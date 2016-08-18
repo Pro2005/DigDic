@@ -9,7 +9,13 @@
 import UIKit
 
 class IDDictionariesListViewController: UIViewController, IDDictionariesListViewInput {
-
+    
+    // MARK: Constants
+    enum Constants {
+        static let dictionariesListTitle = "dictionaries_list_title"
+    }
+    
+    // MARK: Properties
     var output: IDDictionariesListViewOutput!
 
     // MARK: Life cycle
@@ -18,9 +24,8 @@ class IDDictionariesListViewController: UIViewController, IDDictionariesListView
         output.viewIsReady()
     }
 
-
     // MARK: IDDictionariesListViewInput
     func setupInitialState() {
-        self.title = "Dictionaries"
+        self.title = Constants.dictionariesListTitle.localized()
     }
 }
