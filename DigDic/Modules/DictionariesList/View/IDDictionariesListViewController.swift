@@ -17,15 +17,28 @@ class IDDictionariesListViewController: UIViewController, IDDictionariesListView
     
     // MARK: Properties
     var output: IDDictionariesListViewOutput!
+    // MARK: IBOutlet
+    @IBOutlet weak var tableView: UITableView!
+    
 
-    // MARK: Life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
-    // MARK: IDDictionariesListViewInput
+    // MARK: <IDDictionariesListViewInput>
     func setupInitialState() {
         self.title = Constants.dictionariesListTitle.localized()
     }
+
+    func setupTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
+        self.tableView.dataSource = dataSource
+        self.tableView.delegate = delegate
+    }
+    
+    func reloadData() {
+        self.tableView.reloadData()
+    }
+
 }

@@ -8,10 +8,6 @@
 
 protocol IDDictionariesListViewOutput: IDBaseViewOutput {
 
-    /**
-        @author Ilya Denisov
-        Notify presenter that view is ready
-    */
-
-    func viewIsReady()
+    
+    
 }

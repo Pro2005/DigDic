@@ -5,8 +5,9 @@
 //  Created by Ilya Denisov on 18/08/2016.
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
+import UIKit
 
-class IDDictionariesListPresenter: IDDictionariesListModuleInput, IDDictionariesListViewOutput, IDDictionariesListInteractorOutput {
+class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDictionariesListViewOutput, IDDictionariesListInteractorOutput {
 
     weak var view: IDDictionariesListViewInput!
     var interactor: IDDictionariesListInteractorInput!
@@ -14,5 +15,6 @@ class IDDictionariesListPresenter: IDDictionariesListModuleInput, IDDictionaries
 
     func viewIsReady() {
         view.setupInitialState()
+        view.setupTableViewDataSource(self, delegate: self)
     }
 }

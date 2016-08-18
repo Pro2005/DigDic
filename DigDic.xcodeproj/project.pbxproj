@@ -11,7 +11,6 @@
 		084F13C61D65E6A700E907D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13C51D65E6A700E907D6 /* AppDelegate.swift */; };
 		084F13DB1D65E6A700E907D6 /* DigDicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13DA1D65E6A700E907D6 /* DigDicTests.swift */; };
 		084F13E91D65EA7B00E907D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 084F13E81D65EA7B00E907D6 /* Assets.xcassets */; };
-		084F13EC1D65EAC500E907D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 084F13EB1D65EAC500E907D6 /* Info.plist */; };
 		084F13EE1D65ED5E00E907D6 /* IDDictionariesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084F13ED1D65ED5E00E907D6 /* IDDictionariesListViewController.xib */; };
 		084F13F61D65F34000E907D6 /* IDBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13F51D65F34000E907D6 /* IDBaseNavigationController.swift */; };
 		084F13FE1D65F3D200E907D6 /* IDBaseViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13FC1D65F3D200E907D6 /* IDBaseViewInput.swift */; };
@@ -22,6 +21,8 @@
 		084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */; };
 		08DE58E21D66441D00C255E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08DE58E41D66441D00C255E6 /* Localizable.strings */; };
 		08DE58EA1D6646C600C255E6 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58E91D6646C600C255E6 /* String+Localized.swift */; };
+		08DE58EF1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */; };
+		08DE58F11D6652A900C255E6 /* IDDictionariesListPresenter+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58F01D6652A900C255E6 /* IDDictionariesListPresenter+Delegate.swift */; };
 		0A4AE09DC7EE733B2B21606E /* IDDictionariesListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1929641FC0E7D6686E0104DC /* IDDictionariesListInteractorTests.swift */; };
 		0DA718AC741D71F25AF3E63E /* IDDictionariesListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCB653DBEFA22386B1E1BD /* IDDictionariesListRouterInput.swift */; };
 		18E08ABF241AF5B7F6F08D5F /* Pods_DigDic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84D2429BA61854DBF241AF6 /* Pods_DigDic.framework */; };
@@ -71,6 +72,8 @@
 		084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouterInput.swift; sourceTree = "<group>"; };
 		08DE58E31D66441D00C255E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08DE58E91D6646C600C255E6 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDDictionariesListPresenter+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		08DE58F01D6652A900C255E6 /* IDDictionariesListPresenter+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDDictionariesListPresenter+Delegate.swift"; sourceTree = "<group>"; };
 		10C37CBF32F81E75A35E832F /* IDDictionariesListConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListConfiguratorTests.swift; sourceTree = "<group>"; };
 		1929641FC0E7D6686E0104DC /* IDDictionariesListInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListInteractorTests.swift; sourceTree = "<group>"; };
 		199DF158F1E8945C91C3AC89 /* IDDictionariesListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewInput.swift; sourceTree = "<group>"; };
@@ -251,6 +254,15 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		08DE58ED1D664E2600C255E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */,
+				08DE58F01D6652A900C255E6 /* IDDictionariesListPresenter+Delegate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		558B07262A9B07B8BFFD7DC9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +274,7 @@
 		604A948DF1569374A9FECED0 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				08DE58ED1D664E2600C255E6 /* Extensions */,
 				D572770738EB155EA136FF42 /* IDDictionariesListModuleInput.swift */,
 				084506986546352BFDC79839 /* IDDictionariesListPresenter.swift */,
 			);
@@ -488,7 +501,6 @@
 				084F13EE1D65ED5E00E907D6 /* IDDictionariesListViewController.xib in Resources */,
 				08DE58E21D66441D00C255E6 /* Localizable.strings in Resources */,
 				084F13E91D65EA7B00E907D6 /* Assets.xcassets in Resources */,
-				084F13EC1D65EAC500E907D6 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +619,8 @@
 				3A2EC88414525B4CC6D8B395 /* IDDictionariesListModuleInput.swift in Sources */,
 				084F13FF1D65F3D200E907D6 /* IDBaseViewOutput.swift in Sources */,
 				DBC18666997231F8BE46F665 /* IDDictionariesListPresenter.swift in Sources */,
+				08DE58F11D6652A900C255E6 /* IDDictionariesListPresenter+Delegate.swift in Sources */,
+				08DE58EF1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift in Sources */,
 				D950E713B8C50D2CD0F88137 /* IDDictionariesListInteractorInput.swift in Sources */,
 				084F14041D65F42F00E907D6 /* IDBaseInteractorInput.swift in Sources */,
 				084F13FE1D65F3D200E907D6 /* IDBaseViewInput.swift in Sources */,

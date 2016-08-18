@@ -6,12 +6,11 @@
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
 
+import UIKit
+
 protocol IDDictionariesListViewInput: IDBaseViewInput {
 
-    /**
-        @author Ilya Denisov
-        Setup initial state of the view
-    */
-
-    func setupInitialState()
+    func setupTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate)
+    func reloadData()
+    
 }
