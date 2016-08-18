@@ -1,0 +1,36 @@
+### Headers settings
+company: Ilya Denisov
+
+### Xcode project settings
+project_name: DigDic
+xcodeproj_path: DigDic.xcodeproj
+prefix: ID
+
+### Code generation settings section
+# The main project target name
+project_target: DigDic
+
+# The file path for new modules
+project_file_path: DigDic/Modules
+
+# The Xcode group path to new modules
+project_group_path: DigDic/Modules
+
+### Tests generation settings section
+# The tests target name
+test_target: DigDicTests
+
+# The file path for new tests
+test_file_path: DigDicTests/Modules
+
+# The Xcode group path to new tests
+test_group_path: DigDicTests/Modules
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: rviper_controller}
+- {name: mvvm_controller}
+- {name: swifty_viper}

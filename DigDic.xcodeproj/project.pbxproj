@@ -7,12 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03CA0AF00450ADE64E177428 /* IDDictionariesListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9CD1A8C5903781EA6CB13 /* IDDictionariesListConfigurator.swift */; };
 		084F13C61D65E6A700E907D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13C51D65E6A700E907D6 /* AppDelegate.swift */; };
-		084F13C81D65E6A700E907D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13C71D65E6A700E907D6 /* ViewController.swift */; };
-		084F13CB1D65E6A700E907D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084F13C91D65E6A700E907D6 /* Main.storyboard */; };
-		084F13CD1D65E6A700E907D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 084F13CC1D65E6A700E907D6 /* Assets.xcassets */; };
-		084F13D01D65E6A700E907D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084F13CE1D65E6A700E907D6 /* LaunchScreen.storyboard */; };
 		084F13DB1D65E6A700E907D6 /* DigDicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13DA1D65E6A700E907D6 /* DigDicTests.swift */; };
+		084F13E91D65EA7B00E907D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 084F13E81D65EA7B00E907D6 /* Assets.xcassets */; };
+		084F13EC1D65EAC500E907D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 084F13EB1D65EAC500E907D6 /* Info.plist */; };
+		084F13EE1D65ED5E00E907D6 /* IDDictionariesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084F13ED1D65ED5E00E907D6 /* IDDictionariesListViewController.xib */; };
+		084F13F61D65F34000E907D6 /* IDBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13F51D65F34000E907D6 /* IDBaseNavigationController.swift */; };
+		084F13FE1D65F3D200E907D6 /* IDBaseViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13FC1D65F3D200E907D6 /* IDBaseViewInput.swift */; };
+		084F13FF1D65F3D200E907D6 /* IDBaseViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13FD1D65F3D200E907D6 /* IDBaseViewOutput.swift */; };
+		084F14011D65F40300E907D6 /* IDBaseModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14001D65F40300E907D6 /* IDBaseModuleInput.swift */; };
+		084F14041D65F42F00E907D6 /* IDBaseInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */; };
+		084F14051D65F42F00E907D6 /* IDBaseInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */; };
+		084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */; };
+		0A4AE09DC7EE733B2B21606E /* IDDictionariesListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1929641FC0E7D6686E0104DC /* IDDictionariesListInteractorTests.swift */; };
+		0DA718AC741D71F25AF3E63E /* IDDictionariesListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCB653DBEFA22386B1E1BD /* IDDictionariesListRouterInput.swift */; };
+		18E08ABF241AF5B7F6F08D5F /* Pods_DigDic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84D2429BA61854DBF241AF6 /* Pods_DigDic.framework */; };
+		339DD14E95BF5AF0DC00977E /* IDDictionariesListConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C37CBF32F81E75A35E832F /* IDDictionariesListConfiguratorTests.swift */; };
+		3A2EC88414525B4CC6D8B395 /* IDDictionariesListModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572770738EB155EA136FF42 /* IDDictionariesListModuleInput.swift */; };
+		645833ABEB171AE312D8A55F /* IDDictionariesListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA6485CAAB2D84114C8CA6 /* IDDictionariesListInteractorOutput.swift */; };
+		6BEE48A86F54732D103C0EA7 /* IDDictionariesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC138363548D5A04894A8A0F /* IDDictionariesListRouter.swift */; };
+		8BBCF3710B1094637156C098 /* IDDictionariesListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BCB33CEA9BCF21C5B896B /* IDDictionariesListViewOutput.swift */; };
+		AFDE776B46B4E495392A2203 /* IDDictionariesListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20E9B32E4B7C049F1A3898B /* IDDictionariesListPresenterTests.swift */; };
+		BA9385C1959706CC18273082 /* Pods_DigDicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D42D706F8FFD958BD3D024 /* Pods_DigDicTests.framework */; };
+		D77E4143B6B5F5F011066236 /* IDDictionariesListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199DF158F1E8945C91C3AC89 /* IDDictionariesListViewInput.swift */; };
+		D950E713B8C50D2CD0F88137 /* IDDictionariesListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221AB61CF607BCFB0E18F755 /* IDDictionariesListInteractorInput.swift */; };
+		DBC18666997231F8BE46F665 /* IDDictionariesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084506986546352BFDC79839 /* IDDictionariesListPresenter.swift */; };
+		E40F1C69ADBDC50D9092E798 /* IDDictionariesListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7121FA5BDB166E48857A7750 /* IDDictionariesListRouterTests.swift */; };
+		E6773595B873EC1A9F11C691 /* IDDictionariesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D0E5787AA2885826E6088 /* IDDictionariesListInteractor.swift */; };
+		F3F4A4232F4F275D20CCCC7C /* IDDictionariesListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C91E446F5CB3D7309D95A1 /* IDDictionariesListViewTests.swift */; };
+		F4934EB3922FB4741E358414 /* IDDictionariesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750E971230A7C48DFF11B96F /* IDDictionariesListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +50,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0126661D970EE6910779089C /* Pods-DigDicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigDicTests/Pods-DigDicTests.release.xcconfig"; sourceTree = "<group>"; };
+		084506986546352BFDC79839 /* IDDictionariesListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListPresenter.swift; sourceTree = "<group>"; };
 		084F13C21D65E6A700E907D6 /* DigDic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigDic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		084F13C51D65E6A700E907D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		084F13C71D65E6A700E907D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		084F13CA1D65E6A700E907D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		084F13CC1D65E6A700E907D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		084F13CF1D65E6A700E907D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		084F13D11D65E6A700E907D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		084F13D61D65E6A700E907D6 /* DigDicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigDicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		084F13DA1D65E6A700E907D6 /* DigDicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigDicTests.swift; sourceTree = "<group>"; };
 		084F13DC1D65E6A700E907D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		084F13E81D65EA7B00E907D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		084F13EB1D65EAC500E907D6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		084F13ED1D65ED5E00E907D6 /* IDDictionariesListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDDictionariesListViewController.xib; sourceTree = "<group>"; };
+		084F13F51D65F34000E907D6 /* IDBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseNavigationController.swift; sourceTree = "<group>"; };
+		084F13FC1D65F3D200E907D6 /* IDBaseViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseViewInput.swift; sourceTree = "<group>"; };
+		084F13FD1D65F3D200E907D6 /* IDBaseViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseViewOutput.swift; sourceTree = "<group>"; };
+		084F14001D65F40300E907D6 /* IDBaseModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseModuleInput.swift; sourceTree = "<group>"; };
+		084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorInput.swift; sourceTree = "<group>"; };
+		084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorOutput.swift; sourceTree = "<group>"; };
+		084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouterInput.swift; sourceTree = "<group>"; };
+		10C37CBF32F81E75A35E832F /* IDDictionariesListConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListConfiguratorTests.swift; sourceTree = "<group>"; };
+		1929641FC0E7D6686E0104DC /* IDDictionariesListInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListInteractorTests.swift; sourceTree = "<group>"; };
+		199DF158F1E8945C91C3AC89 /* IDDictionariesListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewInput.swift; sourceTree = "<group>"; };
+		221AB61CF607BCFB0E18F755 /* IDDictionariesListInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListInteractorInput.swift; sourceTree = "<group>"; };
+		24C91E446F5CB3D7309D95A1 /* IDDictionariesListViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewTests.swift; sourceTree = "<group>"; };
+		7121FA5BDB166E48857A7750 /* IDDictionariesListRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListRouterTests.swift; sourceTree = "<group>"; };
+		750E971230A7C48DFF11B96F /* IDDictionariesListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewController.swift; sourceTree = "<group>"; };
+		757BCB33CEA9BCF21C5B896B /* IDDictionariesListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewOutput.swift; sourceTree = "<group>"; };
+		7F1215E1957285839254C1F9 /* Pods-DigDic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigDic/Pods-DigDic.debug.xcconfig"; sourceTree = "<group>"; };
+		8FB9CD1A8C5903781EA6CB13 /* IDDictionariesListConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListConfigurator.swift; sourceTree = "<group>"; };
+		93D42D706F8FFD958BD3D024 /* Pods_DigDicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigDicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABFCB653DBEFA22386B1E1BD /* IDDictionariesListRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListRouterInput.swift; sourceTree = "<group>"; };
+		C84D2429BA61854DBF241AF6 /* Pods_DigDic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigDic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3BF10209863A4F838B4745 /* Pods-DigDic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDic.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigDic/Pods-DigDic.release.xcconfig"; sourceTree = "<group>"; };
+		D572770738EB155EA136FF42 /* IDDictionariesListModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListModuleInput.swift; sourceTree = "<group>"; };
+		E0191674B3B7921148B3326F /* Pods-DigDicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigDicTests/Pods-DigDicTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E20E9B32E4B7C049F1A3898B /* IDDictionariesListPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListPresenterTests.swift; sourceTree = "<group>"; };
+		EC138363548D5A04894A8A0F /* IDDictionariesListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListRouter.swift; sourceTree = "<group>"; };
+		EE2D0E5787AA2885826E6088 /* IDDictionariesListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListInteractor.swift; sourceTree = "<group>"; };
+		F2CA6485CAAB2D84114C8CA6 /* IDDictionariesListInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListInteractorOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E08ABF241AF5B7F6F08D5F /* Pods_DigDic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9385C1959706CC18273082 /* Pods_DigDicTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +115,8 @@
 				084F13C41D65E6A700E907D6 /* DigDic */,
 				084F13D91D65E6A700E907D6 /* DigDicTests */,
 				084F13C31D65E6A700E907D6 /* Products */,
+				EC6E04ACBAE364A87BD5F402 /* Pods */,
+				D09DC5A91EDE253D2AA91A8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,11 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				084F13C51D65E6A700E907D6 /* AppDelegate.swift */,
-				084F13C71D65E6A700E907D6 /* ViewController.swift */,
-				084F13C91D65E6A700E907D6 /* Main.storyboard */,
-				084F13CC1D65E6A700E907D6 /* Assets.xcassets */,
-				084F13CE1D65E6A700E907D6 /* LaunchScreen.storyboard */,
-				084F13D11D65E6A700E907D6 /* Info.plist */,
+				084F13EF1D65ED8500E907D6 /* Controllers */,
+				C490E55ECD9AF6AC9C99A137 /* Modules */,
+				084F13EA1D65EAC500E907D6 /* Supporting Files */,
+				084F13E71D65EA7B00E907D6 /* Resources */,
 			);
 			path = DigDic;
 			sourceTree = "<group>";
@@ -92,8 +146,234 @@
 			children = (
 				084F13DA1D65E6A700E907D6 /* DigDicTests.swift */,
 				084F13DC1D65E6A700E907D6 /* Info.plist */,
+				558B07262A9B07B8BFFD7DC9 /* Modules */,
 			);
 			path = DigDicTests;
+			sourceTree = "<group>";
+		};
+		084F13E71D65EA7B00E907D6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				084F13E81D65EA7B00E907D6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		084F13EA1D65EAC500E907D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				084F13EB1D65EAC500E907D6 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		084F13EF1D65ED8500E907D6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				084F13F31D65F34000E907D6 /* BaseProtocols */,
+				084F13F41D65F34000E907D6 /* BaseClasses */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		084F13F31D65F34000E907D6 /* BaseProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				084F13F81D65F3B200E907D6 /* Router */,
+				084F13F91D65F3B200E907D6 /* Interactor */,
+				084F13FA1D65F3B200E907D6 /* Presenter */,
+				084F13FB1D65F3B200E907D6 /* View */,
+			);
+			path = BaseProtocols;
+			sourceTree = "<group>";
+		};
+		084F13F41D65F34000E907D6 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				084F13F51D65F34000E907D6 /* IDBaseNavigationController.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		084F13F81D65F3B200E907D6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		084F13F91D65F3B200E907D6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */,
+				084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		084F13FA1D65F3B200E907D6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				084F14001D65F40300E907D6 /* IDBaseModuleInput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		084F13FB1D65F3B200E907D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				084F13FC1D65F3D200E907D6 /* IDBaseViewInput.swift */,
+				084F13FD1D65F3D200E907D6 /* IDBaseViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		558B07262A9B07B8BFFD7DC9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				98263E1E401A45A9F19B332A /* DictionariesList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		604A948DF1569374A9FECED0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D572770738EB155EA136FF42 /* IDDictionariesListModuleInput.swift */,
+				084506986546352BFDC79839 /* IDDictionariesListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		70BEFA2637B108A092F87F5E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E20E9B32E4B7C049F1A3898B /* IDDictionariesListPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8A86AF04ABBE5D90A3CDA6E0 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				8FB9CD1A8C5903781EA6CB13 /* IDDictionariesListConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		959AC816ECF0ED11F7B2ECBC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				221AB61CF607BCFB0E18F755 /* IDDictionariesListInteractorInput.swift */,
+				F2CA6485CAAB2D84114C8CA6 /* IDDictionariesListInteractorOutput.swift */,
+				EE2D0E5787AA2885826E6088 /* IDDictionariesListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		98263E1E401A45A9F19B332A /* DictionariesList */ = {
+			isa = PBXGroup;
+			children = (
+				ADD420B31037372373D732A3 /* Configurator */,
+				D3A2684B1039BB16EAD1569B /* View */,
+				EB2BE3D4C49022A56C220134 /* Interactor */,
+				70BEFA2637B108A092F87F5E /* Presenter */,
+				B47B2527E9A4FE1E3C48E820 /* Router */,
+			);
+			path = DictionariesList;
+			sourceTree = "<group>";
+		};
+		99F18022E078F68A4F8EB07D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				199DF158F1E8945C91C3AC89 /* IDDictionariesListViewInput.swift */,
+				757BCB33CEA9BCF21C5B896B /* IDDictionariesListViewOutput.swift */,
+				750E971230A7C48DFF11B96F /* IDDictionariesListViewController.swift */,
+				084F13ED1D65ED5E00E907D6 /* IDDictionariesListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AAE0995652B857727ADCDFC4 /* DictionariesList */ = {
+			isa = PBXGroup;
+			children = (
+				99F18022E078F68A4F8EB07D /* View */,
+				604A948DF1569374A9FECED0 /* Presenter */,
+				959AC816ECF0ED11F7B2ECBC /* Interactor */,
+				B47170CD9B0214D5089D5823 /* Router */,
+				8A86AF04ABBE5D90A3CDA6E0 /* Configurator */,
+			);
+			path = DictionariesList;
+			sourceTree = "<group>";
+		};
+		ADD420B31037372373D732A3 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				10C37CBF32F81E75A35E832F /* IDDictionariesListConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		B47170CD9B0214D5089D5823 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				ABFCB653DBEFA22386B1E1BD /* IDDictionariesListRouterInput.swift */,
+				EC138363548D5A04894A8A0F /* IDDictionariesListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B47B2527E9A4FE1E3C48E820 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7121FA5BDB166E48857A7750 /* IDDictionariesListRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C490E55ECD9AF6AC9C99A137 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AAE0995652B857727ADCDFC4 /* DictionariesList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D09DC5A91EDE253D2AA91A8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C84D2429BA61854DBF241AF6 /* Pods_DigDic.framework */,
+				93D42D706F8FFD958BD3D024 /* Pods_DigDicTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3A2684B1039BB16EAD1569B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24C91E446F5CB3D7309D95A1 /* IDDictionariesListViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB2BE3D4C49022A56C220134 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1929641FC0E7D6686E0104DC /* IDDictionariesListInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EC6E04ACBAE364A87BD5F402 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F1215E1957285839254C1F9 /* Pods-DigDic.debug.xcconfig */,
+				CF3BF10209863A4F838B4745 /* Pods-DigDic.release.xcconfig */,
+				E0191674B3B7921148B3326F /* Pods-DigDicTests.debug.xcconfig */,
+				0126661D970EE6910779089C /* Pods-DigDicTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +383,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 084F13DF1D65E6A800E907D6 /* Build configuration list for PBXNativeTarget "DigDic" */;
 			buildPhases = (
+				96761C51294936A078B34FFC /* [CP] Check Pods Manifest.lock */,
 				084F13BE1D65E6A700E907D6 /* Sources */,
 				084F13BF1D65E6A700E907D6 /* Frameworks */,
 				084F13C01D65E6A700E907D6 /* Resources */,
+				58F6372F743F2838D367041B /* [CP] Embed Pods Frameworks */,
+				9AC270F96536F0001E7D5682 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +403,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 084F13E21D65E6A800E907D6 /* Build configuration list for PBXNativeTarget "DigDicTests" */;
 			buildPhases = (
+				1F19194223DDBD4184F211C9 /* [CP] Check Pods Manifest.lock */,
 				084F13D21D65E6A700E907D6 /* Sources */,
 				084F13D31D65E6A700E907D6 /* Frameworks */,
 				084F13D41D65E6A700E907D6 /* Resources */,
+				B1FD8621B8F165B646A827D5 /* [CP] Embed Pods Frameworks */,
+				52163667DDAE333D116AA19C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,9 +463,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				084F13D01D65E6A700E907D6 /* LaunchScreen.storyboard in Resources */,
-				084F13CD1D65E6A700E907D6 /* Assets.xcassets in Resources */,
-				084F13CB1D65E6A700E907D6 /* Main.storyboard in Resources */,
+				084F13EE1D65ED5E00E907D6 /* IDDictionariesListViewController.xib in Resources */,
+				084F13E91D65EA7B00E907D6 /* Assets.xcassets in Resources */,
+				084F13EC1D65EAC500E907D6 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,13 +478,123 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F19194223DDBD4184F211C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		52163667DDAE333D116AA19C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigDicTests/Pods-DigDicTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58F6372F743F2838D367041B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigDic/Pods-DigDic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96761C51294936A078B34FFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9AC270F96536F0001E7D5682 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigDic/Pods-DigDic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1FD8621B8F165B646A827D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigDicTests/Pods-DigDicTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		084F13BE1D65E6A700E907D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				084F13C81D65E6A700E907D6 /* ViewController.swift in Sources */,
 				084F13C61D65E6A700E907D6 /* AppDelegate.swift in Sources */,
+				D77E4143B6B5F5F011066236 /* IDDictionariesListViewInput.swift in Sources */,
+				8BBCF3710B1094637156C098 /* IDDictionariesListViewOutput.swift in Sources */,
+				F4934EB3922FB4741E358414 /* IDDictionariesListViewController.swift in Sources */,
+				084F14011D65F40300E907D6 /* IDBaseModuleInput.swift in Sources */,
+				3A2EC88414525B4CC6D8B395 /* IDDictionariesListModuleInput.swift in Sources */,
+				084F13FF1D65F3D200E907D6 /* IDBaseViewOutput.swift in Sources */,
+				DBC18666997231F8BE46F665 /* IDDictionariesListPresenter.swift in Sources */,
+				D950E713B8C50D2CD0F88137 /* IDDictionariesListInteractorInput.swift in Sources */,
+				084F14041D65F42F00E907D6 /* IDBaseInteractorInput.swift in Sources */,
+				084F13FE1D65F3D200E907D6 /* IDBaseViewInput.swift in Sources */,
+				084F14051D65F42F00E907D6 /* IDBaseInteractorOutput.swift in Sources */,
+				645833ABEB171AE312D8A55F /* IDDictionariesListInteractorOutput.swift in Sources */,
+				E6773595B873EC1A9F11C691 /* IDDictionariesListInteractor.swift in Sources */,
+				0DA718AC741D71F25AF3E63E /* IDDictionariesListRouterInput.swift in Sources */,
+				6BEE48A86F54732D103C0EA7 /* IDDictionariesListRouter.swift in Sources */,
+				03CA0AF00450ADE64E177428 /* IDDictionariesListConfigurator.swift in Sources */,
+				084F13F61D65F34000E907D6 /* IDBaseNavigationController.swift in Sources */,
+				084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +603,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				084F13DB1D65E6A700E907D6 /* DigDicTests.swift in Sources */,
+				339DD14E95BF5AF0DC00977E /* IDDictionariesListConfiguratorTests.swift in Sources */,
+				F3F4A4232F4F275D20CCCC7C /* IDDictionariesListViewTests.swift in Sources */,
+				0A4AE09DC7EE733B2B21606E /* IDDictionariesListInteractorTests.swift in Sources */,
+				AFDE776B46B4E495392A2203 /* IDDictionariesListPresenterTests.swift in Sources */,
+				E40F1C69ADBDC50D9092E798 /* IDDictionariesListRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,25 +620,6 @@
 			targetProxy = 084F13D71D65E6A700E907D6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		084F13C91D65E6A700E907D6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				084F13CA1D65E6A700E907D6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		084F13CE1D65E6A700E907D6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				084F13CF1D65E6A700E907D6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		084F13DD1D65E6A700E907D6 /* Debug */ = {
@@ -325,9 +707,10 @@
 		};
 		084F13E01D65E6A800E907D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F1215E1957285839254C1F9 /* Pods-DigDic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DigDic/Info.plist;
+				INFOPLIST_FILE = "DigDic/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.DigDic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,9 +719,10 @@
 		};
 		084F13E11D65E6A800E907D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF3BF10209863A4F838B4745 /* Pods-DigDic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DigDic/Info.plist;
+				INFOPLIST_FILE = "DigDic/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.DigDic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -347,6 +731,7 @@
 		};
 		084F13E31D65E6A800E907D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0191674B3B7921148B3326F /* Pods-DigDicTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DigDicTests/Info.plist;
@@ -359,6 +744,7 @@
 		};
 		084F13E41D65E6A800E907D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0126661D970EE6910779089C /* Pods-DigDicTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DigDicTests/Info.plist;
@@ -388,6 +774,7 @@
 				084F13E11D65E6A800E907D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		084F13E21D65E6A800E907D6 /* Build configuration list for PBXNativeTarget "DigDicTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +783,7 @@
 				084F13E41D65E6A800E907D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
