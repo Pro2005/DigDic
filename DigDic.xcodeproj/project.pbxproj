@@ -19,6 +19,7 @@
 		084F14041D65F42F00E907D6 /* IDBaseInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */; };
 		084F14051D65F42F00E907D6 /* IDBaseInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */; };
 		084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */; };
+		086E79291D6B3C3000EB081F /* UINavigationItem+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */; };
 		08DE58E21D66441D00C255E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08DE58E41D66441D00C255E6 /* Localizable.strings */; };
 		08DE58EA1D6646C600C255E6 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58E91D6646C600C255E6 /* String+Localized.swift */; };
 		08DE58EF1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */; };
@@ -70,6 +71,7 @@
 		084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorInput.swift; sourceTree = "<group>"; };
 		084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorOutput.swift; sourceTree = "<group>"; };
 		084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouterInput.swift; sourceTree = "<group>"; };
+		086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Buttons.swift"; sourceTree = "<group>"; };
 		08DE58E31D66441D00C255E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08DE58E91D6646C600C255E6 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDDictionariesListPresenter+UITableViewDataSource.swift"; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08341B391D66E81E0020F0D8 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
 		084F13B91D65E6A700E907D6 = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +251,7 @@
 		08DE58E71D66453E00C255E6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				08341B391D66E81E0020F0D8 /* NavigationController */,
 				08DE58E81D66454E00C255E6 /* String */,
 			);
 			path = Extensions;
@@ -627,6 +638,7 @@
 				084F14051D65F42F00E907D6 /* IDBaseInteractorOutput.swift in Sources */,
 				645833ABEB171AE312D8A55F /* IDDictionariesListInteractorOutput.swift in Sources */,
 				E6773595B873EC1A9F11C691 /* IDDictionariesListInteractor.swift in Sources */,
+				086E79291D6B3C3000EB081F /* UINavigationItem+Buttons.swift in Sources */,
 				08DE58EA1D6646C600C255E6 /* String+Localized.swift in Sources */,
 				0DA718AC741D71F25AF3E63E /* IDDictionariesListRouterInput.swift in Sources */,
 				6BEE48A86F54732D103C0EA7 /* IDDictionariesListRouter.swift in Sources */,

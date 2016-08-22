@@ -12,7 +12,9 @@ class IDDictionariesListViewController: UIViewController, IDDictionariesListView
     
     // MARK: Constants
     enum Constants {
-        static let dictionariesListTitle = "dictionaries_list_title"
+        static let title = "dictionaries_list_title"
+        static let addButtonTitle = "dictionaries_list_add_button_title"
+        static let addButtonFontSize = 12
     }
     
     // MARK: Properties
@@ -26,10 +28,25 @@ class IDDictionariesListViewController: UIViewController, IDDictionariesListView
         super.viewDidLoad()
         output.viewIsReady()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    // MARK: Actions
+    func addDic(sender: AnyObject) {
+        
+    }
 
     // MARK: <IDDictionariesListViewInput>
     func setupInitialState() {
-        self.title = Constants.dictionariesListTitle.localized()
+        self.title = Constants.title.localized()
+        let addButton = self.navigationItem.addButtonWithTitle(Constants.addButtonTitle.localized(), alignment: .Right, font: UIFont.systemFontOfSize(CGFloat(Constants.addButtonFontSize)))
+        addButton.addTarget(self, action: #selector(addDic), forControlEvents: .TouchUpInside)
     }
 
     func setupTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
@@ -40,5 +57,9 @@ class IDDictionariesListViewController: UIViewController, IDDictionariesListView
     func reloadData() {
         self.tableView.reloadData()
     }
-
+    
+    // MARK: Private
+    private func _addButtonInNavigationBar() {
+        
+    }
 }
