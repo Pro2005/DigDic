@@ -9,5 +9,9 @@
 import Foundation
 
 protocol IDDictionariesListInteractorInput: IDBaseInteractorInput {
+    var dataSource: [IDDictionaryProtocol] {get}
 
+    func fetchDictionaries(competion: () -> ())
+    func addNewDictionaryWithName(name: String)
+    
 }

@@ -13,4 +13,6 @@ protocol IDDictionariesListViewInput: IDBaseViewInput {
     func setupTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate)
     func reloadData()
     
+    func showAlertController(alertController: UIAlertController)
+    
 }

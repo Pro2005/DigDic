@@ -23,7 +23,13 @@
 		08DE58E21D66441D00C255E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08DE58E41D66441D00C255E6 /* Localizable.strings */; };
 		08DE58EA1D6646C600C255E6 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58E91D6646C600C255E6 /* String+Localized.swift */; };
 		08DE58EF1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */; };
-		08DE58F11D6652A900C255E6 /* IDDictionariesListPresenter+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58F01D6652A900C255E6 /* IDDictionariesListPresenter+Delegate.swift */; };
+		08DE58F11D6652A900C255E6 /* IDDictionariesListPresenter+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58F01D6652A900C255E6 /* IDDictionariesListPresenter+UITableViewDelegate.swift */; };
+		08E7FD4F1D6CD694006BD301 /* IDDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD4E1D6CD694006BD301 /* IDDictionaryService.swift */; };
+		08E7FD511D6CD6BA006BD301 /* IDBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD501D6CD6BA006BD301 /* IDBaseService.swift */; };
+		08E7FD591D6CD794006BD301 /* IDDictionaryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD571D6CD794006BD301 /* IDDictionaryProtocol.swift */; };
+		08E7FD5A1D6CD794006BD301 /* IDDictionarySourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD581D6CD794006BD301 /* IDDictionarySourceProtocol.swift */; };
+		08E7FD5D1D6CD805006BD301 /* IDLocalDataBaseSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD5C1D6CD805006BD301 /* IDLocalDataBaseSource.swift */; };
+		08E7FD601D6CD8D1006BD301 /* IDLDBDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD5F1D6CD8D1006BD301 /* IDLDBDictionary.swift */; };
 		0A4AE09DC7EE733B2B21606E /* IDDictionariesListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1929641FC0E7D6686E0104DC /* IDDictionariesListInteractorTests.swift */; };
 		0DA718AC741D71F25AF3E63E /* IDDictionariesListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCB653DBEFA22386B1E1BD /* IDDictionariesListRouterInput.swift */; };
 		18E08ABF241AF5B7F6F08D5F /* Pods_DigDic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84D2429BA61854DBF241AF6 /* Pods_DigDic.framework */; };
@@ -75,7 +81,13 @@
 		08DE58E31D66441D00C255E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08DE58E91D6646C600C255E6 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDDictionariesListPresenter+UITableViewDataSource.swift"; sourceTree = "<group>"; };
-		08DE58F01D6652A900C255E6 /* IDDictionariesListPresenter+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDDictionariesListPresenter+Delegate.swift"; sourceTree = "<group>"; };
+		08DE58F01D6652A900C255E6 /* IDDictionariesListPresenter+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDDictionariesListPresenter+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		08E7FD4E1D6CD694006BD301 /* IDDictionaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionaryService.swift; sourceTree = "<group>"; };
+		08E7FD501D6CD6BA006BD301 /* IDBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseService.swift; sourceTree = "<group>"; };
+		08E7FD571D6CD794006BD301 /* IDDictionaryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionaryProtocol.swift; sourceTree = "<group>"; };
+		08E7FD581D6CD794006BD301 /* IDDictionarySourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionarySourceProtocol.swift; sourceTree = "<group>"; };
+		08E7FD5C1D6CD805006BD301 /* IDLocalDataBaseSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDLocalDataBaseSource.swift; sourceTree = "<group>"; };
+		08E7FD5F1D6CD8D1006BD301 /* IDLDBDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDLDBDictionary.swift; sourceTree = "<group>"; };
 		10C37CBF32F81E75A35E832F /* IDDictionariesListConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListConfiguratorTests.swift; sourceTree = "<group>"; };
 		1929641FC0E7D6686E0104DC /* IDDictionariesListInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListInteractorTests.swift; sourceTree = "<group>"; };
 		199DF158F1E8945C91C3AC89 /* IDDictionariesListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewInput.swift; sourceTree = "<group>"; };
@@ -149,6 +161,8 @@
 		084F13C41D65E6A700E907D6 /* DigDic */ = {
 			isa = PBXGroup;
 			children = (
+				08E7FD4B1D6CD648006BD301 /* Services */,
+				08AAD4911D6B820F0072ED1D /* Managers */,
 				08DE58E71D66453E00C255E6 /* Extensions */,
 				084F13C51D65E6A700E907D6 /* AppDelegate.swift */,
 				084F13EF1D65ED8500E907D6 /* Controllers */,
@@ -248,6 +262,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		08AAD4911D6B820F0072ED1D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		08DE58E71D66453E00C255E6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,9 +290,62 @@
 			isa = PBXGroup;
 			children = (
 				08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */,
-				08DE58F01D6652A900C255E6 /* IDDictionariesListPresenter+Delegate.swift */,
+				08DE58F01D6652A900C255E6 /* IDDictionariesListPresenter+UITableViewDelegate.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		08E7FD4B1D6CD648006BD301 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				08E7FD561D6CD794006BD301 /* Protocols */,
+				08E7FD4D1D6CD67D006BD301 /* Sources */,
+				08E7FD4C1D6CD66F006BD301 /* Base */,
+				08E7FD4E1D6CD694006BD301 /* IDDictionaryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		08E7FD4C1D6CD66F006BD301 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				08E7FD501D6CD6BA006BD301 /* IDBaseService.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		08E7FD4D1D6CD67D006BD301 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				08E7FD5B1D6CD7F5006BD301 /* LocalDataBase */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		08E7FD561D6CD794006BD301 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				08E7FD571D6CD794006BD301 /* IDDictionaryProtocol.swift */,
+				08E7FD581D6CD794006BD301 /* IDDictionarySourceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		08E7FD5B1D6CD7F5006BD301 /* LocalDataBase */ = {
+			isa = PBXGroup;
+			children = (
+				08E7FD5E1D6CD89B006BD301 /* Models */,
+				08E7FD5C1D6CD805006BD301 /* IDLocalDataBaseSource.swift */,
+			);
+			path = LocalDataBase;
+			sourceTree = "<group>";
+		};
+		08E7FD5E1D6CD89B006BD301 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				08E7FD5F1D6CD8D1006BD301 /* IDLDBDictionary.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		558B07262A9B07B8BFFD7DC9 /* Modules */ = {
@@ -623,14 +697,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				084F13C61D65E6A700E907D6 /* AppDelegate.swift in Sources */,
+				08E7FD511D6CD6BA006BD301 /* IDBaseService.swift in Sources */,
 				D77E4143B6B5F5F011066236 /* IDDictionariesListViewInput.swift in Sources */,
 				8BBCF3710B1094637156C098 /* IDDictionariesListViewOutput.swift in Sources */,
 				F4934EB3922FB4741E358414 /* IDDictionariesListViewController.swift in Sources */,
+				08E7FD4F1D6CD694006BD301 /* IDDictionaryService.swift in Sources */,
+				08E7FD5A1D6CD794006BD301 /* IDDictionarySourceProtocol.swift in Sources */,
 				084F14011D65F40300E907D6 /* IDBaseModuleInput.swift in Sources */,
 				3A2EC88414525B4CC6D8B395 /* IDDictionariesListModuleInput.swift in Sources */,
+				08E7FD601D6CD8D1006BD301 /* IDLDBDictionary.swift in Sources */,
 				084F13FF1D65F3D200E907D6 /* IDBaseViewOutput.swift in Sources */,
 				DBC18666997231F8BE46F665 /* IDDictionariesListPresenter.swift in Sources */,
-				08DE58F11D6652A900C255E6 /* IDDictionariesListPresenter+Delegate.swift in Sources */,
+				08DE58F11D6652A900C255E6 /* IDDictionariesListPresenter+UITableViewDelegate.swift in Sources */,
 				08DE58EF1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift in Sources */,
 				D950E713B8C50D2CD0F88137 /* IDDictionariesListInteractorInput.swift in Sources */,
 				084F14041D65F42F00E907D6 /* IDBaseInteractorInput.swift in Sources */,
@@ -643,7 +721,9 @@
 				0DA718AC741D71F25AF3E63E /* IDDictionariesListRouterInput.swift in Sources */,
 				6BEE48A86F54732D103C0EA7 /* IDDictionariesListRouter.swift in Sources */,
 				03CA0AF00450ADE64E177428 /* IDDictionariesListConfigurator.swift in Sources */,
+				08E7FD5D1D6CD805006BD301 /* IDLocalDataBaseSource.swift in Sources */,
 				084F13F61D65F34000E907D6 /* IDBaseNavigationController.swift in Sources */,
+				08E7FD591D6CD794006BD301 /* IDDictionaryProtocol.swift in Sources */,
 				084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

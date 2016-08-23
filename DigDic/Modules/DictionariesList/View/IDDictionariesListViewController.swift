@@ -38,15 +38,15 @@ class IDDictionariesListViewController: UIViewController, IDDictionariesListView
     }
     
     // MARK: Actions
-    func addDic(sender: AnyObject) {
-        
+    func addDictionary(sender: AnyObject) {
+        self.output.addDictionary()
     }
 
     // MARK: <IDDictionariesListViewInput>
     func setupInitialState() {
         self.title = Constants.title.localized()
         let addButton = self.navigationItem.addButtonWithTitle(Constants.addButtonTitle.localized(), alignment: .Right, font: UIFont.systemFontOfSize(CGFloat(Constants.addButtonFontSize)))
-        addButton.addTarget(self, action: #selector(addDic), forControlEvents: .TouchUpInside)
+        addButton.addTarget(self, action: #selector(addDictionary), forControlEvents: .TouchUpInside)
     }
 
     func setupTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
@@ -56,6 +56,10 @@ class IDDictionariesListViewController: UIViewController, IDDictionariesListView
     
     func reloadData() {
         self.tableView.reloadData()
+    }
+    
+    func showAlertController(alertController: UIAlertController) {
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     // MARK: Private
