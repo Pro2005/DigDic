@@ -11,4 +11,14 @@ import UIKit
 
 extension IDDictionariesListPresenter: UITableViewDelegate {
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        guard let dictionary = self.interactor.dictionaryByIndex(indexPath.row) else {
+            return
+        }
+        guard let navigationController = self.view.getNavigationController() else {
+            return
+        }
+        self.router.pushDictionaryDetailScreenWithDictionary(dictionary, navigationController: navigationController)
+    }
+    
 }

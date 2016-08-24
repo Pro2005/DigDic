@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 protocol IDDictionariesListRouterInput: IDBaseRouterInput {
 
+    func pushDictionaryDetailScreenWithDictionary(dictionary: IDDictionaryProtocol, navigationController: UINavigationController)
+    
 }

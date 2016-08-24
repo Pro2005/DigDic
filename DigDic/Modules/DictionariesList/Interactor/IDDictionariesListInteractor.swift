@@ -23,5 +23,12 @@ class IDDictionariesListInteractor: IDDictionariesListInteractorInput {
     func addNewDictionaryWithName(name: String) {
         service.addDictionaryWithName(name)
     }
+    
+    func dictionaryByIndex(index: Int) -> IDDictionaryProtocol? {
+        guard index < dataSource.count else {
+            return nil
+        }
+        return dataSource[index]
+    }
 
 }

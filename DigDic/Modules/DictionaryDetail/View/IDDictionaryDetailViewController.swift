@@ -22,4 +22,9 @@ class IDDictionaryDetailViewController: UIViewController, IDDictionaryDetailView
     // MARK: IDDictionaryDetailViewInput
     func setupInitialState() {
     }
+    
+    func getNavigationController() -> UINavigationController? {
+        return self.navigationController
+    }
+    
 }
