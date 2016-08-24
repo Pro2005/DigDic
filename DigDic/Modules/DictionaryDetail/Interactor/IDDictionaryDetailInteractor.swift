@@ -9,5 +9,10 @@
 class IDDictionaryDetailInteractor: IDDictionaryDetailInteractorInput {
 
     weak var output: IDDictionaryDetailInteractorOutput!
+    var dictionary: IDDictionaryProtocol
+    
+    init(dictionary: IDDictionaryProtocol) {
+        self.dictionary = dictionary
+    }
 
 }

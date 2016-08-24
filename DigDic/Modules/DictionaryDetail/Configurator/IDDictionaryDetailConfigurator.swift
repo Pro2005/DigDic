@@ -10,14 +10,14 @@ import UIKit
 
 class IDDictionaryDetailModuleConfigurator {
 
-    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
+    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController, dictionary: IDDictionaryProtocol) {
 
         if let viewController = viewInput as? IDDictionaryDetailViewController {
-            configure(viewController)
+            configure(viewController, dictionary: dictionary)
         }
     }
 
-    private func configure(viewController: IDDictionaryDetailViewController) {
+    private func configure(viewController: IDDictionaryDetailViewController, dictionary: IDDictionaryProtocol) {
 
         let router = IDDictionaryDetailRouter()
 
@@ -25,7 +25,7 @@ class IDDictionaryDetailModuleConfigurator {
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = IDDictionaryDetailInteractor()
+        let interactor = IDDictionaryDetailInteractor(dictionary: dictionary)
         interactor.output = presenter
 
         presenter.interactor = interactor

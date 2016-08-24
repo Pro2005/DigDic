@@ -13,6 +13,9 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
     var router: IDDictionaryDetailRouterInput!
 
     func viewIsReady() {
-
+        view.setupInitialState()
+        if let dictionaryName = self.interactor.dictionary.name {
+            self.view.updateTitle(dictionaryName)
+        }
     }
 }

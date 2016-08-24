@@ -27,4 +27,8 @@ class IDDictionaryDetailViewController: UIViewController, IDDictionaryDetailView
         return self.navigationController
     }
     
+    func updateTitle(title: String) {
+        self.title = title
+    }
+    
 }
