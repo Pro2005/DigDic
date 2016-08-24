@@ -10,4 +10,5 @@ import Foundation
 
 protocol IDDictionaryProtocol {
     var name: String? {get}
+    var words: [IDWordProtocol] {get}
 }

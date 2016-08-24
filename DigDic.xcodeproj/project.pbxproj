@@ -21,6 +21,8 @@
 		084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */; };
 		086E79291D6B3C3000EB081F /* UINavigationItem+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */; };
 		08B4AB121D6E258100E5CE88 /* IDDictionaryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4AB111D6E258100E5CE88 /* IDDictionaryDetailViewController.xib */; };
+		08B4AB171D6E3E4C00E5CE88 /* IDWordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4AB161D6E3E4C00E5CE88 /* IDWordProtocol.swift */; };
+		08B4AB191D6E3FFF00E5CE88 /* IDLDBWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4AB181D6E3FFF00E5CE88 /* IDLDBWord.swift */; };
 		08DE58E21D66441D00C255E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08DE58E41D66441D00C255E6 /* Localizable.strings */; };
 		08DE58EA1D6646C600C255E6 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58E91D6646C600C255E6 /* String+Localized.swift */; };
 		08DE58EF1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */; };
@@ -96,6 +98,8 @@
 		084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouterInput.swift; sourceTree = "<group>"; };
 		086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Buttons.swift"; sourceTree = "<group>"; };
 		08B4AB111D6E258100E5CE88 /* IDDictionaryDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDDictionaryDetailViewController.xib; sourceTree = "<group>"; };
+		08B4AB161D6E3E4C00E5CE88 /* IDWordProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDWordProtocol.swift; sourceTree = "<group>"; };
+		08B4AB181D6E3FFF00E5CE88 /* IDLDBWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDLDBWord.swift; sourceTree = "<group>"; };
 		08DE58E31D66441D00C255E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08DE58E91D6646C600C255E6 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDDictionariesListPresenter+UITableViewDataSource.swift"; sourceTree = "<group>"; };
@@ -369,6 +373,7 @@
 			children = (
 				08E7FD571D6CD794006BD301 /* IDDictionaryProtocol.swift */,
 				08E7FD581D6CD794006BD301 /* IDDictionarySourceProtocol.swift */,
+				08B4AB161D6E3E4C00E5CE88 /* IDWordProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				08E7FD5F1D6CD8D1006BD301 /* IDLDBDictionary.swift */,
+				08B4AB181D6E3FFF00E5CE88 /* IDLDBWord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -871,6 +877,7 @@
 				03CA0AF00450ADE64E177428 /* IDDictionariesListConfigurator.swift in Sources */,
 				08E7FD5D1D6CD805006BD301 /* IDLocalDataBaseSource.swift in Sources */,
 				084F13F61D65F34000E907D6 /* IDBaseNavigationController.swift in Sources */,
+				08B4AB171D6E3E4C00E5CE88 /* IDWordProtocol.swift in Sources */,
 				08E7FD591D6CD794006BD301 /* IDDictionaryProtocol.swift in Sources */,
 				084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */,
 				2842A9EFCB076636AF741314 /* IDDictionaryDetailViewInput.swift in Sources */,
@@ -884,6 +891,7 @@
 				2F4A22408AA6CC7F2BEAC5FE /* IDDictionaryDetailRouterInput.swift in Sources */,
 				7D248BD796BDFCC6C8090F6E /* IDDictionaryDetailRouter.swift in Sources */,
 				E14DC73B8A2B4A5F519456B6 /* IDDictionaryDetailConfigurator.swift in Sources */,
+				08B4AB191D6E3FFF00E5CE88 /* IDLDBWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
