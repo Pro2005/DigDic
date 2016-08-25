@@ -12,7 +12,7 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
     weak var view: IDDictionariesListViewInput!
     var interactor: IDDictionariesListInteractorInput!
     var router: IDDictionariesListRouterInput!
-    var dataSource: [IDDictionaryProtocol] = [IDDictionaryProtocol]()
+    var dataSource: [IDDictionary] = [IDDictionary]()
     
     // MARK: IDDictionariesListViewOutput
     func viewIsReady() {
@@ -49,8 +49,8 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
     }
     
     // MARK: Private
-    private func _updateDataForDataSource(inout dataSource: [IDDictionaryProtocol], completion: () -> ()) {
-        interactor.fetchDictionaries {(items: [IDDictionaryProtocol]) in
+    private func _updateDataForDataSource(inout dataSource: [IDDictionary], completion: () -> ()) {
+        interactor.fetchDictionaries {(items: [IDDictionary]) in
             dataSource.removeAll()
             dataSource += items
             completion()

@@ -11,9 +11,9 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
     weak var view: IDDictionaryDetailViewInput!
     var interactor: IDDictionaryDetailInteractorInput!
     var router: IDDictionaryDetailRouterInput!
-    let selectedDictionary: IDDictionaryProtocol
+    let selectedDictionary: IDDictionary
     
-    init(selectedDictionary: IDDictionaryProtocol) {
+    init(selectedDictionary: IDDictionary) {
         self.selectedDictionary = selectedDictionary
     }
 

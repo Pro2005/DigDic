@@ -9,14 +9,14 @@
 import Foundation
 
 class IDDictionaryService: IDBaseService {
-    var source: IDDictionarySourceProtocol
+    var source: IDDictionarySource
     
-    init(source: IDDictionarySourceProtocol) {
+    init(source: IDDictionarySource) {
         self.source = source
     }
     
     // MARK: Public
-    func fetchDictionaries(completion: ([IDDictionaryProtocol]) -> ()) {
+    func fetchDictionaries(completion: ([IDDictionary]) -> ()) {
         self.source.fetchDictionaries(completion)
     }
     

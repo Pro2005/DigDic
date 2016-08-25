@@ -10,7 +10,7 @@ import UIKit
 
 class IDDictionariesListRouter: IDDictionariesListRouterInput {
 
-    func pushDictionaryDetailScreenWithDictionary(dictionary: IDDictionaryProtocol, navigationController: UINavigationController) {
+    func pushDictionaryDetailScreenWithDictionary(dictionary: IDDictionary, navigationController: UINavigationController) {
         let viewController = IDDictionaryDetailViewController()
         IDDictionaryDetailModuleConfigurator().configureModuleForViewInput(viewController, dictionary: dictionary)
         navigationController.pushViewController(viewController, animated: true)

@@ -12,8 +12,8 @@ class IDDictionariesListInteractor: IDDictionariesListInteractorInput {
     lazy var service: IDDictionaryService = IDDictionaryService(source: IDLocalDataBaseSource())
 
     // MARK: IDDictionariesListInteractorInput
-    func fetchDictionaries(competion: ([IDDictionaryProtocol]) -> ()) {
-        service.fetchDictionaries {(dictionaries: [IDDictionaryProtocol]) in
+    func fetchDictionaries(competion: ([IDDictionary]) -> ()) {
+        service.fetchDictionaries {(dictionaries: [IDDictionary]) in
             competion(dictionaries)
         }
     }

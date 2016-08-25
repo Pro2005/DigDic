@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol IDDictionaryProtocol {
+protocol IDDictionary {
     var name: String? {get}
-    var words: [IDWordProtocol] {get}
+    var words: [IDWord] {get}
 }

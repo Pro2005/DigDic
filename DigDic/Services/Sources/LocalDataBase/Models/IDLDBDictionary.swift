@@ -9,11 +9,11 @@
 import Foundation
 import RealmSwift
 
-class IDLDBDictionary: Object, IDDictionaryProtocol {
+class IDLDBDictionary: Object, IDDictionary {
     // MARK: IDDictionaryProtocol
     dynamic var name: String?
-    var words: [IDWordProtocol] {
-        return self._words.map{$0 as IDWordProtocol}
+    var words: [IDWord] {
+        return self._words.map{$0 as IDWord}
     }
     
     // MARK: Private

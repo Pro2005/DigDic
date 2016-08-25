@@ -9,13 +9,13 @@
 import Foundation
 import RealmSwift
 
-class IDLocalDataBaseSource: IDDictionarySourceProtocol {
+class IDLocalDataBaseSource: IDDictionarySource {
     
     // MARK: IDDictionarySourceProtocol
-    func fetchDictionaries(completion: ([IDDictionaryProtocol]) -> ()) {
+    func fetchDictionaries(completion: ([IDDictionary]) -> ()) {
         let realm = try! Realm()
         let result = realm.objects(IDLDBDictionary)
-        let dictionaries = result.map{$0 as IDDictionaryProtocol}
+        let dictionaries = result.map{$0 as IDDictionary}
         completion(dictionaries)
     }
     

@@ -8,9 +8,9 @@
 
 import Foundation
 
-protocol IDDictionarySourceProtocol {
+protocol IDDictionarySource {
     
-    func fetchDictionaries(completion: ([IDDictionaryProtocol]) -> ())
+    func fetchDictionaries(completion: ([IDDictionary]) -> ())
     func addDictionaryWithName(name: String)
     
 }

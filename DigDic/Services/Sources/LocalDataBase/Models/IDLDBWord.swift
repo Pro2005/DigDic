@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class IDLDBWord: Object, IDWordProtocol {
+class IDLDBWord: Object, IDWord {
     // MARK: IDWordProtocol
     dynamic var name: String?
 }
