@@ -21,11 +21,11 @@ class IDDictionaryDetailModuleConfigurator {
 
         let router = IDDictionaryDetailRouter()
 
-        let presenter = IDDictionaryDetailPresenter()
+        let presenter = IDDictionaryDetailPresenter(selectedDictionary: dictionary)
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = IDDictionaryDetailInteractor(dictionary: dictionary)
+        let interactor = IDDictionaryDetailInteractor()
         interactor.output = presenter
 
         presenter.interactor = interactor

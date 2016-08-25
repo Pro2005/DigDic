@@ -12,12 +12,13 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
     weak var view: IDDictionariesListViewInput!
     var interactor: IDDictionariesListInteractorInput!
     var router: IDDictionariesListRouterInput!
+    var dataSource: [IDDictionaryProtocol] = [IDDictionaryProtocol]()
     
     // MARK: IDDictionariesListViewOutput
     func viewIsReady() {
         view.setupInitialState()
         view.setupTableViewDataSource(self, delegate: self)
-        interactor.fetchDictionaries {[unowned self] in
+        self._updateDataForDataSource(&self.dataSource) { [unowned self] in
             self.view.reloadData()
         }
     }
@@ -35,7 +36,7 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
                 return
             }
             self.interactor.addNewDictionaryWithName(text)
-            self.interactor.fetchDictionaries({ 
+            self._updateDataForDataSource(&self.dataSource, completion: { 
                 self.view.reloadData()
             })
         }
@@ -45,6 +46,15 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
         alertController.addAction(addAction)
         alertController.addAction(cancelAction)
         self.view.showAlertController(alertController)
+    }
+    
+    // MARK: Private
+    private func _updateDataForDataSource(inout dataSource: [IDDictionaryProtocol], completion: () -> ()) {
+        interactor.fetchDictionaries {(items: [IDDictionaryProtocol]) in
+            dataSource.removeAll()
+            dataSource += items
+            completion()
+        }
     }
     
 }

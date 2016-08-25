@@ -11,10 +11,15 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
     weak var view: IDDictionaryDetailViewInput!
     var interactor: IDDictionaryDetailInteractorInput!
     var router: IDDictionaryDetailRouterInput!
+    let selectedDictionary: IDDictionaryProtocol
+    
+    init(selectedDictionary: IDDictionaryProtocol) {
+        self.selectedDictionary = selectedDictionary
+    }
 
     func viewIsReady() {
         view.setupInitialState()
-        if let dictionaryName = self.interactor.dictionary.name {
+        if let dictionaryName = self.selectedDictionary.name {
             self.view.updateTitle(dictionaryName)
         }
     }

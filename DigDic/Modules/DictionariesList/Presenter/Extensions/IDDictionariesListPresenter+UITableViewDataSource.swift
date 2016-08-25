@@ -13,15 +13,16 @@ extension IDDictionariesListPresenter: UITableViewDataSource {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.interactor.dataSource.count
+        return self.dataSource.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let identifier = String(UITableViewCell)
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier) ?? UITableViewCell(style: .Default, reuseIdentifier: identifier)
-        guard let dictionary = self.interactor.dictionaryByIndex(indexPath.row) else {
-            return cell;
+        guard indexPath.row < self.dataSource.count else {
+            return cell
         }
+        let dictionary = self.dataSource[indexPath.row]
         cell.textLabel?.text = dictionary.name
         return cell
     }

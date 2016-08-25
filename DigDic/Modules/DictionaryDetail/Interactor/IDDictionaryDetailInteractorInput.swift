@@ -10,6 +10,4 @@ import Foundation
 
 protocol IDDictionaryDetailInteractorInput: IDBaseInteractorInput {
     
-    var dictionary: IDDictionaryProtocol {get}
-    
 }
