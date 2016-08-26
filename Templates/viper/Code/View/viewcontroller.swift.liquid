@@ -8,7 +8,7 @@
 
 import UIKit
 
-class {{ prefix }}{{ module_info.name }}ViewController: UIViewController, {{ prefix }}{{module_info.name}}ViewInput {
+class {{ prefix }}{{ module_info.name }}ViewController: IDBaseViewController, {{ prefix }}{{module_info.name}}ViewInput {
 
     var output: {{ prefix }}{{ module_info.name }}ViewOutput!
 
@@ -20,10 +20,5 @@ class {{ prefix }}{{ module_info.name }}ViewController: UIViewController, {{ pre
 
 
     // MARK: {{ prefix }}{{module_info.name}}ViewInput
-    func setupInitialState() {
-    }
-
-    func getNavigationController() -> UINavigationController? {
-        return nil
-    }
+    
 }

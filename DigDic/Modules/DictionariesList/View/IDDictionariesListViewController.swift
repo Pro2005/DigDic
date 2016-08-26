@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IDDictionariesListViewController: UIViewController, IDDictionariesListViewInput {
+class IDDictionariesListViewController: IDBaseViewController, IDDictionariesListViewInput {
     
     // MARK: Constants
     enum Constants {
@@ -43,7 +43,8 @@ class IDDictionariesListViewController: UIViewController, IDDictionariesListView
     }
 
     // MARK: <IDDictionariesListViewInput>
-    func setupInitialState() {
+    
+    override func setupInitialState() {
         self.title = Constants.title.localized()
         let addButton = self.navigationItem.addButtonWithTitle(Constants.addButtonTitle.localized(), alignment: .Right, font: UIFont.systemFontOfSize(CGFloat(Constants.addButtonFontSize)))
         addButton.addTarget(self, action: #selector(addDictionary), forControlEvents: .TouchUpInside)
@@ -60,10 +61,6 @@ class IDDictionariesListViewController: UIViewController, IDDictionariesListView
     
     func showAlertController(alertController: UIAlertController) {
         self.presentViewController(alertController, animated: true, completion: nil)
-    }
-    
-    func currentNavigationController() -> UINavigationController? {
-        return self.navigationController
     }
     
     // MARK: Private

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IDDictionaryDetailViewController: UIViewController, IDDictionaryDetailViewInput {
+class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetailViewInput {
 
     var output: IDDictionaryDetailViewOutput!
 
@@ -26,12 +26,6 @@ class IDDictionaryDetailViewController: UIViewController, IDDictionaryDetailView
     }
 
     // MARK: IDDictionaryDetailViewInput
-    func setupInitialState() {
-    }
-    
-    func currentNavigationController() -> UINavigationController? {
-        return self.navigationController
-    }
     
     func updateTitle(title: String) {
         self.title = title

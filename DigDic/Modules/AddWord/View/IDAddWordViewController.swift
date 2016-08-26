@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IDAddWordViewController: UIViewController, IDAddWordViewInput {
+class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput {
 
     var output: IDAddWordViewOutput!
     @IBOutlet weak var frontTableView: UITableView!
@@ -29,12 +29,6 @@ class IDAddWordViewController: UIViewController, IDAddWordViewInput {
     }
 
     // MARK: IDAddWordViewInput
-    func setupInitialState() {
-    }
-    
-    func currentNavigationController() -> UINavigationController? {
-        return nil
-    }
     
     func setupBackTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
         
