@@ -18,7 +18,7 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
     func viewIsReady() {
         view.setupInitialState()
         view.setupTableViewDataSource(self, delegate: self)
-        self._updateDataForDataSource(&self.dataSource) { [unowned self] in
+        self.updateDataForDataSource(&self.dataSource) { [unowned self] in
             self.view.reloadData()
         }
     }
@@ -36,7 +36,7 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
                 return
             }
             self.interactor.addNewDictionaryWithName(text)
-            self._updateDataForDataSource(&self.dataSource, completion: { 
+            self.updateDataForDataSource(&self.dataSource, completion: {
                 self.view.reloadData()
             })
         }
@@ -49,7 +49,8 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
     }
     
     // MARK: Private
-    private func _updateDataForDataSource(inout dataSource: [IDDictionary], completion: () -> ()) {
+    
+    private func updateDataForDataSource(inout dataSource: [IDDictionary], completion: () -> ()) {
         interactor.fetchDictionaries {(items: [IDDictionary]) in
             dataSource.removeAll()
             dataSource += items

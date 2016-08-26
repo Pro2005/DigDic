@@ -15,6 +15,6 @@ protocol IDBaseViewInput: class {
     */
 
     func setupInitialState()
-    func getNavigationController() -> UINavigationController?
+    func currentNavigationController() -> UINavigationController?
     
 }

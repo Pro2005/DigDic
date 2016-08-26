@@ -1,12 +1,12 @@
 //
-//  DictionaryDetailIDDictionaryDetailViewOutput.swift
+//  AddWordIDAddWordViewOutput.swift
 //  DigDic
 //
-//  Created by ls on 24/08/2016.
+//  Created by ls on 26/08/2016.
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
 
-protocol IDDictionaryDetailViewOutput: IDBaseViewOutput {
+protocol IDAddWordViewOutput: IDBaseViewOutput {
 
     /**
         @author ls
@@ -14,6 +14,5 @@ protocol IDDictionaryDetailViewOutput: IDBaseViewOutput {
     */
 
     func viewIsReady()
-    func addPressed()
-    
+    func closePressed()
 }

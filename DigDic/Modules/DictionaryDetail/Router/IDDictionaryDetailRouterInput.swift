@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 protocol IDDictionaryDetailRouterInput: IDBaseRouterInput {
-
+    
+    func presentAddWordForDictionary(dictionary: IDDictionary, navigationController: UINavigationController)
+    
 }

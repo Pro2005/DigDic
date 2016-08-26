@@ -5,6 +5,7 @@
 //  Created by ls on 24/08/2016.
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
+import UIKit
 
 protocol IDDictionaryDetailViewInput: IDBaseViewInput {
 
@@ -15,4 +16,5 @@ protocol IDDictionaryDetailViewInput: IDBaseViewInput {
 
     func setupInitialState()
     func updateTitle(title: String)
+
 }

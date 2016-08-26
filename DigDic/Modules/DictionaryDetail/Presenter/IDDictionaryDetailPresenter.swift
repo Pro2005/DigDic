@@ -23,4 +23,11 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
             self.view.updateTitle(dictionaryName)
         }
     }
+    
+    func addPressed() {
+        guard let navigationController = self.view.currentNavigationController() else {
+            return
+        }
+        self.router.presentAddWordForDictionary(self.selectedDictionary, navigationController: navigationController)
+    }
 }

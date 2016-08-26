@@ -13,6 +13,6 @@ class {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_info.na
     var router: {{ prefix }}{{ module_info.name }}RouterInput!
 
     func viewIsReady() {
-
+      view.setupInitialState()
     }
 }

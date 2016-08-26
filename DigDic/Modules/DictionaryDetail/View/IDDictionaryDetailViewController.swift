@@ -18,12 +18,18 @@ class IDDictionaryDetailViewController: UIViewController, IDDictionaryDetailView
         output.viewIsReady()
     }
 
+    
+    // MARK: Actions
+    
+    @IBAction func addPressed(sender: AnyObject) {
+        self.output.addPressed()
+    }
 
     // MARK: IDDictionaryDetailViewInput
     func setupInitialState() {
     }
     
-    func getNavigationController() -> UINavigationController? {
+    func currentNavigationController() -> UINavigationController? {
         return self.navigationController
     }
     

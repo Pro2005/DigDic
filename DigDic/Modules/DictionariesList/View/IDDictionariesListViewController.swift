@@ -62,12 +62,13 @@ class IDDictionariesListViewController: UIViewController, IDDictionariesListView
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    func getNavigationController() -> UINavigationController? {
+    func currentNavigationController() -> UINavigationController? {
         return self.navigationController
     }
     
     // MARK: Private
-    private func _addButtonInNavigationBar() {
+    
+    private func addButtonInNavigationBar() {
         
     }
 }

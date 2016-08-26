@@ -25,6 +25,9 @@
                     <state key="normal" title="+">
                         <color key="titleColor" red="0.16249757874661408" green="1" blue="0.082447746701489577" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="addPressed:" destination="-1" eventType="touchUpInside" id="Tnj-OU-V2L"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

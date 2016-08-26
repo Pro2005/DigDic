@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		03CA0AF00450ADE64E177428 /* IDDictionariesListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9CD1A8C5903781EA6CB13 /* IDDictionariesListConfigurator.swift */; };
+		081E909A1D70D490007FA7A1 /* IDAddWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 081E90991D70D490007FA7A1 /* IDAddWordViewController.xib */; };
+		081E909D1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E909C1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift */; };
+		081E909F1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E909E1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift */; };
 		084F13C61D65E6A700E907D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13C51D65E6A700E907D6 /* AppDelegate.swift */; };
 		084F13DB1D65E6A700E907D6 /* DigDicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13DA1D65E6A700E907D6 /* DigDicTests.swift */; };
 		084F13E91D65EA7B00E907D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 084F13E81D65EA7B00E907D6 /* Assets.xcassets */; };
@@ -34,38 +37,54 @@
 		08E7FD5D1D6CD805006BD301 /* IDLocalDataBaseSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD5C1D6CD805006BD301 /* IDLocalDataBaseSource.swift */; };
 		08E7FD601D6CD8D1006BD301 /* IDLDBDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD5F1D6CD8D1006BD301 /* IDLDBDictionary.swift */; };
 		0A4AE09DC7EE733B2B21606E /* IDDictionariesListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1929641FC0E7D6686E0104DC /* IDDictionariesListInteractorTests.swift */; };
+		0D326EF69ED452DDCBA125D4 /* IDAddWordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C20C58D76B100F636642462 /* IDAddWordInteractor.swift */; };
 		0D4403A125CDA0E1009047FE /* IDDictionaryDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D32D046186A27D8455707F /* IDDictionaryDetailPresenterTests.swift */; };
 		0DA718AC741D71F25AF3E63E /* IDDictionariesListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCB653DBEFA22386B1E1BD /* IDDictionariesListRouterInput.swift */; };
 		11C3552D9EE7CF14FE232EA1 /* IDDictionaryDetailInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1384E33B8960348149E6B8CF /* IDDictionaryDetailInteractorInput.swift */; };
 		18E08ABF241AF5B7F6F08D5F /* Pods_DigDic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84D2429BA61854DBF241AF6 /* Pods_DigDic.framework */; };
 		27EB1517FB15D56B1309070C /* IDDictionaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6C120220C4E931CD3DFBB /* IDDictionaryDetailViewController.swift */; };
 		2842A9EFCB076636AF741314 /* IDDictionaryDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6622EDD0DADBEB127EDE7E /* IDDictionaryDetailViewInput.swift */; };
+		2C9D64258F6D0546CBC4A175 /* IDAddWordRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6E14FE57FC81FD580202B /* IDAddWordRouterInput.swift */; };
+		2CA3BD01F8EDABDEAEC4B49C /* IDAddWordInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859C7FA5B9480CAC19A818B2 /* IDAddWordInteractorOutput.swift */; };
 		2F4A22408AA6CC7F2BEAC5FE /* IDDictionaryDetailRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FAB7DC1C65C2AB853FC73 /* IDDictionaryDetailRouterInput.swift */; };
 		2FA28F005BCA8B90F7689106 /* IDDictionaryDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D53CD41234F11AE8C93E4B1 /* IDDictionaryDetailPresenter.swift */; };
 		339DD14E95BF5AF0DC00977E /* IDDictionariesListConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C37CBF32F81E75A35E832F /* IDDictionariesListConfiguratorTests.swift */; };
 		3A2EC88414525B4CC6D8B395 /* IDDictionariesListModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572770738EB155EA136FF42 /* IDDictionariesListModuleInput.swift */; };
+		3A589DF7CE3A82FA81825F11 /* IDAddWordViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D930CB18255A1E66BC3C5E92 /* IDAddWordViewInput.swift */; };
+		45701B33D8CD4B50949B4296 /* IDAddWordPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B5F066733A50FCA7EA8E3 /* IDAddWordPresenterTests.swift */; };
+		5563309313CFCDF970F42CC7 /* IDAddWordConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB6B2B98CAA5FB90C8A364 /* IDAddWordConfiguratorTests.swift */; };
 		5C0012D36CCA29A97C3E4791 /* IDDictionaryDetailConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338308A98C1AF2B598855681 /* IDDictionaryDetailConfiguratorTests.swift */; };
 		645833ABEB171AE312D8A55F /* IDDictionariesListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA6485CAAB2D84114C8CA6 /* IDDictionariesListInteractorOutput.swift */; };
 		6BEE48A86F54732D103C0EA7 /* IDDictionariesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC138363548D5A04894A8A0F /* IDDictionariesListRouter.swift */; };
 		6D39CD993FA191235D64318F /* IDDictionaryDetailRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481A7EA718C47A91875DCDB /* IDDictionaryDetailRouterTests.swift */; };
+		6F407B79A3CA2FDFC84E1C13 /* IDAddWordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0124A007F52F193869808 /* IDAddWordRouter.swift */; };
 		723B8F6A7EF19D54FBE078DB /* IDDictionaryDetailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2EBBA565199DDAA1BF7C1F /* IDDictionaryDetailViewTests.swift */; };
+		7ADD40745138FAACBC72F159 /* IDAddWordRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863CC1F69CEAFCD15C3449C /* IDAddWordRouterTests.swift */; };
 		7D248BD796BDFCC6C8090F6E /* IDDictionaryDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97456EA28E233A6361DD0FF8 /* IDDictionaryDetailRouter.swift */; };
+		81A46CF3F23D045497A06F7C /* IDAddWordViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AC0DC3213DC62033CDEB74 /* IDAddWordViewOutput.swift */; };
 		8B61583EBE1ECD654801F713 /* IDDictionaryDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F0C50883B7A57AF9C571E6 /* IDDictionaryDetailInteractorTests.swift */; };
 		8BBCF3710B1094637156C098 /* IDDictionariesListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BCB33CEA9BCF21C5B896B /* IDDictionariesListViewOutput.swift */; };
 		9E16193D6E59C89286EDCFC6 /* IDDictionaryDetailModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128950BED6A34BB5B29054E8 /* IDDictionaryDetailModuleInput.swift */; };
 		AFDE776B46B4E495392A2203 /* IDDictionariesListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20E9B32E4B7C049F1A3898B /* IDDictionariesListPresenterTests.swift */; };
 		B2CCC394C90704661B24D48C /* IDDictionaryDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BFA38A97CF5BD7486E7C0 /* IDDictionaryDetailInteractor.swift */; };
+		B3CC735E2E05C0A96A4CED4F /* IDAddWordModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306CBEFF8935698AA966551 /* IDAddWordModuleInput.swift */; };
+		B52ACF295E17B5AF55110598 /* IDAddWordInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEEC60D7456ED1F80954ACA /* IDAddWordInteractorInput.swift */; };
 		BA9385C1959706CC18273082 /* Pods_DigDicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D42D706F8FFD958BD3D024 /* Pods_DigDicTests.framework */; };
+		CC3CB1D1E8A052B64771FD32 /* IDAddWordViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE6CCFC6AB109FF32D0A29 /* IDAddWordViewTests.swift */; };
 		D64F75F3512D5B6D36299F6F /* IDDictionaryDetailViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9A50FE21D5223E57A5726 /* IDDictionaryDetailViewOutput.swift */; };
 		D77E4143B6B5F5F011066236 /* IDDictionariesListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199DF158F1E8945C91C3AC89 /* IDDictionariesListViewInput.swift */; };
 		D950E713B8C50D2CD0F88137 /* IDDictionariesListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221AB61CF607BCFB0E18F755 /* IDDictionariesListInteractorInput.swift */; };
+		D9744579C7C02E065E1F9210 /* IDAddWordConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B9DCBAEE7E472BB651204 /* IDAddWordConfigurator.swift */; };
 		DBC18666997231F8BE46F665 /* IDDictionariesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084506986546352BFDC79839 /* IDDictionariesListPresenter.swift */; };
 		E14DC73B8A2B4A5F519456B6 /* IDDictionaryDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CC6AEE3CFA1C0A0EDB2B9 /* IDDictionaryDetailConfigurator.swift */; };
 		E1528A507EC1ED583A1D779D /* IDDictionaryDetailInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0957A7DB4E45593F50BA3 /* IDDictionaryDetailInteractorOutput.swift */; };
+		E21AA1EA9B4B2DE4C5FED40B /* IDAddWordInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521C9D52C1054A1C7DF5BF32 /* IDAddWordInteractorTests.swift */; };
+		E341AE691D11286488A115FB /* IDAddWordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B0A531BD3644B8F9479B55 /* IDAddWordPresenter.swift */; };
 		E40F1C69ADBDC50D9092E798 /* IDDictionariesListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7121FA5BDB166E48857A7750 /* IDDictionariesListRouterTests.swift */; };
 		E6773595B873EC1A9F11C691 /* IDDictionariesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D0E5787AA2885826E6088 /* IDDictionariesListInteractor.swift */; };
 		F3F4A4232F4F275D20CCCC7C /* IDDictionariesListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C91E446F5CB3D7309D95A1 /* IDDictionariesListViewTests.swift */; };
 		F4934EB3922FB4741E358414 /* IDDictionariesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750E971230A7C48DFF11B96F /* IDDictionariesListViewController.swift */; };
+		FB959B8ED252B3488930458E /* IDAddWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D2E3BC23D899A5B20A03C /* IDAddWordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +99,10 @@
 
 /* Begin PBXFileReference section */
 		0126661D970EE6910779089C /* Pods-DigDicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigDicTests/Pods-DigDicTests.release.xcconfig"; sourceTree = "<group>"; };
+		07BB6B2B98CAA5FB90C8A364 /* IDAddWordConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordConfiguratorTests.swift; sourceTree = "<group>"; };
+		081E90991D70D490007FA7A1 /* IDAddWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDAddWordViewController.xib; sourceTree = "<group>"; };
+		081E909C1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDAddWordPresenter+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		081E909E1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDAddWordPresenter+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		084506986546352BFDC79839 /* IDDictionariesListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListPresenter.swift; sourceTree = "<group>"; };
 		084F13C21D65E6A700E907D6 /* DigDic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigDic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		084F13C51D65E6A700E907D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +119,7 @@
 		084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorInput.swift; sourceTree = "<group>"; };
 		084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorOutput.swift; sourceTree = "<group>"; };
 		084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouterInput.swift; sourceTree = "<group>"; };
+		0863CC1F69CEAFCD15C3449C /* IDAddWordRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordRouterTests.swift; sourceTree = "<group>"; };
 		086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Buttons.swift"; sourceTree = "<group>"; };
 		08B4AB111D6E258100E5CE88 /* IDDictionaryDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDDictionaryDetailViewController.xib; sourceTree = "<group>"; };
 		08B4AB161D6E3E4C00E5CE88 /* IDWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDWord.swift; sourceTree = "<group>"; };
@@ -111,6 +135,7 @@
 		08E7FD5C1D6CD805006BD301 /* IDLocalDataBaseSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDLocalDataBaseSource.swift; sourceTree = "<group>"; };
 		08E7FD5F1D6CD8D1006BD301 /* IDLDBDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDLDBDictionary.swift; sourceTree = "<group>"; };
 		10C37CBF32F81E75A35E832F /* IDDictionariesListConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListConfiguratorTests.swift; sourceTree = "<group>"; };
+		11FE6CCFC6AB109FF32D0A29 /* IDAddWordViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordViewTests.swift; sourceTree = "<group>"; };
 		128950BED6A34BB5B29054E8 /* IDDictionaryDetailModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailModuleInput.swift; sourceTree = "<group>"; };
 		1384E33B8960348149E6B8CF /* IDDictionaryDetailInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailInteractorInput.swift; sourceTree = "<group>"; };
 		1929641FC0E7D6686E0104DC /* IDDictionariesListInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListInteractorTests.swift; sourceTree = "<group>"; };
@@ -119,33 +144,46 @@
 		221AB61CF607BCFB0E18F755 /* IDDictionariesListInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListInteractorInput.swift; sourceTree = "<group>"; };
 		24C91E446F5CB3D7309D95A1 /* IDDictionariesListViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewTests.swift; sourceTree = "<group>"; };
 		26D32D046186A27D8455707F /* IDDictionaryDetailPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailPresenterTests.swift; sourceTree = "<group>"; };
+		2B8B5F066733A50FCA7EA8E3 /* IDAddWordPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordPresenterTests.swift; sourceTree = "<group>"; };
 		338308A98C1AF2B598855681 /* IDDictionaryDetailConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailConfiguratorTests.swift; sourceTree = "<group>"; };
 		363FAB7DC1C65C2AB853FC73 /* IDDictionaryDetailRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailRouterInput.swift; sourceTree = "<group>"; };
+		424D2E3BC23D899A5B20A03C /* IDAddWordViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordViewController.swift; sourceTree = "<group>"; };
+		42B0A531BD3644B8F9479B55 /* IDAddWordPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordPresenter.swift; sourceTree = "<group>"; };
+		521C9D52C1054A1C7DF5BF32 /* IDAddWordInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordInteractorTests.swift; sourceTree = "<group>"; };
 		5D53CD41234F11AE8C93E4B1 /* IDDictionaryDetailPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailPresenter.swift; sourceTree = "<group>"; };
+		6C20C58D76B100F636642462 /* IDAddWordInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordInteractor.swift; sourceTree = "<group>"; };
 		7121FA5BDB166E48857A7750 /* IDDictionariesListRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListRouterTests.swift; sourceTree = "<group>"; };
 		750E971230A7C48DFF11B96F /* IDDictionariesListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewController.swift; sourceTree = "<group>"; };
 		757BCB33CEA9BCF21C5B896B /* IDDictionariesListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewOutput.swift; sourceTree = "<group>"; };
+		76AC0DC3213DC62033CDEB74 /* IDAddWordViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordViewOutput.swift; sourceTree = "<group>"; };
 		7F1215E1957285839254C1F9 /* Pods-DigDic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigDic/Pods-DigDic.debug.xcconfig"; sourceTree = "<group>"; };
+		84B0124A007F52F193869808 /* IDAddWordRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordRouter.swift; sourceTree = "<group>"; };
+		859C7FA5B9480CAC19A818B2 /* IDAddWordInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordInteractorOutput.swift; sourceTree = "<group>"; };
 		8FB9CD1A8C5903781EA6CB13 /* IDDictionariesListConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListConfigurator.swift; sourceTree = "<group>"; };
 		93D42D706F8FFD958BD3D024 /* Pods_DigDicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigDicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97456EA28E233A6361DD0FF8 /* IDDictionaryDetailRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailRouter.swift; sourceTree = "<group>"; };
 		99D6C120220C4E931CD3DFBB /* IDDictionaryDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailViewController.swift; sourceTree = "<group>"; };
 		9B6622EDD0DADBEB127EDE7E /* IDDictionaryDetailViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailViewInput.swift; sourceTree = "<group>"; };
+		9DA6E14FE57FC81FD580202B /* IDAddWordRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordRouterInput.swift; sourceTree = "<group>"; };
 		ABFCB653DBEFA22386B1E1BD /* IDDictionariesListRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListRouterInput.swift; sourceTree = "<group>"; };
 		B7F0C50883B7A57AF9C571E6 /* IDDictionaryDetailInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailInteractorTests.swift; sourceTree = "<group>"; };
 		C84D2429BA61854DBF241AF6 /* Pods_DigDic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigDic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93B9DCBAEE7E472BB651204 /* IDAddWordConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordConfigurator.swift; sourceTree = "<group>"; };
 		CF3BF10209863A4F838B4745 /* Pods-DigDic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDic.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigDic/Pods-DigDic.release.xcconfig"; sourceTree = "<group>"; };
 		D36BFA38A97CF5BD7486E7C0 /* IDDictionaryDetailInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailInteractor.swift; sourceTree = "<group>"; };
 		D572770738EB155EA136FF42 /* IDDictionariesListModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListModuleInput.swift; sourceTree = "<group>"; };
+		D930CB18255A1E66BC3C5E92 /* IDAddWordViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordViewInput.swift; sourceTree = "<group>"; };
 		E0191674B3B7921148B3326F /* Pods-DigDicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigDicTests/Pods-DigDicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E20E9B32E4B7C049F1A3898B /* IDDictionariesListPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListPresenterTests.swift; sourceTree = "<group>"; };
 		E4F0957A7DB4E45593F50BA3 /* IDDictionaryDetailInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailInteractorOutput.swift; sourceTree = "<group>"; };
 		EC138363548D5A04894A8A0F /* IDDictionariesListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListRouter.swift; sourceTree = "<group>"; };
 		EE2D0E5787AA2885826E6088 /* IDDictionariesListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListInteractor.swift; sourceTree = "<group>"; };
 		F2CA6485CAAB2D84114C8CA6 /* IDDictionariesListInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListInteractorOutput.swift; sourceTree = "<group>"; };
+		F306CBEFF8935698AA966551 /* IDAddWordModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordModuleInput.swift; sourceTree = "<group>"; };
 		F481A7EA718C47A91875DCDB /* IDDictionaryDetailRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailRouterTests.swift; sourceTree = "<group>"; };
 		FC2EBBA565199DDAA1BF7C1F /* IDDictionaryDetailViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailViewTests.swift; sourceTree = "<group>"; };
 		FDF9A50FE21D5223E57A5726 /* IDDictionaryDetailViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailViewOutput.swift; sourceTree = "<group>"; };
+		FEEEC60D7456ED1F80954ACA /* IDAddWordInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordInteractorInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +212,23 @@
 				FC2EBBA565199DDAA1BF7C1F /* IDDictionaryDetailViewTests.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04AC050F7D5A2B45E08FE10E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				521C9D52C1054A1C7DF5BF32 /* IDAddWordInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		081E909B1D70D6E1007FA7A1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				081E909C1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift */,
+				081E909E1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		08341B391D66E81E0020F0D8 /* NavigationController */ = {
@@ -396,6 +451,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0D0DA3EC2B429589555B0BFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11FE6CCFC6AB109FF32D0A29 /* IDAddWordViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2391BFBDED772374C72EBFB5 /* DictionaryDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +469,24 @@
 				56ACD9D06E93E86597DEBCE4 /* Router */,
 			);
 			path = DictionaryDetail;
+			sourceTree = "<group>";
+		};
+		24752D62E93837E1F55B6175 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				081E909B1D70D6E1007FA7A1 /* Extensions */,
+				F306CBEFF8935698AA966551 /* IDAddWordModuleInput.swift */,
+				42B0A531BD3644B8F9479B55 /* IDAddWordPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2EB0ACBEAB504AAE0C91004C /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				07BB6B2B98CAA5FB90C8A364 /* IDAddWordConfiguratorTests.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		32848B1AF942C39B8F048BE1 /* Presenter */ = {
@@ -424,10 +505,30 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		48BCA485FD4F4C37433A5C95 /* AddWord */ = {
+			isa = PBXGroup;
+			children = (
+				2EB0ACBEAB504AAE0C91004C /* Configurator */,
+				0D0DA3EC2B429589555B0BFB /* View */,
+				04AC050F7D5A2B45E08FE10E /* Interactor */,
+				6BF4E62C86A6D8B4551E7A60 /* Presenter */,
+				8579E2690621294BFB532139 /* Router */,
+			);
+			path = AddWord;
+			sourceTree = "<group>";
+		};
 		4BD300077AB316A03B4D293B /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
 				338308A98C1AF2B598855681 /* IDDictionaryDetailConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		4EDD2E444F8DE8B5645CC84F /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				C93B9DCBAEE7E472BB651204 /* IDAddWordConfigurator.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -437,6 +538,7 @@
 			children = (
 				98263E1E401A45A9F19B332A /* DictionariesList */,
 				2391BFBDED772374C72EBFB5 /* DictionaryDetail */,
+				48BCA485FD4F4C37433A5C95 /* AddWord */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -449,6 +551,17 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		5C352792D1735FDF224F5550 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D930CB18255A1E66BC3C5E92 /* IDAddWordViewInput.swift */,
+				76AC0DC3213DC62033CDEB74 /* IDAddWordViewOutput.swift */,
+				424D2E3BC23D899A5B20A03C /* IDAddWordViewController.swift */,
+				081E90991D70D490007FA7A1 /* IDAddWordViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		604A948DF1569374A9FECED0 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,12 +572,40 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		6BF4E62C86A6D8B4551E7A60 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2B8B5F066733A50FCA7EA8E3 /* IDAddWordPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		70BEFA2637B108A092F87F5E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				E20E9B32E4B7C049F1A3898B /* IDDictionariesListPresenterTests.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8515686450FE149E6EC7551B /* AddWord */ = {
+			isa = PBXGroup;
+			children = (
+				5C352792D1735FDF224F5550 /* View */,
+				24752D62E93837E1F55B6175 /* Presenter */,
+				A8DB1DB904AE5D8D207E3495 /* Interactor */,
+				FB56DE74303755C05C3F1C59 /* Router */,
+				4EDD2E444F8DE8B5645CC84F /* Configurator */,
+			);
+			path = AddWord;
+			sourceTree = "<group>";
+		};
+		8579E2690621294BFB532139 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0863CC1F69CEAFCD15C3449C /* IDAddWordRouterTests.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		8A86AF04ABBE5D90A3CDA6E0 /* Configurator */ = {
@@ -540,6 +681,16 @@
 			path = DictionaryDetail;
 			sourceTree = "<group>";
 		};
+		A8DB1DB904AE5D8D207E3495 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FEEEC60D7456ED1F80954ACA /* IDAddWordInteractorInput.swift */,
+				859C7FA5B9480CAC19A818B2 /* IDAddWordInteractorOutput.swift */,
+				6C20C58D76B100F636642462 /* IDAddWordInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		AAE0995652B857727ADCDFC4 /* DictionariesList */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,6 +752,7 @@
 			children = (
 				AAE0995652B857727ADCDFC4 /* DictionariesList */,
 				A2C88C8E2B395D06DD6CE59E /* DictionaryDetail */,
+				8515686450FE149E6EC7551B /* AddWord */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -647,6 +799,15 @@
 				0126661D970EE6910779089C /* Pods-DigDicTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB56DE74303755C05C3F1C59 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9DA6E14FE57FC81FD580202B /* IDAddWordRouterInput.swift */,
+				84B0124A007F52F193869808 /* IDAddWordRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -740,6 +901,7 @@
 				08DE58E21D66441D00C255E6 /* Localizable.strings in Resources */,
 				08B4AB121D6E258100E5CE88 /* IDDictionaryDetailViewController.xib in Resources */,
 				084F13E91D65EA7B00E907D6 /* Assets.xcassets in Resources */,
+				081E909A1D70D490007FA7A1 /* IDAddWordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,11 +1049,24 @@
 				2FA28F005BCA8B90F7689106 /* IDDictionaryDetailPresenter.swift in Sources */,
 				11C3552D9EE7CF14FE232EA1 /* IDDictionaryDetailInteractorInput.swift in Sources */,
 				E1528A507EC1ED583A1D779D /* IDDictionaryDetailInteractorOutput.swift in Sources */,
+				081E909D1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift in Sources */,
+				081E909F1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift in Sources */,
 				B2CCC394C90704661B24D48C /* IDDictionaryDetailInteractor.swift in Sources */,
 				2F4A22408AA6CC7F2BEAC5FE /* IDDictionaryDetailRouterInput.swift in Sources */,
 				7D248BD796BDFCC6C8090F6E /* IDDictionaryDetailRouter.swift in Sources */,
 				E14DC73B8A2B4A5F519456B6 /* IDDictionaryDetailConfigurator.swift in Sources */,
 				08B4AB191D6E3FFF00E5CE88 /* IDLDBWord.swift in Sources */,
+				3A589DF7CE3A82FA81825F11 /* IDAddWordViewInput.swift in Sources */,
+				81A46CF3F23D045497A06F7C /* IDAddWordViewOutput.swift in Sources */,
+				FB959B8ED252B3488930458E /* IDAddWordViewController.swift in Sources */,
+				B3CC735E2E05C0A96A4CED4F /* IDAddWordModuleInput.swift in Sources */,
+				E341AE691D11286488A115FB /* IDAddWordPresenter.swift in Sources */,
+				B52ACF295E17B5AF55110598 /* IDAddWordInteractorInput.swift in Sources */,
+				2CA3BD01F8EDABDEAEC4B49C /* IDAddWordInteractorOutput.swift in Sources */,
+				0D326EF69ED452DDCBA125D4 /* IDAddWordInteractor.swift in Sources */,
+				2C9D64258F6D0546CBC4A175 /* IDAddWordRouterInput.swift in Sources */,
+				6F407B79A3CA2FDFC84E1C13 /* IDAddWordRouter.swift in Sources */,
+				D9744579C7C02E065E1F9210 /* IDAddWordConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,6 +1085,11 @@
 				8B61583EBE1ECD654801F713 /* IDDictionaryDetailInteractorTests.swift in Sources */,
 				0D4403A125CDA0E1009047FE /* IDDictionaryDetailPresenterTests.swift in Sources */,
 				6D39CD993FA191235D64318F /* IDDictionaryDetailRouterTests.swift in Sources */,
+				5563309313CFCDF970F42CC7 /* IDAddWordConfiguratorTests.swift in Sources */,
+				CC3CB1D1E8A052B64771FD32 /* IDAddWordViewTests.swift in Sources */,
+				E21AA1EA9B4B2DE4C5FED40B /* IDAddWordInteractorTests.swift in Sources */,
+				45701B33D8CD4B50949B4296 /* IDAddWordPresenterTests.swift in Sources */,
+				7ADD40745138FAACBC72F159 /* IDAddWordRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
