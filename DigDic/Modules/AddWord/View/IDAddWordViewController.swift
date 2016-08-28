@@ -24,8 +24,8 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput {
     
     // MARK: Actions
     
-    @IBAction func closePressed(sender: AnyObject) {
-        self.output.closePressed()
+    @IBAction func didTapCloseButton(sender: AnyObject) {
+        self.output.didTapCloseButton()
     }
 
     // MARK: IDAddWordViewInput

@@ -9,7 +9,7 @@
 class IDAddWordRouter: IDBaseRouter, IDAddWordRouterInput {
 
     func dismiss() {
-        
+        self.viewController .dismissViewControllerAnimated(true, completion: nil)
     }
     
 }

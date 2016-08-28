@@ -14,5 +14,5 @@ protocol IDAddWordViewOutput: IDBaseViewOutput {
     */
 
     func viewIsReady()
-    func closePressed()
+    func didTapCloseButton()
 }

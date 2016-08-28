@@ -23,7 +23,7 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
         }
     }
     
-    func addDictionary() {
+    func didTapAddButton() {
         let alertController = UIAlertController(title: "Add dictionary", message: nil, preferredStyle: .Alert)
         alertController.addTextFieldWithConfigurationHandler { (textField: UITextField) in
             textField.placeholder = "name of new dictionary"

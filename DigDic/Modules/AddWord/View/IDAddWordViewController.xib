@@ -42,7 +42,7 @@
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="closePressed:" destination="-1" eventType="touchUpInside" id="XL4-AY-Zs3"/>
+                                <action selector="didTapCloseButton:" destination="-1" eventType="touchUpInside" id="MYK-dI-huX"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFS-R0-PId">

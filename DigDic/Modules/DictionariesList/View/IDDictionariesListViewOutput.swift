@@ -8,6 +8,6 @@
 
 protocol IDDictionariesListViewOutput: IDBaseViewOutput {
 
-    func addDictionary()
+    func didTapAddButton()
     
 }

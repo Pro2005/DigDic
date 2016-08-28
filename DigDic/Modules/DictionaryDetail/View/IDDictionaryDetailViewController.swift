@@ -21,8 +21,8 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     
     // MARK: Actions
     
-    @IBAction func addPressed(sender: AnyObject) {
-        self.output.addPressed()
+    @IBAction func didTapAddButton(sender: AnyObject) {
+        self.output.didTapAddButton()
     }
 
     // MARK: IDDictionaryDetailViewInput

@@ -24,7 +24,7 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
         }
     }
     
-    func addPressed() {
+    func didTapAddButton() {
         self.router.presentAddWordForDictionary(self.selectedDictionary)
     }
 }

@@ -19,8 +19,8 @@ class IDAddWordPresenter: NSObject, IDAddWordModuleInput, IDAddWordViewOutput, I
         view.setupFrontTableViewDataSource(self, delegate: self)
     }
     
-    func closePressed() {
-        
+    func didTapCloseButton() {
+        self.router.dismiss()
     }
     
     // MARK: Private

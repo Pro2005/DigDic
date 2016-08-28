@@ -38,8 +38,8 @@ class IDDictionariesListViewController: IDBaseViewController, IDDictionariesList
     }
     
     // MARK: Actions
-    func addDictionary(sender: AnyObject) {
-        self.output.addDictionary()
+    func didTapAddButton(sender: AnyObject) {
+        self.output.didTapAddButton()
     }
 
     // MARK: <IDDictionariesListViewInput>
@@ -47,7 +47,7 @@ class IDDictionariesListViewController: IDBaseViewController, IDDictionariesList
     override func setupInitialState() {
         self.title = Constants.title.localized()
         let addButton = self.navigationItem.addButtonWithTitle(Constants.addButtonTitle.localized(), alignment: .Right, font: UIFont.systemFontOfSize(CGFloat(Constants.addButtonFontSize)))
-        addButton.addTarget(self, action: #selector(addDictionary), forControlEvents: .TouchUpInside)
+        addButton.addTarget(self, action: #selector(didTapAddButton), forControlEvents: .TouchUpInside)
     }
 
     func setupTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
