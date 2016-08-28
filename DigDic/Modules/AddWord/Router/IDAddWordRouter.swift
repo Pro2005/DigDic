@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
 
-class IDAddWordRouter: IDAddWordRouterInput {
+class IDAddWordRouter: IDBaseRouter, IDAddWordRouterInput {
 
     func dismiss() {
         

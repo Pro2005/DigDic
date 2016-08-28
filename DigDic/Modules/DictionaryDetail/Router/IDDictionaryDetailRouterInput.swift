@@ -11,6 +11,6 @@ import UIKit
 
 protocol IDDictionaryDetailRouterInput: IDBaseRouterInput {
     
-    func presentAddWordForDictionary(dictionary: IDDictionary, navigationController: UINavigationController)
+    func presentAddWordForDictionary(dictionary: IDDictionary)
     
 }

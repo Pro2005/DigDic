@@ -25,9 +25,6 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
     }
     
     func addPressed() {
-        guard let navigationController = self.view.currentNavigationController() else {
-            return
-        }
-        self.router.presentAddWordForDictionary(self.selectedDictionary, navigationController: navigationController)
+        self.router.presentAddWordForDictionary(self.selectedDictionary)
     }
 }

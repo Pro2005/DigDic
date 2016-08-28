@@ -19,7 +19,7 @@ class IDDictionaryDetailModuleConfigurator {
 
     private func configure(viewController: IDDictionaryDetailViewController, dictionary: IDDictionary) {
 
-        let router = IDDictionaryDetailRouter()
+        let router = IDDictionaryDetailRouter(viewController: viewController)
 
         let presenter = IDDictionaryDetailPresenter(selectedDictionary: dictionary)
         presenter.view = viewController

@@ -11,6 +11,6 @@ import UIKit
 
 protocol IDDictionariesListRouterInput: IDBaseRouterInput {
 
-    func pushDictionaryDetailScreenWithDictionary(dictionary: IDDictionary, navigationController: UINavigationController)
+    func pushDictionaryDetailScreenWithDictionary(dictionary: IDDictionary)
     
 }

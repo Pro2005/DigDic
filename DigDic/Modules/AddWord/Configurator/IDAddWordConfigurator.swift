@@ -19,7 +19,7 @@ class IDAddWordModuleConfigurator {
 
     private func configure(viewController: IDAddWordViewController) {
 
-        let router = IDAddWordRouter()
+        let router = IDAddWordRouter(viewController: viewController)
 
         let presenter = IDAddWordPresenter()
         presenter.view = viewController

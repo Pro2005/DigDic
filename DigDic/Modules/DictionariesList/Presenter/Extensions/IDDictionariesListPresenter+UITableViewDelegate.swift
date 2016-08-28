@@ -16,10 +16,8 @@ extension IDDictionariesListPresenter: UITableViewDelegate {
             return
         }
         let dictionary = self.dataSource[indexPath.row]
-        guard let navigationController = self.view.currentNavigationController() else {
-            return
-        }
-        self.router.pushDictionaryDetailScreenWithDictionary(dictionary, navigationController: navigationController)
+    
+        self.router.pushDictionaryDetailScreenWithDictionary(dictionary)
     }
     
 }

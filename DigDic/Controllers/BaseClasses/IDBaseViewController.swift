@@ -16,9 +16,5 @@ class IDBaseViewController: UIViewController, IDBaseViewInput {
     func setupInitialState() {
         
     }
-    
-    func currentNavigationController() -> UINavigationController? {
-        return self.navigationController
-    }
-    
+
 }

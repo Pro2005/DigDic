@@ -8,9 +8,12 @@
 
 import UIKit
 
-class IDDictionaryDetailRouter: IDDictionaryDetailRouterInput {
+class IDDictionaryDetailRouter: IDBaseRouter, IDDictionaryDetailRouterInput {
 
-    func presentAddWordForDictionary(dictionary: IDDictionary, navigationController: UINavigationController) {
+    func presentAddWordForDictionary(dictionary: IDDictionary) {
+        guard let navigationController = self.viewController.navigationController else {
+            return
+        }
         let viewController = IDAddWordViewController()
         IDAddWordModuleConfigurator().configureModuleForViewInput(viewController)
         navigationController.presentViewController(viewController, animated: true, completion: nil)

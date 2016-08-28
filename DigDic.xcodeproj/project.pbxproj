@@ -23,6 +23,7 @@
 		084F14041D65F42F00E907D6 /* IDBaseInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */; };
 		084F14051D65F42F00E907D6 /* IDBaseInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */; };
 		084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */; };
+		0863B6B21D7376EA009EB5B6 /* IDBaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */; };
 		086E79291D6B3C3000EB081F /* UINavigationItem+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */; };
 		08B4AB121D6E258100E5CE88 /* IDDictionaryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4AB111D6E258100E5CE88 /* IDDictionaryDetailViewController.xib */; };
 		08B4AB171D6E3E4C00E5CE88 /* IDWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4AB161D6E3E4C00E5CE88 /* IDWord.swift */; };
@@ -121,6 +122,7 @@
 		084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorInput.swift; sourceTree = "<group>"; };
 		084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorOutput.swift; sourceTree = "<group>"; };
 		084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouterInput.swift; sourceTree = "<group>"; };
+		0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouter.swift; sourceTree = "<group>"; };
 		0863CC1F69CEAFCD15C3449C /* IDAddWordRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordRouterTests.swift; sourceTree = "<group>"; };
 		086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Buttons.swift"; sourceTree = "<group>"; };
 		08B4AB111D6E258100E5CE88 /* IDDictionaryDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDDictionaryDetailViewController.xib; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 			children = (
 				084F13F51D65F34000E907D6 /* IDBaseNavigationController.swift */,
 				081E90A01D70E137007FA7A1 /* IDBaseViewController.swift */,
+				0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -1044,6 +1047,7 @@
 				084F13F61D65F34000E907D6 /* IDBaseNavigationController.swift in Sources */,
 				08B4AB171D6E3E4C00E5CE88 /* IDWord.swift in Sources */,
 				08E7FD591D6CD794006BD301 /* IDDictionary.swift in Sources */,
+				0863B6B21D7376EA009EB5B6 /* IDBaseRouter.swift in Sources */,
 				084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */,
 				2842A9EFCB076636AF741314 /* IDDictionaryDetailViewInput.swift in Sources */,
 				D64F75F3512D5B6D36299F6F /* IDDictionaryDetailViewOutput.swift in Sources */,
