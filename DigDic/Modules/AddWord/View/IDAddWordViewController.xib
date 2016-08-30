@@ -7,8 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IDAddWordViewController" customModule="DigDic" customModuleProvider="target">
             <connections>
-                <outlet property="frontTableView" destination="Uba-eG-5Na" id="rAY-XQ-ZfL"/>
-                <outlet property="frontView" destination="K9D-Hd-weP" id="22b-52-Fje"/>
+                <outlet property="frontView" destination="Eyg-Mw-cKR" id="Vtk-cr-atd"/>
                 <outlet property="view" destination="iN0-l3-epB" id="wga-9C-hpQ"/>
             </connections>
         </placeholder>
@@ -17,20 +16,20 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9D-Hd-weP">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9D-Hd-weP" userLabel="Contrainer">
                     <rect key="frame" x="8" y="20" width="584" height="524"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uba-eG-5Na">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eyg-Mw-cKR" userLabel="frontView" customClass="IDAddWordFormView" customModule="DigDic" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="584" height="524"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </tableView>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="Uba-eG-5Na" firstAttribute="leading" secondItem="K9D-Hd-weP" secondAttribute="leading" id="LTN-CD-Bqa"/>
-                        <constraint firstItem="Uba-eG-5Na" firstAttribute="top" secondItem="K9D-Hd-weP" secondAttribute="top" id="dGP-UZ-1Bn"/>
-                        <constraint firstAttribute="trailing" secondItem="Uba-eG-5Na" secondAttribute="trailing" id="j2d-Ks-JPE"/>
-                        <constraint firstAttribute="bottom" secondItem="Uba-eG-5Na" secondAttribute="bottom" id="lIv-ve-tFx"/>
+                        <constraint firstAttribute="trailing" secondItem="Eyg-Mw-cKR" secondAttribute="trailing" id="0xk-Gm-nbD"/>
+                        <constraint firstItem="Eyg-Mw-cKR" firstAttribute="leading" secondItem="K9D-Hd-weP" secondAttribute="leading" id="O5Z-05-G95"/>
+                        <constraint firstAttribute="bottom" secondItem="Eyg-Mw-cKR" secondAttribute="bottom" id="vkV-U5-Ntj"/>
+                        <constraint firstItem="Eyg-Mw-cKR" firstAttribute="top" secondItem="K9D-Hd-weP" secondAttribute="top" id="wcd-Hr-2Lp"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awk-v4-CJ2">

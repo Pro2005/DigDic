@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		03CA0AF00450ADE64E177428 /* IDDictionariesListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9CD1A8C5903781EA6CB13 /* IDDictionariesListConfigurator.swift */; };
+		081CC38B1D761572001E3293 /* IDAddWordFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CC38A1D761572001E3293 /* IDAddWordFormView.swift */; };
+		081CC38D1D761C62001E3293 /* IDAddWordFooterViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CC38C1D761C62001E3293 /* IDAddWordFooterViewDelegate.swift */; };
 		081E909A1D70D490007FA7A1 /* IDAddWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 081E90991D70D490007FA7A1 /* IDAddWordViewController.xib */; };
-		081E909D1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E909C1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift */; };
-		081E909F1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E909E1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift */; };
 		081E90A11D70E137007FA7A1 /* IDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E90A01D70E137007FA7A1 /* IDBaseViewController.swift */; };
 		083935231D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083935221D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift */; };
 		084F13C61D65E6A700E907D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13C51D65E6A700E907D6 /* AppDelegate.swift */; };
@@ -104,9 +104,9 @@
 /* Begin PBXFileReference section */
 		0126661D970EE6910779089C /* Pods-DigDicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigDicTests/Pods-DigDicTests.release.xcconfig"; sourceTree = "<group>"; };
 		07BB6B2B98CAA5FB90C8A364 /* IDAddWordConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordConfiguratorTests.swift; sourceTree = "<group>"; };
+		081CC38A1D761572001E3293 /* IDAddWordFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordFormView.swift; sourceTree = "<group>"; };
+		081CC38C1D761C62001E3293 /* IDAddWordFooterViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordFooterViewDelegate.swift; sourceTree = "<group>"; };
 		081E90991D70D490007FA7A1 /* IDAddWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDAddWordViewController.xib; sourceTree = "<group>"; };
-		081E909C1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDAddWordPresenter+UITableViewDataSource.swift"; sourceTree = "<group>"; };
-		081E909E1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDAddWordPresenter+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		081E90A01D70E137007FA7A1 /* IDBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseViewController.swift; sourceTree = "<group>"; };
 		083935221D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionariesListDataDisplayManager.swift; sourceTree = "<group>"; };
 		084506986546352BFDC79839 /* IDDictionariesListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListPresenter.swift; sourceTree = "<group>"; };
@@ -228,15 +228,6 @@
 				521C9D52C1054A1C7DF5BF32 /* IDAddWordInteractorTests.swift */,
 			);
 			path = Interactor;
-			sourceTree = "<group>";
-		};
-		081E909B1D70D6E1007FA7A1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				081E909C1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift */,
-				081E909E1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		08341B391D66E81E0020F0D8 /* NavigationController */ = {
@@ -387,6 +378,7 @@
 			children = (
 				0855514B1D7575F400029EED /* IDAddWordFooterView.swift */,
 				0855514D1D75761900029EED /* IDAddWordFooterView.xib */,
+				081CC38C1D761C62001E3293 /* IDAddWordFooterViewDelegate.swift */,
 			);
 			path = Footer;
 			sourceTree = "<group>";
@@ -493,7 +485,6 @@
 		24752D62E93837E1F55B6175 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				081E909B1D70D6E1007FA7A1 /* Extensions */,
 				F306CBEFF8935698AA966551 /* IDAddWordModuleInput.swift */,
 				42B0A531BD3644B8F9479B55 /* IDAddWordPresenter.swift */,
 			);
@@ -578,6 +569,7 @@
 				76AC0DC3213DC62033CDEB74 /* IDAddWordViewOutput.swift */,
 				424D2E3BC23D899A5B20A03C /* IDAddWordViewController.swift */,
 				081E90991D70D490007FA7A1 /* IDAddWordViewController.xib */,
+				081CC38A1D761572001E3293 /* IDAddWordFormView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1039,6 +1031,7 @@
 				8BBCF3710B1094637156C098 /* IDDictionariesListViewOutput.swift in Sources */,
 				F4934EB3922FB4741E358414 /* IDDictionariesListViewController.swift in Sources */,
 				08E7FD4F1D6CD694006BD301 /* IDDictionaryService.swift in Sources */,
+				081CC38B1D761572001E3293 /* IDAddWordFormView.swift in Sources */,
 				08E7FD5A1D6CD794006BD301 /* IDDictionarySource.swift in Sources */,
 				084F14011D65F40300E907D6 /* IDBaseModuleInput.swift in Sources */,
 				3A2EC88414525B4CC6D8B395 /* IDDictionariesListModuleInput.swift in Sources */,
@@ -1070,11 +1063,10 @@
 				2FA28F005BCA8B90F7689106 /* IDDictionaryDetailPresenter.swift in Sources */,
 				11C3552D9EE7CF14FE232EA1 /* IDDictionaryDetailInteractorInput.swift in Sources */,
 				E1528A507EC1ED583A1D779D /* IDDictionaryDetailInteractorOutput.swift in Sources */,
-				081E909D1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift in Sources */,
-				081E909F1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift in Sources */,
 				B2CCC394C90704661B24D48C /* IDDictionaryDetailInteractor.swift in Sources */,
 				2F4A22408AA6CC7F2BEAC5FE /* IDDictionaryDetailRouterInput.swift in Sources */,
 				7D248BD796BDFCC6C8090F6E /* IDDictionaryDetailRouter.swift in Sources */,
+				081CC38D1D761C62001E3293 /* IDAddWordFooterViewDelegate.swift in Sources */,
 				E14DC73B8A2B4A5F519456B6 /* IDDictionaryDetailConfigurator.swift in Sources */,
 				08B4AB191D6E3FFF00E5CE88 /* IDLDBWord.swift in Sources */,
 				3A589DF7CE3A82FA81825F11 /* IDAddWordViewInput.swift in Sources */,

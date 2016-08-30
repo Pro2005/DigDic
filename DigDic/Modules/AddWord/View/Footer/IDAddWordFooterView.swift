@@ -11,6 +11,10 @@ import UIKit
 
 class IDAddWordFooterView: UIView {
     
+    var delegate: IDAddWordFooterViewDelegate?
+    
+    // MARK: Public
+    
     class func height() -> CGFloat {
         struct Holder {
             static var height: CGFloat = 0
@@ -21,6 +25,14 @@ class IDAddWordFooterView: UIView {
             }
         }
         return Holder.height
+    }
+    
+    // MARK: Action
+    
+    @IBAction func didTapAddImageButton(sender: AnyObject) {
+        if let delegate = self.delegate {
+            delegate.addWordFooterViewDidTapAddImageButton(self)
+        }
     }
     
 }

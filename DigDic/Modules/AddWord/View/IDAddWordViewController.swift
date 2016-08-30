@@ -8,26 +8,16 @@
 
 import UIKit
 
-class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput {
+class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWordFooterViewDelegate {
 
     var output: IDAddWordViewOutput!
-    @IBOutlet weak var frontTableView: UITableView!
-    @IBOutlet weak var frontView: UIView!
-    @IBOutlet weak var backTableView: UITableView!
-    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var frontView: IDAddWordFormView!
+
 
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
-        if let footerView = self.frontTableView.tableFooterView {
-            self.updateFooterHeight(footerView)
-        }
     }
     
     // MARK: Actions
@@ -38,27 +28,22 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput {
 
     // MARK: IDAddWordViewInput
     
-    func setupBackTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
-        
-    }
+    // MARK: IDAddWordFooterViewDelegate
     
-    func setupFrontTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
-        
+    func addWordFooterViewDidTapAddImageButton(footerView: IDAddWordFooterView) {
+        self.output.didTapAddImageButton()
     }
     
     // MARK: Protected
     
     override func setupInitialState() {
         if let view = NSBundle.mainBundle().loadNibNamed(String(IDAddWordFooterView), owner: nil, options: nil).last {
-            self.frontTableView.tableFooterView = view as? UIView
+            let footerView = view as! IDAddWordFooterView
+            footerView.delegate = self
+            self.frontView.setupTableViewFooter(footerView, footerHeight: IDAddWordFooterView.height())
         }
     }
     
     // MARK: Private
-    private func updateFooterHeight(footer: UIView) {
-        var frame = footer.frame
-        frame.size.height = IDAddWordFooterView.height()
-        footer.frame = frame
-    }
     
 }

@@ -11,7 +11,4 @@ import UIKit
 protocol IDAddWordViewInput: IDBaseViewInput {
 
     func setupInitialState()
-    func setupBackTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate)
-    func setupFrontTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate)
-
 }

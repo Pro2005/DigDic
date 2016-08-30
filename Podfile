@@ -6,6 +6,7 @@ target 'DigDic' do
   use_frameworks!
 
   pod 'RealmSwift', '~> 1.0.2'
+  pod 'PureLayout', '~> 3.0.2'
 
   target 'DigDicTests' do
     inherit! :search_paths

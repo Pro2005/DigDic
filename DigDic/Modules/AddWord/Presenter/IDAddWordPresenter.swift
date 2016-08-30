@@ -15,12 +15,14 @@ class IDAddWordPresenter: NSObject, IDAddWordModuleInput, IDAddWordViewOutput, I
 
     func viewIsReady() {
         view.setupInitialState()
-        view.setupBackTableViewDataSource(self, delegate: self)
-        view.setupFrontTableViewDataSource(self, delegate: self)
     }
     
     func didTapCloseButton() {
         self.router.dismiss()
+    }
+    
+    func didTapAddImageButton() {
+        
     }
     
     // MARK: Private
