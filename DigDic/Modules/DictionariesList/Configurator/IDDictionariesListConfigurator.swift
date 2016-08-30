@@ -30,6 +30,7 @@ class IDDictionariesListModuleConfigurator {
 
         presenter.interactor = interactor
         viewController.output = presenter
+        viewController.dataDisplayManager = IDDictionariesListDataDisplayManager()
     }
 
 }

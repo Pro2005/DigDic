@@ -12,49 +12,35 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
     weak var view: IDDictionariesListViewInput!
     var interactor: IDDictionariesListInteractorInput!
     var router: IDDictionariesListRouterInput!
-    var dataSource: [IDDictionary] = [IDDictionary]()
     
     // MARK: IDDictionariesListViewOutput
     func viewIsReady() {
         view.setupInitialState()
-        view.setupTableViewDataSource(self, delegate: self)
-        self.updateDataForDataSource(&self.dataSource) { [unowned self] in
-            self.view.reloadData()
+        self.updateData {[weak self] (items: [IDDictionary]) in
+            self?.view.reloadDataWithDictionaries(items)
         }
     }
     
     func didTapAddButton() {
-        let alertController = UIAlertController(title: "Add dictionary", message: nil, preferredStyle: .Alert)
-        alertController.addTextFieldWithConfigurationHandler { (textField: UITextField) in
-            textField.placeholder = "name of new dictionary"
+        self.view.showFormForCreatingNewDictionary()
+    }
+    
+    func didTapCreateDictionaryButtonWithDictionaryName(name: String) {
+        self.interactor.addNewDictionaryWithName(name)
+        self.updateData {[weak self] (items: [IDDictionary]) in
+            self?.view.reloadDataWithDictionaries(items)
         }
-        let addAction = UIAlertAction(title: "Add", style: .Default) { [unowned self](alertAction: UIAlertAction) in
-            guard let textField = alertController.textFields?.first else {
-                return
-            }
-            guard let text = textField.text else {
-                return
-            }
-            self.interactor.addNewDictionaryWithName(text)
-            self.updateDataForDataSource(&self.dataSource, completion: {
-                self.view.reloadData()
-            })
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Destructive) { (alertAction: UIAlertAction) in
-            
-        }
-        alertController.addAction(addAction)
-        alertController.addAction(cancelAction)
-        self.view.showAlertController(alertController)
+    }
+    
+    func didSelectDictionary(dictionary: IDDictionary) {
+        self.router.pushDictionaryDetailScreenWithDictionary(dictionary)
     }
     
     // MARK: Private
     
-    private func updateDataForDataSource(inout dataSource: [IDDictionary], completion: () -> ()) {
-        interactor.fetchDictionaries {(items: [IDDictionary]) in
-            dataSource.removeAll()
-            dataSource += items
-            completion()
+    private func updateData(completion: ([IDDictionary] -> ())) {
+        interactor.fetchDictionaries { (items: [IDDictionary]) in
+            completion(items)
         }
     }
     

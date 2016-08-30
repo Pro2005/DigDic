@@ -12,6 +12,7 @@
 		081E909D1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E909C1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift */; };
 		081E909F1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E909E1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift */; };
 		081E90A11D70E137007FA7A1 /* IDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E90A01D70E137007FA7A1 /* IDBaseViewController.swift */; };
+		083935231D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083935221D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift */; };
 		084F13C61D65E6A700E907D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13C51D65E6A700E907D6 /* AppDelegate.swift */; };
 		084F13DB1D65E6A700E907D6 /* DigDicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13DA1D65E6A700E907D6 /* DigDicTests.swift */; };
 		084F13E91D65EA7B00E907D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 084F13E81D65EA7B00E907D6 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		084F14041D65F42F00E907D6 /* IDBaseInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */; };
 		084F14051D65F42F00E907D6 /* IDBaseInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */; };
 		084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */; };
+		085551461D756C5C00029EED /* IDDictionariesListDataDisplayManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085551451D756C5C00029EED /* IDDictionariesListDataDisplayManagerDelegate.swift */; };
 		0863B6B21D7376EA009EB5B6 /* IDBaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */; };
 		086E79291D6B3C3000EB081F /* UINavigationItem+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */; };
 		08B4AB121D6E258100E5CE88 /* IDDictionaryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4AB111D6E258100E5CE88 /* IDDictionaryDetailViewController.xib */; };
@@ -30,8 +32,6 @@
 		08B4AB191D6E3FFF00E5CE88 /* IDLDBWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4AB181D6E3FFF00E5CE88 /* IDLDBWord.swift */; };
 		08DE58E21D66441D00C255E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08DE58E41D66441D00C255E6 /* Localizable.strings */; };
 		08DE58EA1D6646C600C255E6 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58E91D6646C600C255E6 /* String+Localized.swift */; };
-		08DE58EF1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */; };
-		08DE58F11D6652A900C255E6 /* IDDictionariesListPresenter+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58F01D6652A900C255E6 /* IDDictionariesListPresenter+UITableViewDelegate.swift */; };
 		08E7FD4F1D6CD694006BD301 /* IDDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD4E1D6CD694006BD301 /* IDDictionaryService.swift */; };
 		08E7FD511D6CD6BA006BD301 /* IDBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD501D6CD6BA006BD301 /* IDBaseService.swift */; };
 		08E7FD591D6CD794006BD301 /* IDDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD571D6CD794006BD301 /* IDDictionary.swift */; };
@@ -106,6 +106,7 @@
 		081E909C1D70D705007FA7A1 /* IDAddWordPresenter+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDAddWordPresenter+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		081E909E1D70D71C007FA7A1 /* IDAddWordPresenter+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDAddWordPresenter+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		081E90A01D70E137007FA7A1 /* IDBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseViewController.swift; sourceTree = "<group>"; };
+		083935221D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionariesListDataDisplayManager.swift; sourceTree = "<group>"; };
 		084506986546352BFDC79839 /* IDDictionariesListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListPresenter.swift; sourceTree = "<group>"; };
 		084F13C21D65E6A700E907D6 /* DigDic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigDic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		084F13C51D65E6A700E907D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 		084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorInput.swift; sourceTree = "<group>"; };
 		084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorOutput.swift; sourceTree = "<group>"; };
 		084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouterInput.swift; sourceTree = "<group>"; };
+		085551451D756C5C00029EED /* IDDictionariesListDataDisplayManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionariesListDataDisplayManagerDelegate.swift; sourceTree = "<group>"; };
 		0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouter.swift; sourceTree = "<group>"; };
 		0863CC1F69CEAFCD15C3449C /* IDAddWordRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordRouterTests.swift; sourceTree = "<group>"; };
 		086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Buttons.swift"; sourceTree = "<group>"; };
@@ -130,8 +132,6 @@
 		08B4AB181D6E3FFF00E5CE88 /* IDLDBWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDLDBWord.swift; sourceTree = "<group>"; };
 		08DE58E31D66441D00C255E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08DE58E91D6646C600C255E6 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
-		08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDDictionariesListPresenter+UITableViewDataSource.swift"; sourceTree = "<group>"; };
-		08DE58F01D6652A900C255E6 /* IDDictionariesListPresenter+UITableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDDictionariesListPresenter+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		08E7FD4E1D6CD694006BD301 /* IDDictionaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionaryService.swift; sourceTree = "<group>"; };
 		08E7FD501D6CD6BA006BD301 /* IDBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseService.swift; sourceTree = "<group>"; };
 		08E7FD571D6CD794006BD301 /* IDDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionary.swift; sourceTree = "<group>"; };
@@ -241,6 +241,15 @@
 				086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		083935211D744C8500F71B29 /* DataDisplayManager */ = {
+			isa = PBXGroup;
+			children = (
+				083935221D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift */,
+				085551451D756C5C00029EED /* IDDictionariesListDataDisplayManagerDelegate.swift */,
+			);
+			path = DataDisplayManager;
 			sourceTree = "<group>";
 		};
 		084F13B91D65E6A700E907D6 = {
@@ -391,15 +400,6 @@
 				08DE58E91D6646C600C255E6 /* String+Localized.swift */,
 			);
 			path = String;
-			sourceTree = "<group>";
-		};
-		08DE58ED1D664E2600C255E6 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				08DE58EE1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift */,
-				08DE58F01D6652A900C255E6 /* IDDictionariesListPresenter+UITableViewDelegate.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		08E7FD4B1D6CD648006BD301 /* Services */ = {
@@ -571,7 +571,6 @@
 		604A948DF1569374A9FECED0 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				08DE58ED1D664E2600C255E6 /* Extensions */,
 				D572770738EB155EA136FF42 /* IDDictionariesListModuleInput.swift */,
 				084506986546352BFDC79839 /* IDDictionariesListPresenter.swift */,
 			);
@@ -667,6 +666,7 @@
 		99F18022E078F68A4F8EB07D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				083935211D744C8500F71B29 /* DataDisplayManager */,
 				199DF158F1E8945C91C3AC89 /* IDDictionariesListViewInput.swift */,
 				757BCB33CEA9BCF21C5B896B /* IDDictionariesListViewOutput.swift */,
 				750E971230A7C48DFF11B96F /* IDDictionariesListViewController.swift */,
@@ -1030,8 +1030,6 @@
 				08E7FD601D6CD8D1006BD301 /* IDLDBDictionary.swift in Sources */,
 				084F13FF1D65F3D200E907D6 /* IDBaseViewOutput.swift in Sources */,
 				DBC18666997231F8BE46F665 /* IDDictionariesListPresenter.swift in Sources */,
-				08DE58F11D6652A900C255E6 /* IDDictionariesListPresenter+UITableViewDelegate.swift in Sources */,
-				08DE58EF1D664FD300C255E6 /* IDDictionariesListPresenter+UITableViewDataSource.swift in Sources */,
 				D950E713B8C50D2CD0F88137 /* IDDictionariesListInteractorInput.swift in Sources */,
 				084F14041D65F42F00E907D6 /* IDBaseInteractorInput.swift in Sources */,
 				084F13FE1D65F3D200E907D6 /* IDBaseViewInput.swift in Sources */,
@@ -1053,6 +1051,7 @@
 				D64F75F3512D5B6D36299F6F /* IDDictionaryDetailViewOutput.swift in Sources */,
 				27EB1517FB15D56B1309070C /* IDDictionaryDetailViewController.swift in Sources */,
 				9E16193D6E59C89286EDCFC6 /* IDDictionaryDetailModuleInput.swift in Sources */,
+				085551461D756C5C00029EED /* IDDictionariesListDataDisplayManagerDelegate.swift in Sources */,
 				2FA28F005BCA8B90F7689106 /* IDDictionaryDetailPresenter.swift in Sources */,
 				11C3552D9EE7CF14FE232EA1 /* IDDictionaryDetailInteractorInput.swift in Sources */,
 				E1528A507EC1ED583A1D779D /* IDDictionaryDetailInteractorOutput.swift in Sources */,
@@ -1073,6 +1072,7 @@
 				0D326EF69ED452DDCBA125D4 /* IDAddWordInteractor.swift in Sources */,
 				081E90A11D70E137007FA7A1 /* IDBaseViewController.swift in Sources */,
 				2C9D64258F6D0546CBC4A175 /* IDAddWordRouterInput.swift in Sources */,
+				083935231D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift in Sources */,
 				6F407B79A3CA2FDFC84E1C13 /* IDAddWordRouter.swift in Sources */,
 				D9744579C7C02E065E1F9210 /* IDAddWordConfigurator.swift in Sources */,
 			);
