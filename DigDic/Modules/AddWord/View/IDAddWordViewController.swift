@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PureLayout
 
 class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput {
 
@@ -20,6 +21,14 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput {
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        if let footerView = self.frontTableView.tableFooterView {
+            self.updateFooterHeight(footerView)
+        }
     }
     
     // MARK: Actions
@@ -41,9 +50,16 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput {
     // MARK: Protected
     
     override func setupInitialState() {
-        if let footerView = NSBundle.mainBundle().loadNibNamed(String(IDAddWordFooterView), owner: nil, options: nil).last {
-            self.frontTableView.tableFooterView = footerView as? UIView
+        if let view = NSBundle.mainBundle().loadNibNamed(String(IDAddWordFooterView), owner: nil, options: nil).last {
+            self.frontTableView.tableFooterView = view as? UIView
         }
+    }
+    
+    // MARK: Private
+    private func updateFooterHeight(footer: UIView) {
+        var frame = footer.frame
+        frame.size.height = IDAddWordFooterView.height()
+        footer.frame = frame
     }
     
 }
