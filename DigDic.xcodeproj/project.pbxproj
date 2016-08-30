@@ -25,6 +25,8 @@
 		084F14051D65F42F00E907D6 /* IDBaseInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */; };
 		084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */; };
 		085551461D756C5C00029EED /* IDDictionariesListDataDisplayManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085551451D756C5C00029EED /* IDDictionariesListDataDisplayManagerDelegate.swift */; };
+		0855514C1D7575F400029EED /* IDAddWordFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0855514B1D7575F400029EED /* IDAddWordFooterView.swift */; };
+		0855514E1D75761900029EED /* IDAddWordFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0855514D1D75761900029EED /* IDAddWordFooterView.xib */; };
 		0863B6B21D7376EA009EB5B6 /* IDBaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */; };
 		086E79291D6B3C3000EB081F /* UINavigationItem+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */; };
 		08B4AB121D6E258100E5CE88 /* IDDictionaryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4AB111D6E258100E5CE88 /* IDDictionaryDetailViewController.xib */; };
@@ -124,6 +126,8 @@
 		084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorOutput.swift; sourceTree = "<group>"; };
 		084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouterInput.swift; sourceTree = "<group>"; };
 		085551451D756C5C00029EED /* IDDictionariesListDataDisplayManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionariesListDataDisplayManagerDelegate.swift; sourceTree = "<group>"; };
+		0855514B1D7575F400029EED /* IDAddWordFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordFooterView.swift; sourceTree = "<group>"; };
+		0855514D1D75761900029EED /* IDAddWordFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDAddWordFooterView.xib; sourceTree = "<group>"; };
 		0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouter.swift; sourceTree = "<group>"; };
 		0863CC1F69CEAFCD15C3449C /* IDAddWordRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordRouterTests.swift; sourceTree = "<group>"; };
 		086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Buttons.swift"; sourceTree = "<group>"; };
@@ -378,6 +382,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0855514A1D7575DE00029EED /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				0855514B1D7575F400029EED /* IDAddWordFooterView.swift */,
+				0855514D1D75761900029EED /* IDAddWordFooterView.xib */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
 		08AAD4911D6B820F0072ED1D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +573,7 @@
 		5C352792D1735FDF224F5550 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0855514A1D7575DE00029EED /* Footer */,
 				D930CB18255A1E66BC3C5E92 /* IDAddWordViewInput.swift */,
 				76AC0DC3213DC62033CDEB74 /* IDAddWordViewOutput.swift */,
 				424D2E3BC23D899A5B20A03C /* IDAddWordViewController.swift */,
@@ -905,6 +919,7 @@
 			files = (
 				084F13EE1D65ED5E00E907D6 /* IDDictionariesListViewController.xib in Resources */,
 				08DE58E21D66441D00C255E6 /* Localizable.strings in Resources */,
+				0855514E1D75761900029EED /* IDAddWordFooterView.xib in Resources */,
 				08B4AB121D6E258100E5CE88 /* IDDictionaryDetailViewController.xib in Resources */,
 				084F13E91D65EA7B00E907D6 /* Assets.xcassets in Resources */,
 				081E909A1D70D490007FA7A1 /* IDAddWordViewController.xib in Resources */,
@@ -1064,6 +1079,7 @@
 				08B4AB191D6E3FFF00E5CE88 /* IDLDBWord.swift in Sources */,
 				3A589DF7CE3A82FA81825F11 /* IDAddWordViewInput.swift in Sources */,
 				81A46CF3F23D045497A06F7C /* IDAddWordViewOutput.swift in Sources */,
+				0855514C1D7575F400029EED /* IDAddWordFooterView.swift in Sources */,
 				FB959B8ED252B3488930458E /* IDAddWordViewController.swift in Sources */,
 				B3CC735E2E05C0A96A4CED4F /* IDAddWordModuleInput.swift in Sources */,
 				E341AE691D11286488A115FB /* IDAddWordPresenter.swift in Sources */,

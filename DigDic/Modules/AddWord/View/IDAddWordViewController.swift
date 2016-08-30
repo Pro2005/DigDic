@@ -37,4 +37,13 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput {
     func setupFrontTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
         
     }
+    
+    // MARK: Protected
+    
+    override func setupInitialState() {
+        if let footerView = NSBundle.mainBundle().loadNibNamed(String(IDAddWordFooterView), owner: nil, options: nil).last {
+            self.frontTableView.tableFooterView = footerView as? UIView
+        }
+    }
+    
 }
