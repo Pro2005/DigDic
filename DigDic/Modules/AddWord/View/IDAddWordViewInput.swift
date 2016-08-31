@@ -11,4 +11,6 @@ import UIKit
 protocol IDAddWordViewInput: IDBaseViewInput {
 
     func setupInitialState()
+    func addFormForSelectingImage()
+    
 }

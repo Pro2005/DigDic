@@ -22,6 +22,10 @@ class IDAddWordPresenter: NSObject, IDAddWordModuleInput, IDAddWordViewOutput, I
     }
     
     func didTapAddImageButton() {
+        self.view.addFormForSelectingImage()
+    }
+    
+    func didTapSelectImageButton() {
         
     }
     

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWordFooterViewDelegate {
+class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWordFooterViewDelegate, IDAddWordDataDisplayManagerDelegate {
 
     var output: IDAddWordViewOutput!
     @IBOutlet weak var frontView: IDAddWordFormView!
-
+    let dataDisplayManager = IDAddWordDataDisplayManager()
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -28,10 +28,21 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
 
     // MARK: IDAddWordViewInput
     
+    func addFormForSelectingImage() {
+        self.dataDisplayManager.addCellForSelectingImage()
+        self.frontView.reloadData()
+    }
+    
     // MARK: IDAddWordFooterViewDelegate
     
     func addWordFooterViewDidTapAddImageButton(footerView: IDAddWordFooterView) {
         self.output.didTapAddImageButton()
+    }
+    
+    // MARK: IDAddWordDataDisplayManagerDelegate
+    
+    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddWordDataDisplayManager) {
+        self.output.didTapSelectImageButton()
     }
     
     // MARK: Protected
@@ -42,6 +53,8 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
             footerView.delegate = self
             self.frontView.setupTableViewFooter(footerView, footerHeight: IDAddWordFooterView.height())
         }
+        self.frontView.setupTableViewDataSource(self.dataDisplayManager, delegate: self.dataDisplayManager)
+        self.dataDisplayManager.delegate = self
     }
     
     // MARK: Private
