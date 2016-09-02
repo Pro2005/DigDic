@@ -7,6 +7,7 @@ target 'DigDic' do
 
   pod 'RealmSwift', '~> 1.0.2'
   pod 'PureLayout', '~> 3.0.2'
+  pod 'BlocksKit', '~> 2.2.5'
 
   target 'DigDicTests' do
     inherit! :search_paths
