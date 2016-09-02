@@ -19,6 +19,14 @@ class IDAddWordDataDisplayManager: NSObject, UITableViewDelegate, UITableViewDat
         let imageDataHolder = IDAddWordImageDataHolder()
         dataSource.append(imageDataHolder)
     }
+    
+    func updateImage(image: UIImage, indexPath: NSIndexPath) {
+        let dataHolder = self.dataSource[indexPath.row]
+        guard let imageDataHolder = dataHolder as? IDAddWordImageDataHolder else {
+            return
+        }
+        imageDataHolder.image = image
+    }
  
     // MARK: UITableViewDataSource
     
@@ -42,11 +50,15 @@ class IDAddWordDataDisplayManager: NSObject, UITableViewDelegate, UITableViewDat
         switch dataHolder {
         case _ as IDAddWordImageDataHolder:
             if let delegate = self.delegate {
-               delegate.dataDisplayManagerWantSelectImage(self)
+                delegate.dataDisplayManagerWantSelectImage(self, indexPath: indexPath)
             }
         default:
             return
         }
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
 }

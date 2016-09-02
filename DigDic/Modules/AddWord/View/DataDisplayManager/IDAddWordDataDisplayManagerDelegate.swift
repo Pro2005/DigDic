@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 protocol IDAddWordDataDisplayManagerDelegate {
     
-    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddWordDataDisplayManager)
+    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddWordDataDisplayManager, indexPath: NSIndexPath) -> Void
     
 }

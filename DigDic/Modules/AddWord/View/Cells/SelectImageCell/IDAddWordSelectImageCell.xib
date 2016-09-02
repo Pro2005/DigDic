@@ -14,25 +14,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="493" height="121"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yJA-BG-su6">
-                        <rect key="frame" x="0.0" y="0.0" width="493" height="121"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to select" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mp-LX-AB7">
                         <rect key="frame" x="197" y="50" width="99" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yJA-BG-su6">
+                        <rect key="frame" x="0.0" y="0.0" width="493" height="121"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="750" constant="121" id="idr-nz-fIm"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="yJA-BG-su6" firstAttribute="top" secondItem="nPk-5J-DBV" secondAttribute="top" id="FBt-Jd-2l6"/>
-                    <constraint firstAttribute="trailing" secondItem="yJA-BG-su6" secondAttribute="trailing" id="V7O-f2-MrP"/>
-                    <constraint firstItem="yJA-BG-su6" firstAttribute="leading" secondItem="nPk-5J-DBV" secondAttribute="leading" id="kXg-gv-YkW"/>
-                    <constraint firstAttribute="bottom" secondItem="yJA-BG-su6" secondAttribute="bottom" id="m8B-69-zze"/>
-                    <constraint firstItem="5Mp-LX-AB7" firstAttribute="centerX" secondItem="nPk-5J-DBV" secondAttribute="centerX" id="yFl-CC-tMA"/>
-                    <constraint firstItem="5Mp-LX-AB7" firstAttribute="centerY" secondItem="nPk-5J-DBV" secondAttribute="centerY" id="yey-6X-ES5"/>
+                    <constraint firstItem="5Mp-LX-AB7" firstAttribute="centerY" secondItem="nPk-5J-DBV" secondAttribute="centerY" id="999-wy-9R8"/>
+                    <constraint firstItem="5Mp-LX-AB7" firstAttribute="centerX" secondItem="nPk-5J-DBV" secondAttribute="centerX" id="D4v-dj-a2b"/>
+                    <constraint firstAttribute="trailing" secondItem="yJA-BG-su6" secondAttribute="trailing" id="GaT-c2-jbm"/>
+                    <constraint firstItem="yJA-BG-su6" firstAttribute="top" secondItem="nPk-5J-DBV" secondAttribute="top" id="IDa-0Q-wP2"/>
+                    <constraint firstAttribute="bottom" secondItem="yJA-BG-su6" secondAttribute="bottom" id="c7x-60-Uod"/>
+                    <constraint firstItem="yJA-BG-su6" firstAttribute="leading" secondItem="nPk-5J-DBV" secondAttribute="leading" id="vhv-x5-hcu"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="backgroundImageView" destination="yJA-BG-su6" id="saw-Dj-DD7"/>
+                <outlet property="heightLayoutConstraint" destination="idr-nz-fIm" id="SNf-O8-poh"/>
+                <outlet property="label" destination="5Mp-LX-AB7" id="JCK-Er-Dda"/>
+            </connections>
             <point key="canvasLocation" x="450.5" y="329"/>
         </tableViewCell>
     </objects>

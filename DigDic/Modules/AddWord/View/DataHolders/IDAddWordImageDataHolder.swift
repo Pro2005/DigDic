@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 class IDAddWordImageDataHolder: IDAddWordDataHolder {
+    
+    var image: UIImage?
     
 }

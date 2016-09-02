@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BlocksKit
 
 class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWordFooterViewDelegate, IDAddWordDataDisplayManagerDelegate {
 
@@ -33,6 +34,31 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
         self.frontView.reloadData()
     }
     
+    func displayDialogForSelectingImage(completion: (result: UIImage?) -> Void) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            
+        }
+        alertController.addAction(cancelAction)
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            let takePhotoAction = UIAlertAction(title: "take photo", style: .Default, handler: {[unowned self] (action) in
+                self.showImagePickerController(.Camera, completion: { (image) in
+                    completion(result: image)
+                });
+            })
+            alertController.addAction(takePhotoAction)
+        }
+        if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
+            let selectExistingPhotoAction = UIAlertAction(title: "choose img", style: .Default, handler: {[unowned self] (action) in
+                self.showImagePickerController(.PhotoLibrary, completion: { (image) in
+                    completion(result: image)
+                });
+            })
+            alertController.addAction(selectExistingPhotoAction)
+        }
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
     // MARK: IDAddWordFooterViewDelegate
     
     func addWordFooterViewDidTapAddImageButton(footerView: IDAddWordFooterView) {
@@ -41,8 +67,14 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
     
     // MARK: IDAddWordDataDisplayManagerDelegate
     
-    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddWordDataDisplayManager) {
-        self.output.didTapSelectImageButton()
+    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddWordDataDisplayManager, indexPath: NSIndexPath) {
+        self.output.didTapSelectImageButton {[unowned self] (result) in
+            guard let image = result else {
+                return
+            }
+            dataDisplayManager.updateImage(image, indexPath: indexPath)
+            self.frontView.reloadData()
+        }
     }
     
     // MARK: Protected
@@ -58,5 +90,23 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
     }
     
     // MARK: Private
+    
+    private func showImagePickerController(sourceType: UIImagePickerControllerSourceType, completion: (UIImage?) -> Void) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.allowsEditing = true
+        imagePickerController.sourceType = sourceType
+        let didFinishPickingMediaBlock: (UIImagePickerController!, [NSObject: AnyObject]!) -> Void = {(imagePickerController, info) in
+            imagePickerController.dismissViewControllerAnimated(true, completion: nil)
+            let image = info[UIImagePickerControllerEditedImage]
+            completion(image as? UIImage)
+        }
+        imagePickerController.bk_didFinishPickingMediaBlock = didFinishPickingMediaBlock
+        let didCancelBlock: (UIImagePickerController!) -> Void = {(imagePickerController) in
+            imagePickerController.dismissViewControllerAnimated(true, completion: nil)
+            completion(nil)
+        }
+        imagePickerController.bk_didCancelBlock = didCancelBlock
+        self.presentViewController(imagePickerController, animated: true, completion: nil)
+    }
     
 }

@@ -1,4 +1,19 @@
 PODS:
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
   - PureLayout (3.0.2)
   - Realm (1.0.2):
     - Realm/Headers (= 1.0.2)
@@ -7,14 +22,16 @@ PODS:
     - Realm (= 1.0.2)
 
 DEPENDENCIES:
+  - BlocksKit (~> 2.2.5)
   - PureLayout (~> 3.0.2)
   - RealmSwift (~> 1.0.2)
 
 SPEC CHECKSUMS:
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
   RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
 
-PODFILE CHECKSUM: 5aceda633cb1aae7f82a060564c5e5fdd962d3c0
+PODFILE CHECKSUM: 485ab0b7dbd48a0c2a355dfd93e9d0d4e902bb20
 
 COCOAPODS: 1.0.1

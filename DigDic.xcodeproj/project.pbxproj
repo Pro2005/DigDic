@@ -956,6 +956,7 @@
 				TargetAttributes = {
 					084F13C11D65E6A700E907D6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = RT92TJ3NKC;
 					};
 					084F13D51D65E6A700E907D6 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1307,10 +1308,13 @@
 			baseConfigurationReference = 7F1215E1957285839254C1F9 /* Pods-DigDic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DigDic/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ios.DigDic;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.digdic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1319,10 +1323,13 @@
 			baseConfigurationReference = CF3BF10209863A4F838B4745 /* Pods-DigDic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DigDic/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ios.DigDic;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.digdic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

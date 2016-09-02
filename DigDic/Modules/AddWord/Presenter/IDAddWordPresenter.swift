@@ -25,8 +25,8 @@ class IDAddWordPresenter: NSObject, IDAddWordModuleInput, IDAddWordViewOutput, I
         self.view.addFormForSelectingImage()
     }
     
-    func didTapSelectImageButton() {
-        
+    func didTapSelectImageButton(completion: (result: UIImage?) -> Void) {
+        self.view.displayDialogForSelectingImage(completion)
     }
     
     // MARK: Private

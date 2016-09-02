@@ -13,6 +13,9 @@ class IDAddWordSelectImageCellObjectBuilder: IDAddWordCellObjectBuilder {
     func cellObjectForDataHolder(dataHolder: IDAddWordDataHolder) -> IDAddWordCell {
         let view = NSBundle.mainBundle().loadNibNamed(String(IDAddWordSelectImageCell), owner: nil, options: nil).last
         let cell = view as! IDAddWordSelectImageCell
+        if let imageDataHolder = dataHolder as? IDAddWordImageDataHolder {
+            cell.loadFromDataHolder(imageDataHolder)
+        }
         return cell
     }
     

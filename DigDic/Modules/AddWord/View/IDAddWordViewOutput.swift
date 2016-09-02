@@ -5,6 +5,7 @@
 //  Created by ls on 26/08/2016.
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
+import UIKit
 
 protocol IDAddWordViewOutput: IDBaseViewOutput {
 
@@ -16,6 +17,6 @@ protocol IDAddWordViewOutput: IDBaseViewOutput {
     func viewIsReady()
     func didTapCloseButton()
     func didTapAddImageButton()
-    func didTapSelectImageButton()
+    func didTapSelectImageButton(completion: (result: UIImage?) -> Void)
     
 }
