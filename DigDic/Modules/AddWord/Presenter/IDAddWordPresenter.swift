@@ -25,8 +25,16 @@ class IDAddWordPresenter: NSObject, IDAddWordModuleInput, IDAddWordViewOutput, I
         self.view.addFormForSelectingImage()
     }
     
-    func didTapSelectImageButton(completion: (result: UIImage?) -> Void) {
-        self.view.displayDialogForSelectingImage(completion)
+    func didTapSelectImageButton(dataHolder: IDAddWordDataHolder) {
+        self.view.displayDialogForSelectingImage { (result) in
+            if let image = result {
+                self.view.displayDialogForCropImage(image, dataHolder: dataHolder)
+            }
+        }
+    }
+    
+    func didCropImage(image: UIImage, dataHolder: IDAddWordDataHolder) {
+        self.view.updateImageForDataHolder(image, dataHolder: dataHolder)
     }
     
     // MARK: Private

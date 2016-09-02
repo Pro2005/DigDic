@@ -11,6 +11,6 @@ import UIKit
 
 protocol IDAddWordDataDisplayManagerDelegate {
     
-    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddWordDataDisplayManager, indexPath: NSIndexPath) -> Void
+    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddWordDataDisplayManager, dataHolder: IDAddWordDataHolder) -> Void
     
 }

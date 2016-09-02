@@ -8,12 +8,14 @@
 
 import UIKit
 import BlocksKit
+import TOCropViewController
 
-class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWordFooterViewDelegate, IDAddWordDataDisplayManagerDelegate {
+class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWordFooterViewDelegate, IDAddWordDataDisplayManagerDelegate, TOCropViewControllerDelegate {
 
     var output: IDAddWordViewOutput!
     @IBOutlet weak var frontView: IDAddWordFormView!
     let dataDisplayManager = IDAddWordDataDisplayManager()
+    var cropImageCompletionBlock: ((image: UIImage) -> Void)?
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -59,6 +61,32 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    func displayDialogForCropImage(image: UIImage, dataHolder: IDAddWordDataHolder) {
+        let cropViewController = TOCropViewController(image: image)
+        cropViewController.delegate = self
+        self.cropImageCompletionBlock = {[unowned self](image) in
+            self.output.didCropImage(image, dataHolder: dataHolder)
+        }
+        self.presentViewController(cropViewController, animated: true, completion: nil)
+    }
+    
+    func updateImageForDataHolder(image: UIImage, dataHolder: IDAddWordDataHolder) {
+        guard let imageDataHolder = dataHolder as? IDAddWordImageDataHolder else {
+            return
+        }
+        imageDataHolder.image = image
+        self.frontView.reloadData()
+    }
+    
+    // MARK: TOCropViewControllerDelegate
+
+    func cropViewController(cropViewController: TOCropViewController!, didCropToImage image: UIImage!, withRect cropRect: CGRect, angle: Int) {
+        cropViewController.dismissViewControllerAnimated(true, completion: nil)
+        if let completionBlock = self.cropImageCompletionBlock {
+            completionBlock(image: image)
+        }
+    }
+    
     // MARK: IDAddWordFooterViewDelegate
     
     func addWordFooterViewDidTapAddImageButton(footerView: IDAddWordFooterView) {
@@ -67,14 +95,8 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
     
     // MARK: IDAddWordDataDisplayManagerDelegate
     
-    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddWordDataDisplayManager, indexPath: NSIndexPath) {
-        self.output.didTapSelectImageButton {[unowned self] (result) in
-            guard let image = result else {
-                return
-            }
-            dataDisplayManager.updateImage(image, indexPath: indexPath)
-            self.frontView.reloadData()
-        }
+    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddWordDataDisplayManager, dataHolder: IDAddWordDataHolder) {
+        self.output.didTapSelectImageButton(dataHolder)
     }
     
     // MARK: Protected

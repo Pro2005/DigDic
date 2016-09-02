@@ -13,5 +13,7 @@ protocol IDAddWordViewInput: IDBaseViewInput {
     func setupInitialState()
     func addFormForSelectingImage()
     func displayDialogForSelectingImage(completion: (result: UIImage?) -> Void)
+    func displayDialogForCropImage(image: UIImage, dataHolder: IDAddWordDataHolder)
+    func updateImageForDataHolder(image: UIImage, dataHolder: IDAddWordDataHolder)
     
 }

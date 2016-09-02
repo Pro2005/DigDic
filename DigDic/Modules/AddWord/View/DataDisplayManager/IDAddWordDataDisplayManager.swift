@@ -50,7 +50,7 @@ class IDAddWordDataDisplayManager: NSObject, UITableViewDelegate, UITableViewDat
         switch dataHolder {
         case _ as IDAddWordImageDataHolder:
             if let delegate = self.delegate {
-                delegate.dataDisplayManagerWantSelectImage(self, indexPath: indexPath)
+                delegate.dataDisplayManagerWantSelectImage(self, dataHolder: dataHolder)
             }
         default:
             return
