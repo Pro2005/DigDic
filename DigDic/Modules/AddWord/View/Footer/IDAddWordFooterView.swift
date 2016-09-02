@@ -35,4 +35,16 @@ class IDAddWordFooterView: UIView {
         }
     }
     
+    @IBAction func didTapLeftButton(sender: AnyObject) {
+        if let delegate = self.delegate {
+            delegate.addWordFooterViewDidTapLeftButton(self)
+        }
+    }
+    
+    @IBAction func didTapRightButton(sender: AnyObject) {
+        if let delegate = self.delegate {
+            delegate.addWordFooterViewDidTapRightButton(self)
+        }
+    }
+    
 }

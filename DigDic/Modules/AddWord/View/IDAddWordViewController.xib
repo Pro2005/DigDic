@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IDAddWordViewController" customModule="DigDic" customModuleProvider="target">
             <connections>
+                <outlet property="backView" destination="3bK-Hv-JMJ" id="JHC-C1-dMH"/>
                 <outlet property="frontView" destination="Eyg-Mw-cKR" id="Vtk-cr-atd"/>
                 <outlet property="view" destination="iN0-l3-epB" id="wga-9C-hpQ"/>
             </connections>
@@ -21,13 +22,21 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eyg-Mw-cKR" userLabel="frontView" customClass="IDAddWordFormView" customModule="DigDic" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="584" height="524"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.75686274509803919" green="0.84705882352941175" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bK-Hv-JMJ" userLabel="backView" customClass="IDAddWordFormView" customModule="DigDic" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="584" height="524"/>
+                            <color key="backgroundColor" red="0.36470588235294116" green="0.5490196078431373" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Eyg-Mw-cKR" secondAttribute="trailing" id="0xk-Gm-nbD"/>
+                        <constraint firstItem="3bK-Hv-JMJ" firstAttribute="leading" secondItem="K9D-Hd-weP" secondAttribute="leading" id="7MT-IU-iH1"/>
+                        <constraint firstAttribute="bottom" secondItem="3bK-Hv-JMJ" secondAttribute="bottom" id="8kI-1s-6Qw"/>
                         <constraint firstItem="Eyg-Mw-cKR" firstAttribute="leading" secondItem="K9D-Hd-weP" secondAttribute="leading" id="O5Z-05-G95"/>
+                        <constraint firstAttribute="trailing" secondItem="3bK-Hv-JMJ" secondAttribute="trailing" id="XiO-Fp-5Ui"/>
+                        <constraint firstItem="3bK-Hv-JMJ" firstAttribute="top" secondItem="K9D-Hd-weP" secondAttribute="top" id="Yzt-cr-E13"/>
                         <constraint firstAttribute="bottom" secondItem="Eyg-Mw-cKR" secondAttribute="bottom" id="vkV-U5-Ntj"/>
                         <constraint firstItem="Eyg-Mw-cKR" firstAttribute="top" secondItem="K9D-Hd-weP" secondAttribute="top" id="wcd-Hr-2Lp"/>
                     </constraints>

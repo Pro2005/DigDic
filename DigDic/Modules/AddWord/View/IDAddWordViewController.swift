@@ -14,7 +14,27 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
 
     var output: IDAddWordViewOutput!
     @IBOutlet weak var frontView: IDAddWordFormView!
-    let dataDisplayManager = IDAddWordDataDisplayManager()
+    @IBOutlet weak var backView: IDAddWordFormView!
+    
+    var currentView: IDAddWordFormView {
+        if (!frontView.hidden) {
+            return frontView
+        } else {
+            return backView
+        }
+    }
+    
+    let frontDataDisplayManager = IDAddWordDataDisplayManager()
+    let backDataDisplayManager = IDAddWordDataDisplayManager()
+    
+    var currentDataDisplayManager: IDAddWordDataDisplayManager {
+        if (!frontView.hidden) {
+            return frontDataDisplayManager
+        } else {
+            return backDataDisplayManager
+        }
+    }
+    
     var cropImageCompletionBlock: ((image: UIImage) -> Void)?
 
     // MARK: Life cycle
@@ -32,8 +52,8 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
     // MARK: IDAddWordViewInput
     
     func addFormForSelectingImage() {
-        self.dataDisplayManager.addCellForSelectingImage()
-        self.frontView.reloadData()
+        self.currentDataDisplayManager.addCellForSelectingImage()
+        self.currentView.reloadData()
     }
     
     func displayDialogForSelectingImage(completion: (result: UIImage?) -> Void) {
@@ -75,7 +95,7 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
             return
         }
         imageDataHolder.image = image
-        self.frontView.reloadData()
+        self.currentView.reloadData()
     }
     
     // MARK: TOCropViewControllerDelegate
@@ -93,6 +113,14 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
         self.output.didTapAddImageButton()
     }
     
+    func addWordFooterViewDidTapLeftButton(footerView: IDAddWordFooterView) {
+        UIView.transitionFromView(self.currentView, toView: self.currentView == self.frontView ? self.backView : self.frontView, duration: 0.5, options:[.TransitionFlipFromRight, .ShowHideTransitionViews], completion: nil)
+    }
+    
+    func addWordFooterViewDidTapRightButton(footerView: IDAddWordFooterView) {
+        UIView.transitionFromView(self.currentView, toView: self.currentView == self.frontView ? self.backView : self.frontView, duration: 0.5, options:[.TransitionFlipFromLeft, .ShowHideTransitionViews], completion: nil)
+    }
+    
     // MARK: IDAddWordDataDisplayManagerDelegate
     
     func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddWordDataDisplayManager, dataHolder: IDAddWordDataHolder) {
@@ -107,8 +135,18 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
             footerView.delegate = self
             self.frontView.setupTableViewFooter(footerView, footerHeight: IDAddWordFooterView.height())
         }
-        self.frontView.setupTableViewDataSource(self.dataDisplayManager, delegate: self.dataDisplayManager)
-        self.dataDisplayManager.delegate = self
+        
+        if let view = NSBundle.mainBundle().loadNibNamed(String(IDAddWordFooterView), owner: nil, options: nil).last {
+            let footerView = view as! IDAddWordFooterView
+            footerView.delegate = self
+            self.backView.setupTableViewFooter(footerView, footerHeight: IDAddWordFooterView.height())
+        }
+        
+        self.frontView.setupTableViewDataSource(self.frontDataDisplayManager, delegate: self.frontDataDisplayManager)
+        self.frontDataDisplayManager.delegate = self
+        
+        self.backView.setupTableViewDataSource(self.backDataDisplayManager, delegate: self.backDataDisplayManager)
+        self.backDataDisplayManager.delegate = self
     }
     
     // MARK: Private

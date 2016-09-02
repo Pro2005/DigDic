@@ -24,9 +24,39 @@
                         <action selector="didTapAddImageButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="c5L-VW-502"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mjj-AP-HcI">
+                    <rect key="frame" x="14" y="11" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="A74-RF-yxy"/>
+                        <constraint firstAttribute="height" constant="30" id="xCn-tp-BOT"/>
+                    </constraints>
+                    <state key="normal" title="&lt;-">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapLeftButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="j8f-dW-VC9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFn-1P-l0R">
+                    <rect key="frame" x="540" y="11" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="XPd-E3-zSp"/>
+                        <constraint firstAttribute="height" constant="30" id="w0K-L6-afn"/>
+                    </constraints>
+                    <state key="normal" title="-&gt;">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapRightButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="3Rv-Pp-mOG"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="amq-MU-F7p" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9Sz-Dz-ga6"/>
+                <constraint firstAttribute="trailing" secondItem="YFn-1P-l0R" secondAttribute="trailing" constant="14" id="L2i-hE-P1T"/>
+                <constraint firstItem="Mjj-AP-HcI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jbK-2O-QiH"/>
+                <constraint firstItem="YFn-1P-l0R" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qom-G0-gHf"/>
+                <constraint firstItem="Mjj-AP-HcI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="yoN-3h-Eow"/>
                 <constraint firstItem="amq-MU-F7p" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zLO-Xi-YZn"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

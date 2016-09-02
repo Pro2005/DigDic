@@ -18,9 +18,11 @@ class IDAddWordFormView: UIView {
         super.init(coder: aDecoder)
         self.setup()
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        self.tableView.backgroundColor = UIColor.clearColor()
         
         if let height = self.footerHeight, footerView = self.tableView.tableFooterView {
             self.updateFooterHeight(footerView, height: height)
@@ -55,6 +57,7 @@ class IDAddWordFormView: UIView {
     
     private func setup() {
         self.addSubview(self.tableView)
+        
     }
     
     // MARK: Private

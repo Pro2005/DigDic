@@ -11,5 +11,7 @@ import Foundation
 protocol IDAddWordFooterViewDelegate {
     
     func addWordFooterViewDidTapAddImageButton(footerView: IDAddWordFooterView)
+    func addWordFooterViewDidTapLeftButton(footerView: IDAddWordFooterView)
+    func addWordFooterViewDidTapRightButton(footerView: IDAddWordFooterView)
     
 }
