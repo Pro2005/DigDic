@@ -29,4 +29,9 @@ class IDLocalDataBaseSource: IDDictionarySource {
         }
     }
     
+    func wordModelForFilling() -> IDWord {
+        let word = IDLDBWord()
+        return word
+    }
+    
 }

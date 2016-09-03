@@ -12,5 +12,6 @@ protocol IDDictionarySource {
     
     func fetchDictionaries(completion: ([IDDictionary]) -> ())
     func addDictionaryWithName(name: String)
+    func wordModelForFilling() -> IDWord
     
 }

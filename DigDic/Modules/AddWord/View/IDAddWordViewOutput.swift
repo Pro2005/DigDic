@@ -16,6 +16,7 @@ protocol IDAddWordViewOutput: IDBaseViewOutput {
 
     func viewIsReady()
     func didTapCloseButton()
+    func didTapAddButton()
     func didTapAddImageButton()
     func didTapSelectImageButton(dataHolder: IDAddWordDataHolder)
     func didCropImage(image: UIImage, dataHolder: IDAddWordDataHolder)

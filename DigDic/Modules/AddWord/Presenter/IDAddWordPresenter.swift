@@ -21,6 +21,15 @@ class IDAddWordPresenter: NSObject, IDAddWordModuleInput, IDAddWordViewOutput, I
         self.router.dismiss()
     }
     
+    func didTapAddButton() {
+//        let numberWords = self.view.numberWords()
+//        for wordIndex in 0..<numberWords {
+//            if let dataHolders = self.view.dataHoldersForWordNumber(wordIndex) {
+//                
+//            }
+//        }
+    }
+    
     func didTapAddImageButton() {
         self.view.addFormForSelectingImage()
     }

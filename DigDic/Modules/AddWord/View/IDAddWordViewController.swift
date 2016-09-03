@@ -27,6 +27,11 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
     let frontDataDisplayManager = IDAddWordDataDisplayManager()
     let backDataDisplayManager = IDAddWordDataDisplayManager()
     
+    enum IDWordFrom: Int {
+        case FaceView = 0
+        case BackView
+    }
+    
     var currentDataDisplayManager: IDAddWordDataDisplayManager {
         if (!frontView.hidden) {
             return frontDataDisplayManager
@@ -47,6 +52,10 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
     
     @IBAction func didTapCloseButton(sender: AnyObject) {
         self.output.didTapCloseButton()
+    }
+    
+    @IBAction func didTapAddButton(sender: AnyObject) {
+        
     }
 
     // MARK: IDAddWordViewInput
@@ -96,6 +105,21 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
         }
         imageDataHolder.image = image
         self.currentView.reloadData()
+    }
+    
+    func numberWords() -> Int {
+        return 2
+    }
+    
+    func dataHoldersForWordNumber(number: Int) -> [IDAddWordDataHolder]? {
+        switch number {
+        case IDWordFrom.BackView.rawValue:
+            return self.frontDataDisplayManager.dataSource
+        case IDWordFrom.FaceView.rawValue:
+            return self.backDataDisplayManager.dataSource
+        default:
+            return nil
+        }
     }
     
     // MARK: TOCropViewControllerDelegate

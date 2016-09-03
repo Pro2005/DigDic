@@ -9,5 +9,8 @@
 class IDAddWordInteractor: IDAddWordInteractorInput {
 
     weak var output: IDAddWordInteractorOutput!
+    lazy var service: IDDictionaryService = IDDictionaryService(source: IDLocalDataBaseSource())
+    
 
+    
 }
