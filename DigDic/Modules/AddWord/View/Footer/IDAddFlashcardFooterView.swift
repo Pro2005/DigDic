@@ -1,5 +1,5 @@
 //
-//  IDAddWordFooterView.swift
+//  IDAddFlashcardFooterView.swift
 //  DigDic
 //
 //  Created by Ilya Denisov on 8/30/16.
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class IDAddWordFooterView: UIView {
+class IDAddFlashcardFooterView: UIView {
     
-    var delegate: IDAddWordFooterViewDelegate?
+    var delegate: IDAddFlashcardFooterViewDelegate?
     
     // MARK: Public
     
@@ -20,7 +20,7 @@ class IDAddWordFooterView: UIView {
             static var height: CGFloat = 0
         }
         if Holder.height == 0 {
-            if let view = NSBundle.mainBundle().loadNibNamed(String(IDAddWordFooterView), owner: nil, options: nil).last {
+            if let view = NSBundle.mainBundle().loadNibNamed(String(IDAddFlashcardFooterView), owner: nil, options: nil).last {
                 Holder.height = (view as! UIView).frame.size.height
             }
         }
@@ -31,19 +31,19 @@ class IDAddWordFooterView: UIView {
     
     @IBAction func didTapAddImageButton(sender: AnyObject) {
         if let delegate = self.delegate {
-            delegate.addWordFooterViewDidTapAddImageButton(self)
+            delegate.AddFlashcardFooterViewDidTapAddImageButton(self)
         }
     }
     
     @IBAction func didTapLeftButton(sender: AnyObject) {
         if let delegate = self.delegate {
-            delegate.addWordFooterViewDidTapLeftButton(self)
+            delegate.AddFlashcardFooterViewDidTapLeftButton(self)
         }
     }
     
     @IBAction func didTapRightButton(sender: AnyObject) {
         if let delegate = self.delegate {
-            delegate.addWordFooterViewDidTapRightButton(self)
+            delegate.AddFlashcardFooterViewDidTapRightButton(self)
         }
     }
     

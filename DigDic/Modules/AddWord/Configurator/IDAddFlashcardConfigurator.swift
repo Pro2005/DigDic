@@ -1,5 +1,5 @@
 //
-//  IDAddWordIDAddWordConfigurator.swift
+//  IDAddFlashcardIDAddFlashcardConfigurator.swift
 //  DigDic
 //
 //  Created by ls on 26/08/2016.
@@ -8,24 +8,24 @@
 
 import UIKit
 
-class IDAddWordModuleConfigurator {
+class IDAddFlashcardModuleConfigurator {
 
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
-        if let viewController = viewInput as? IDAddWordViewController {
+        if let viewController = viewInput as? IDAddFlashcardViewController {
             configure(viewController)
         }
     }
 
-    private func configure(viewController: IDAddWordViewController) {
+    private func configure(viewController: IDAddFlashcardViewController) {
 
-        let router = IDAddWordRouter(viewController: viewController)
+        let router = IDAddFlashcardRouter(viewController: viewController)
 
-        let presenter = IDAddWordPresenter()
+        let presenter = IDAddFlashcardPresenter()
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = IDAddWordInteractor()
+        let interactor = IDAddFlashcardInteractor()
         interactor.output = presenter
 
         presenter.interactor = interactor

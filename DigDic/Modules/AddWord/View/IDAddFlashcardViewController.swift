@@ -1,5 +1,5 @@
 //
-//  AddWordIDAddWordViewController.swift
+//  AddFlashcardIDAddFlashcardViewController.swift
 //  DigDic
 //
 //  Created by ls on 26/08/2016.
@@ -10,13 +10,13 @@ import UIKit
 import BlocksKit
 import TOCropViewController
 
-class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWordFooterViewDelegate, IDAddWordDataDisplayManagerDelegate, TOCropViewControllerDelegate {
+class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInput, IDAddFlashcardFooterViewDelegate, IDAddFlashcardDataDisplayManagerDelegate, TOCropViewControllerDelegate {
 
-    var output: IDAddWordViewOutput!
-    @IBOutlet weak var frontView: IDAddWordFormView!
-    @IBOutlet weak var backView: IDAddWordFormView!
+    var output: IDAddFlashcardViewOutput!
+    @IBOutlet weak var frontView: IDAddFlashcardFormView!
+    @IBOutlet weak var backView: IDAddFlashcardFormView!
     
-    var currentView: IDAddWordFormView {
+    var currentView: IDAddFlashcardFormView {
         if (!frontView.hidden) {
             return frontView
         } else {
@@ -24,15 +24,15 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
         }
     }
     
-    let frontDataDisplayManager = IDAddWordDataDisplayManager()
-    let backDataDisplayManager = IDAddWordDataDisplayManager()
+    let frontDataDisplayManager = IDAddFlashcardDataDisplayManager()
+    let backDataDisplayManager = IDAddFlashcardDataDisplayManager()
     
     enum IDWordFrom: Int {
         case FaceView = 0
         case BackView
     }
     
-    var currentDataDisplayManager: IDAddWordDataDisplayManager {
+    var currentDataDisplayManager: IDAddFlashcardDataDisplayManager {
         if (!frontView.hidden) {
             return frontDataDisplayManager
         } else {
@@ -58,7 +58,7 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
         
     }
 
-    // MARK: IDAddWordViewInput
+    // MARK: IDAddFlashcardViewInput
     
     func addFormForSelectingImage() {
         self.currentDataDisplayManager.addCellForSelectingImage()
@@ -90,7 +90,7 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    func displayDialogForCropImage(image: UIImage, dataHolder: IDAddWordDataHolder) {
+    func displayDialogForCropImage(image: UIImage, dataHolder: IDAddFlashcardDataHolder) {
         let cropViewController = TOCropViewController(image: image)
         cropViewController.delegate = self
         self.cropImageCompletionBlock = {[unowned self](image) in
@@ -99,19 +99,19 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
         self.presentViewController(cropViewController, animated: true, completion: nil)
     }
     
-    func updateImageForDataHolder(image: UIImage, dataHolder: IDAddWordDataHolder) {
-        guard let imageDataHolder = dataHolder as? IDAddWordImageDataHolder else {
+    func updateImageForDataHolder(image: UIImage, dataHolder: IDAddFlashcardDataHolder) {
+        guard let imageDataHolder = dataHolder as? IDAddFlashcardImageDataHolder else {
             return
         }
         imageDataHolder.image = image
         self.currentView.reloadData()
     }
     
-    func numberWords() -> Int {
+    func numberFlashcards() -> Int {
         return 2
     }
     
-    func dataHoldersForWordNumber(number: Int) -> [IDAddWordDataHolder]? {
+    func dataHoldersForFlashcardWithNumber(number: Int) -> [IDAddFlashcardDataHolder]? {
         switch number {
         case IDWordFrom.BackView.rawValue:
             return self.frontDataDisplayManager.dataSource
@@ -131,39 +131,39 @@ class IDAddWordViewController: IDBaseViewController, IDAddWordViewInput, IDAddWo
         }
     }
     
-    // MARK: IDAddWordFooterViewDelegate
+    // MARK: IDAddFlashcardFooterViewDelegate
     
-    func addWordFooterViewDidTapAddImageButton(footerView: IDAddWordFooterView) {
+    func AddFlashcardFooterViewDidTapAddImageButton(footerView: IDAddFlashcardFooterView) {
         self.output.didTapAddImageButton()
     }
     
-    func addWordFooterViewDidTapLeftButton(footerView: IDAddWordFooterView) {
+    func AddFlashcardFooterViewDidTapLeftButton(footerView: IDAddFlashcardFooterView) {
         UIView.transitionFromView(self.currentView, toView: self.currentView == self.frontView ? self.backView : self.frontView, duration: 0.5, options:[.TransitionFlipFromRight, .ShowHideTransitionViews], completion: nil)
     }
     
-    func addWordFooterViewDidTapRightButton(footerView: IDAddWordFooterView) {
+    func AddFlashcardFooterViewDidTapRightButton(footerView: IDAddFlashcardFooterView) {
         UIView.transitionFromView(self.currentView, toView: self.currentView == self.frontView ? self.backView : self.frontView, duration: 0.5, options:[.TransitionFlipFromLeft, .ShowHideTransitionViews], completion: nil)
     }
     
-    // MARK: IDAddWordDataDisplayManagerDelegate
+    // MARK: IDAddFlashcardDataDisplayManagerDelegate
     
-    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddWordDataDisplayManager, dataHolder: IDAddWordDataHolder) {
+    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddFlashcardDataDisplayManager, dataHolder: IDAddFlashcardDataHolder) {
         self.output.didTapSelectImageButton(dataHolder)
     }
     
     // MARK: Protected
     
     override func setupInitialState() {
-        if let view = NSBundle.mainBundle().loadNibNamed(String(IDAddWordFooterView), owner: nil, options: nil).last {
-            let footerView = view as! IDAddWordFooterView
+        if let view = NSBundle.mainBundle().loadNibNamed(String(IDAddFlashcardFooterView), owner: nil, options: nil).last {
+            let footerView = view as! IDAddFlashcardFooterView
             footerView.delegate = self
-            self.frontView.setupTableViewFooter(footerView, footerHeight: IDAddWordFooterView.height())
+            self.frontView.setupTableViewFooter(footerView, footerHeight: IDAddFlashcardFooterView.height())
         }
         
-        if let view = NSBundle.mainBundle().loadNibNamed(String(IDAddWordFooterView), owner: nil, options: nil).last {
-            let footerView = view as! IDAddWordFooterView
+        if let view = NSBundle.mainBundle().loadNibNamed(String(IDAddFlashcardFooterView), owner: nil, options: nil).last {
+            let footerView = view as! IDAddFlashcardFooterView
             footerView.delegate = self
-            self.backView.setupTableViewFooter(footerView, footerHeight: IDAddWordFooterView.height())
+            self.backView.setupTableViewFooter(footerView, footerHeight: IDAddFlashcardFooterView.height())
         }
         
         self.frontView.setupTableViewDataSource(self.frontDataDisplayManager, delegate: self.frontDataDisplayManager)

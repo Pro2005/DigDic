@@ -10,5 +10,5 @@ import Foundation
 
 protocol IDDictionary {
     var name: String? {get}
-    var words: [IDWord] {get}
+    var cards: [IDFlashcard] {get}
 }

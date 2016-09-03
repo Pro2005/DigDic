@@ -1,5 +1,5 @@
 //
-//  IDAddWordIDAddWordRouterTests.swift
+//  IDAddFlashcardIDAddFlashcardRouterTests.swift
 //  DigDic
 //
 //  Created by ls on 26/08/2016.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class AddWordRouterTests: XCTestCase {
+class AddFlashcardRouterTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

@@ -24,8 +24,8 @@ class IDDictionaryService: IDBaseService {
         self.source.addDictionaryWithName(name)
     }
     
-    func wordModelForFilling() -> IDLDBWord {
-        return self.source.wordModelForFilling() as! IDLDBWord
+    func flashcardModelForFilling() -> IDFlashcard {
+        return self.source.flashcardModelForFilling()
     }
     
 }

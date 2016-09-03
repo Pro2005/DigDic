@@ -1,5 +1,5 @@
 //
-//  IDAddWordDataDisplayManager.swift
+//  IDAddFlashcardDataDisplayManager.swift
 //  DigDic
 //
 //  Created by Ilya Denisov on 8/31/16.
@@ -9,20 +9,20 @@
 import Foundation
 import UIKit
 
-class IDAddWordDataDisplayManager: NSObject, UITableViewDelegate, UITableViewDataSource {
-    var dataSource = [IDAddWordDataHolder]()
-    var delegate: IDAddWordDataDisplayManagerDelegate?
+class IDAddFlashcardDataDisplayManager: NSObject, UITableViewDelegate, UITableViewDataSource {
+    var dataSource = [IDAddFlashcardDataHolder]()
+    var delegate: IDAddFlashcardDataDisplayManagerDelegate?
     
     // MARK: Public
     
     func addCellForSelectingImage() {
-        let imageDataHolder = IDAddWordImageDataHolder()
+        let imageDataHolder = IDAddFlashcardImageDataHolder()
         dataSource.append(imageDataHolder)
     }
     
     func updateImage(image: UIImage, indexPath: NSIndexPath) {
         let dataHolder = self.dataSource[indexPath.row]
-        guard let imageDataHolder = dataHolder as? IDAddWordImageDataHolder else {
+        guard let imageDataHolder = dataHolder as? IDAddFlashcardImageDataHolder else {
             return
         }
         imageDataHolder.image = image
@@ -36,7 +36,7 @@ class IDAddWordDataDisplayManager: NSObject, UITableViewDelegate, UITableViewDat
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let dataHolder = self.dataSource[indexPath.row]
-        if let cellObjectBuilder = IDAddWordCellObjectBuilderFactory.builderForDataHolder(dataHolder) {
+        if let cellObjectBuilder = IDAddFlashcardCellObjectBuilderFactory.builderForDataHolder(dataHolder) {
             let cell = cellObjectBuilder.cellObjectForDataHolder(dataHolder)
             return cell as! UITableViewCell
         }
@@ -48,7 +48,7 @@ class IDAddWordDataDisplayManager: NSObject, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let dataHolder = self.dataSource[indexPath.row]
         switch dataHolder {
-        case _ as IDAddWordImageDataHolder:
+        case _ as IDAddFlashcardImageDataHolder:
             if let delegate = self.delegate {
                 delegate.dataDisplayManagerWantSelectImage(self, dataHolder: dataHolder)
             }

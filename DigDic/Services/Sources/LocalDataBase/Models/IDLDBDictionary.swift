@@ -12,10 +12,10 @@ import RealmSwift
 class IDLDBDictionary: Object, IDDictionary {
     // MARK: IDDictionaryProtocol
     dynamic var name: String?
-    var words: [IDWord] {
-        return self._words.map{$0 as IDWord}
+    var cards: [IDFlashcard] {
+        return self._cards.map{$0 as IDFlashcard}
     }
     
     // MARK: Private
-    let _words = List<IDLDBWord>()
+    private let _cards = List<IDLDBFlashcard>()
 }

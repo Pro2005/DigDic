@@ -1,5 +1,5 @@
 //
-//  AddWordIDAddWordViewOutput.swift
+//  AddFlashcardIDAddFlashcardViewOutput.swift
 //  DigDic
 //
 //  Created by ls on 26/08/2016.
@@ -7,7 +7,7 @@
 //
 import UIKit
 
-protocol IDAddWordViewOutput: IDBaseViewOutput {
+protocol IDAddFlashcardViewOutput: IDBaseViewOutput {
 
     /**
         @author ls
@@ -18,7 +18,7 @@ protocol IDAddWordViewOutput: IDBaseViewOutput {
     func didTapCloseButton()
     func didTapAddButton()
     func didTapAddImageButton()
-    func didTapSelectImageButton(dataHolder: IDAddWordDataHolder)
-    func didCropImage(image: UIImage, dataHolder: IDAddWordDataHolder)
+    func didTapSelectImageButton(dataHolder: IDAddFlashcardDataHolder)
+    func didCropImage(image: UIImage, dataHolder: IDAddFlashcardDataHolder)
     
 }

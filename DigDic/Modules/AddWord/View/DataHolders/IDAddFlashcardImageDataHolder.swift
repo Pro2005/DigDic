@@ -1,5 +1,5 @@
 //
-//  IDAddWordImageDataHolder.swift
+//  IDAddFlashcardImageDataHolder.swift
 //  DigDic
 //
 //  Created by Ilya Denisov on 8/31/16.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class IDAddWordImageDataHolder: IDAddWordDataHolder {
+class IDAddFlashcardImageDataHolder: IDAddFlashcardDataHolder {
     
     var image: UIImage?
     

@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		03CA0AF00450ADE64E177428 /* IDDictionariesListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9CD1A8C5903781EA6CB13 /* IDDictionariesListConfigurator.swift */; };
-		081CC38B1D761572001E3293 /* IDAddWordFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CC38A1D761572001E3293 /* IDAddWordFormView.swift */; };
-		081CC38D1D761C62001E3293 /* IDAddWordFooterViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CC38C1D761C62001E3293 /* IDAddWordFooterViewDelegate.swift */; };
-		081E909A1D70D490007FA7A1 /* IDAddWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 081E90991D70D490007FA7A1 /* IDAddWordViewController.xib */; };
+		081CC38B1D761572001E3293 /* IDAddFlashcardFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CC38A1D761572001E3293 /* IDAddFlashcardFormView.swift */; };
+		081CC38D1D761C62001E3293 /* IDAddFlashcardFooterViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CC38C1D761C62001E3293 /* IDAddFlashcardFooterViewDelegate.swift */; };
+		081E909A1D70D490007FA7A1 /* IDAddFlashcardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 081E90991D70D490007FA7A1 /* IDAddFlashcardViewController.xib */; };
 		081E90A11D70E137007FA7A1 /* IDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E90A01D70E137007FA7A1 /* IDBaseViewController.swift */; };
 		083935231D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083935221D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift */; };
 		084F13C61D65E6A700E907D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13C51D65E6A700E907D6 /* AppDelegate.swift */; };
@@ -25,23 +25,27 @@
 		084F14051D65F42F00E907D6 /* IDBaseInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */; };
 		084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */; };
 		085551461D756C5C00029EED /* IDDictionariesListDataDisplayManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085551451D756C5C00029EED /* IDDictionariesListDataDisplayManagerDelegate.swift */; };
-		0855514C1D7575F400029EED /* IDAddWordFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0855514B1D7575F400029EED /* IDAddWordFooterView.swift */; };
-		0855514E1D75761900029EED /* IDAddWordFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0855514D1D75761900029EED /* IDAddWordFooterView.xib */; };
-		0863779C1D77620E00ABB41B /* IDAddWordDataDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863779B1D77620E00ABB41B /* IDAddWordDataDisplayManager.swift */; };
-		086377A31D7763C000ABB41B /* IDAddWordSelectImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377A21D7763C000ABB41B /* IDAddWordSelectImageCell.swift */; };
-		086377A51D77649A00ABB41B /* IDAddWordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377A41D77649A00ABB41B /* IDAddWordCell.swift */; };
-		086377AF1D776A1000ABB41B /* IDAddWordSelectImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 086377AE1D776A1000ABB41B /* IDAddWordSelectImageCell.xib */; };
-		086377B31D776B3500ABB41B /* IDAddWordCellObjectBuilderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377B21D776B3500ABB41B /* IDAddWordCellObjectBuilderFactory.swift */; };
-		086377B61D77704D00ABB41B /* IDAddWordDataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377B51D77704D00ABB41B /* IDAddWordDataHolder.swift */; };
-		086377B81D77708800ABB41B /* IDAddWordCellObjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377B71D77708800ABB41B /* IDAddWordCellObjectBuilder.swift */; };
-		086377BA1D77715C00ABB41B /* IDAddWordImageDataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377B91D77715C00ABB41B /* IDAddWordImageDataHolder.swift */; };
-		086377BC1D7773F600ABB41B /* IDAddWordSelectImageCellObjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377BB1D7773F600ABB41B /* IDAddWordSelectImageCellObjectBuilder.swift */; };
-		086377BE1D77790C00ABB41B /* IDAddWordDataDisplayManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377BD1D77790C00ABB41B /* IDAddWordDataDisplayManagerDelegate.swift */; };
+		0855514C1D7575F400029EED /* IDAddFlashcardFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0855514B1D7575F400029EED /* IDAddFlashcardFooterView.swift */; };
+		0855514E1D75761900029EED /* IDAddFlashcardFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0855514D1D75761900029EED /* IDAddFlashcardFooterView.xib */; };
+		0863779C1D77620E00ABB41B /* IDAddFlashcardDataDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863779B1D77620E00ABB41B /* IDAddFlashcardDataDisplayManager.swift */; };
+		086377A31D7763C000ABB41B /* IDAddFlashcardSelectImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377A21D7763C000ABB41B /* IDAddFlashcardSelectImageCell.swift */; };
+		086377A51D77649A00ABB41B /* IDAddFlashcardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377A41D77649A00ABB41B /* IDAddFlashcardCell.swift */; };
+		086377AF1D776A1000ABB41B /* IDAddFlashcardSelectImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 086377AE1D776A1000ABB41B /* IDAddFlashcardSelectImageCell.xib */; };
+		086377B31D776B3500ABB41B /* IDAddFlashcardCellObjectBuilderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377B21D776B3500ABB41B /* IDAddFlashcardCellObjectBuilderFactory.swift */; };
+		086377B61D77704D00ABB41B /* IDAddFlashcardDataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377B51D77704D00ABB41B /* IDAddFlashcardDataHolder.swift */; };
+		086377B81D77708800ABB41B /* IDAddFlashcardCellObjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377B71D77708800ABB41B /* IDAddFlashcardCellObjectBuilder.swift */; };
+		086377BA1D77715C00ABB41B /* IDAddFlashcardImageDataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377B91D77715C00ABB41B /* IDAddFlashcardImageDataHolder.swift */; };
+		086377BC1D7773F600ABB41B /* IDAddFlashcardSelectImageCellObjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377BB1D7773F600ABB41B /* IDAddFlashcardSelectImageCellObjectBuilder.swift */; };
+		086377BE1D77790C00ABB41B /* IDAddFlashcardDataDisplayManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377BD1D77790C00ABB41B /* IDAddFlashcardDataDisplayManagerDelegate.swift */; };
 		0863B6B21D7376EA009EB5B6 /* IDBaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */; };
 		086E79291D6B3C3000EB081F /* UINavigationItem+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */; };
+		08A1ADD41D7B5D78006A39DA /* IDFlashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADD11D7B5D78006A39DA /* IDFlashcard.swift */; };
+		08A1ADD51D7B5D78006A39DA /* IDFlashcardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADD21D7B5D78006A39DA /* IDFlashcardImage.swift */; };
+		08A1ADD61D7B5D78006A39DA /* IDFlashcardText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADD31D7B5D78006A39DA /* IDFlashcardText.swift */; };
+		08A1ADD81D7B5E41006A39DA /* IDLDBFlashcardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADD71D7B5E41006A39DA /* IDLDBFlashcardImage.swift */; };
+		08A1ADDA1D7B5E4F006A39DA /* IDLDBFlashcardText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADD91D7B5E4F006A39DA /* IDLDBFlashcardText.swift */; };
 		08B4AB121D6E258100E5CE88 /* IDDictionaryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4AB111D6E258100E5CE88 /* IDDictionaryDetailViewController.xib */; };
-		08B4AB171D6E3E4C00E5CE88 /* IDWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4AB161D6E3E4C00E5CE88 /* IDWord.swift */; };
-		08B4AB191D6E3FFF00E5CE88 /* IDLDBWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4AB181D6E3FFF00E5CE88 /* IDLDBWord.swift */; };
+		08B4AB191D6E3FFF00E5CE88 /* IDLDBFlashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4AB181D6E3FFF00E5CE88 /* IDLDBFlashcard.swift */; };
 		08DE58E21D66441D00C255E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08DE58E41D66441D00C255E6 /* Localizable.strings */; };
 		08DE58EA1D6646C600C255E6 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58E91D6646C600C255E6 /* String+Localized.swift */; };
 		08E7FD4F1D6CD694006BD301 /* IDDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD4E1D6CD694006BD301 /* IDDictionaryService.swift */; };
@@ -51,54 +55,54 @@
 		08E7FD5D1D6CD805006BD301 /* IDLocalDataBaseSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD5C1D6CD805006BD301 /* IDLocalDataBaseSource.swift */; };
 		08E7FD601D6CD8D1006BD301 /* IDLDBDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7FD5F1D6CD8D1006BD301 /* IDLDBDictionary.swift */; };
 		0A4AE09DC7EE733B2B21606E /* IDDictionariesListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1929641FC0E7D6686E0104DC /* IDDictionariesListInteractorTests.swift */; };
-		0D326EF69ED452DDCBA125D4 /* IDAddWordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C20C58D76B100F636642462 /* IDAddWordInteractor.swift */; };
+		0D326EF69ED452DDCBA125D4 /* IDAddFlashcardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C20C58D76B100F636642462 /* IDAddFlashcardInteractor.swift */; };
 		0D4403A125CDA0E1009047FE /* IDDictionaryDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D32D046186A27D8455707F /* IDDictionaryDetailPresenterTests.swift */; };
 		0DA718AC741D71F25AF3E63E /* IDDictionariesListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFCB653DBEFA22386B1E1BD /* IDDictionariesListRouterInput.swift */; };
 		11C3552D9EE7CF14FE232EA1 /* IDDictionaryDetailInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1384E33B8960348149E6B8CF /* IDDictionaryDetailInteractorInput.swift */; };
 		18E08ABF241AF5B7F6F08D5F /* Pods_DigDic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84D2429BA61854DBF241AF6 /* Pods_DigDic.framework */; };
 		27EB1517FB15D56B1309070C /* IDDictionaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6C120220C4E931CD3DFBB /* IDDictionaryDetailViewController.swift */; };
 		2842A9EFCB076636AF741314 /* IDDictionaryDetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6622EDD0DADBEB127EDE7E /* IDDictionaryDetailViewInput.swift */; };
-		2C9D64258F6D0546CBC4A175 /* IDAddWordRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6E14FE57FC81FD580202B /* IDAddWordRouterInput.swift */; };
-		2CA3BD01F8EDABDEAEC4B49C /* IDAddWordInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859C7FA5B9480CAC19A818B2 /* IDAddWordInteractorOutput.swift */; };
+		2C9D64258F6D0546CBC4A175 /* IDAddFlashcardRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6E14FE57FC81FD580202B /* IDAddFlashcardRouterInput.swift */; };
+		2CA3BD01F8EDABDEAEC4B49C /* IDAddFlashcardInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859C7FA5B9480CAC19A818B2 /* IDAddFlashcardInteractorOutput.swift */; };
 		2F4A22408AA6CC7F2BEAC5FE /* IDDictionaryDetailRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FAB7DC1C65C2AB853FC73 /* IDDictionaryDetailRouterInput.swift */; };
 		2FA28F005BCA8B90F7689106 /* IDDictionaryDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D53CD41234F11AE8C93E4B1 /* IDDictionaryDetailPresenter.swift */; };
 		339DD14E95BF5AF0DC00977E /* IDDictionariesListConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C37CBF32F81E75A35E832F /* IDDictionariesListConfiguratorTests.swift */; };
 		3A2EC88414525B4CC6D8B395 /* IDDictionariesListModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572770738EB155EA136FF42 /* IDDictionariesListModuleInput.swift */; };
-		3A589DF7CE3A82FA81825F11 /* IDAddWordViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D930CB18255A1E66BC3C5E92 /* IDAddWordViewInput.swift */; };
+		3A589DF7CE3A82FA81825F11 /* IDAddFlashcardViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D930CB18255A1E66BC3C5E92 /* IDAddFlashcardViewInput.swift */; };
 		45701B33D8CD4B50949B4296 /* IDAddWordPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B5F066733A50FCA7EA8E3 /* IDAddWordPresenterTests.swift */; };
 		5563309313CFCDF970F42CC7 /* IDAddWordConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB6B2B98CAA5FB90C8A364 /* IDAddWordConfiguratorTests.swift */; };
 		5C0012D36CCA29A97C3E4791 /* IDDictionaryDetailConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338308A98C1AF2B598855681 /* IDDictionaryDetailConfiguratorTests.swift */; };
 		645833ABEB171AE312D8A55F /* IDDictionariesListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA6485CAAB2D84114C8CA6 /* IDDictionariesListInteractorOutput.swift */; };
 		6BEE48A86F54732D103C0EA7 /* IDDictionariesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC138363548D5A04894A8A0F /* IDDictionariesListRouter.swift */; };
 		6D39CD993FA191235D64318F /* IDDictionaryDetailRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481A7EA718C47A91875DCDB /* IDDictionaryDetailRouterTests.swift */; };
-		6F407B79A3CA2FDFC84E1C13 /* IDAddWordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0124A007F52F193869808 /* IDAddWordRouter.swift */; };
+		6F407B79A3CA2FDFC84E1C13 /* IDAddFlashcardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0124A007F52F193869808 /* IDAddFlashcardRouter.swift */; };
 		723B8F6A7EF19D54FBE078DB /* IDDictionaryDetailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2EBBA565199DDAA1BF7C1F /* IDDictionaryDetailViewTests.swift */; };
 		7ADD40745138FAACBC72F159 /* IDAddWordRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863CC1F69CEAFCD15C3449C /* IDAddWordRouterTests.swift */; };
 		7D248BD796BDFCC6C8090F6E /* IDDictionaryDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97456EA28E233A6361DD0FF8 /* IDDictionaryDetailRouter.swift */; };
-		81A46CF3F23D045497A06F7C /* IDAddWordViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AC0DC3213DC62033CDEB74 /* IDAddWordViewOutput.swift */; };
+		81A46CF3F23D045497A06F7C /* IDAddFlashcardViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AC0DC3213DC62033CDEB74 /* IDAddFlashcardViewOutput.swift */; };
 		8B61583EBE1ECD654801F713 /* IDDictionaryDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F0C50883B7A57AF9C571E6 /* IDDictionaryDetailInteractorTests.swift */; };
 		8BBCF3710B1094637156C098 /* IDDictionariesListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BCB33CEA9BCF21C5B896B /* IDDictionariesListViewOutput.swift */; };
 		9E16193D6E59C89286EDCFC6 /* IDDictionaryDetailModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128950BED6A34BB5B29054E8 /* IDDictionaryDetailModuleInput.swift */; };
 		AFDE776B46B4E495392A2203 /* IDDictionariesListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20E9B32E4B7C049F1A3898B /* IDDictionariesListPresenterTests.swift */; };
 		B2CCC394C90704661B24D48C /* IDDictionaryDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BFA38A97CF5BD7486E7C0 /* IDDictionaryDetailInteractor.swift */; };
-		B3CC735E2E05C0A96A4CED4F /* IDAddWordModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306CBEFF8935698AA966551 /* IDAddWordModuleInput.swift */; };
-		B52ACF295E17B5AF55110598 /* IDAddWordInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEEC60D7456ED1F80954ACA /* IDAddWordInteractorInput.swift */; };
+		B3CC735E2E05C0A96A4CED4F /* IDAddFlashcardModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306CBEFF8935698AA966551 /* IDAddFlashcardModuleInput.swift */; };
+		B52ACF295E17B5AF55110598 /* IDAddFlashcardInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEEC60D7456ED1F80954ACA /* IDAddFlashcardInteractorInput.swift */; };
 		BA9385C1959706CC18273082 /* Pods_DigDicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D42D706F8FFD958BD3D024 /* Pods_DigDicTests.framework */; };
 		CC3CB1D1E8A052B64771FD32 /* IDAddWordViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE6CCFC6AB109FF32D0A29 /* IDAddWordViewTests.swift */; };
 		D64F75F3512D5B6D36299F6F /* IDDictionaryDetailViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9A50FE21D5223E57A5726 /* IDDictionaryDetailViewOutput.swift */; };
 		D77E4143B6B5F5F011066236 /* IDDictionariesListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199DF158F1E8945C91C3AC89 /* IDDictionariesListViewInput.swift */; };
 		D950E713B8C50D2CD0F88137 /* IDDictionariesListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221AB61CF607BCFB0E18F755 /* IDDictionariesListInteractorInput.swift */; };
-		D9744579C7C02E065E1F9210 /* IDAddWordConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B9DCBAEE7E472BB651204 /* IDAddWordConfigurator.swift */; };
+		D9744579C7C02E065E1F9210 /* IDAddFlashcardConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B9DCBAEE7E472BB651204 /* IDAddFlashcardConfigurator.swift */; };
 		DBC18666997231F8BE46F665 /* IDDictionariesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084506986546352BFDC79839 /* IDDictionariesListPresenter.swift */; };
 		E14DC73B8A2B4A5F519456B6 /* IDDictionaryDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CC6AEE3CFA1C0A0EDB2B9 /* IDDictionaryDetailConfigurator.swift */; };
 		E1528A507EC1ED583A1D779D /* IDDictionaryDetailInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0957A7DB4E45593F50BA3 /* IDDictionaryDetailInteractorOutput.swift */; };
 		E21AA1EA9B4B2DE4C5FED40B /* IDAddWordInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521C9D52C1054A1C7DF5BF32 /* IDAddWordInteractorTests.swift */; };
-		E341AE691D11286488A115FB /* IDAddWordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B0A531BD3644B8F9479B55 /* IDAddWordPresenter.swift */; };
+		E341AE691D11286488A115FB /* IDAddFlashcardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B0A531BD3644B8F9479B55 /* IDAddFlashcardPresenter.swift */; };
 		E40F1C69ADBDC50D9092E798 /* IDDictionariesListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7121FA5BDB166E48857A7750 /* IDDictionariesListRouterTests.swift */; };
 		E6773595B873EC1A9F11C691 /* IDDictionariesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D0E5787AA2885826E6088 /* IDDictionariesListInteractor.swift */; };
 		F3F4A4232F4F275D20CCCC7C /* IDDictionariesListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C91E446F5CB3D7309D95A1 /* IDDictionariesListViewTests.swift */; };
 		F4934EB3922FB4741E358414 /* IDDictionariesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750E971230A7C48DFF11B96F /* IDDictionariesListViewController.swift */; };
-		FB959B8ED252B3488930458E /* IDAddWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D2E3BC23D899A5B20A03C /* IDAddWordViewController.swift */; };
+		FB959B8ED252B3488930458E /* IDAddFlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D2E3BC23D899A5B20A03C /* IDAddFlashcardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,10 +117,10 @@
 
 /* Begin PBXFileReference section */
 		0126661D970EE6910779089C /* Pods-DigDicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigDicTests/Pods-DigDicTests.release.xcconfig"; sourceTree = "<group>"; };
-		07BB6B2B98CAA5FB90C8A364 /* IDAddWordConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordConfiguratorTests.swift; sourceTree = "<group>"; };
-		081CC38A1D761572001E3293 /* IDAddWordFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordFormView.swift; sourceTree = "<group>"; };
-		081CC38C1D761C62001E3293 /* IDAddWordFooterViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordFooterViewDelegate.swift; sourceTree = "<group>"; };
-		081E90991D70D490007FA7A1 /* IDAddWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDAddWordViewController.xib; sourceTree = "<group>"; };
+		07BB6B2B98CAA5FB90C8A364 /* IDAddWordConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IDAddWordConfiguratorTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		081CC38A1D761572001E3293 /* IDAddFlashcardFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardFormView.swift; sourceTree = "<group>"; };
+		081CC38C1D761C62001E3293 /* IDAddFlashcardFooterViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardFooterViewDelegate.swift; sourceTree = "<group>"; };
+		081E90991D70D490007FA7A1 /* IDAddFlashcardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDAddFlashcardViewController.xib; sourceTree = "<group>"; };
 		081E90A01D70E137007FA7A1 /* IDBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseViewController.swift; sourceTree = "<group>"; };
 		083935221D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionariesListDataDisplayManager.swift; sourceTree = "<group>"; };
 		084506986546352BFDC79839 /* IDDictionariesListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListPresenter.swift; sourceTree = "<group>"; };
@@ -136,24 +140,28 @@
 		084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorOutput.swift; sourceTree = "<group>"; };
 		084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouterInput.swift; sourceTree = "<group>"; };
 		085551451D756C5C00029EED /* IDDictionariesListDataDisplayManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionariesListDataDisplayManagerDelegate.swift; sourceTree = "<group>"; };
-		0855514B1D7575F400029EED /* IDAddWordFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordFooterView.swift; sourceTree = "<group>"; };
-		0855514D1D75761900029EED /* IDAddWordFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDAddWordFooterView.xib; sourceTree = "<group>"; };
-		0863779B1D77620E00ABB41B /* IDAddWordDataDisplayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordDataDisplayManager.swift; sourceTree = "<group>"; };
-		086377A21D7763C000ABB41B /* IDAddWordSelectImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordSelectImageCell.swift; sourceTree = "<group>"; };
-		086377A41D77649A00ABB41B /* IDAddWordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordCell.swift; sourceTree = "<group>"; };
-		086377AE1D776A1000ABB41B /* IDAddWordSelectImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDAddWordSelectImageCell.xib; sourceTree = "<group>"; };
-		086377B21D776B3500ABB41B /* IDAddWordCellObjectBuilderFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordCellObjectBuilderFactory.swift; sourceTree = "<group>"; };
-		086377B51D77704D00ABB41B /* IDAddWordDataHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordDataHolder.swift; sourceTree = "<group>"; };
-		086377B71D77708800ABB41B /* IDAddWordCellObjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordCellObjectBuilder.swift; sourceTree = "<group>"; };
-		086377B91D77715C00ABB41B /* IDAddWordImageDataHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordImageDataHolder.swift; sourceTree = "<group>"; };
-		086377BB1D7773F600ABB41B /* IDAddWordSelectImageCellObjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordSelectImageCellObjectBuilder.swift; sourceTree = "<group>"; };
-		086377BD1D77790C00ABB41B /* IDAddWordDataDisplayManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddWordDataDisplayManagerDelegate.swift; sourceTree = "<group>"; };
+		0855514B1D7575F400029EED /* IDAddFlashcardFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardFooterView.swift; sourceTree = "<group>"; };
+		0855514D1D75761900029EED /* IDAddFlashcardFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDAddFlashcardFooterView.xib; sourceTree = "<group>"; };
+		0863779B1D77620E00ABB41B /* IDAddFlashcardDataDisplayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardDataDisplayManager.swift; sourceTree = "<group>"; };
+		086377A21D7763C000ABB41B /* IDAddFlashcardSelectImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardSelectImageCell.swift; sourceTree = "<group>"; };
+		086377A41D77649A00ABB41B /* IDAddFlashcardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IDAddFlashcardCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		086377AE1D776A1000ABB41B /* IDAddFlashcardSelectImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDAddFlashcardSelectImageCell.xib; sourceTree = "<group>"; };
+		086377B21D776B3500ABB41B /* IDAddFlashcardCellObjectBuilderFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IDAddFlashcardCellObjectBuilderFactory.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		086377B51D77704D00ABB41B /* IDAddFlashcardDataHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardDataHolder.swift; sourceTree = "<group>"; };
+		086377B71D77708800ABB41B /* IDAddFlashcardCellObjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IDAddFlashcardCellObjectBuilder.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		086377B91D77715C00ABB41B /* IDAddFlashcardImageDataHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardImageDataHolder.swift; sourceTree = "<group>"; };
+		086377BB1D7773F600ABB41B /* IDAddFlashcardSelectImageCellObjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardSelectImageCellObjectBuilder.swift; sourceTree = "<group>"; };
+		086377BD1D77790C00ABB41B /* IDAddFlashcardDataDisplayManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardDataDisplayManagerDelegate.swift; sourceTree = "<group>"; };
 		0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouter.swift; sourceTree = "<group>"; };
 		0863CC1F69CEAFCD15C3449C /* IDAddWordRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordRouterTests.swift; sourceTree = "<group>"; };
 		086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Buttons.swift"; sourceTree = "<group>"; };
+		08A1ADD11D7B5D78006A39DA /* IDFlashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDFlashcard.swift; sourceTree = "<group>"; };
+		08A1ADD21D7B5D78006A39DA /* IDFlashcardImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDFlashcardImage.swift; sourceTree = "<group>"; };
+		08A1ADD31D7B5D78006A39DA /* IDFlashcardText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDFlashcardText.swift; sourceTree = "<group>"; };
+		08A1ADD71D7B5E41006A39DA /* IDLDBFlashcardImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDLDBFlashcardImage.swift; sourceTree = "<group>"; };
+		08A1ADD91D7B5E4F006A39DA /* IDLDBFlashcardText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDLDBFlashcardText.swift; sourceTree = "<group>"; };
 		08B4AB111D6E258100E5CE88 /* IDDictionaryDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDDictionaryDetailViewController.xib; sourceTree = "<group>"; };
-		08B4AB161D6E3E4C00E5CE88 /* IDWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDWord.swift; sourceTree = "<group>"; };
-		08B4AB181D6E3FFF00E5CE88 /* IDLDBWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDLDBWord.swift; sourceTree = "<group>"; };
+		08B4AB181D6E3FFF00E5CE88 /* IDLDBFlashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDLDBFlashcard.swift; sourceTree = "<group>"; };
 		08DE58E31D66441D00C255E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08DE58E91D6646C600C255E6 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		08E7FD4E1D6CD694006BD301 /* IDDictionaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionaryService.swift; sourceTree = "<group>"; };
@@ -175,43 +183,43 @@
 		2B8B5F066733A50FCA7EA8E3 /* IDAddWordPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordPresenterTests.swift; sourceTree = "<group>"; };
 		338308A98C1AF2B598855681 /* IDDictionaryDetailConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailConfiguratorTests.swift; sourceTree = "<group>"; };
 		363FAB7DC1C65C2AB853FC73 /* IDDictionaryDetailRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailRouterInput.swift; sourceTree = "<group>"; };
-		424D2E3BC23D899A5B20A03C /* IDAddWordViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordViewController.swift; sourceTree = "<group>"; };
-		42B0A531BD3644B8F9479B55 /* IDAddWordPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordPresenter.swift; sourceTree = "<group>"; };
+		424D2E3BC23D899A5B20A03C /* IDAddFlashcardViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardViewController.swift; sourceTree = "<group>"; };
+		42B0A531BD3644B8F9479B55 /* IDAddFlashcardPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardPresenter.swift; sourceTree = "<group>"; };
 		521C9D52C1054A1C7DF5BF32 /* IDAddWordInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordInteractorTests.swift; sourceTree = "<group>"; };
 		5D53CD41234F11AE8C93E4B1 /* IDDictionaryDetailPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailPresenter.swift; sourceTree = "<group>"; };
-		6C20C58D76B100F636642462 /* IDAddWordInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordInteractor.swift; sourceTree = "<group>"; };
+		6C20C58D76B100F636642462 /* IDAddFlashcardInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardInteractor.swift; sourceTree = "<group>"; };
 		7121FA5BDB166E48857A7750 /* IDDictionariesListRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListRouterTests.swift; sourceTree = "<group>"; };
 		750E971230A7C48DFF11B96F /* IDDictionariesListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewController.swift; sourceTree = "<group>"; };
 		757BCB33CEA9BCF21C5B896B /* IDDictionariesListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewOutput.swift; sourceTree = "<group>"; };
-		76AC0DC3213DC62033CDEB74 /* IDAddWordViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordViewOutput.swift; sourceTree = "<group>"; };
+		76AC0DC3213DC62033CDEB74 /* IDAddFlashcardViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardViewOutput.swift; sourceTree = "<group>"; };
 		7F1215E1957285839254C1F9 /* Pods-DigDic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigDic/Pods-DigDic.debug.xcconfig"; sourceTree = "<group>"; };
-		84B0124A007F52F193869808 /* IDAddWordRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordRouter.swift; sourceTree = "<group>"; };
-		859C7FA5B9480CAC19A818B2 /* IDAddWordInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordInteractorOutput.swift; sourceTree = "<group>"; };
+		84B0124A007F52F193869808 /* IDAddFlashcardRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardRouter.swift; sourceTree = "<group>"; };
+		859C7FA5B9480CAC19A818B2 /* IDAddFlashcardInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardInteractorOutput.swift; sourceTree = "<group>"; };
 		8FB9CD1A8C5903781EA6CB13 /* IDDictionariesListConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListConfigurator.swift; sourceTree = "<group>"; };
 		93D42D706F8FFD958BD3D024 /* Pods_DigDicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigDicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97456EA28E233A6361DD0FF8 /* IDDictionaryDetailRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailRouter.swift; sourceTree = "<group>"; };
 		99D6C120220C4E931CD3DFBB /* IDDictionaryDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailViewController.swift; sourceTree = "<group>"; };
 		9B6622EDD0DADBEB127EDE7E /* IDDictionaryDetailViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailViewInput.swift; sourceTree = "<group>"; };
-		9DA6E14FE57FC81FD580202B /* IDAddWordRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordRouterInput.swift; sourceTree = "<group>"; };
+		9DA6E14FE57FC81FD580202B /* IDAddFlashcardRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardRouterInput.swift; sourceTree = "<group>"; };
 		ABFCB653DBEFA22386B1E1BD /* IDDictionariesListRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListRouterInput.swift; sourceTree = "<group>"; };
 		B7F0C50883B7A57AF9C571E6 /* IDDictionaryDetailInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailInteractorTests.swift; sourceTree = "<group>"; };
 		C84D2429BA61854DBF241AF6 /* Pods_DigDic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigDic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C93B9DCBAEE7E472BB651204 /* IDAddWordConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordConfigurator.swift; sourceTree = "<group>"; };
+		C93B9DCBAEE7E472BB651204 /* IDAddFlashcardConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IDAddFlashcardConfigurator.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CF3BF10209863A4F838B4745 /* Pods-DigDic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDic.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigDic/Pods-DigDic.release.xcconfig"; sourceTree = "<group>"; };
 		D36BFA38A97CF5BD7486E7C0 /* IDDictionaryDetailInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailInteractor.swift; sourceTree = "<group>"; };
 		D572770738EB155EA136FF42 /* IDDictionariesListModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListModuleInput.swift; sourceTree = "<group>"; };
-		D930CB18255A1E66BC3C5E92 /* IDAddWordViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordViewInput.swift; sourceTree = "<group>"; };
+		D930CB18255A1E66BC3C5E92 /* IDAddFlashcardViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardViewInput.swift; sourceTree = "<group>"; };
 		E0191674B3B7921148B3326F /* Pods-DigDicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigDicTests/Pods-DigDicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E20E9B32E4B7C049F1A3898B /* IDDictionariesListPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListPresenterTests.swift; sourceTree = "<group>"; };
 		E4F0957A7DB4E45593F50BA3 /* IDDictionaryDetailInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailInteractorOutput.swift; sourceTree = "<group>"; };
 		EC138363548D5A04894A8A0F /* IDDictionariesListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListRouter.swift; sourceTree = "<group>"; };
 		EE2D0E5787AA2885826E6088 /* IDDictionariesListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListInteractor.swift; sourceTree = "<group>"; };
 		F2CA6485CAAB2D84114C8CA6 /* IDDictionariesListInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListInteractorOutput.swift; sourceTree = "<group>"; };
-		F306CBEFF8935698AA966551 /* IDAddWordModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordModuleInput.swift; sourceTree = "<group>"; };
+		F306CBEFF8935698AA966551 /* IDAddFlashcardModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardModuleInput.swift; sourceTree = "<group>"; };
 		F481A7EA718C47A91875DCDB /* IDDictionaryDetailRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailRouterTests.swift; sourceTree = "<group>"; };
 		FC2EBBA565199DDAA1BF7C1F /* IDDictionaryDetailViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailViewTests.swift; sourceTree = "<group>"; };
 		FDF9A50FE21D5223E57A5726 /* IDDictionaryDetailViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailViewOutput.swift; sourceTree = "<group>"; };
-		FEEEC60D7456ED1F80954ACA /* IDAddWordInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordInteractorInput.swift; sourceTree = "<group>"; };
+		FEEEC60D7456ED1F80954ACA /* IDAddFlashcardInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardInteractorInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,9 +404,9 @@
 		0855514A1D7575DE00029EED /* Footer */ = {
 			isa = PBXGroup;
 			children = (
-				0855514B1D7575F400029EED /* IDAddWordFooterView.swift */,
-				0855514D1D75761900029EED /* IDAddWordFooterView.xib */,
-				081CC38C1D761C62001E3293 /* IDAddWordFooterViewDelegate.swift */,
+				0855514B1D7575F400029EED /* IDAddFlashcardFooterView.swift */,
+				0855514D1D75761900029EED /* IDAddFlashcardFooterView.xib */,
+				081CC38C1D761C62001E3293 /* IDAddFlashcardFooterViewDelegate.swift */,
 			);
 			path = Footer;
 			sourceTree = "<group>";
@@ -406,8 +414,8 @@
 		0863779A1D7761F900ABB41B /* DataDisplayManager */ = {
 			isa = PBXGroup;
 			children = (
-				0863779B1D77620E00ABB41B /* IDAddWordDataDisplayManager.swift */,
-				086377BD1D77790C00ABB41B /* IDAddWordDataDisplayManagerDelegate.swift */,
+				0863779B1D77620E00ABB41B /* IDAddFlashcardDataDisplayManager.swift */,
+				086377BD1D77790C00ABB41B /* IDAddFlashcardDataDisplayManagerDelegate.swift */,
 			);
 			path = DataDisplayManager;
 			sourceTree = "<group>";
@@ -416,7 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				086377A11D7763B000ABB41B /* SelectImageCell */,
-				086377A41D77649A00ABB41B /* IDAddWordCell.swift */,
+				086377A41D77649A00ABB41B /* IDAddFlashcardCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -424,8 +432,8 @@
 		086377A11D7763B000ABB41B /* SelectImageCell */ = {
 			isa = PBXGroup;
 			children = (
-				086377A21D7763C000ABB41B /* IDAddWordSelectImageCell.swift */,
-				086377AE1D776A1000ABB41B /* IDAddWordSelectImageCell.xib */,
+				086377A21D7763C000ABB41B /* IDAddFlashcardSelectImageCell.swift */,
+				086377AE1D776A1000ABB41B /* IDAddFlashcardSelectImageCell.xib */,
 			);
 			path = SelectImageCell;
 			sourceTree = "<group>";
@@ -434,7 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				086377B11D776B1800ABB41B /* ConcreteCellObjectBuilders */,
-				086377B21D776B3500ABB41B /* IDAddWordCellObjectBuilderFactory.swift */,
+				086377B21D776B3500ABB41B /* IDAddFlashcardCellObjectBuilderFactory.swift */,
 			);
 			path = CellObjectBuilder;
 			sourceTree = "<group>";
@@ -442,8 +450,8 @@
 		086377B11D776B1800ABB41B /* ConcreteCellObjectBuilders */ = {
 			isa = PBXGroup;
 			children = (
-				086377B71D77708800ABB41B /* IDAddWordCellObjectBuilder.swift */,
-				086377BB1D7773F600ABB41B /* IDAddWordSelectImageCellObjectBuilder.swift */,
+				086377B71D77708800ABB41B /* IDAddFlashcardCellObjectBuilder.swift */,
+				086377BB1D7773F600ABB41B /* IDAddFlashcardSelectImageCellObjectBuilder.swift */,
 			);
 			path = ConcreteCellObjectBuilders;
 			sourceTree = "<group>";
@@ -451,10 +459,20 @@
 		086377B41D77703800ABB41B /* DataHolders */ = {
 			isa = PBXGroup;
 			children = (
-				086377B51D77704D00ABB41B /* IDAddWordDataHolder.swift */,
-				086377B91D77715C00ABB41B /* IDAddWordImageDataHolder.swift */,
+				086377B51D77704D00ABB41B /* IDAddFlashcardDataHolder.swift */,
+				086377B91D77715C00ABB41B /* IDAddFlashcardImageDataHolder.swift */,
 			);
 			path = DataHolders;
+			sourceTree = "<group>";
+		};
+		08A1ADD01D7B5D78006A39DA /* Flashcard */ = {
+			isa = PBXGroup;
+			children = (
+				08A1ADD11D7B5D78006A39DA /* IDFlashcard.swift */,
+				08A1ADD21D7B5D78006A39DA /* IDFlashcardImage.swift */,
+				08A1ADD31D7B5D78006A39DA /* IDFlashcardText.swift */,
+			);
+			path = Flashcard;
 			sourceTree = "<group>";
 		};
 		08AAD4911D6B820F0072ED1D /* Managers */ = {
@@ -511,9 +529,9 @@
 		08E7FD561D6CD794006BD301 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				08A1ADD01D7B5D78006A39DA /* Flashcard */,
 				08E7FD571D6CD794006BD301 /* IDDictionary.swift */,
 				08E7FD581D6CD794006BD301 /* IDDictionarySource.swift */,
-				08B4AB161D6E3E4C00E5CE88 /* IDWord.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -531,7 +549,9 @@
 			isa = PBXGroup;
 			children = (
 				08E7FD5F1D6CD8D1006BD301 /* IDLDBDictionary.swift */,
-				08B4AB181D6E3FFF00E5CE88 /* IDLDBWord.swift */,
+				08B4AB181D6E3FFF00E5CE88 /* IDLDBFlashcard.swift */,
+				08A1ADD71D7B5E41006A39DA /* IDLDBFlashcardImage.swift */,
+				08A1ADD91D7B5E4F006A39DA /* IDLDBFlashcardText.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -559,8 +579,8 @@
 		24752D62E93837E1F55B6175 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				F306CBEFF8935698AA966551 /* IDAddWordModuleInput.swift */,
-				42B0A531BD3644B8F9479B55 /* IDAddWordPresenter.swift */,
+				F306CBEFF8935698AA966551 /* IDAddFlashcardModuleInput.swift */,
+				42B0A531BD3644B8F9479B55 /* IDAddFlashcardPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -612,7 +632,7 @@
 		4EDD2E444F8DE8B5645CC84F /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
-				C93B9DCBAEE7E472BB651204 /* IDAddWordConfigurator.swift */,
+				C93B9DCBAEE7E472BB651204 /* IDAddFlashcardConfigurator.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -643,11 +663,11 @@
 				0863779D1D77626D00ABB41B /* Cells */,
 				0863779A1D7761F900ABB41B /* DataDisplayManager */,
 				0855514A1D7575DE00029EED /* Footer */,
-				D930CB18255A1E66BC3C5E92 /* IDAddWordViewInput.swift */,
-				76AC0DC3213DC62033CDEB74 /* IDAddWordViewOutput.swift */,
-				424D2E3BC23D899A5B20A03C /* IDAddWordViewController.swift */,
-				081E90991D70D490007FA7A1 /* IDAddWordViewController.xib */,
-				081CC38A1D761572001E3293 /* IDAddWordFormView.swift */,
+				D930CB18255A1E66BC3C5E92 /* IDAddFlashcardViewInput.swift */,
+				76AC0DC3213DC62033CDEB74 /* IDAddFlashcardViewOutput.swift */,
+				424D2E3BC23D899A5B20A03C /* IDAddFlashcardViewController.swift */,
+				081E90991D70D490007FA7A1 /* IDAddFlashcardViewController.xib */,
+				081CC38A1D761572001E3293 /* IDAddFlashcardFormView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -677,7 +697,7 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		8515686450FE149E6EC7551B /* AddWord */ = {
+		8515686450FE149E6EC7551B /* AddFlashcard */ = {
 			isa = PBXGroup;
 			children = (
 				5C352792D1735FDF224F5550 /* View */,
@@ -686,6 +706,7 @@
 				FB56DE74303755C05C3F1C59 /* Router */,
 				4EDD2E444F8DE8B5645CC84F /* Configurator */,
 			);
+			name = AddFlashcard;
 			path = AddWord;
 			sourceTree = "<group>";
 		};
@@ -774,9 +795,9 @@
 		A8DB1DB904AE5D8D207E3495 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				FEEEC60D7456ED1F80954ACA /* IDAddWordInteractorInput.swift */,
-				859C7FA5B9480CAC19A818B2 /* IDAddWordInteractorOutput.swift */,
-				6C20C58D76B100F636642462 /* IDAddWordInteractor.swift */,
+				FEEEC60D7456ED1F80954ACA /* IDAddFlashcardInteractorInput.swift */,
+				859C7FA5B9480CAC19A818B2 /* IDAddFlashcardInteractorOutput.swift */,
+				6C20C58D76B100F636642462 /* IDAddFlashcardInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -842,7 +863,7 @@
 			children = (
 				AAE0995652B857727ADCDFC4 /* DictionariesList */,
 				A2C88C8E2B395D06DD6CE59E /* DictionaryDetail */,
-				8515686450FE149E6EC7551B /* AddWord */,
+				8515686450FE149E6EC7551B /* AddFlashcard */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -894,8 +915,8 @@
 		FB56DE74303755C05C3F1C59 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				9DA6E14FE57FC81FD580202B /* IDAddWordRouterInput.swift */,
-				84B0124A007F52F193869808 /* IDAddWordRouter.swift */,
+				9DA6E14FE57FC81FD580202B /* IDAddFlashcardRouterInput.swift */,
+				84B0124A007F52F193869808 /* IDAddFlashcardRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -990,11 +1011,11 @@
 			files = (
 				084F13EE1D65ED5E00E907D6 /* IDDictionariesListViewController.xib in Resources */,
 				08DE58E21D66441D00C255E6 /* Localizable.strings in Resources */,
-				086377AF1D776A1000ABB41B /* IDAddWordSelectImageCell.xib in Resources */,
-				0855514E1D75761900029EED /* IDAddWordFooterView.xib in Resources */,
+				086377AF1D776A1000ABB41B /* IDAddFlashcardSelectImageCell.xib in Resources */,
+				0855514E1D75761900029EED /* IDAddFlashcardFooterView.xib in Resources */,
 				08B4AB121D6E258100E5CE88 /* IDDictionaryDetailViewController.xib in Resources */,
 				084F13E91D65EA7B00E907D6 /* Assets.xcassets in Resources */,
-				081E909A1D70D490007FA7A1 /* IDAddWordViewController.xib in Resources */,
+				081E909A1D70D490007FA7A1 /* IDAddFlashcardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1105,41 +1126,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				086377B31D776B3500ABB41B /* IDAddWordCellObjectBuilderFactory.swift in Sources */,
+				086377B31D776B3500ABB41B /* IDAddFlashcardCellObjectBuilderFactory.swift in Sources */,
 				084F13C61D65E6A700E907D6 /* AppDelegate.swift in Sources */,
 				08E7FD511D6CD6BA006BD301 /* IDBaseService.swift in Sources */,
 				D77E4143B6B5F5F011066236 /* IDDictionariesListViewInput.swift in Sources */,
 				8BBCF3710B1094637156C098 /* IDDictionariesListViewOutput.swift in Sources */,
 				F4934EB3922FB4741E358414 /* IDDictionariesListViewController.swift in Sources */,
 				08E7FD4F1D6CD694006BD301 /* IDDictionaryService.swift in Sources */,
-				081CC38B1D761572001E3293 /* IDAddWordFormView.swift in Sources */,
+				081CC38B1D761572001E3293 /* IDAddFlashcardFormView.swift in Sources */,
 				08E7FD5A1D6CD794006BD301 /* IDDictionarySource.swift in Sources */,
 				084F14011D65F40300E907D6 /* IDBaseModuleInput.swift in Sources */,
 				3A2EC88414525B4CC6D8B395 /* IDDictionariesListModuleInput.swift in Sources */,
+				08A1ADD61D7B5D78006A39DA /* IDFlashcardText.swift in Sources */,
 				08E7FD601D6CD8D1006BD301 /* IDLDBDictionary.swift in Sources */,
 				084F13FF1D65F3D200E907D6 /* IDBaseViewOutput.swift in Sources */,
+				08A1ADD81D7B5E41006A39DA /* IDLDBFlashcardImage.swift in Sources */,
 				DBC18666997231F8BE46F665 /* IDDictionariesListPresenter.swift in Sources */,
 				D950E713B8C50D2CD0F88137 /* IDDictionariesListInteractorInput.swift in Sources */,
-				086377A31D7763C000ABB41B /* IDAddWordSelectImageCell.swift in Sources */,
+				086377A31D7763C000ABB41B /* IDAddFlashcardSelectImageCell.swift in Sources */,
 				084F14041D65F42F00E907D6 /* IDBaseInteractorInput.swift in Sources */,
+				08A1ADD51D7B5D78006A39DA /* IDFlashcardImage.swift in Sources */,
 				084F13FE1D65F3D200E907D6 /* IDBaseViewInput.swift in Sources */,
 				084F14051D65F42F00E907D6 /* IDBaseInteractorOutput.swift in Sources */,
 				645833ABEB171AE312D8A55F /* IDDictionariesListInteractorOutput.swift in Sources */,
 				E6773595B873EC1A9F11C691 /* IDDictionariesListInteractor.swift in Sources */,
 				086E79291D6B3C3000EB081F /* UINavigationItem+Buttons.swift in Sources */,
-				086377B81D77708800ABB41B /* IDAddWordCellObjectBuilder.swift in Sources */,
+				086377B81D77708800ABB41B /* IDAddFlashcardCellObjectBuilder.swift in Sources */,
 				08DE58EA1D6646C600C255E6 /* String+Localized.swift in Sources */,
 				0DA718AC741D71F25AF3E63E /* IDDictionariesListRouterInput.swift in Sources */,
 				6BEE48A86F54732D103C0EA7 /* IDDictionariesListRouter.swift in Sources */,
 				03CA0AF00450ADE64E177428 /* IDDictionariesListConfigurator.swift in Sources */,
 				08E7FD5D1D6CD805006BD301 /* IDLocalDataBaseSource.swift in Sources */,
 				084F13F61D65F34000E907D6 /* IDBaseNavigationController.swift in Sources */,
-				086377BA1D77715C00ABB41B /* IDAddWordImageDataHolder.swift in Sources */,
-				08B4AB171D6E3E4C00E5CE88 /* IDWord.swift in Sources */,
+				086377BA1D77715C00ABB41B /* IDAddFlashcardImageDataHolder.swift in Sources */,
 				08E7FD591D6CD794006BD301 /* IDDictionary.swift in Sources */,
-				0863779C1D77620E00ABB41B /* IDAddWordDataDisplayManager.swift in Sources */,
+				0863779C1D77620E00ABB41B /* IDAddFlashcardDataDisplayManager.swift in Sources */,
 				0863B6B21D7376EA009EB5B6 /* IDBaseRouter.swift in Sources */,
 				084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */,
+				08A1ADD41D7B5D78006A39DA /* IDFlashcard.swift in Sources */,
 				2842A9EFCB076636AF741314 /* IDDictionaryDetailViewInput.swift in Sources */,
 				D64F75F3512D5B6D36299F6F /* IDDictionaryDetailViewOutput.swift in Sources */,
 				27EB1517FB15D56B1309070C /* IDDictionaryDetailViewController.swift in Sources */,
@@ -1148,30 +1172,31 @@
 				2FA28F005BCA8B90F7689106 /* IDDictionaryDetailPresenter.swift in Sources */,
 				11C3552D9EE7CF14FE232EA1 /* IDDictionaryDetailInteractorInput.swift in Sources */,
 				E1528A507EC1ED583A1D779D /* IDDictionaryDetailInteractorOutput.swift in Sources */,
-				086377BC1D7773F600ABB41B /* IDAddWordSelectImageCellObjectBuilder.swift in Sources */,
+				086377BC1D7773F600ABB41B /* IDAddFlashcardSelectImageCellObjectBuilder.swift in Sources */,
 				B2CCC394C90704661B24D48C /* IDDictionaryDetailInteractor.swift in Sources */,
 				2F4A22408AA6CC7F2BEAC5FE /* IDDictionaryDetailRouterInput.swift in Sources */,
 				7D248BD796BDFCC6C8090F6E /* IDDictionaryDetailRouter.swift in Sources */,
-				081CC38D1D761C62001E3293 /* IDAddWordFooterViewDelegate.swift in Sources */,
+				081CC38D1D761C62001E3293 /* IDAddFlashcardFooterViewDelegate.swift in Sources */,
 				E14DC73B8A2B4A5F519456B6 /* IDDictionaryDetailConfigurator.swift in Sources */,
-				08B4AB191D6E3FFF00E5CE88 /* IDLDBWord.swift in Sources */,
-				3A589DF7CE3A82FA81825F11 /* IDAddWordViewInput.swift in Sources */,
-				81A46CF3F23D045497A06F7C /* IDAddWordViewOutput.swift in Sources */,
-				0855514C1D7575F400029EED /* IDAddWordFooterView.swift in Sources */,
-				FB959B8ED252B3488930458E /* IDAddWordViewController.swift in Sources */,
-				B3CC735E2E05C0A96A4CED4F /* IDAddWordModuleInput.swift in Sources */,
-				E341AE691D11286488A115FB /* IDAddWordPresenter.swift in Sources */,
-				B52ACF295E17B5AF55110598 /* IDAddWordInteractorInput.swift in Sources */,
-				2CA3BD01F8EDABDEAEC4B49C /* IDAddWordInteractorOutput.swift in Sources */,
-				0D326EF69ED452DDCBA125D4 /* IDAddWordInteractor.swift in Sources */,
-				086377A51D77649A00ABB41B /* IDAddWordCell.swift in Sources */,
+				08B4AB191D6E3FFF00E5CE88 /* IDLDBFlashcard.swift in Sources */,
+				3A589DF7CE3A82FA81825F11 /* IDAddFlashcardViewInput.swift in Sources */,
+				81A46CF3F23D045497A06F7C /* IDAddFlashcardViewOutput.swift in Sources */,
+				0855514C1D7575F400029EED /* IDAddFlashcardFooterView.swift in Sources */,
+				FB959B8ED252B3488930458E /* IDAddFlashcardViewController.swift in Sources */,
+				B3CC735E2E05C0A96A4CED4F /* IDAddFlashcardModuleInput.swift in Sources */,
+				E341AE691D11286488A115FB /* IDAddFlashcardPresenter.swift in Sources */,
+				B52ACF295E17B5AF55110598 /* IDAddFlashcardInteractorInput.swift in Sources */,
+				2CA3BD01F8EDABDEAEC4B49C /* IDAddFlashcardInteractorOutput.swift in Sources */,
+				0D326EF69ED452DDCBA125D4 /* IDAddFlashcardInteractor.swift in Sources */,
+				086377A51D77649A00ABB41B /* IDAddFlashcardCell.swift in Sources */,
 				081E90A11D70E137007FA7A1 /* IDBaseViewController.swift in Sources */,
-				2C9D64258F6D0546CBC4A175 /* IDAddWordRouterInput.swift in Sources */,
-				086377B61D77704D00ABB41B /* IDAddWordDataHolder.swift in Sources */,
-				086377BE1D77790C00ABB41B /* IDAddWordDataDisplayManagerDelegate.swift in Sources */,
+				08A1ADDA1D7B5E4F006A39DA /* IDLDBFlashcardText.swift in Sources */,
+				2C9D64258F6D0546CBC4A175 /* IDAddFlashcardRouterInput.swift in Sources */,
+				086377B61D77704D00ABB41B /* IDAddFlashcardDataHolder.swift in Sources */,
+				086377BE1D77790C00ABB41B /* IDAddFlashcardDataDisplayManagerDelegate.swift in Sources */,
 				083935231D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift in Sources */,
-				6F407B79A3CA2FDFC84E1C13 /* IDAddWordRouter.swift in Sources */,
-				D9744579C7C02E065E1F9210 /* IDAddWordConfigurator.swift in Sources */,
+				6F407B79A3CA2FDFC84E1C13 /* IDAddFlashcardRouter.swift in Sources */,
+				D9744579C7C02E065E1F9210 /* IDAddFlashcardConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

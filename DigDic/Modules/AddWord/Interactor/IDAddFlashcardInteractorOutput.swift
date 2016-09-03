@@ -1,5 +1,5 @@
 //
-//  IDAddWordIDAddWordInteractorOutput.swift
+//  IDAddFlashcardIDAddFlashcardInteractorOutput.swift
 //  DigDic
 //
 //  Created by ls on 26/08/2016.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol IDAddWordInteractorOutput: IDBaseInteractorOutput {
+protocol IDAddFlashcardInteractorOutput: IDBaseInteractorOutput {
 
 }

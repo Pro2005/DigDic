@@ -1,5 +1,5 @@
 //
-//  IDAddWordIDAddWordViewTests.swift
+//  IDAddFlashcardIDAddFlashcardViewTests.swift
 //  DigDic
 //
 //  Created by ls on 26/08/2016.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class AddWordViewTests: XCTestCase {
+class AddFlashcardViewTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

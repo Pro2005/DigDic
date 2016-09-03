@@ -1,15 +1,16 @@
 //
-//  IDLDBWord.swift
+//  IDLDBFlashcardImage.swift
 //  DigDic
 //
-//  Created by Ilya Denisov on 8/24/16.
+//  Created by Ilya Denisov on 9/3/16.
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 
-class IDLDBWord: Object, IDWord {
-    // MARK: IDWordProtocol
+class IDLDBFlashcardImage: Object, IDFlashcardImage {
+
     dynamic var name: String?
+    
 }

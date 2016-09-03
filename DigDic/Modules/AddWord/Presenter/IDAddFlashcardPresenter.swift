@@ -1,5 +1,5 @@
 //
-//  AddWordIDAddWordPresenter.swift
+//  AddFlashcardIDAddFlashcardPresenter.swift
 //  DigDic
 //
 //  Created by ls on 26/08/2016.
@@ -7,11 +7,11 @@
 //
 import UIKit
 
-class IDAddWordPresenter: NSObject, IDAddWordModuleInput, IDAddWordViewOutput, IDAddWordInteractorOutput {
+class IDAddFlashcardPresenter: NSObject, IDAddFlashcardModuleInput, IDAddFlashcardViewOutput, IDAddFlashcardInteractorOutput {
 
-    weak var view: IDAddWordViewInput!
-    var interactor: IDAddWordInteractorInput!
-    var router: IDAddWordRouterInput!
+    weak var view: IDAddFlashcardViewInput!
+    var interactor: IDAddFlashcardInteractorInput!
+    var router: IDAddFlashcardRouterInput!
 
     func viewIsReady() {
         view.setupInitialState()
@@ -34,7 +34,7 @@ class IDAddWordPresenter: NSObject, IDAddWordModuleInput, IDAddWordViewOutput, I
         self.view.addFormForSelectingImage()
     }
     
-    func didTapSelectImageButton(dataHolder: IDAddWordDataHolder) {
+    func didTapSelectImageButton(dataHolder: IDAddFlashcardDataHolder) {
         self.view.displayDialogForSelectingImage { (result) in
             if let image = result {
                 self.view.displayDialogForCropImage(image, dataHolder: dataHolder)
@@ -42,7 +42,7 @@ class IDAddWordPresenter: NSObject, IDAddWordModuleInput, IDAddWordViewOutput, I
         }
     }
     
-    func didCropImage(image: UIImage, dataHolder: IDAddWordDataHolder) {
+    func didCropImage(image: UIImage, dataHolder: IDAddFlashcardDataHolder) {
         self.view.updateImageForDataHolder(image, dataHolder: dataHolder)
     }
     

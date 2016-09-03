@@ -1,5 +1,5 @@
 //
-//  AddWordIDAddWordRouterInput.swift
+//  AddFlashcardIDAddFlashcardRouterInput.swift
 //  DigDic
 //
 //  Created by ls on 26/08/2016.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol IDAddWordRouterInput: IDBaseRouterInput {
+protocol IDAddFlashcardRouterInput: IDBaseRouterInput {
 
     func dismiss()
     

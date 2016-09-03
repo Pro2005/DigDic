@@ -1,5 +1,5 @@
 //
-//  IDAddWordIDAddWordPresenterTests.swift
+//  IDAddFlashcardIDAddFlashcardPresenterTests.swift
 //  DigDic
 //
 //  Created by ls on 26/08/2016.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class AddWordPresenterTest: XCTestCase {
+class AddFlashcardPresenterTest: XCTestCase {
 
     override func setUp() {
         super.setUp()
@@ -20,15 +20,15 @@ class AddWordPresenterTest: XCTestCase {
         super.tearDown()
     }
 
-    class MockInteractor: AddWordInteractorInput {
+    class MockInteractor: AddFlashcardInteractorInput {
 
     }
 
-    class MockRouter: AddWordRouterInput {
+    class MockRouter: AddFlashcardRouterInput {
 
     }
 
-    class MockViewController: AddWordViewInput {
+    class MockViewController: AddFlashcardViewInput {
 
         func setupInitialState() {
 

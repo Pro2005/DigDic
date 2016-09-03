@@ -10,12 +10,12 @@ import UIKit
 
 class IDDictionaryDetailRouter: IDBaseRouter, IDDictionaryDetailRouterInput {
 
-    func presentAddWordForDictionary(dictionary: IDDictionary) {
+    func presentAddFlashcardForDictionary(dictionary: IDDictionary) {
         guard let navigationController = self.viewController.navigationController else {
             return
         }
-        let viewController = IDAddWordViewController()
-        IDAddWordModuleConfigurator().configureModuleForViewInput(viewController)
+        let viewController = IDAddFlashcardViewController()
+        IDAddFlashcardModuleConfigurator().configureModuleForViewInput(viewController)
         navigationController.presentViewController(viewController, animated: true, completion: nil)
     }
     

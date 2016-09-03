@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class IDAddWordSelectImageCell: UITableViewCell, IDAddWordCell {
+class IDAddFlashcardSelectImageCell: UITableViewCell, IDAddFlashcardCell {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var label: UILabel!
@@ -24,7 +24,7 @@ class IDAddWordSelectImageCell: UITableViewCell, IDAddWordCell {
         super.updateConstraints()
     }
     
-    func loadFromDataHolder(dataHolder: IDAddWordImageDataHolder) {
+    func loadFromDataHolder(dataHolder: IDAddFlashcardImageDataHolder) {
         if let image = dataHolder.image {
             self.backgroundImageView.image = image
             self.label.hidden = true

@@ -1,5 +1,5 @@
 //
-//  IDAddWordIDAddWordConfiguratorTests.swift
+//  IDAddFlashcardIDAddFlashcardConfiguratorTests.swift
 //  DigDic
 //
 //  Created by ls on 26/08/2016.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class AddWordModuleConfiguratorTests: XCTestCase {
+class AddFlashcardModuleConfiguratorTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
@@ -23,26 +23,26 @@ class AddWordModuleConfiguratorTests: XCTestCase {
     func testConfigureModuleForViewController() {
 
         //given
-        let viewController = AddWordViewControllerMock()
-        let configurator = AddWordModuleConfigurator()
+        let viewController = AddFlashcardViewControllerMock()
+        let configurator = AddFlashcardModuleConfigurator()
 
         //when
         configurator.configureModuleForViewInput(viewController)
 
         //then
-        XCTAssertNotNil(viewController.output, "AddWordViewController is nil after configuration")
-        XCTAssertTrue(viewController.output is AddWordPresenter, "output is not AddWordPresenter")
+        XCTAssertNotNil(viewController.output, "AddFlashcardViewController is nil after configuration")
+        XCTAssertTrue(viewController.output is AddFlashcardPresenter, "output is not AddFlashcardPresenter")
 
-        let presenter: AddWordPresenter = viewController.output as! AddWordPresenter
-        XCTAssertNotNil(presenter.view, "view in AddWordPresenter is nil after configuration")
-        XCTAssertNotNil(presenter.router, "router in AddWordPresenter is nil after configuration")
-        XCTAssertTrue(presenter.router is AddWordRouter, "router is not AddWordRouter")
+        let presenter: AddFlashcardPresenter = viewController.output as! AddFlashcardPresenter
+        XCTAssertNotNil(presenter.view, "view in AddFlashcardPresenter is nil after configuration")
+        XCTAssertNotNil(presenter.router, "router in AddFlashcardPresenter is nil after configuration")
+        XCTAssertTrue(presenter.router is AddFlashcardRouter, "router is not AddFlashcardRouter")
 
-        let interactor: AddWordInteractor = presenter.interactor as! AddWordInteractor
-        XCTAssertNotNil(interactor.output, "output in AddWordInteractor is nil after configuration")
+        let interactor: AddFlashcardInteractor = presenter.interactor as! AddFlashcardInteractor
+        XCTAssertNotNil(interactor.output, "output in AddFlashcardInteractor is nil after configuration")
     }
 
-    class AddWordViewControllerMock: AddWordViewController {
+    class AddFlashcardViewControllerMock: AddFlashcardViewController {
 
         var setupInitialStateDidCall = false
 

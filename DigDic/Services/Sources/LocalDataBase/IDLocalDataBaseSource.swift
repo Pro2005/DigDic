@@ -29,9 +29,9 @@ class IDLocalDataBaseSource: IDDictionarySource {
         }
     }
     
-    func wordModelForFilling() -> IDWord {
-        let word = IDLDBWord()
-        return word
+    func flashcardModelForFilling() -> IDFlashcard {
+        let flashcard = IDLDBFlashcard()
+        return flashcard
     }
     
 }

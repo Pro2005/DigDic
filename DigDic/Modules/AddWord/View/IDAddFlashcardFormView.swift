@@ -1,5 +1,5 @@
 //
-//  IDAddWordFormView.swift
+//  IDAddFlashcardFormView.swift
 //  DigDic
 //
 //  Created by Ilya Denisov on 8/30/16.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import PureLayout
 
-class IDAddWordFormView: UIView {
+class IDAddFlashcardFormView: UIView {
     var tableView: UITableView = UITableView(frame: CGRectZero, style: .Plain)
     var footerHeight: CGFloat?
     
