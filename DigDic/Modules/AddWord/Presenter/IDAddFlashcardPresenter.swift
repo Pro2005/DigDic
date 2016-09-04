@@ -12,6 +12,11 @@ class IDAddFlashcardPresenter: NSObject, IDAddFlashcardModuleInput, IDAddFlashca
     weak var view: IDAddFlashcardViewInput!
     var interactor: IDAddFlashcardInteractorInput!
     var router: IDAddFlashcardRouterInput!
+    let dictionary: IDDictionary!
+    
+    init(dictionary: IDDictionary) {
+        self.dictionary = dictionary
+    }
 
     func viewIsReady() {
         view.setupInitialState()
@@ -22,12 +27,13 @@ class IDAddFlashcardPresenter: NSObject, IDAddFlashcardModuleInput, IDAddFlashca
     }
     
     func didTapAddButton() {
-//        let numberWords = self.view.numberWords()
-//        for wordIndex in 0..<numberWords {
-//            if let dataHolders = self.view.dataHoldersForWordNumber(wordIndex) {
-//                
-//            }
-//        }
+        let numberCards = self.view.numberFlashcards()
+        for cardNumber in 0 ..< numberCards {
+            if let dataHolders = self.view.dataHoldersForFlashcardWithNumber(cardNumber) {
+                self.interactor.addFlashcardWithDataHolders(dataHolders, toDictionary: self.dictionary)
+            }
+        }
+        self.router.dismiss()
     }
     
     func didTapAddImageButton() {

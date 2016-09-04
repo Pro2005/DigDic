@@ -13,5 +13,7 @@ protocol IDDictionarySource {
     func fetchDictionaries(completion: ([IDDictionary]) -> ())
     func addDictionaryWithName(name: String)
     func flashcardModelForFilling() -> IDFlashcard
+    func addFlashcardImageWithImageName(imageName: String) -> IDFlashcardImage 
+    func addFlashcard(flashcard: IDFlashcard, toDictionary dictionary: IDDictionary) 
     
 }

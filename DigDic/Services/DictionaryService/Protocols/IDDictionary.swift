@@ -11,4 +11,6 @@ import Foundation
 protocol IDDictionary {
     var name: String? {get}
     var cards: [IDFlashcard] {get}
+    
+    func addCard(card: IDFlashcard)
 }

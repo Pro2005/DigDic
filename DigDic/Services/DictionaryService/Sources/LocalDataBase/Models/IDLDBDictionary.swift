@@ -16,6 +16,13 @@ class IDLDBDictionary: Object, IDDictionary {
         return self._cards.map{$0 as IDFlashcard}
     }
     
+    func addCard(card: IDFlashcard) {
+        guard let card = card as? IDLDBFlashcard else {
+            return
+        }
+        self._cards.append(card)
+    }
+    
     // MARK: Private
     private let _cards = List<IDLDBFlashcard>()
 }

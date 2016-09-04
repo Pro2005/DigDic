@@ -15,7 +15,7 @@ class IDDictionaryDetailRouter: IDBaseRouter, IDDictionaryDetailRouterInput {
             return
         }
         let viewController = IDAddFlashcardViewController()
-        IDAddFlashcardModuleConfigurator().configureModuleForViewInput(viewController)
+        IDAddFlashcardModuleConfigurator().configureModuleForViewInput(viewController, dictionary: dictionary)
         navigationController.presentViewController(viewController, animated: true, completion: nil)
     }
     

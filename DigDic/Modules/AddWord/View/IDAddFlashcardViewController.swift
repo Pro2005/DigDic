@@ -55,7 +55,7 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
     }
     
     @IBAction func didTapAddButton(sender: AnyObject) {
-        
+        self.output.didTapAddButton()
     }
 
     // MARK: IDAddFlashcardViewInput
