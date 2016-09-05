@@ -25,7 +25,6 @@ class IDDictionariesListDataDisplayManager: NSObject, UITableViewDelegate, UITab
         return self.dataSource.count
     }
     
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let identifier = String(UITableViewCell)
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier) ?? UITableViewCell(style: .Default, reuseIdentifier: identifier)

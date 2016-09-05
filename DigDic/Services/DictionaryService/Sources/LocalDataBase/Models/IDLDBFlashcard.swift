@@ -10,18 +10,9 @@ import Foundation
 import RealmSwift
 
 class IDLDBFlashcard: Object, IDFlashcard {
-    var imageNames: [IDFlashcardImage]? {
+    var data: [IDFlashcardData]? {
         get {
-            return self._imageNames.map{$0 as IDFlashcardImage}
-        }
-        set {
-            
-        }
-    }
-    
-    var texts: [IDFlashcardText]? {
-        get {
-            return self._texts.map{$0 as IDFlashcardText}
+            return self._data.map{$0 as IDFlashcardData}
         }
         set {
             
@@ -46,8 +37,7 @@ class IDLDBFlashcard: Object, IDFlashcard {
         }
     }
     
-    private let _imageNames = List<IDLDBFlashcardImage>()
-    private let _texts = List<IDLDBFlashcardText>()
+    private let _data = List<IDLDBFlashcardData>()
     private var _back: Bool = false
     private dynamic var _card: IDLDBFlashcard?
 }

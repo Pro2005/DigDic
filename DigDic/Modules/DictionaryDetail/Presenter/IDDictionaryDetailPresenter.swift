@@ -22,9 +22,22 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
         if let dictionaryName = self.selectedDictionary.name {
             self.view.updateTitle(dictionaryName)
         }
+        let flashcards = self.selectedDictionary.cards.filter{$0.back == false}
+        if let flashcard = flashcards.first {
+            self.view.displayFlashcard(flashcard)
+        }
     }
     
     func didTapAddButton() {
         self.router.presentAddFlashcardForDictionary(self.selectedDictionary)
     }
+    
+    // MARK: Private 
+    
+    private func flashcardViewForFlashcard(flashcard: IDFlashcard) -> IDDictionaryDetailFlashcardView {
+        let view = IDDictionaryDetailFlashcardView(flashcard: flashcard)
+        
+        return view
+    }
+    
 }

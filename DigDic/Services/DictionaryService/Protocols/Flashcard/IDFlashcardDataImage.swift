@@ -1,5 +1,5 @@
 //
-//  IDFlashcardText.swift
+//  IDFlashcardImage.swift
 //  DigDic
 //
 //  Created by Ilya Denisov on 9/3/16.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol IDFlashcardText {
-    
+protocol IDFlashcardDataImage: IDFlashcardData {
+    var name: String? {get}
 }

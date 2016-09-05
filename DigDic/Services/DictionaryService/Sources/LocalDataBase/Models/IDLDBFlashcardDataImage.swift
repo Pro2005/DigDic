@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class IDLDBFlashcardImage: Object, IDFlashcardImage {
+class IDLDBFlashcardDataImage: IDLDBFlashcardData, IDFlashcardDataImage {
 
     dynamic var name: String?
     

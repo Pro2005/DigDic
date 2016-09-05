@@ -1,5 +1,5 @@
 //
-//  IDFlashcardImage.swift
+//  IDLDBFlashcardText.swift
 //  DigDic
 //
 //  Created by Ilya Denisov on 9/3/16.
@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import RealmSwift
 
-protocol IDFlashcardImage {
-    var name: String? {get}
+class IDLDBFlashcardDataText: IDLDBFlashcardData, IDFlashcardDataText {
+    
 }

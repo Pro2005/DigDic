@@ -18,7 +18,7 @@ class IDAddFlashcardInteractor: IDAddFlashcardInteractorInput {
             if let imageDataHolder = dataHolder as? IDAddFlashcardImageDataHolder {
                 if let image = imageDataHolder.image {
                     if let filename = self.imageManager.saveImage(image) {
-                        flashcard.imageNames!.append(self.service.addFlashcardImageWithImageName(filename))
+                        flashcard.data!.append(self.service.addFlashcardDataImageWithImageName(filename))
                     }
                 }
             }

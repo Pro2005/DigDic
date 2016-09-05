@@ -34,8 +34,8 @@ class IDLocalDataBaseSource: IDDictionarySource {
         return flashcard
     }
     
-    func addFlashcardImageWithImageName(imageName: String) -> IDFlashcardImage {
-        let flashcardImage = IDLDBFlashcardImage()
+    func addFlashcardDataImageWithImageName(imageName: String) -> IDFlashcardDataImage {
+        let flashcardImage = IDLDBFlashcardDataImage()
         flashcardImage.name = imageName
         
         let realm = try! Realm()
