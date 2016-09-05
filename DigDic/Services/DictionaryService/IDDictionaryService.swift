@@ -28,12 +28,16 @@ class IDDictionaryService: IDBaseService {
         return self.source.flashcardModelForFilling()
     }
     
-    func addFlashcardDataImageWithImageName(imageName: String) -> IDFlashcardDataImage {
-        return self.source.addFlashcardDataImageWithImageName(imageName)
+    func addFlashcardDataWithImageName(imageName: String) -> IDFlashcardData {
+        return self.source.addFlashcardDataWithImageName(imageName)
     }
     
     func addFlashcard(flashcard: IDFlashcard, toDictionary dictionary: IDDictionary) {
         self.source.addFlashcard(flashcard, toDictionary: dictionary)
+    }
+    
+    func connectFlashcardsTogether(inout faceFlashcard: IDFlashcard, inout backFlashcard: IDFlashcard) {
+        self.source.connectFlashcardsTogether(&faceFlashcard, backFlashcard:&backFlashcard)
     }
     
 }

@@ -18,13 +18,17 @@ class IDAddFlashcardInteractor: IDAddFlashcardInteractorInput {
             if let imageDataHolder = dataHolder as? IDAddFlashcardImageDataHolder {
                 if let image = imageDataHolder.image {
                     if let filename = self.imageManager.saveImage(image) {
-                        flashcard.data!.append(self.service.addFlashcardDataImageWithImageName(filename))
+                        flashcard.data!.append(self.service.addFlashcardDataWithImageName(filename))
                     }
                 }
             }
         }
         self.service.addFlashcard(flashcard, toDictionary: dictionary)
         return flashcard
+    }
+    
+    func connectFlashcardsTogether(inout faceFlashcard: IDFlashcard, inout backFlashcard: IDFlashcard) {
+        self.service.connectFlashcardsTogether(&faceFlashcard, backFlashcard: &backFlashcard)
     }
     
 }

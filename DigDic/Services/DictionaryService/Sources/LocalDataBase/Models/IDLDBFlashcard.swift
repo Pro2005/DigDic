@@ -15,7 +15,11 @@ class IDLDBFlashcard: Object, IDFlashcard {
             return self._data.map{$0 as IDFlashcardData}
         }
         set {
-            
+            if let newValue = newValue {
+                for value in newValue {
+                    self._data.append(value as! IDLDBFlashcardData)
+                }
+            }
         }
     }
     
@@ -24,20 +28,20 @@ class IDLDBFlashcard: Object, IDFlashcard {
             return self._back
         }
         set {
-            
+            self._back = newValue
         }
     }
     
-    var card: IDFlashcard? {
+    var connectedFlashcard: IDFlashcard? {
         get {
-            return self._card as? IDFlashcard
+            return self._connectedFlashcard as? IDFlashcard
         }
         set {
-            
+            self._connectedFlashcard = newValue as? IDLDBFlashcard
         }
     }
     
     private let _data = List<IDLDBFlashcardData>()
     private var _back: Bool = false
-    private dynamic var _card: IDLDBFlashcard?
+    private dynamic var _connectedFlashcard: IDLDBFlashcard?
 }

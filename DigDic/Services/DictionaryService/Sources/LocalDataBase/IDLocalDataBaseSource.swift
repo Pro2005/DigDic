@@ -34,15 +34,16 @@ class IDLocalDataBaseSource: IDDictionarySource {
         return flashcard
     }
     
-    func addFlashcardDataImageWithImageName(imageName: String) -> IDFlashcardDataImage {
-        let flashcardImage = IDLDBFlashcardDataImage()
-        flashcardImage.name = imageName
+    func addFlashcardDataWithImageName(imageName: String) -> IDFlashcardData {
+        let flashcardData = IDLDBFlashcardData()
+        flashcardData.imageName = imageName
+        flashcardData.type = .Image
         
         let realm = try! Realm()
         try! realm.write {
-            realm.add(flashcardImage)
+            realm.add(flashcardData)
         }
-        return flashcardImage
+        return flashcardData
     }
     
     func addFlashcard(flashcard: IDFlashcard, toDictionary dictionary: IDDictionary) {
@@ -56,6 +57,15 @@ class IDLocalDataBaseSource: IDDictionarySource {
         try! realm.write {
             realm.add(flashcard)
             dictionary.addCard(flashcard)
+        }
+    }
+    
+    func connectFlashcardsTogether(inout faceFlashcard: IDFlashcard, inout backFlashcard: IDFlashcard) {
+        let realm = try! Realm()
+        try! realm.write {
+            faceFlashcard.connectedFlashcard = backFlashcard
+            backFlashcard.connectedFlashcard = faceFlashcard
+            backFlashcard.back = true
         }
     }
     

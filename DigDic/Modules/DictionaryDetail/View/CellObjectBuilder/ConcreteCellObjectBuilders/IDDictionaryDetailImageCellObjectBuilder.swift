@@ -13,9 +13,7 @@ class IDDictionaryDetailImageCellObjectBuilder: IDDictionaryDetailCellObjectBuil
     func cellObjectForFlashcardData(flashcardData: IDFlashcardData) -> IDDictionaryDetailCell {
         let view = NSBundle.mainBundle().loadNibNamed(String(IDDictionaryDetailImageCell), owner: nil, options: nil).last
         let cell = view as! IDDictionaryDetailImageCell
-//        if let imageDataHolder = dataHolder as? IDAddFlashcardImageDataHolder {
-//            cell.loadFromDataHolder(imageDataHolder)
-//        }
+        cell.loadWithData(flashcardData)
         return cell
     }
     

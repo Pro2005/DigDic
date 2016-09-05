@@ -28,11 +28,20 @@ class IDAddFlashcardPresenter: NSObject, IDAddFlashcardModuleInput, IDAddFlashca
     
     func didTapAddButton() {
         let numberCards = self.view.numberFlashcards()
+        var flashcards = [IDFlashcard]()
         for cardNumber in 0 ..< numberCards {
             if let dataHolders = self.view.dataHoldersForFlashcardWithNumber(cardNumber) {
-                self.interactor.addFlashcardWithDataHolders(dataHolders, toDictionary: self.dictionary)
+                let flashcard = self.interactor.addFlashcardWithDataHolders(dataHolders, toDictionary: self.dictionary)
+                flashcards.append(flashcard)
             }
         }
+        
+        if flashcards.count == 2 {
+            var faceFlashcard = flashcards.first!
+            var backFlashcard = flashcards.last!
+            self.interactor.connectFlashcardsTogether(&faceFlashcard, backFlashcard: &backFlashcard)
+        }
+        
         self.router.dismiss()
     }
     

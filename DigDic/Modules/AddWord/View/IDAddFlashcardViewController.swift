@@ -114,9 +114,9 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
     func dataHoldersForFlashcardWithNumber(number: Int) -> [IDAddFlashcardDataHolder]? {
         switch number {
         case IDWordFrom.BackView.rawValue:
-            return self.frontDataDisplayManager.dataSource
-        case IDWordFrom.FaceView.rawValue:
             return self.backDataDisplayManager.dataSource
+        case IDWordFrom.FaceView.rawValue:
+            return self.frontDataDisplayManager.dataSource
         default:
             return nil
         }

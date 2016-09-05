@@ -11,5 +11,6 @@ import Foundation
 protocol IDAddFlashcardInteractorInput: IDBaseInteractorInput {
 
     func addFlashcardWithDataHolders(dataHolders: [IDAddFlashcardDataHolder], toDictionary dictionary: IDDictionary) -> IDFlashcard
+    func connectFlashcardsTogether(inout faceFlashcard: IDFlashcard, inout backFlashcard: IDFlashcard)
     
 }

@@ -11,5 +11,5 @@ import Foundation
 protocol IDFlashcard {
     var data: [IDFlashcardData]? {get set}
     var back: Bool {get set}
-    var card: IDFlashcard? {get set}
+    var connectedFlashcard: IDFlashcard? {get set}
 }

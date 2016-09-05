@@ -32,12 +32,12 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
         self.router.presentAddFlashcardForDictionary(self.selectedDictionary)
     }
     
-    // MARK: Private 
+    func didTapRightButton() {
+        self.view.flipFlashcard(false)
+    }
     
-    private func flashcardViewForFlashcard(flashcard: IDFlashcard) -> IDDictionaryDetailFlashcardView {
-        let view = IDDictionaryDetailFlashcardView(flashcard: flashcard)
-        
-        return view
+    func didTapLeftButton() {
+        self.view.flipFlashcard(true)
     }
     
 }

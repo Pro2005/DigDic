@@ -2,7 +2,7 @@
 //  IDDictionaryDetailFlashcardView.swift
 //  DigDic
 //
-//  Created by Ilya Denisov on 9/4/16.
+//  Created by Ilya Denisov on 9/5/16.
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
 
@@ -10,42 +10,64 @@ import Foundation
 import UIKit
 
 class IDDictionaryDetailFlashcardView: UIView {
-    let flashcard: IDFlashcard
-    var tableView: UITableView = UITableView(frame: CGRectZero, style: .Plain)
+    let faceView = IDDictionaryDetailFlashcardSubView()
+    let backView = IDDictionaryDetailFlashcardSubView()
+    var visibleView: IDDictionaryDetailFlashcardSubView {
+        return faceView.hidden ? backView : faceView
+    }
+    var hiddenView: IDDictionaryDetailFlashcardSubView {
+        return faceView.hidden ? faceView : backView
+    }
+    var setNeedsAddConstraintsForFlashcardView = false
     
-    init(flashcard: IDFlashcard) {
-        self.flashcard = flashcard
+    // MARK: Initializer
+    
+    init(faceDataDisplayManager: IDDictionaryDetailDataDisplayManager, backDataDisplayManager: IDDictionaryDetailDataDisplayManager) {
         super.init(frame: CGRectZero)
-        self.setup(self.flashcard)
+        self.setup(faceDataDisplayManager, backDataDisplayManager: backDataDisplayManager)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: Public
+    
+    func reloadData() {
+        self.faceView.reloadData()
+        self.backView.reloadData()
+    }
+    
+    func flipFlashcard(left: Bool) {
+        var options: UIViewAnimationOptions = [.TransitionFlipFromRight, .ShowHideTransitionViews]
+        if left {
+            options = [.TransitionFlipFromLeft, .ShowHideTransitionViews]
+        }
+        UIView.transitionFromView(self.visibleView, toView: self.hiddenView, duration: 0.5, options:options, completion: nil)
+    }
+    
+    // MARK: 
+    
     override func updateConstraints() {
-        if self.tableView.constraints.count == 0 && self.tableView.superview != nil {
-            self.tableView.autoPinEdgesToSuperviewEdges()
+        if (self.setNeedsAddConstraintsForFlashcardView) {
+            self.faceView.autoPinEdgesToSuperviewEdges()
+            self.backView.autoPinEdgesToSuperviewEdges()
+            
+            self.setNeedsAddConstraintsForFlashcardView = false
         }
         
         super.updateConstraints()
     }
     
-    // MARK: Public
-    
-    func setupTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
-        self.tableView.dataSource = dataSource
-        self.tableView.delegate = delegate
-    }
-    
-    func reloadData() {
-        self.tableView.reloadData()
-    }
-    
     // MARK: Private
     
-    private func setup(flashcard: IDFlashcard) {
-        self.addSubview(self.tableView)
+    func setup(faceDataDisplayManager: IDDictionaryDetailDataDisplayManager, backDataDisplayManager: IDDictionaryDetailDataDisplayManager) {
+        self.faceView.setupTableViewDataSource(faceDataDisplayManager, delegate: faceDataDisplayManager)
+        self.backView.setupTableViewDataSource(backDataDisplayManager, delegate: backDataDisplayManager)
+        self.addSubview(self.faceView)
+        self.addSubview(self.backView)
+        self.backView.hidden = true
+        self.setNeedsAddConstraintsForFlashcardView = true
     }
     
 }

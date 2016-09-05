@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class IDDictionaryDetailDataDisplayManager: NSObject, UITableViewDelegate, UITableViewDataSource {
-    var flashcard: IDFlashcard!
+    let flashcard: IDFlashcard!
     
-    func loadWithFlashcard(flashcard: IDFlashcard) {
+    init(flashcard: IDFlashcard) {
         self.flashcard = flashcard
     }
     
@@ -35,4 +35,9 @@ class IDDictionaryDetailDataDisplayManager: NSObject, UITableViewDelegate, UITab
     }
     
     // MARK: UITableViewDelegate
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
 }

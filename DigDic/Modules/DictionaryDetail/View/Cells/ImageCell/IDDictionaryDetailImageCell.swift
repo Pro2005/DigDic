@@ -11,9 +11,47 @@ import UIKit
 
 class IDDictionaryDetailImageCell: UITableViewCell, IDDictionaryDetailCell {
     @IBOutlet var backgroundImageView: UIImageView!
+    @IBOutlet weak var heightLayoutConstraint: NSLayoutConstraint!
+    private var setNeedUpdateHeight = false
     
-    func loadWithData(flashcardDataImage: IDFlashcardDataImage) {
-        backgroundImageView.image = IDImageManager().imageByFilename(flashcardDataImage.name!)
+    // MARK: Public
+    
+    func loadWithData(flashcardData: IDFlashcardData) {
+        if let imageName = flashcardData.imageName {
+            backgroundImageView.image = IDImageManager().imageByFilename(imageName)
+            self.setNeedUpdateHeight = true
+        }
+    }
+    
+    // MARK: Overriden
+    
+    override func updateConstraints() {
+        self.updateHeightIfNeeded()
+        
+        super.updateConstraints()
+    }
+    
+    override func prepareForReuse() {
+        self.backgroundImageView.image = nil
+    }
+    
+    // MARK: Private
+    
+    private func updateHeightIfNeeded() {
+        if !self.setNeedUpdateHeight {
+            return
+        }
+        guard let image = self.backgroundImageView.image else {
+            return
+        }
+        let imageSize = image.size
+        let factor = max(imageSize.width, imageSize.height) / min(imageSize.width, imageSize.height)
+        if (imageSize.width > imageSize.height) {
+            self.heightLayoutConstraint.constant = ceil(CGRectGetWidth(self.frame) / factor)
+        } else {
+            self.heightLayoutConstraint.constant = ceil(CGRectGetWidth(self.frame) * factor)
+        }
+        self.setNeedUpdateHeight = false
     }
     
 }
