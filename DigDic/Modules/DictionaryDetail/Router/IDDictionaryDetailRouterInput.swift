@@ -11,6 +11,6 @@ import UIKit
 
 protocol IDDictionaryDetailRouterInput: IDBaseRouterInput {
     
-    func presentAddFlashcardForDictionary(dictionary: IDDictionary)
+    func presentAddFlashcardForDictionary(dictionary: IDDictionary, delegate: IDAddFlashcardPresenterDelegate?)
     
 }

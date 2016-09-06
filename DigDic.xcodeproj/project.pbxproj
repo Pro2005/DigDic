@@ -62,6 +62,7 @@
 		08B4AB121D6E258100E5CE88 /* IDDictionaryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4AB111D6E258100E5CE88 /* IDDictionaryDetailViewController.xib */; };
 		08DE58E21D66441D00C255E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08DE58E41D66441D00C255E6 /* Localizable.strings */; };
 		08DE58EA1D6646C600C255E6 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE58E91D6646C600C255E6 /* String+Localized.swift */; };
+		08F6839D1D7F4F82009ADBCB /* IDAddFlashcardPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F6839C1D7F4F82009ADBCB /* IDAddFlashcardPresenterDelegate.swift */; };
 		0A4AE09DC7EE733B2B21606E /* IDDictionariesListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1929641FC0E7D6686E0104DC /* IDDictionariesListInteractorTests.swift */; };
 		0D326EF69ED452DDCBA125D4 /* IDAddFlashcardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C20C58D76B100F636642462 /* IDAddFlashcardInteractor.swift */; };
 		0D4403A125CDA0E1009047FE /* IDDictionaryDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D32D046186A27D8455707F /* IDDictionaryDetailPresenterTests.swift */; };
@@ -186,6 +187,7 @@
 		08B4AB111D6E258100E5CE88 /* IDDictionaryDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDDictionaryDetailViewController.xib; sourceTree = "<group>"; };
 		08DE58E31D66441D00C255E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08DE58E91D6646C600C255E6 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		08F6839C1D7F4F82009ADBCB /* IDAddFlashcardPresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardPresenterDelegate.swift; sourceTree = "<group>"; };
 		10C37CBF32F81E75A35E832F /* IDDictionariesListConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListConfiguratorTests.swift; sourceTree = "<group>"; };
 		11FE6CCFC6AB109FF32D0A29 /* IDAddWordViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordViewTests.swift; sourceTree = "<group>"; };
 		128950BED6A34BB5B29054E8 /* IDDictionaryDetailModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailModuleInput.swift; sourceTree = "<group>"; };
@@ -657,6 +659,7 @@
 			children = (
 				F306CBEFF8935698AA966551 /* IDAddFlashcardModuleInput.swift */,
 				42B0A531BD3644B8F9479B55 /* IDAddFlashcardPresenter.swift */,
+				08F6839C1D7F4F82009ADBCB /* IDAddFlashcardPresenterDelegate.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1210,6 +1213,7 @@
 				086377B31D776B3500ABB41B /* IDAddFlashcardCellObjectBuilderFactory.swift in Sources */,
 				081CCDD51D7CAD66005B7035 /* IDDictionaryDetailCell.swift in Sources */,
 				084F13C61D65E6A700E907D6 /* AppDelegate.swift in Sources */,
+				08F6839D1D7F4F82009ADBCB /* IDAddFlashcardPresenterDelegate.swift in Sources */,
 				D77E4143B6B5F5F011066236 /* IDDictionariesListViewInput.swift in Sources */,
 				8BBCF3710B1094637156C098 /* IDDictionariesListViewOutput.swift in Sources */,
 				F4934EB3922FB4741E358414 /* IDDictionariesListViewController.swift in Sources */,

@@ -13,6 +13,7 @@ class IDAddFlashcardPresenter: NSObject, IDAddFlashcardModuleInput, IDAddFlashca
     var interactor: IDAddFlashcardInteractorInput!
     var router: IDAddFlashcardRouterInput!
     let dictionary: IDDictionary!
+    var delegate: IDAddFlashcardPresenterDelegate?
     
     init(dictionary: IDDictionary) {
         self.dictionary = dictionary
@@ -40,6 +41,9 @@ class IDAddFlashcardPresenter: NSObject, IDAddFlashcardModuleInput, IDAddFlashca
             var faceFlashcard = flashcards.first!
             var backFlashcard = flashcards.last!
             self.interactor.connectFlashcardsTogether(&faceFlashcard, backFlashcard: &backFlashcard)
+            if let delegate = self.delegate {
+                delegate.addFlashcardPresenterDidAddFlashcards(faceFlashcard, backFlashcard: backFlashcard)
+            }
         }
         
         self.router.dismiss()

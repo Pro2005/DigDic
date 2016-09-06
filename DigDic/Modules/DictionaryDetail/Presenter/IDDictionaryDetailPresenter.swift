@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
 
-class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDetailViewOutput, IDDictionaryDetailInteractorOutput {
+class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDetailViewOutput, IDDictionaryDetailInteractorOutput, IDAddFlashcardPresenterDelegate {
 
     weak var view: IDDictionaryDetailViewInput!
     var interactor: IDDictionaryDetailInteractorInput!
@@ -27,7 +27,13 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
     }
     
     func didTapAddButton() {
-        self.router.presentAddFlashcardForDictionary(self.selectedDictionary)
+        self.router.presentAddFlashcardForDictionary(self.selectedDictionary, delegate: self)
+    }
+    
+    // MARK: - IDAddFlashcardPresenterDelegate 
+    
+    func addFlashcardPresenterDidAddFlashcards(faceFlashcard: IDFlashcard, backFlashcard: IDFlashcard) {
+        self.view.displayFlashcards([faceFlashcard])
     }
     
 }

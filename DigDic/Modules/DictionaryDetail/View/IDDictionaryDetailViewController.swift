@@ -12,7 +12,7 @@ import ZLSwipeableViewSwift
 class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetailViewInput {
     var output: IDDictionaryDetailViewOutput!
     var swipeableView: ZLSwipeableView?
-    var setNeedsAddConstraints: Bool = false
+    var setNeedsUpdateConstraints: Bool = false
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     }
 
     override func updateViewConstraints() {
-        if self.setNeedsAddConstraints {
+        if self.setNeedsUpdateConstraints {
             if let swipeableView = self.swipeableView {
                 swipeableView.autoPinEdgeToSuperviewEdge(.Left, withInset: 10)
                 swipeableView.autoPinEdgeToSuperviewEdge(.Right, withInset: 10)
@@ -29,9 +29,9 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
                 swipeableView.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 60)
             }
 
-            self.setNeedsAddConstraints = false
+            self.setNeedsUpdateConstraints = false
         }
-        
+    
         super.updateViewConstraints()
     }
     
@@ -48,12 +48,12 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     }
     
     func displayFlashcards(flashcards: [IDFlashcard]) {
-        let swipeableView = ZLSwipeableView(frame: CGRectZero)
-        self.view.addSubview(swipeableView)
-        
-        swipeableView.numberOfActiveView = UInt(flashcards.count)
+        guard let swpeableView = self.swipeableView else {
+            return
+        }
+        swpeableView.numberOfActiveView = UInt(flashcards.count)
         var index = 0
-        swipeableView.nextView = {
+        swpeableView.nextView = {
             if index < flashcards.count {
                 let flashcard = flashcards[index]
                 index += 1
@@ -61,16 +61,18 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
             }
             return UIView()
         }
-        swipeableView.loadViews()
-        self.swipeableView = swipeableView
-        
-        self.setNeedsAddConstraints = true
+        swpeableView.loadViews()
     }
     
     // MARK: override
     
     override func setupInitialState() {
         super.setupInitialState()
+        
+        let swipeableView = ZLSwipeableView(frame: CGRectZero)
+        self.view.addSubview(swipeableView)
+        self.swipeableView = swipeableView
+        self.setNeedsUpdateConstraints = true
     }
     
 }
