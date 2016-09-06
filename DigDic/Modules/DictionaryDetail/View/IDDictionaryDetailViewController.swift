@@ -10,9 +10,6 @@ import UIKit
 
 class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetailViewInput {
     var output: IDDictionaryDetailViewOutput!
-    var faceDataDisplayManager: IDDictionaryDetailDataDisplayManager?
-    var backDataDisplayManager: IDDictionaryDetailDataDisplayManager?
-//    var flashcardView: IDDictionaryDetailFlashcardView?
     var flashcardView: IDDictionaryDetailFlashcardView?
     var setNeedsAddConstraintsForFlashcardView: Bool = false
 
@@ -57,27 +54,15 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     }
     
     func displayFlashcard(flashcard: IDFlashcard) {
-        self.faceDataDisplayManager = IDDictionaryDetailDataDisplayManager(flashcard: flashcard)
-        self.backDataDisplayManager = IDDictionaryDetailDataDisplayManager(flashcard: flashcard.connectedFlashcard!)
-        let view = IDDictionaryDetailFlashcardView(faceDataDisplayManager: self.faceDataDisplayManager!, backDataDisplayManager: self.backDataDisplayManager!)
-        view.reloadData()
-        self.view.addSubview(view)
-        self.flashcardView = view
-        self.setNeedsAddConstraintsForFlashcardView = true
-    /*
         let view = IDDictionaryDetailFlashcardView(flashcard: flashcard)
-        self.dataDisplayManager = IDDictionaryDetailDataDisplayManager(flashcard: flashcard)
-        view.setupTableViewDataSource(self.dataDisplayManager!, delegate: self.dataDisplayManager!)
         view.reloadData()
         self.view.addSubview(view)
         self.flashcardView = view
         self.setNeedsAddConstraintsForFlashcardView = true
- */
     }
     
     func flipFlashcard(left: Bool) {
         self.flashcardView?.flipFlashcard(left)
-//        UIView.transitionFromView(self., toView: self.currentView == self.frontView ? self.backView : self.frontView, duration: 0.5, options:[.TransitionFlipFromRight, .ShowHideTransitionViews], completion: nil)
     }
     
 }

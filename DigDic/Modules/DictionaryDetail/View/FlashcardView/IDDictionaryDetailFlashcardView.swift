@@ -12,6 +12,9 @@ import UIKit
 class IDDictionaryDetailFlashcardView: UIView {
     let faceView = IDDictionaryDetailFlashcardSubView()
     let backView = IDDictionaryDetailFlashcardSubView()
+    var faceDataDisplayManager: IDDictionaryDetailDataDisplayManager?
+    var backDataDisplayManager: IDDictionaryDetailDataDisplayManager?
+    
     var visibleView: IDDictionaryDetailFlashcardSubView {
         return faceView.hidden ? backView : faceView
     }
@@ -22,9 +25,13 @@ class IDDictionaryDetailFlashcardView: UIView {
     
     // MARK: Initializer
     
-    init(faceDataDisplayManager: IDDictionaryDetailDataDisplayManager, backDataDisplayManager: IDDictionaryDetailDataDisplayManager) {
+//    init(faceDataDisplayManager: IDDictionaryDetailDataDisplayManager, backDataDisplayManager: IDDictionaryDetailDataDisplayManager) {
+//        super.init(frame: CGRectZero)
+//        self.setup(faceDataDisplayManager, backDataDisplayManager: backDataDisplayManager)
+//    }
+    init(flashcard: IDFlashcard) {
         super.init(frame: CGRectZero)
-        self.setup(faceDataDisplayManager, backDataDisplayManager: backDataDisplayManager)
+        self.setup(flashcard)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -61,9 +68,11 @@ class IDDictionaryDetailFlashcardView: UIView {
     
     // MARK: Private
     
-    func setup(faceDataDisplayManager: IDDictionaryDetailDataDisplayManager, backDataDisplayManager: IDDictionaryDetailDataDisplayManager) {
-        self.faceView.setupTableViewDataSource(faceDataDisplayManager, delegate: faceDataDisplayManager)
-        self.backView.setupTableViewDataSource(backDataDisplayManager, delegate: backDataDisplayManager)
+    func setup(flashcard: IDFlashcard) {
+        self.faceDataDisplayManager = IDDictionaryDetailDataDisplayManager(flashcard: flashcard)
+        self.backDataDisplayManager = IDDictionaryDetailDataDisplayManager(flashcard: flashcard.connectedFlashcard!)
+        self.faceView.setupTableViewDataSource(self.faceDataDisplayManager!, delegate: self.faceDataDisplayManager!)
+        self.backView.setupTableViewDataSource(self.backDataDisplayManager!, delegate: self.backDataDisplayManager!)
         self.addSubview(self.faceView)
         self.addSubview(self.backView)
         self.backView.hidden = true
