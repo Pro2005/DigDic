@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import ZLSwipeableViewSwift
 
 class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetailViewInput {
     var output: IDDictionaryDetailViewOutput!
-    var flashcardView: IDDictionaryDetailFlashcardView?
-    var setNeedsAddConstraintsForFlashcardView: Bool = false
+    var swipeableView: ZLSwipeableView?
+    var setNeedsAddConstraints: Bool = false
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -20,14 +21,15 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     }
 
     override func updateViewConstraints() {
-        if let flashcardView = self.flashcardView {
-            if self.setNeedsAddConstraintsForFlashcardView {
-                flashcardView.autoPinEdgeToSuperviewEdge(.Left, withInset: 10)
-                flashcardView.autoPinEdgeToSuperviewEdge(.Right, withInset: 10)
-                flashcardView.autoPinEdgeToSuperviewEdge(.Top, withInset: 70)
-                flashcardView.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 60)
-                self.setNeedsAddConstraintsForFlashcardView = false
+        if self.setNeedsAddConstraints {
+            if let swipeableView = self.swipeableView {
+                swipeableView.autoPinEdgeToSuperviewEdge(.Left, withInset: 10)
+                swipeableView.autoPinEdgeToSuperviewEdge(.Right, withInset: 10)
+                swipeableView.autoPinEdgeToSuperviewEdge(.Top, withInset: 70)
+                swipeableView.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 60)
             }
+
+            self.setNeedsAddConstraints = false
         }
         
         super.updateViewConstraints()
@@ -54,15 +56,22 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     }
     
     func displayFlashcard(flashcard: IDFlashcard) {
-        let view = IDDictionaryDetailFlashcardView(flashcard: flashcard)
-        view.reloadData()
-        self.view.addSubview(view)
-        self.flashcardView = view
-        self.setNeedsAddConstraintsForFlashcardView = true
+        let swipeableView = ZLSwipeableView(frame: CGRectZero)
+        self.view.addSubview(swipeableView)
+        
+        swipeableView.numberOfActiveView = 1
+        swipeableView.nextView = {
+            return IDDictionaryDetailFlashcardView(flashcard: flashcard)
+        }
+        swipeableView.loadViews()
+        self.swipeableView = swipeableView
+        
+        self.setNeedsAddConstraints = true
     }
     
     func flipFlashcard(left: Bool) {
-        self.flashcardView?.flipFlashcard(left)
+        
+//        self.flashcardView?.flipFlashcard(left)
     }
     
 }

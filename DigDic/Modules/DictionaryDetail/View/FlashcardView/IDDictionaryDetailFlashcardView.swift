@@ -21,14 +21,10 @@ class IDDictionaryDetailFlashcardView: UIView {
     var hiddenView: IDDictionaryDetailFlashcardSubView {
         return faceView.hidden ? faceView : backView
     }
-    var setNeedsAddConstraintsForFlashcardView = false
+    var setNeedsAddConstraints = false
     
     // MARK: Initializer
     
-//    init(faceDataDisplayManager: IDDictionaryDetailDataDisplayManager, backDataDisplayManager: IDDictionaryDetailDataDisplayManager) {
-//        super.init(frame: CGRectZero)
-//        self.setup(faceDataDisplayManager, backDataDisplayManager: backDataDisplayManager)
-//    }
     init(flashcard: IDFlashcard) {
         super.init(frame: CGRectZero)
         self.setup(flashcard)
@@ -56,11 +52,13 @@ class IDDictionaryDetailFlashcardView: UIView {
     // MARK: 
     
     override func updateConstraints() {
-        if (self.setNeedsAddConstraintsForFlashcardView) {
+        if (self.setNeedsAddConstraints) {
+            self.autoPinEdgesToSuperviewEdges()
+            
             self.faceView.autoPinEdgesToSuperviewEdges()
             self.backView.autoPinEdgesToSuperviewEdges()
             
-            self.setNeedsAddConstraintsForFlashcardView = false
+            self.setNeedsAddConstraints = false
         }
         
         super.updateConstraints()
@@ -76,7 +74,7 @@ class IDDictionaryDetailFlashcardView: UIView {
         self.addSubview(self.faceView)
         self.addSubview(self.backView)
         self.backView.hidden = true
-        self.setNeedsAddConstraintsForFlashcardView = true
+        self.setNeedsAddConstraints = true
     }
     
 }
