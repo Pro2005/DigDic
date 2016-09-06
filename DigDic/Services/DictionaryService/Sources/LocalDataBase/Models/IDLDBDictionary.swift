@@ -25,4 +25,8 @@ class IDLDBDictionary: Object, IDDictionary {
     
     // MARK: Private
     private let _cards = List<IDLDBFlashcard>()
+    
+    override static func ignoredProperties() -> [String] {
+        return ["cards"]
+    }
 }

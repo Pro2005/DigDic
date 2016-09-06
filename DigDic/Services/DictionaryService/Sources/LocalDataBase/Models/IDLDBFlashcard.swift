@@ -42,6 +42,10 @@ class IDLDBFlashcard: Object, IDFlashcard {
     }
     
     private let _data = List<IDLDBFlashcardData>()
-    private var _back: Bool = false
+    private dynamic var _back: Bool = false
     private dynamic var _connectedFlashcard: IDLDBFlashcard?
+    
+    override static func ignoredProperties() -> [String] {
+        return ["data", "back", "connectedFlashcard"]
+    }
 }

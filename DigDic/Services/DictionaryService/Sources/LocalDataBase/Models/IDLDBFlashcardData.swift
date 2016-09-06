@@ -27,5 +27,7 @@ class IDLDBFlashcardData: Object, IDFlashcardData {
     }
     
     dynamic var _type = IDFlashcardDataType.Text.rawValue
-    
+    override static func ignoredProperties() -> [String] {
+        return ["type"]
+    }
 }
