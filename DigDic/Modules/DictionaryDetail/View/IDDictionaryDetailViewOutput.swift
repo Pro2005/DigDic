@@ -15,7 +15,5 @@ protocol IDDictionaryDetailViewOutput: IDBaseViewOutput {
 
     func viewIsReady()
     func didTapAddButton()
-    func didTapLeftButton()
-    func didTapRightButton()
     
 }

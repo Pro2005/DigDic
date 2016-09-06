@@ -40,14 +40,6 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     @IBAction func didTapAddButton(sender: AnyObject) {
         self.output.didTapAddButton()
     }
-    
-    @IBAction func didTapLeftButton(sender: AnyObject) {
-        self.output.didTapLeftButton()
-    }
-    
-    @IBAction func didTapRightButton(sender: AnyObject) {
-        self.output.didTapRightButton()
-    }
 
     // MARK: IDDictionaryDetailViewInput
     
@@ -55,13 +47,19 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
         self.title = title
     }
     
-    func displayFlashcard(flashcard: IDFlashcard) {
+    func displayFlashcards(flashcards: [IDFlashcard]) {
         let swipeableView = ZLSwipeableView(frame: CGRectZero)
         self.view.addSubview(swipeableView)
         
-        swipeableView.numberOfActiveView = 1
+        swipeableView.numberOfActiveView = UInt(flashcards.count)
+        var index = 0
         swipeableView.nextView = {
-            return IDDictionaryDetailFlashcardView(flashcard: flashcard)
+            if index < flashcards.count {
+                let flashcard = flashcards[index]
+                index += 1
+                return IDDictionaryDetailFlashcardView(flashcard: flashcard)
+            }
+            return UIView()
         }
         swipeableView.loadViews()
         self.swipeableView = swipeableView
@@ -69,9 +67,10 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
         self.setNeedsAddConstraints = true
     }
     
-    func flipFlashcard(left: Bool) {
-        
-//        self.flashcardView?.flipFlashcard(left)
+    // MARK: override
+    
+    override func setupInitialState() {
+        super.setupInitialState()
     }
     
 }

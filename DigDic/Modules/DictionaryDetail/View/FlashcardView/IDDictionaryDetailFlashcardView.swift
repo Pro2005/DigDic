@@ -34,19 +34,19 @@ class IDDictionaryDetailFlashcardView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: Action
+    
+    func handleLongPress(sender: UILongPressGestureRecognizer) {
+        if sender.state == .Began {
+            self.flipFlashcard(true)
+        }
+    }
+    
     // MARK: Public
     
     func reloadData() {
         self.faceView.reloadData()
         self.backView.reloadData()
-    }
-    
-    func flipFlashcard(left: Bool) {
-        var options: UIViewAnimationOptions = [.TransitionFlipFromRight, .ShowHideTransitionViews]
-        if left {
-            options = [.TransitionFlipFromLeft, .ShowHideTransitionViews]
-        }
-        UIView.transitionFromView(self.visibleView, toView: self.hiddenView, duration: 0.5, options:options, completion: nil)
     }
     
     // MARK: 
@@ -75,6 +75,17 @@ class IDDictionaryDetailFlashcardView: UIView {
         self.addSubview(self.backView)
         self.backView.hidden = true
         self.setNeedsAddConstraints = true
+        
+        let gestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
+        self.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    private func flipFlashcard(left: Bool) {
+        var options: UIViewAnimationOptions = [.TransitionFlipFromRight, .ShowHideTransitionViews]
+        if left {
+            options = [.TransitionFlipFromLeft, .ShowHideTransitionViews]
+        }
+        UIView.transitionFromView(self.visibleView, toView: self.hiddenView, duration: 0.5, options:options, completion: nil)
     }
     
 }
