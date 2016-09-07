@@ -23,6 +23,15 @@ class IDLDBDictionary: Object, IDDictionary {
         self._cards.append(card)
     }
     
+    func removeCard(card: IDFlashcard) {
+        guard let card = card as? IDLDBFlashcard else {
+            return
+        }
+        if let index = self._cards.indexOf(card) {
+            self._cards.removeAtIndex(index)
+        }
+    }
+    
     // MARK: Private
     private let _cards = List<IDLDBFlashcard>()
     

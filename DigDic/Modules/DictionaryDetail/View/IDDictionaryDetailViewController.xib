@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IDDictionaryDetailViewController" customModule="DigDic" customModuleProvider="target">
             <connections>
+                <outlet property="badLabel" destination="TBC-db-3yH" id="AhN-KU-At0"/>
+                <outlet property="goodLabel" destination="vON-g3-SD2" id="utD-wM-DNW"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2xR-Bw-Rys"/>
             </connections>
         </placeholder>
@@ -16,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WT5-q2-2WV">
-                    <rect key="frame" x="275" y="531" width="50" height="50"/>
+                    <rect key="frame" x="325" y="531" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="7Lw-Xh-vkb"/>
                         <constraint firstAttribute="width" constant="50" id="U0c-ck-XBd"/>
@@ -29,11 +31,43 @@
                         <action selector="didTapAddButton:" destination="-1" eventType="touchUpInside" id="eLh-Ha-LC7"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBC-db-3yH">
+                    <rect key="frame" x="18" y="537" width="32" height="39"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vON-g3-SD2">
+                    <rect key="frame" x="550" y="537" width="32" height="39"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPs-qP-eLA">
+                    <rect key="frame" x="225" y="531" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="49c-fL-yEX"/>
+                        <constraint firstAttribute="height" constant="50" id="xQs-bj-wHw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="-">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapRemoveButton:" destination="-1" eventType="touchUpInside" id="MkG-Y3-Sd6"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="vON-g3-SD2" firstAttribute="centerY" secondItem="WT5-q2-2WV" secondAttribute="centerY" id="FxE-3q-MbO"/>
                 <constraint firstAttribute="bottom" secondItem="WT5-q2-2WV" secondAttribute="bottom" constant="19" id="IjH-sK-fDr"/>
-                <constraint firstItem="WT5-q2-2WV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wrx-D3-CJj"/>
+                <constraint firstAttribute="trailing" secondItem="vON-g3-SD2" secondAttribute="trailing" constant="18" id="d1B-Sf-Dld"/>
+                <constraint firstItem="TBC-db-3yH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="kCz-gu-DEI"/>
+                <constraint firstItem="TBC-db-3yH" firstAttribute="centerY" secondItem="WT5-q2-2WV" secondAttribute="centerY" id="p7z-z9-AqD"/>
+                <constraint firstItem="pPs-qP-eLA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-50" id="st7-Jy-0lY"/>
+                <constraint firstItem="WT5-q2-2WV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="50" id="wrx-D3-CJj"/>
+                <constraint firstItem="pPs-qP-eLA" firstAttribute="centerY" secondItem="WT5-q2-2WV" secondAttribute="centerY" id="xI8-vV-lES"/>
             </constraints>
         </view>
     </objects>

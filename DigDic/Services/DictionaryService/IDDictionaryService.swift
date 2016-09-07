@@ -40,4 +40,8 @@ class IDDictionaryService: IDBaseService {
         self.source.connectFlashcardsTogether(&faceFlashcard, backFlashcard:&backFlashcard)
     }
     
+    func removeFlashcards(flashcards: [IDFlashcard], fromDictionary dictionary: IDDictionary) {
+        self.source.removeFlashcards(flashcards, fromDictionary: dictionary)
+    }
+    
 }

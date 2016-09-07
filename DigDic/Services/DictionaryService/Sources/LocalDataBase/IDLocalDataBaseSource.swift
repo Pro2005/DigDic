@@ -69,4 +69,20 @@ class IDLocalDataBaseSource: IDDictionarySource {
         }
     }
     
+    func removeFlashcards(flashcards: [IDFlashcard], fromDictionary dictionary: IDDictionary) {
+        guard let dictionary = dictionary as? IDLDBDictionary else {
+            return
+        }
+        
+        let realm = try! Realm()
+        try! realm.write {
+            
+            let items = flashcards.map{$0 as! IDLDBFlashcard}
+            for item in items {
+                dictionary.removeCard(item)
+                realm.delete(item)
+            }
+        }
+    }
+    
 }

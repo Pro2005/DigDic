@@ -39,6 +39,12 @@ class IDImageManager {
         return image
     }
     
+    func removeImageWithFilename(filename: String) throws -> Bool {
+        let fullPath = try self.fileInDocumentsDirectory(filename)
+        try NSFileManager.defaultManager().removeItemAtPath(fullPath)
+        return true
+    }
+    
     // MARK: - Private
     
     private func saveImage(image: UIImage, path: String) -> Bool {

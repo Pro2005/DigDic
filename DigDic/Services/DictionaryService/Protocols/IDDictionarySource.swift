@@ -16,5 +16,6 @@ protocol IDDictionarySource {
     func addFlashcardDataWithImageName(imageName: String) -> IDFlashcardData
     func addFlashcard(flashcard: IDFlashcard, toDictionary dictionary: IDDictionary)
     func connectFlashcardsTogether(inout faceFlashcard: IDFlashcard, inout backFlashcard: IDFlashcard)
+    func removeFlashcards(flashcards: [IDFlashcard], fromDictionary dictionary: IDDictionary)
     
 }

@@ -30,6 +30,14 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
         self.router.presentAddFlashcardForDictionary(self.selectedDictionary, delegate: self)
     }
     
+    func didTapRemoveButton() {
+        self.view.getConfirmationForRemoving()
+    }
+    
+    func removeFlashcards(flashcards: [IDFlashcard]) {
+        self.interactor.removeFlashcards(flashcards, fromDictinary: self.selectedDictionary)
+    }
+    
     // MARK: - IDAddFlashcardPresenterDelegate 
     
     func addFlashcardPresenterDidAddFlashcards(faceFlashcard: IDFlashcard, backFlashcard: IDFlashcard) {

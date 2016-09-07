@@ -9,5 +9,24 @@
 class IDDictionaryDetailInteractor: IDDictionaryDetailInteractorInput {
 
     weak var output: IDDictionaryDetailInteractorOutput!
+    lazy var service: IDDictionaryService = IDDictionaryService(source: IDLocalDataBaseSource())
+    lazy var imageManager: IDImageManager = IDImageManager()
 
+    func removeFlashcards(flashcards: [IDFlashcard], fromDictinary dictionary: IDDictionary) {
+        for flashcard in flashcards {
+            if let data = flashcard.data {
+                for dataItem in data {
+                    if let imageName = dataItem.imageName {
+                        do {
+                            try self.imageManager.removeImageWithFilename(imageName)
+                        } catch {
+                            
+                        }
+                    }
+                }
+            }
+        }
+        self.service.removeFlashcards(flashcards, fromDictionary: dictionary)
+    }
+    
 }
