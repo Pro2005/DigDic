@@ -18,7 +18,11 @@ class IDDictionaryDetailImageCell: UITableViewCell, IDDictionaryDetailCell {
     
     func loadWithData(flashcardData: IDFlashcardData) {
         if let imageName = flashcardData.imageName {
-            backgroundImageView.image = IDImageManager().imageByFilename(imageName)
+            do {
+                backgroundImageView.image = try IDImageManager().imageByFilename(imageName)
+            } catch {
+                
+            }
             self.setNeedUpdateHeight = true
         }
     }

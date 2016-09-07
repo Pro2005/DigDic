@@ -32,8 +32,11 @@ class IDAddFlashcardPresenter: NSObject, IDAddFlashcardModuleInput, IDAddFlashca
         var flashcards = [IDFlashcard]()
         for cardNumber in 0 ..< numberCards {
             if let dataHolders = self.view.dataHoldersForFlashcardWithNumber(cardNumber) {
-                let flashcard = self.interactor.addFlashcardWithDataHolders(dataHolders, toDictionary: self.dictionary)
-                flashcards.append(flashcard)
+                if let flashcard = self.interactor.addFlashcardWithDataHolders(dataHolders, toDictionary: self.dictionary) {
+                    flashcards.append(flashcard)
+                } else {
+                    return
+                }
             }
         }
         

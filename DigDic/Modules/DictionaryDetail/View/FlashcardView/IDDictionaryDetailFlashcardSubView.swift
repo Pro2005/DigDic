@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class IDDictionaryDetailFlashcardSubView: UIView {
-//    let flashcard: IDFlashcard
     var tableView: UITableView = UITableView(frame: CGRectZero, style: .Plain)
     
     init() {
@@ -45,6 +44,7 @@ class IDDictionaryDetailFlashcardSubView: UIView {
     
     private func setup() {
         self.addSubview(self.tableView)
+        self.tableView.separatorStyle = .None
     }
     
 }

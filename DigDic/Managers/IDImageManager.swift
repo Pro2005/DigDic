@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+enum ImageManagerError: ErrorType {
+    case NameConflict
+}
+
 class IDImageManager {
     private var documentsURL: NSURL {
         return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
@@ -16,9 +20,12 @@ class IDImageManager {
     
     // MARK: - Public
     
-    func saveImage(image: UIImage) -> String? {
+    func saveImage(image: UIImage) throws -> String? {
         let filename = self.filename()
-        let fullPath = self.fileInDocumentsDirectory(filename)
+        let fullPath = try self.fileInDocumentsDirectory(filename)
+        if NSFileManager.defaultManager().fileExistsAtPath(fullPath) {
+            throw ImageManagerError.NameConflict
+        }
         let result = self.saveImage(image, path: fullPath)
         if result {
             return filename
@@ -26,9 +33,8 @@ class IDImageManager {
         return nil
     }
     
-    func imageByFilename(filename: String) -> UIImage? {
-        let fullPath = self.fileInDocumentsDirectory(filename)
-        
+    func imageByFilename(filename: String) throws -> UIImage? {
+        let fullPath = try self.fileInDocumentsDirectory(filename)
         let image = UIImage(contentsOfFile: fullPath)
         return image
     }
@@ -45,11 +51,15 @@ class IDImageManager {
     
     private func filename() -> String {
         let timestamp = NSDate().timeIntervalSince1970
-        return String(format: "image_%d", argument: timestamp)
+        return "image_\(Int(timestamp))"
     }
     
-    private func fileInDocumentsDirectory(filename: String) -> String {
-        let fileURL = self.documentsURL.URLByAppendingPathComponent(filename)
+    private func fileInDocumentsDirectory(filename: String) throws -> String {
+        var fileURL = self.documentsURL.URLByAppendingPathComponent("images")
+        if !NSFileManager.defaultManager().fileExistsAtPath(fileURL.path!) {
+            try NSFileManager.defaultManager().createDirectoryAtPath(fileURL.path!, withIntermediateDirectories: false, attributes: nil)
+        }
+        fileURL = fileURL.URLByAppendingPathComponent(filename)
         return fileURL.path!
     }
     
