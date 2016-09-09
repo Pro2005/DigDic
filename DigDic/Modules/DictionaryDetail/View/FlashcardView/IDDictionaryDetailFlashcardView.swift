@@ -10,22 +10,24 @@ import Foundation
 import UIKit
 
 class IDDictionaryDetailFlashcardView: UIView {
-    let faceView = IDDictionaryDetailFlashcardSubView()
+    let flashcard: IDFlashcard
+    let frontView = IDDictionaryDetailFlashcardSubView()
     let backView = IDDictionaryDetailFlashcardSubView()
-    var faceDataDisplayManager: IDDictionaryDetailDataDisplayManager?
+    var frontDataDisplayManager: IDDictionaryDetailDataDisplayManager?
     var backDataDisplayManager: IDDictionaryDetailDataDisplayManager?
     
     var visibleView: IDDictionaryDetailFlashcardSubView {
-        return faceView.hidden ? backView : faceView
+        return frontView.hidden ? backView : frontView
     }
     var hiddenView: IDDictionaryDetailFlashcardSubView {
-        return faceView.hidden ? faceView : backView
+        return frontView.hidden ? frontView : backView
     }
     var setNeedsAddConstraints = false
     
     // MARK: Initializer
     
     init(flashcard: IDFlashcard) {
+        self.flashcard = flashcard
         super.init(frame: CGRectZero)
         self.setup(flashcard)
     }
@@ -45,7 +47,7 @@ class IDDictionaryDetailFlashcardView: UIView {
     // MARK: Public
     
     func reloadData() {
-        self.faceView.reloadData()
+        self.frontView.reloadData()
         self.backView.reloadData()
     }
     
@@ -55,7 +57,7 @@ class IDDictionaryDetailFlashcardView: UIView {
         if (self.setNeedsAddConstraints) {
             self.autoPinEdgesToSuperviewEdges()
             
-            self.faceView.autoPinEdgesToSuperviewEdges()
+            self.frontView.autoPinEdgesToSuperviewEdges()
             self.backView.autoPinEdgesToSuperviewEdges()
             
             self.setNeedsAddConstraints = false
@@ -67,11 +69,11 @@ class IDDictionaryDetailFlashcardView: UIView {
     // MARK: Private
     
     func setup(flashcard: IDFlashcard) {
-        self.faceDataDisplayManager = IDDictionaryDetailDataDisplayManager(flashcard: flashcard)
-        self.backDataDisplayManager = IDDictionaryDetailDataDisplayManager(flashcard: flashcard.connectedFlashcard!)
-        self.faceView.setupTableViewDataSource(self.faceDataDisplayManager!, delegate: self.faceDataDisplayManager!)
+        self.frontDataDisplayManager = IDDictionaryDetailDataDisplayManager(card: flashcard.frontCard!)
+        self.backDataDisplayManager = IDDictionaryDetailDataDisplayManager(card: flashcard.backCard!)
+        self.frontView.setupTableViewDataSource(self.frontDataDisplayManager!, delegate: self.frontDataDisplayManager!)
         self.backView.setupTableViewDataSource(self.backDataDisplayManager!, delegate: self.backDataDisplayManager!)
-        self.addSubview(self.faceView)
+        self.addSubview(self.frontView)
         self.addSubview(self.backView)
         self.backView.hidden = true
         self.setNeedsAddConstraints = true

@@ -16,8 +16,8 @@ class IDDictionaryDetailImageCell: UITableViewCell, IDDictionaryDetailCell {
     
     // MARK: Public
     
-    func loadWithData(flashcardData: IDFlashcardData) {
-        if let imageName = flashcardData.imageName {
+    func loadWithData(cardData: IDCardData) {
+        if let imageName = cardData.imageName {
             do {
                 backgroundImageView.image = try IDImageManager().imageByFilename(imageName)
             } catch {

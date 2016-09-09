@@ -28,7 +28,7 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
     let backDataDisplayManager = IDAddFlashcardDataDisplayManager()
     
     enum IDWordFrom: Int {
-        case FaceView = 0
+        case frontView = 0
         case BackView
     }
     
@@ -107,19 +107,12 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
         self.currentView.reloadData()
     }
     
-    func numberFlashcards() -> Int {
-        return 2
+    func frontDataHolders() -> [IDAddFlashcardDataHolder] {
+        return self.frontDataDisplayManager.dataSource
     }
     
-    func dataHoldersForFlashcardWithNumber(number: Int) -> [IDAddFlashcardDataHolder]? {
-        switch number {
-        case IDWordFrom.BackView.rawValue:
-            return self.backDataDisplayManager.dataSource
-        case IDWordFrom.FaceView.rawValue:
-            return self.frontDataDisplayManager.dataSource
-        default:
-            return nil
-        }
+    func backDataHolders() -> [IDAddFlashcardDataHolder] {
+        return self.backDataDisplayManager.dataSource
     }
     
     // MARK: TOCropViewControllerDelegate

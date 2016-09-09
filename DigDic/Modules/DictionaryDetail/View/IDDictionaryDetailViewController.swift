@@ -74,13 +74,7 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
         let alertController = UIAlertController(title: "", message: "Are you sure?", preferredStyle: .Alert)
         let acceptAction = UIAlertAction(title: "Remove", style: .Destructive) { (alertAction) in
             if let topView = self.swipeableView?.topView() as? IDDictionaryDetailFlashcardView {
-                guard let faceFlashcard = topView.faceDataDisplayManager?.flashcard else {
-                    return
-                }
-                guard let backFlashcard = topView.backDataDisplayManager?.flashcard else {
-                    return
-                }
-                self.output.removeFlashcards([faceFlashcard, backFlashcard])
+                self.output.removeFlashcard(topView.flashcard)
                 self.swipeableView?.swipeTopView(inDirection: .Down)
             }
         }

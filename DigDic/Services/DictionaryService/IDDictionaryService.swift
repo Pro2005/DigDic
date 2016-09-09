@@ -24,24 +24,20 @@ class IDDictionaryService: IDBaseService {
         self.source.addDictionaryWithName(name)
     }
     
-    func flashcardModelForFilling() -> IDFlashcard {
-        return self.source.flashcardModelForFilling()
+    func cardModelForFilling() -> IDCard {
+        return self.source.cardModelForFilling()
     }
     
-    func addFlashcardDataWithImageName(imageName: String) -> IDFlashcardData {
-        return self.source.addFlashcardDataWithImageName(imageName)
+    func addCardDataWithImageName(imageName: String) -> IDCardData {
+        return self.source.addCardDataWithImageName(imageName)
     }
     
-    func addFlashcard(flashcard: IDFlashcard, toDictionary dictionary: IDDictionary) {
-        self.source.addFlashcard(flashcard, toDictionary: dictionary)
+    func createFlashcard(frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard? {
+        return self.source.createFlashcard(frontCard, backCard: backCard, toDictionary: dictionary)
     }
     
-    func connectFlashcardsTogether(inout faceFlashcard: IDFlashcard, inout backFlashcard: IDFlashcard) {
-        self.source.connectFlashcardsTogether(&faceFlashcard, backFlashcard:&backFlashcard)
+    func removeFlashcard(flashcard: IDFlashcard, fromDictionary dictionary: IDDictionary) {
+        self.source.removeFlashcard(flashcard, fromDictionary: dictionary)
     }
-    
-    func removeFlashcards(flashcards: [IDFlashcard], fromDictionary dictionary: IDDictionary) {
-        self.source.removeFlashcards(flashcards, fromDictionary: dictionary)
-    }
-    
+        
 }

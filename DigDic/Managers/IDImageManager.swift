@@ -21,10 +21,21 @@ class IDImageManager {
     // MARK: - Public
     
     func saveImage(image: UIImage) throws -> String? {
-        let filename = self.filename()
-        let fullPath = try self.fileInDocumentsDirectory(filename)
-        if NSFileManager.defaultManager().fileExistsAtPath(fullPath) {
-            throw ImageManagerError.NameConflict
+        var filename = self.filename()
+        var fullPath = try self.fileInDocumentsDirectory(filename)
+        
+        let separator = "_"
+        var attempt = 1
+        while NSFileManager.defaultManager().fileExistsAtPath(fullPath) {
+            var components = filename.componentsSeparatedByString(separator)
+            if components.count == 1 {
+                filename += "_\(attempt)"
+            } else {
+                attempt += 1
+                components[components.count - 1] = "\(attempt)"
+                filename = components.joinWithSeparator(separator)
+            }
+            fullPath = try self.fileInDocumentsDirectory(filename)
         }
         let result = self.saveImage(image, path: fullPath)
         if result {

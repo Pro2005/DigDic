@@ -10,42 +10,28 @@ import Foundation
 import RealmSwift
 
 class IDLDBFlashcard: Object, IDFlashcard {
-    var data: [IDFlashcardData]? {
+    var frontCard: IDCard? {
         get {
-            return self._data.map{$0 as IDFlashcardData}
+            return self._frontCard as? IDCard
         }
         set {
-            if let newValue = newValue {
-                for value in newValue {
-                    self._data.append(value as! IDLDBFlashcardData)
-                }
-            }
+            self._frontCard = newValue as? IDLDBCard
         }
     }
     
-    var back: Bool {
+    var backCard: IDCard? {
         get {
-            return self._back
+            return self._backCard as? IDCard
         }
         set {
-            self._back = newValue
+            self._backCard = newValue as? IDLDBCard
         }
     }
     
-    var connectedFlashcard: IDFlashcard? {
-        get {
-            return self._connectedFlashcard as? IDFlashcard
-        }
-        set {
-            self._connectedFlashcard = newValue as? IDLDBFlashcard
-        }
-    }
-    
-    private let _data = List<IDLDBFlashcardData>()
-    private dynamic var _back: Bool = false
-    private dynamic var _connectedFlashcard: IDLDBFlashcard?
+    private dynamic var _frontCard: IDLDBCard?
+    private dynamic var _backCard: IDLDBCard?
     
     override static func ignoredProperties() -> [String] {
-        return ["data", "back", "connectedFlashcard"]
+        return ["frontCard", "backCard"]
     }
 }

@@ -15,7 +15,7 @@ protocol IDAddFlashcardViewInput: IDBaseViewInput {
     func displayDialogForSelectingImage(completion: (result: UIImage?) -> Void)
     func displayDialogForCropImage(image: UIImage, dataHolder: IDAddFlashcardDataHolder)
     func updateImageForDataHolder(image: UIImage, dataHolder: IDAddFlashcardDataHolder)
-    func numberFlashcards() -> Int
-    func dataHoldersForFlashcardWithNumber(number: Int) -> [IDAddFlashcardDataHolder]?
+    func frontDataHolders() -> [IDAddFlashcardDataHolder]
+    func backDataHolders() -> [IDAddFlashcardDataHolder]
     
 }

@@ -12,10 +12,10 @@ protocol IDDictionarySource {
     
     func fetchDictionaries(completion: ([IDDictionary]) -> ())
     func addDictionaryWithName(name: String)
-    func flashcardModelForFilling() -> IDFlashcard
-    func addFlashcardDataWithImageName(imageName: String) -> IDFlashcardData
-    func addFlashcard(flashcard: IDFlashcard, toDictionary dictionary: IDDictionary)
-    func connectFlashcardsTogether(inout faceFlashcard: IDFlashcard, inout backFlashcard: IDFlashcard)
-    func removeFlashcards(flashcards: [IDFlashcard], fromDictionary dictionary: IDDictionary)
+    
+    func cardModelForFilling() -> IDCard
+    func addCardDataWithImageName(imageName: String) -> IDCardData
+    func createFlashcard(frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard?
+    func removeFlashcard(flashcard: IDFlashcard, fromDictionary dictionary: IDDictionary)
     
 }

@@ -16,6 +16,6 @@ protocol IDDictionaryDetailViewOutput: IDBaseViewOutput {
     func viewIsReady()
     func didTapAddButton()
     func didTapRemoveButton()
-    func removeFlashcards(flashcards: [IDFlashcard])
+    func removeFlashcard(flashcard: IDFlashcard)
     
 }

@@ -10,25 +10,25 @@ import Foundation
 import UIKit
 
 class IDDictionaryDetailDataDisplayManager: NSObject, UITableViewDelegate, UITableViewDataSource {
-    let flashcard: IDFlashcard!
+    let card: IDCard!
     
-    init(flashcard: IDFlashcard) {
-        self.flashcard = flashcard
+    init(card: IDCard) {
+        self.card = card
     }
     
     // MARK: UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let data = self.flashcard.data {
+        if let data = self.card.data {
             return data.count
         }
         return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let data = self.flashcard.data![indexPath.row]
-        if let cellObjectBuilder = IDDictionaryDetailCellObjectBuilderFactory.builderForFlashcardData(data) {
-            let cell = cellObjectBuilder.cellObjectForFlashcardData(data)
+        let data = self.card.data![indexPath.row]
+        if let cellObjectBuilder = IDDictionaryDetailCellObjectBuilderFactory.builderForCardData(data) {
+            let cell = cellObjectBuilder.cellObjectForCardData(data)
             return cell as! UITableViewCell
         }
         return UITableViewCell()

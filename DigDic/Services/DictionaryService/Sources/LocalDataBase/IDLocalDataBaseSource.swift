@@ -29,60 +29,71 @@ class IDLocalDataBaseSource: IDDictionarySource {
         }
     }
     
-    func flashcardModelForFilling() -> IDFlashcard {
+    func cardModelForFilling() -> IDCard {
+        let card = IDLDBCard()
+        return card
+    }
+    
+    func addCardDataWithImageName(imageName: String) -> IDCardData {
+        let cardData = IDLDBCardData()
+        cardData.imageName = imageName
+        cardData.type = .Image
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(cardData)
+        }
+        return cardData
+    }
+    
+    func createFlashcard(frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard? {
+        guard let frontCard = frontCard as? IDLDBCard else {
+            return nil
+        }
+        guard let backCard = backCard as? IDLDBCard else {
+            return nil
+        }
+        guard let dictionary = dictionary as? IDLDBDictionary else {
+            return nil
+        }
         let flashcard = IDLDBFlashcard()
+        flashcard.frontCard = frontCard
+        flashcard.backCard = backCard
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(flashcard)
+            dictionary.addFlashcard(flashcard)
+        }
         return flashcard
     }
     
-    func addFlashcardDataWithImageName(imageName: String) -> IDFlashcardData {
-        let flashcardData = IDLDBFlashcardData()
-        flashcardData.imageName = imageName
-        flashcardData.type = .Image
-        
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(flashcardData)
-        }
-        return flashcardData
-    }
-    
-    func addFlashcard(flashcard: IDFlashcard, toDictionary dictionary: IDDictionary) {
+    func removeFlashcard(flashcard: IDFlashcard, fromDictionary dictionary: IDDictionary) {
         guard let flashcard = flashcard as? IDLDBFlashcard else {
             return
         }
         guard let dictionary = dictionary as? IDLDBDictionary else {
             return
         }
+        
         let realm = try! Realm()
         try! realm.write {
-            realm.add(flashcard)
-            dictionary.addCard(flashcard)
+            self._removeCard(flashcard.frontCard)
+            self._removeCard(flashcard.backCard)
+            dictionary.removeFlashcard(flashcard)
+            realm.delete(flashcard)
         }
     }
     
-    func connectFlashcardsTogether(inout faceFlashcard: IDFlashcard, inout backFlashcard: IDFlashcard) {
-        let realm = try! Realm()
-        try! realm.write {
-            faceFlashcard.connectedFlashcard = backFlashcard
-            backFlashcard.connectedFlashcard = faceFlashcard
-            backFlashcard.back = true
-        }
-    }
-    
-    func removeFlashcards(flashcards: [IDFlashcard], fromDictionary dictionary: IDDictionary) {
-        guard let dictionary = dictionary as? IDLDBDictionary else {
+    // this method should be called into write transaction
+    private func _removeCard(card: IDCard?) {
+        guard let card = card as? IDLDBCard else {
             return
         }
         
         let realm = try! Realm()
-        try! realm.write {
-            
-            let items = flashcards.map{$0 as! IDLDBFlashcard}
-            for item in items {
-                dictionary.removeCard(item)
-                realm.delete(item)
-            }
+        if let data = card.data as? [IDLDBCardData] {
+            realm.delete(data)
         }
+        realm.delete(card)
     }
     
 }

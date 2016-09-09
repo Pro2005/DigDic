@@ -10,7 +10,8 @@ import Foundation
 
 protocol IDDictionary {
     var name: String? {get}
-    var cards: [IDFlashcard] {get}
+    var flashcards: [IDFlashcard] {get}
     
-    func addCard(card: IDFlashcard)
+    func addFlashcard(flashcard: IDFlashcard)
+    func removeFlashcard(flashcard: IDFlashcard)
 }

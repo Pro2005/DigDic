@@ -12,30 +12,30 @@ import RealmSwift
 class IDLDBDictionary: Object, IDDictionary {
     // MARK: IDDictionaryProtocol
     dynamic var name: String?
-    var cards: [IDFlashcard] {
-        return self._cards.map{$0 as IDFlashcard}
+    var flashcards: [IDFlashcard] {
+        return self._flashcards.map{$0 as IDFlashcard}
     }
-    
-    func addCard(card: IDFlashcard) {
-        guard let card = card as? IDLDBFlashcard else {
+
+    func addFlashcard(flashcard: IDFlashcard) {
+        guard let flashcard = flashcard as? IDLDBFlashcard else {
             return
         }
-        self._cards.append(card)
+        self._flashcards.append(flashcard)
     }
     
-    func removeCard(card: IDFlashcard) {
-        guard let card = card as? IDLDBFlashcard else {
+    func removeFlashcard(flashcard: IDFlashcard) {
+        guard let flashcard = flashcard as? IDLDBFlashcard else {
             return
         }
-        if let index = self._cards.indexOf(card) {
-            self._cards.removeAtIndex(index)
+        if let index = self._flashcards.indexOf(flashcard) {
+            self._flashcards.removeAtIndex(index)
         }
     }
     
     // MARK: Private
-    private let _cards = List<IDLDBFlashcard>()
+    private let _flashcards = List<IDLDBFlashcard>()
     
     override static func ignoredProperties() -> [String] {
-        return ["cards"]
+        return ["flashcards"]
     }
 }

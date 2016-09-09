@@ -22,8 +22,7 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
         if let dictionaryName = self.selectedDictionary.name {
             self.view.updateTitle(dictionaryName)
         }
-        let flashcards = self.selectedDictionary.cards.filter{$0.back == false}
-        self.view.displayFlashcards(flashcards)
+        self.view.displayFlashcards(self.selectedDictionary.flashcards)
     }
     
     func didTapAddButton() {
@@ -34,14 +33,15 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
         self.view.getConfirmationForRemoving()
     }
     
-    func removeFlashcards(flashcards: [IDFlashcard]) {
-        self.interactor.removeFlashcards(flashcards, fromDictinary: self.selectedDictionary)
+    func removeFlashcard(flashcard: IDFlashcard) {
+        self.interactor.removeFlashcard(flashcard, fromDictinary: self.selectedDictionary)
+        
     }
     
     // MARK: - IDAddFlashcardPresenterDelegate 
     
-    func addFlashcardPresenterDidAddFlashcards(faceFlashcard: IDFlashcard, backFlashcard: IDFlashcard) {
-        self.view.displayFlashcards([faceFlashcard])
+    func addFlashcardPresenterDidAddFlashcard(flashcard: IDFlashcard) {
+        self.view.displayFlashcards([flashcard])
     }
     
 }

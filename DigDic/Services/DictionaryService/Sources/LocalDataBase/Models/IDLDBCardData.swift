@@ -9,15 +9,15 @@
 import Foundation
 import RealmSwift
 
-class IDLDBFlashcardData: Object, IDFlashcardData {
+class IDLDBCardData: Object, IDCardData {
     
     dynamic var text: String?
     dynamic var imageName: String?
     
     
-    var type: IDFlashcardDataType? {
+    var type: IDCardDataType? {
         get {
-            return IDFlashcardDataType(rawValue: self._type)!
+            return IDCardDataType(rawValue: self._type)!
         }
         set {
             if let newValue = newValue {
@@ -26,7 +26,7 @@ class IDLDBFlashcardData: Object, IDFlashcardData {
         }
     }
     
-    dynamic var _type = IDFlashcardDataType.Text.rawValue
+    dynamic var _type = IDCardDataType.Text.rawValue
     override static func ignoredProperties() -> [String] {
         return ["type"]
     }
