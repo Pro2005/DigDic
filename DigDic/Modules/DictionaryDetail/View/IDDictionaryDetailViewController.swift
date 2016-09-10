@@ -62,8 +62,12 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
         swpeableView.nextView = {
             if index < flashcards.count {
                 let flashcard = flashcards[index]
+                let view = IDDictionaryDetailFlashcardView(flashcard: flashcard, reverseOrder: reverseOrder)
+                if index != 0 {
+                    view.alpha = 0.2
+                }
                 index += 1
-                return IDDictionaryDetailFlashcardView(flashcard: flashcard, reverseOrder: reverseOrder)
+                return view
             }
             return UIView()
         }
@@ -96,7 +100,7 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
         self.swipeableView = swipeableView
         self.setNeedsUpdateConstraints = true
         self.swipeableView?.allowedDirection = .Horizontal
-        self.swipeableView?.swiping = {view, location, translation in
+        self.swipeableView?.swiping = {[unowned self] view, location, translation in
             if abs(translation.x) < 10 {
                 self.goodLabel.alpha = 0
                 self.badLabel.alpha = 0
@@ -107,9 +111,12 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
                 self.badLabel.alpha = abs(translation.x) / 100.0
             }
         }
-        self.swipeableView?.didEnd =  {view, location in
+        self.swipeableView?.didEnd =  {[unowned self] view, location in
             self.goodLabel.alpha = 0
             self.badLabel.alpha = 0
+            if let topView = self.swipeableView?.topView() {
+                topView.alpha = 1.0
+            }
         }
         self.goodLabel.alpha = 0
         self.badLabel.alpha = 0

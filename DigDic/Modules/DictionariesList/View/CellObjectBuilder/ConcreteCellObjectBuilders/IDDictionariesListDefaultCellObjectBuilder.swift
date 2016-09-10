@@ -15,7 +15,7 @@ class IDDictionariesListDefaultCellObjectBuilder: IDDictionariesListCellObjectBu
         let identifier = String(IDDictionariesListCell)
         if let cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? IDDictionariesListCell {
             if let name = dictionary.name {
-                cell.titleLabel.text = name
+                cell.titleLabel.text = name + " - \(dictionary.flashcards.count)"
             }
             return cell
         }
