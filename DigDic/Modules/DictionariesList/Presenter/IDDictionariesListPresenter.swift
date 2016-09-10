@@ -36,6 +36,13 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
         self.router.pushDictionaryDetailScreenWithDictionary(dictionary, reverseOrder: reverseOrder)
     }
     
+    func wantRemoveDictionary(dictionary: IDDictionary) {
+        self.interactor.removeDictionary(dictionary)
+        self.updateData {[weak self] (items: [IDDictionary]) in
+            self?.view.reloadDataWithDictionaries(items)
+        }
+    }
+    
     // MARK: Private
     
     private func updateData(completion: ([IDDictionary] -> ())) {

@@ -39,5 +39,9 @@ class IDDictionaryService: IDBaseService {
     func removeFlashcard(flashcard: IDFlashcard, fromDictionary dictionary: IDDictionary) {
         self.source.removeFlashcard(flashcard, fromDictionary: dictionary)
     }
+    
+    func removeDictionary(dictionary: IDDictionary) {
+        self.source.removeDictionary(dictionary)
+    }
         
 }

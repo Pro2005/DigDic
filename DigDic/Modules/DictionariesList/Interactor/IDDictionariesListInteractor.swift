@@ -13,13 +13,17 @@ class IDDictionariesListInteractor: IDDictionariesListInteractorInput {
 
     // MARK: IDDictionariesListInteractorInput
     func fetchDictionaries(competion: ([IDDictionary]) -> ()) {
-        service.fetchDictionaries {(dictionaries: [IDDictionary]) in
+        self.service.fetchDictionaries {(dictionaries: [IDDictionary]) in
             competion(dictionaries)
         }
     }
     
     func addNewDictionaryWithName(name: String) {
-        service.addDictionaryWithName(name)
+        self.service.addDictionaryWithName(name)
+    }
+    
+    func removeDictionary(dictionary: IDDictionary) {
+        self.service.removeDictionary(dictionary)
     }
     
 }

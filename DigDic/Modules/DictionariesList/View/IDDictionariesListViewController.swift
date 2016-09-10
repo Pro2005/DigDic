@@ -91,6 +91,10 @@ class IDDictionariesListViewController: IDBaseViewController, IDDictionariesList
         self.output.didSelectDictionary(dictionary, reverseOrder: reverseOrder)
     }
     
+    func dictionariesListDataDisplayManager(manager: IDDictionariesListDataDisplayManager, wantRemoveDictionary dictionary: IDDictionary) {
+        self.output.wantRemoveDictionary(dictionary)
+    }
+    
     // MARK: Private
     
     private func addButtonInNavigationBar() {

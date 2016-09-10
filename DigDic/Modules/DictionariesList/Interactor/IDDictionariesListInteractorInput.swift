@@ -12,5 +12,6 @@ protocol IDDictionariesListInteractorInput: IDBaseInteractorInput {
 
     func fetchDictionaries(competion: ([IDDictionary]) -> ())
     func addNewDictionaryWithName(name: String)
+    func removeDictionary(dictionary: IDDictionary)
     
 }

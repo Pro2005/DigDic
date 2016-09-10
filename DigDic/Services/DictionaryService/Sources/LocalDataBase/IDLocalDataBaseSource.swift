@@ -83,6 +83,19 @@ class IDLocalDataBaseSource: IDDictionarySource {
         }
     }
     
+    func removeDictionary(dictionary: IDDictionary) {
+        guard let dictionary = dictionary as? IDLDBDictionary else {
+            return
+        }
+        for flashcard in dictionary.flashcards {
+            self.removeFlashcard(flashcard, fromDictionary: dictionary)
+        }
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(dictionary)
+        }
+    }
+    
     // this method should be called into write transaction
     private func _removeCard(card: IDCard?) {
         guard let card = card as? IDLDBCard else {

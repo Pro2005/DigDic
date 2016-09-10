@@ -35,6 +35,16 @@ class IDDictionariesListDataDisplayManager: NSObject, UITableViewDelegate, UITab
         return cell
     }
     
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        return .Delete
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            delegate?.dictionariesListDataDisplayManager(self, wantRemoveDictionary: self.dataSource[indexPath.row])
+        }
+    }
+    
     // MARK: UITableViewDelegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -48,6 +58,10 @@ class IDDictionariesListDataDisplayManager: NSObject, UITableViewDelegate, UITab
         if let cell = tableView.cellForRowAtIndexPath(indexPath) as? IDDictionariesListReverseOrder {
             delegate.dictionariesListDataDisplayManager(self, didSelectDictionary: dictionary, reverseOrder: cell.hasReverseOrder())
         }
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
     }
     
 }
