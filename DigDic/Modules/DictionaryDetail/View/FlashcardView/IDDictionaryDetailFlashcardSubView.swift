@@ -45,6 +45,7 @@ class IDDictionaryDetailFlashcardSubView: UIView {
     private func setup() {
         self.addSubview(self.tableView)
         self.tableView.separatorStyle = .None
+        self.tableView.backgroundColor = UIColor.clearColor()
     }
     
 }
