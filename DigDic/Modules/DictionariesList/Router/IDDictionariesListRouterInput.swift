@@ -11,6 +11,6 @@ import UIKit
 
 protocol IDDictionariesListRouterInput: IDBaseRouterInput {
 
-    func pushDictionaryDetailScreenWithDictionary(dictionary: IDDictionary)
+    func pushDictionaryDetailScreenWithDictionary(dictionary: IDDictionary, reverseOrder: Bool)
     
 }

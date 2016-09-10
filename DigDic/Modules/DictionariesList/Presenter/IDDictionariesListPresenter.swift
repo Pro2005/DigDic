@@ -32,8 +32,8 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
         }
     }
     
-    func didSelectDictionary(dictionary: IDDictionary) {
-        self.router.pushDictionaryDetailScreenWithDictionary(dictionary)
+    func didSelectDictionary(dictionary: IDDictionary, reverseOrder: Bool) {
+        self.router.pushDictionaryDetailScreenWithDictionary(dictionary, reverseOrder: reverseOrder)
     }
     
     // MARK: Private

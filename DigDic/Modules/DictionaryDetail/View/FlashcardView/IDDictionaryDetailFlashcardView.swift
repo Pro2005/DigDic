@@ -26,10 +26,10 @@ class IDDictionaryDetailFlashcardView: UIView {
     
     // MARK: Initializer
     
-    init(flashcard: IDFlashcard) {
+    init(flashcard: IDFlashcard, reverseOrder: Bool) {
         self.flashcard = flashcard
         super.init(frame: CGRectZero)
-        self.setup(flashcard)
+        self.setup(flashcard, reverseOrder: reverseOrder)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -68,14 +68,19 @@ class IDDictionaryDetailFlashcardView: UIView {
     
     // MARK: Private
     
-    func setup(flashcard: IDFlashcard) {
+    func setup(flashcard: IDFlashcard, reverseOrder: Bool) {
         self.frontDataDisplayManager = IDDictionaryDetailDataDisplayManager(card: flashcard.frontCard!)
         self.backDataDisplayManager = IDDictionaryDetailDataDisplayManager(card: flashcard.backCard!)
         self.frontView.setupTableViewDataSource(self.frontDataDisplayManager!, delegate: self.frontDataDisplayManager!)
         self.backView.setupTableViewDataSource(self.backDataDisplayManager!, delegate: self.backDataDisplayManager!)
         self.addSubview(self.frontView)
         self.addSubview(self.backView)
-        self.backView.hidden = true
+        if reverseOrder {
+            self.frontView.hidden = true
+        } else {
+            self.backView.hidden = true
+        }
+//        self.backView.hidden = true
         self.setNeedsAddConstraints = true
         
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))

@@ -14,6 +14,10 @@ class IDDictionariesListDataDisplayManager: NSObject, UITableViewDelegate, UITab
     var delegate: IDDictionariesListDataDisplayManagerDelegate?
     // MARK: Public
     
+    func registerCellForTableView(tableView: UITableView) {
+        tableView.registerNib(UINib.init(nibName: String(IDDictionariesListCell), bundle: nil), forCellReuseIdentifier: String(IDDictionariesListCell))
+    }
+    
     func updateTableViewModelWithDictionaries(dictionaries: [IDDictionary]) {
         self.dataSource.removeAll()
         self.dataSource += dictionaries
@@ -26,13 +30,8 @@ class IDDictionariesListDataDisplayManager: NSObject, UITableViewDelegate, UITab
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let identifier = String(UITableViewCell)
-        let cell = tableView.dequeueReusableCellWithIdentifier(identifier) ?? UITableViewCell(style: .Default, reuseIdentifier: identifier)
-        guard indexPath.row < self.dataSource.count else {
-            return cell
-        }
-        let dictionary = self.dataSource[indexPath.row]
-        cell.textLabel?.text = dictionary.name
+        let cellObjectBuilder = IDDictionariesListCellObjectBuilderFactory.builderForObject(self.dataSource[indexPath.row])
+        let cell = cellObjectBuilder.buildCellObjectForData(self.dataSource[indexPath.row], tableView: tableView)
         return cell
     }
     
@@ -46,7 +45,9 @@ class IDDictionariesListDataDisplayManager: NSObject, UITableViewDelegate, UITab
             return
         }
         let dictionary = self.dataSource[indexPath.row]
-        delegate.dictionariesListDataDisplayManager(self, didSelectDictionary: dictionary)
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) as? IDDictionariesListReverseOrder {
+            delegate.dictionariesListDataDisplayManager(self, didSelectDictionary: dictionary, reverseOrder: cell.hasReverseOrder())
+        }
     }
     
 }

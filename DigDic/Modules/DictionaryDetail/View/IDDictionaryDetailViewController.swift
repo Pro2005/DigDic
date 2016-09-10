@@ -53,7 +53,7 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
         self.title = title
     }
     
-    func displayFlashcards(flashcards: [IDFlashcard]) {
+    func displayFlashcards(flashcards: [IDFlashcard], reverseOrder: Bool) {
         guard let swpeableView = self.swipeableView else {
             return
         }
@@ -63,7 +63,7 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
             if index < flashcards.count {
                 let flashcard = flashcards[index]
                 index += 1
-                return IDDictionaryDetailFlashcardView(flashcard: flashcard)
+                return IDDictionaryDetailFlashcardView(flashcard: flashcard, reverseOrder: reverseOrder)
             }
             return UIView()
         }

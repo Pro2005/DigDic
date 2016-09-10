@@ -10,18 +10,18 @@ import UIKit
 
 class IDDictionaryDetailModuleConfigurator {
 
-    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController, dictionary: IDDictionary) {
+    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController, dictionary: IDDictionary, reverseOrder: Bool) {
 
         if let viewController = viewInput as? IDDictionaryDetailViewController {
-            configure(viewController, dictionary: dictionary)
+            configure(viewController, dictionary: dictionary, reverseOrder: reverseOrder)
         }
     }
 
-    private func configure(viewController: IDDictionaryDetailViewController, dictionary: IDDictionary) {
+    private func configure(viewController: IDDictionaryDetailViewController, dictionary: IDDictionary, reverseOrder: Bool) {
 
         let router = IDDictionaryDetailRouter(viewController: viewController)
 
-        let presenter = IDDictionaryDetailPresenter(selectedDictionary: dictionary)
+        let presenter = IDDictionaryDetailPresenter(selectedDictionary: dictionary, reverseOrder: reverseOrder)
         presenter.view = viewController
         presenter.router = router
 

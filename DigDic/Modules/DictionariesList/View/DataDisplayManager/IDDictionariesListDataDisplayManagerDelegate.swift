@@ -10,6 +10,6 @@ import Foundation
 
 protocol IDDictionariesListDataDisplayManagerDelegate {
     
-    func dictionariesListDataDisplayManager(manager: IDDictionariesListDataDisplayManager, didSelectDictionary dictionary: IDDictionary)
+    func dictionariesListDataDisplayManager(manager: IDDictionariesListDataDisplayManager, didSelectDictionary dictionary: IDDictionary, reverseOrder: Bool)
     
 }

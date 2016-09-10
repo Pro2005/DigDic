@@ -52,6 +52,7 @@ class IDDictionariesListViewController: IDBaseViewController, IDDictionariesList
         self.title = Constants.dictionariesListTitleText.localized()
         let addButton = self.navigationItem.addButtonWithTitle(Constants.dictionariesListAddButtonTitleText.localized(), alignment: .Right, font: UIFont.systemFontOfSize(CGFloat(Constants.addButtonFontSize)))
         addButton.addTarget(self, action: #selector(didTapAddButton), forControlEvents: .TouchUpInside)
+        self.dataDisplayManager.registerCellForTableView(self.tableView)
         self.tableView.dataSource = self.dataDisplayManager
         self.tableView.delegate = self.dataDisplayManager
         self.dataDisplayManager.delegate = self
@@ -86,8 +87,8 @@ class IDDictionariesListViewController: IDBaseViewController, IDDictionariesList
     
     // MARK: IDDictionariesListDataDisplayManagerDelegate
 
-    func dictionariesListDataDisplayManager(manager: IDDictionariesListDataDisplayManager, didSelectDictionary dictionary: IDDictionary) {
-        self.output.didSelectDictionary(dictionary)
+    func dictionariesListDataDisplayManager(manager: IDDictionariesListDataDisplayManager, didSelectDictionary dictionary: IDDictionary, reverseOrder: Bool) {
+        self.output.didSelectDictionary(dictionary, reverseOrder: reverseOrder)
     }
     
     // MARK: Private

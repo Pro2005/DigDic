@@ -12,9 +12,11 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
     var interactor: IDDictionaryDetailInteractorInput!
     var router: IDDictionaryDetailRouterInput!
     let selectedDictionary: IDDictionary
+    let reverseOrder: Bool
     
-    init(selectedDictionary: IDDictionary) {
+    init(selectedDictionary: IDDictionary, reverseOrder: Bool) {
         self.selectedDictionary = selectedDictionary
+        self.reverseOrder = reverseOrder
     }
 
     func viewIsReady() {
@@ -22,7 +24,7 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
         if let dictionaryName = self.selectedDictionary.name {
             self.view.updateTitle(dictionaryName)
         }
-        self.view.displayFlashcards(self.selectedDictionary.flashcards)
+        self.view.displayFlashcards(self.selectedDictionary.flashcards, reverseOrder: self.reverseOrder)
     }
     
     func didTapAddButton() {
@@ -41,7 +43,7 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
     // MARK: - IDAddFlashcardPresenterDelegate 
     
     func addFlashcardPresenterDidAddFlashcard(flashcard: IDFlashcard) {
-        self.view.displayFlashcards([flashcard])
+        self.view.displayFlashcards([flashcard], reverseOrder: self.reverseOrder)
     }
     
 }
