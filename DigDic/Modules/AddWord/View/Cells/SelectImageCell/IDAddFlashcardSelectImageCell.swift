@@ -24,7 +24,10 @@ class IDAddFlashcardSelectImageCell: UITableViewCell, IDAddFlashcardCell {
         super.updateConstraints()
     }
     
-    func loadFromDataHolder(dataHolder: IDAddFlashcardImageDataHolder) {
+    func loadFromDataHolder(dataHolder: IDAddFlashcardDataHolder) {
+        guard let dataHolder = dataHolder as? IDAddFlashcardImageDataHolder else {
+            return
+        }
         if let image = dataHolder.image {
             self.backgroundImageView.image = image
             self.label.hidden = true

@@ -31,19 +31,25 @@ class IDAddFlashcardFooterView: UIView {
     
     @IBAction func didTapAddImageButton(sender: AnyObject) {
         if let delegate = self.delegate {
-            delegate.AddFlashcardFooterViewDidTapAddImageButton(self)
+            delegate.addFlashcardFooterViewDidTapAddImageButton(self)
+        }
+    }
+    
+    @IBAction func didTapAddTextButton(sender: AnyObject) {
+        if let delegate = self.delegate {
+            delegate.addFlashcardFooterViewDidTapAddTextButton(self)
         }
     }
     
     @IBAction func didTapLeftButton(sender: AnyObject) {
         if let delegate = self.delegate {
-            delegate.AddFlashcardFooterViewDidTapLeftButton(self)
+            delegate.addFlashcardFooterViewDidTapLeftButton(self)
         }
     }
     
     @IBAction func didTapRightButton(sender: AnyObject) {
         if let delegate = self.delegate {
-            delegate.AddFlashcardFooterViewDidTapRightButton(self)
+            delegate.addFlashcardFooterViewDidTapRightButton(self)
         }
     }
     

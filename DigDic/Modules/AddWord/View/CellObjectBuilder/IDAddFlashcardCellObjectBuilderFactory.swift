@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class IDAddFlashcardCellObjectBuilderFactory {
     
@@ -14,9 +15,16 @@ class IDAddFlashcardCellObjectBuilderFactory {
         switch dataHolder {
         case _ as IDAddFlashcardImageDataHolder:
             return IDAddFlashcardSelectImageCellObjectBuilder()
+        case _ as IDAddFlashcardTextDataHolder:
+            return IDAddFlashcardTextCellObjectBuilder()
         default:
             return nil
         }
+    }
+    
+    class func registerCellsForTableView(tableView: UITableView) {
+        IDAddFlashcardSelectImageCellObjectBuilder.registerCellForTableView(tableView)
+        IDAddFlashcardTextCellObjectBuilder.registerCellForTableView(tableView)
     }
     
 }

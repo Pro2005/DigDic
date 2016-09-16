@@ -50,6 +50,10 @@ class IDAddFlashcardPresenter: NSObject, IDAddFlashcardModuleInput, IDAddFlashca
         self.view.addFormForSelectingImage()
     }
     
+    func didTapAddTextButton() {
+        self.view.addFormForText()
+    }
+    
     func didTapSelectImageButton(dataHolder: IDAddFlashcardDataHolder) {
         self.view.displayDialogForSelectingImage { (result) in
             if let image = result {

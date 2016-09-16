@@ -18,6 +18,7 @@ protocol IDAddFlashcardViewOutput: IDBaseViewOutput {
     func didTapCloseButton()
     func didTapAddButton()
     func didTapAddImageButton()
+    func didTapAddTextButton()
     func didTapSelectImageButton(dataHolder: IDAddFlashcardDataHolder)
     func didCropImage(image: UIImage, dataHolder: IDAddFlashcardDataHolder)
     

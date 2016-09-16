@@ -20,12 +20,21 @@ class IDAddFlashcardDataDisplayManager: NSObject, UITableViewDelegate, UITableVi
         dataSource.append(imageDataHolder)
     }
     
+    func addCellForText() {
+        let textDataHolder = IDAddFlashcardTextDataHolder()
+        dataSource.append(textDataHolder)
+    }
+    
     func updateImage(image: UIImage, indexPath: NSIndexPath) {
         let dataHolder = self.dataSource[indexPath.row]
         guard let imageDataHolder = dataHolder as? IDAddFlashcardImageDataHolder else {
             return
         }
         imageDataHolder.image = image
+    }
+    
+    func registerCellsForTableView(tableView: UITableView) {
+        IDAddFlashcardCellObjectBuilderFactory.registerCellsForTableView(tableView)
     }
  
     // MARK: UITableViewDataSource
@@ -37,7 +46,7 @@ class IDAddFlashcardDataDisplayManager: NSObject, UITableViewDelegate, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let dataHolder = self.dataSource[indexPath.row]
         if let cellObjectBuilder = IDAddFlashcardCellObjectBuilderFactory.builderForDataHolder(dataHolder) {
-            let cell = cellObjectBuilder.cellObjectForDataHolder(dataHolder)
+            let cell = cellObjectBuilder.cellObjectForDataHolder(dataHolder, tableView: tableView)
             return cell as! UITableViewCell
         }
         return UITableViewCell()

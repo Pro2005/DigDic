@@ -10,4 +10,6 @@ import Foundation
 
 protocol IDAddFlashcardCell {
     
+    func loadFromDataHolder(dataHolder: IDAddFlashcardDataHolder)
+    
 }

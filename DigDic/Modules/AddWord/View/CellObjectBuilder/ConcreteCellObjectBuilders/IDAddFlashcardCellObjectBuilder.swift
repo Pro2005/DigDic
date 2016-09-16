@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol IDAddFlashcardCellObjectBuilder {
     
-    func cellObjectForDataHolder(dataHolder: IDAddFlashcardDataHolder) -> IDAddFlashcardCell
+    func cellObjectForDataHolder(dataHolder: IDAddFlashcardDataHolder, tableView: UITableView) -> IDAddFlashcardCell
+    static func registerCellForTableView(tableView: UITableView)
     
 }

@@ -10,8 +10,9 @@ import Foundation
 
 protocol IDAddFlashcardFooterViewDelegate {
     
-    func AddFlashcardFooterViewDidTapAddImageButton(footerView: IDAddFlashcardFooterView)
-    func AddFlashcardFooterViewDidTapLeftButton(footerView: IDAddFlashcardFooterView)
-    func AddFlashcardFooterViewDidTapRightButton(footerView: IDAddFlashcardFooterView)
+    func addFlashcardFooterViewDidTapAddImageButton(footerView: IDAddFlashcardFooterView)
+    func addFlashcardFooterViewDidTapAddTextButton(footerView: IDAddFlashcardFooterView)
+    func addFlashcardFooterViewDidTapLeftButton(footerView: IDAddFlashcardFooterView)
+    func addFlashcardFooterViewDidTapRightButton(footerView: IDAddFlashcardFooterView)
     
 }

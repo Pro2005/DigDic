@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
@@ -11,7 +12,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amq-MU-F7p">
-                    <rect key="frame" x="277" y="11" width="46" height="30"/>
+                    <rect key="frame" x="227" y="11" width="46" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="46" id="GP3-2j-a0D"/>
                         <constraint firstAttribute="height" constant="30" id="LIr-0l-pME"/>
@@ -49,14 +50,25 @@
                         <action selector="didTapRightButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="3Rv-Pp-mOG"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38k-mc-I7n">
+                    <rect key="frame" x="326.5" y="11" width="45" height="34"/>
+                    <state key="normal" title="TEXT">
+                        <color key="titleColor" red="0.34509803919999998" green="0.58823529409999997" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapAddTextButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="ByD-Ky-5DW"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="amq-MU-F7p" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9Sz-Dz-ga6"/>
                 <constraint firstAttribute="trailing" secondItem="YFn-1P-l0R" secondAttribute="trailing" constant="14" id="L2i-hE-P1T"/>
+                <constraint firstItem="38k-mc-I7n" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="49" id="aqx-SR-BEO"/>
+                <constraint firstItem="38k-mc-I7n" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="2.5" id="dLk-jX-ubU"/>
                 <constraint firstItem="Mjj-AP-HcI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jbK-2O-QiH"/>
                 <constraint firstItem="YFn-1P-l0R" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qom-G0-gHf"/>
                 <constraint firstItem="Mjj-AP-HcI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="yoN-3h-Eow"/>
-                <constraint firstItem="amq-MU-F7p" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zLO-Xi-YZn"/>
+                <constraint firstItem="amq-MU-F7p" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-50" id="zLO-Xi-YZn"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

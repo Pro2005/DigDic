@@ -7,16 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
 class IDAddFlashcardSelectImageCellObjectBuilder: IDAddFlashcardCellObjectBuilder {
     
-    func cellObjectForDataHolder(dataHolder: IDAddFlashcardDataHolder) -> IDAddFlashcardCell {
-        let view = NSBundle.mainBundle().loadNibNamed(String(IDAddFlashcardSelectImageCell), owner: nil, options: nil).last
-        let cell = view as! IDAddFlashcardSelectImageCell
-        if let imageDataHolder = dataHolder as? IDAddFlashcardImageDataHolder {
-            cell.loadFromDataHolder(imageDataHolder)
-        }
+    func cellObjectForDataHolder(dataHolder: IDAddFlashcardDataHolder, tableView: UITableView) -> IDAddFlashcardCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(IDAddFlashcardSelectImageCell)) as! IDAddFlashcardCell
+        cell.loadFromDataHolder(dataHolder)
         return cell
+    }
+    
+    static func registerCellForTableView(tableView: UITableView) {
+        tableView.registerNib(UINib.init(nibName: String(IDAddFlashcardSelectImageCell), bundle: nil), forCellReuseIdentifier: String(IDAddFlashcardSelectImageCell))
     }
     
 }

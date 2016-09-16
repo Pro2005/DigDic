@@ -65,6 +65,11 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
         self.currentView.reloadData()
     }
     
+    func addFormForText() {
+        self.currentDataDisplayManager.addCellForText()
+        self.currentView.reloadData()
+    }
+    
     func displayDialogForSelectingImage(completion: (result: UIImage?) -> Void) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
@@ -126,15 +131,19 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
     
     // MARK: IDAddFlashcardFooterViewDelegate
     
-    func AddFlashcardFooterViewDidTapAddImageButton(footerView: IDAddFlashcardFooterView) {
+    func addFlashcardFooterViewDidTapAddImageButton(footerView: IDAddFlashcardFooterView) {
         self.output.didTapAddImageButton()
     }
     
-    func AddFlashcardFooterViewDidTapLeftButton(footerView: IDAddFlashcardFooterView) {
+    func addFlashcardFooterViewDidTapAddTextButton(footerView: IDAddFlashcardFooterView) {
+        self.output.didTapAddTextButton()
+    }
+    
+    func addFlashcardFooterViewDidTapLeftButton(footerView: IDAddFlashcardFooterView) {
         UIView.transitionFromView(self.currentView, toView: self.currentView == self.frontView ? self.backView : self.frontView, duration: 0.5, options:[.TransitionFlipFromRight, .ShowHideTransitionViews], completion: nil)
     }
     
-    func AddFlashcardFooterViewDidTapRightButton(footerView: IDAddFlashcardFooterView) {
+    func addFlashcardFooterViewDidTapRightButton(footerView: IDAddFlashcardFooterView) {
         UIView.transitionFromView(self.currentView, toView: self.currentView == self.frontView ? self.backView : self.frontView, duration: 0.5, options:[.TransitionFlipFromLeft, .ShowHideTransitionViews], completion: nil)
     }
     
