@@ -11,7 +11,7 @@ import UIKit
 
 protocol IDAddFlashcardCellObjectBuilder {
     
-    func cellObjectForDataHolder(dataHolder: IDAddFlashcardDataHolder, tableView: UITableView) -> IDAddFlashcardCell
-    static func registerCellForTableView(tableView: UITableView)
+    func cellObjectForDataHolder(_ dataHolder: IDAddFlashcardDataHolder, tableView: UITableView) -> IDAddFlashcardCell
+    static func classNameForRegistration() -> String
     
 }

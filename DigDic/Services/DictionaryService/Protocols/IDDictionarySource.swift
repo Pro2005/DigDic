@@ -10,13 +10,13 @@ import Foundation
 
 protocol IDDictionarySource {
     
-    func fetchDictionaries(completion: ([IDDictionary]) -> ())
-    func addDictionaryWithName(name: String)
+    func fetchDictionaries(_ completion: ([IDDictionary]) -> ())
+    func addDictionaryWithName(_ name: String)
     
     func cardModelForFilling() -> IDCard
-    func addCardDataWithImageName(imageName: String) -> IDCardData
-    func createFlashcard(frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard?
-    func removeFlashcard(flashcard: IDFlashcard, fromDictionary dictionary: IDDictionary)
-    func removeDictionary(dictionary: IDDictionary)
+    func addCardDataWithImageName(_ imageName: String) -> IDCardData
+    func createFlashcard(_ frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard?
+    func removeFlashcard(_ flashcard: IDFlashcard, fromDictionary dictionary: IDDictionary)
+    func removeDictionary(_ dictionary: IDDictionary)
     
 }

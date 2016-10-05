@@ -28,8 +28,8 @@ class IDLDBFlashcard: Object, IDFlashcard {
         }
     }
     
-    private dynamic var _frontCard: IDLDBCard?
-    private dynamic var _backCard: IDLDBCard?
+    fileprivate dynamic var _frontCard: IDLDBCard?
+    fileprivate dynamic var _backCard: IDLDBCard?
     
     override static func ignoredProperties() -> [String] {
         return ["frontCard", "backCard"]

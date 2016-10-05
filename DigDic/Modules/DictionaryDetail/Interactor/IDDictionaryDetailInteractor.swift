@@ -12,7 +12,7 @@ class IDDictionaryDetailInteractor: IDDictionaryDetailInteractorInput {
     lazy var service: IDDictionaryService = IDDictionaryService(source: IDLocalDataBaseSource())
     lazy var imageManager: IDImageManager = IDImageManager()
 
-    func removeFlashcard(flashcard: IDFlashcard, fromDictinary dictionary: IDDictionary) {
+    func removeFlashcard(_ flashcard: IDFlashcard, fromDictinary dictionary: IDDictionary) {
         self._removeImagesForCardData(flashcard.frontCard?.data)
         self._removeImagesForCardData(flashcard.backCard?.data)
         self.service.removeFlashcard(flashcard, fromDictionary: dictionary)
@@ -20,7 +20,7 @@ class IDDictionaryDetailInteractor: IDDictionaryDetailInteractorInput {
     
     // MARK: - Private
     
-    private func _removeImagesForCardData(cardData: [IDCardData]?) {
+    fileprivate func _removeImagesForCardData(_ cardData: [IDCardData]?) {
         if let data = cardData {
             for dataItem in data {
                 if let imageName = dataItem.imageName {

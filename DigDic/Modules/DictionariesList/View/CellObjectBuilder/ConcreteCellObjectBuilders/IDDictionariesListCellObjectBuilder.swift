@@ -11,6 +11,6 @@ import UIKit
 
 protocol IDDictionariesListCellObjectBuilder {
     
-    func buildCellObjectForData(dictionary: IDDictionary, tableView: UITableView) -> UITableViewCell
+    func buildCellObjectForData(_ dictionary: IDDictionary, tableView: UITableView) -> UITableViewCell
     
 }

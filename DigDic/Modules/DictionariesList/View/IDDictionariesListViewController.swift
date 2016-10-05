@@ -33,16 +33,16 @@ class IDDictionariesListViewController: IDBaseViewController, IDDictionariesList
         output.viewIsReady()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
     // MARK: Actions
-    func didTapAddButton(sender: AnyObject) {
+    func didTapAddButton(_ sender: AnyObject) {
         self.output.didTapAddButton()
     }
 
@@ -50,25 +50,25 @@ class IDDictionariesListViewController: IDBaseViewController, IDDictionariesList
     
     override func setupInitialState() {
         self.title = Constants.dictionariesListTitleText.localized()
-        let addButton = self.navigationItem.addButtonWithTitle(Constants.dictionariesListAddButtonTitleText.localized(), alignment: .Right, font: UIFont.systemFontOfSize(CGFloat(Constants.addButtonFontSize)))
-        addButton.addTarget(self, action: #selector(didTapAddButton), forControlEvents: .TouchUpInside)
+        let addButton = self.navigationItem.addButtonWithTitle(Constants.dictionariesListAddButtonTitleText.localized(), alignment: .right, font: UIFont.systemFont(ofSize: CGFloat(Constants.addButtonFontSize)))
+        addButton.addTarget(self, action: #selector(didTapAddButton), for: .touchUpInside)
         self.dataDisplayManager.registerCellForTableView(self.tableView)
         self.tableView.dataSource = self.dataDisplayManager
         self.tableView.delegate = self.dataDisplayManager
         self.dataDisplayManager.delegate = self
     }
     
-    func reloadDataWithDictionaries(dictionaries: [IDDictionary]) {
+    func reloadDataWith(Dictionaries dictionaries: [IDDictionary]) {
         self.dataDisplayManager.updateTableViewModelWithDictionaries(dictionaries)
         self.tableView.reloadData()
     }
 
     func showFormForCreatingNewDictionary() {
-        let alertController = UIAlertController(title: Constants.addDictionaryText.localized(), message: nil, preferredStyle: .Alert)
-        alertController.addTextFieldWithConfigurationHandler { (textField: UITextField) in
+        let alertController = UIAlertController(title: Constants.addDictionaryText.localized(), message: nil, preferredStyle: .alert)
+        alertController.addTextField { (textField: UITextField) in
             textField.placeholder = Constants.nameOfNewDictionaryText.localized()
         }
-        let addAction = UIAlertAction(title: Constants.addText.localized(), style: .Default) { [unowned self](alertAction: UIAlertAction) in
+        let addAction = UIAlertAction(title: Constants.addText.localized(), style: .default) { [unowned self](alertAction: UIAlertAction) in
             guard let textField = alertController.textFields?.first else {
                 return
             }
@@ -77,27 +77,27 @@ class IDDictionariesListViewController: IDBaseViewController, IDDictionariesList
             }
             self.output.didTapCreateDictionaryButtonWithDictionaryName(text)
         }
-        let cancelAction = UIAlertAction(title: Constants.cancelText.localized(), style: .Destructive) { (alertAction: UIAlertAction) in
+        let cancelAction = UIAlertAction(title: Constants.cancelText.localized(), style: .destructive) { (alertAction: UIAlertAction) in
             
         }
         alertController.addAction(addAction)
         alertController.addAction(cancelAction)
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     // MARK: IDDictionariesListDataDisplayManagerDelegate
 
-    func dictionariesListDataDisplayManager(manager: IDDictionariesListDataDisplayManager, didSelectDictionary dictionary: IDDictionary, reverseOrder: Bool) {
+    func dictionariesListDataDisplayManager(_ manager: IDDictionariesListDataDisplayManager, didSelectDictionary dictionary: IDDictionary, reverseOrder: Bool) {
         self.output.didSelectDictionary(dictionary, reverseOrder: reverseOrder)
     }
     
-    func dictionariesListDataDisplayManager(manager: IDDictionariesListDataDisplayManager, wantRemoveDictionary dictionary: IDDictionary) {
+    func dictionariesListDataDisplayManager(_ manager: IDDictionariesListDataDisplayManager, wantRemoveDictionary dictionary: IDDictionary) {
         self.output.wantRemoveDictionary(dictionary)
     }
     
     // MARK: Private
     
-    private func addButtonInNavigationBar() {
+    fileprivate func addButtonInNavigationBar() {
         
     }
 }

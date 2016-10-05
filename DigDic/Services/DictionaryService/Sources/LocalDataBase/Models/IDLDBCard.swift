@@ -24,7 +24,7 @@ class IDLDBCard: Object, IDCard {
         }
     }
     
-    private let _data = List<IDLDBCardData>()
+    fileprivate let _data = List<IDLDBCardData>()
     
     override static func ignoredProperties() -> [String] {
         return ["data"]

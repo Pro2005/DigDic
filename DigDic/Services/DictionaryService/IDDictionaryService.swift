@@ -16,11 +16,11 @@ class IDDictionaryService: IDBaseService {
     }
     
     // MARK: Public
-    func fetchDictionaries(completion: ([IDDictionary]) -> ()) {
+    func fetchDictionaries(_ completion: ([IDDictionary]) -> ()) {
         self.source.fetchDictionaries(completion)
     }
     
-    func addDictionaryWithName(name: String) {
+    func addDictionaryWithName(_ name: String) {
         self.source.addDictionaryWithName(name)
     }
     
@@ -28,19 +28,19 @@ class IDDictionaryService: IDBaseService {
         return self.source.cardModelForFilling()
     }
     
-    func addCardDataWithImageName(imageName: String) -> IDCardData {
+    func addCardDataWithImageName(_ imageName: String) -> IDCardData {
         return self.source.addCardDataWithImageName(imageName)
     }
     
-    func createFlashcard(frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard? {
+    func createFlashcard(_ frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard? {
         return self.source.createFlashcard(frontCard, backCard: backCard, toDictionary: dictionary)
     }
     
-    func removeFlashcard(flashcard: IDFlashcard, fromDictionary dictionary: IDDictionary) {
+    func removeFlashcard(_ flashcard: IDFlashcard, fromDictionary dictionary: IDDictionary) {
         self.source.removeFlashcard(flashcard, fromDictionary: dictionary)
     }
     
-    func removeDictionary(dictionary: IDDictionary) {
+    func removeDictionary(_ dictionary: IDDictionary) {
         self.source.removeDictionary(dictionary)
     }
         

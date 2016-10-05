@@ -10,30 +10,30 @@ import Foundation
 import UIKit
 
 enum UIBarButtonItemAlignment: Int {
-    case Left
-    case Right
+    case left
+    case right
 }
 
 extension UINavigationItem {
     
-    func addButtonWithTitle(title: String, alignment: UIBarButtonItemAlignment, font: UIFont, titleColor: UIColor = UIColor.blackColor()) -> UIButton {
+    func addButtonWithTitle(_ title: String, alignment: UIBarButtonItemAlignment, font: UIFont, titleColor: UIColor = UIColor.black) -> UIButton {
         let button = self._buttonWithTitle(title, font: font, titleColor: titleColor)
         let barButtonItem = UIBarButtonItem.init(customView: button)
         switch alignment {
-        case .Left:
+        case .left:
             self.leftBarButtonItem = barButtonItem
-        case .Right:
+        case .right:
             self.rightBarButtonItem = barButtonItem
         }
         return button
     }
     
     // MARK: - Private
-    private func _buttonWithTitle(title: String, font: UIFont, titleColor: UIColor) -> UIButton {
-        let button = UIButton(type: .Custom)
-        button.setTitle(title, forState: .Normal)
+    fileprivate func _buttonWithTitle(_ title: String, font: UIFont, titleColor: UIColor) -> UIButton {
+        let button = UIButton(type: .custom)
+        button.setTitle(title, for: UIControlState())
         button.titleLabel?.font = font
-        button.setTitleColor(titleColor, forState: .Normal)
+        button.setTitleColor(titleColor, for: UIControlState())
         button.sizeToFit()
         return button
     }

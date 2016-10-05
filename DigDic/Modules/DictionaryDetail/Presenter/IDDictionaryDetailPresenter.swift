@@ -35,14 +35,14 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
         self.view.getConfirmationForRemoving()
     }
     
-    func removeFlashcard(flashcard: IDFlashcard) {
+    func removeFlashcard(_ flashcard: IDFlashcard) {
         self.interactor.removeFlashcard(flashcard, fromDictinary: self.selectedDictionary)
         
     }
     
     // MARK: - IDAddFlashcardPresenterDelegate 
     
-    func addFlashcardPresenterDidAddFlashcard(flashcard: IDFlashcard) {
+    func addFlashcardPresenterDidAddFlashcard(_ flashcard: IDFlashcard) {
         self.view.displayFlashcards([flashcard], reverseOrder: self.reverseOrder)
     }
     

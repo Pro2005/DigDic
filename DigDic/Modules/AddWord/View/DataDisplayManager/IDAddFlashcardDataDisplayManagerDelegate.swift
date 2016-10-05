@@ -11,6 +11,6 @@ import UIKit
 
 protocol IDAddFlashcardDataDisplayManagerDelegate {
     
-    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddFlashcardDataDisplayManager, dataHolder: IDAddFlashcardDataHolder) -> Void
+    func dataDisplayManagerWantSelectImage(_ dataDisplayManager: IDAddFlashcardDataDisplayManager, dataHolder: IDAddFlashcardDataHolder) -> Void
     
 }

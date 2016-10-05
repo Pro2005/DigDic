@@ -9,7 +9,7 @@
 class IDAddFlashcardRouter: IDBaseRouter, IDAddFlashcardRouterInput {
 
     func dismiss() {
-        self.viewController .dismissViewControllerAnimated(true, completion: nil)
+        self.viewController .dismiss(animated: true, completion: nil)
     }
     
 }

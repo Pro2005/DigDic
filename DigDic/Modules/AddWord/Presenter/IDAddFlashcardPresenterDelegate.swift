@@ -10,6 +10,6 @@ import Foundation
 
 protocol IDAddFlashcardPresenterDelegate {
     
-    func addFlashcardPresenterDidAddFlashcard(flashcard: IDFlashcard)
+    func addFlashcardPresenterDidAddFlashcard(_ flashcard: IDFlashcard)
     
 }

@@ -11,9 +11,10 @@ import UIKit
 
 class IDDictionariesListDefaultCellObjectBuilder: IDDictionariesListCellObjectBuilder {
     
-    func buildCellObjectForData(dictionary: IDDictionary, tableView: UITableView) -> UITableViewCell {
-        let identifier = String(IDDictionariesListCell)
-        if let cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? IDDictionariesListCell {
+    func buildCellObjectForData(_ dictionary: IDDictionary, tableView: UITableView) -> UITableViewCell {
+        let identifier = String(describing: IDDictionariesListCell.self)
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? IDDictionariesListCell {
             if let name = dictionary.name {
                 cell.titleLabel.text = name + " - \(dictionary.flashcards.count)"
             }

@@ -20,7 +20,7 @@ class IDAddFlashcardFooterView: UIView {
             static var height: CGFloat = 0
         }
         if Holder.height == 0 {
-            if let view = NSBundle.mainBundle().loadNibNamed(String(IDAddFlashcardFooterView), owner: nil, options: nil).last {
+            if let view = Bundle.main.loadNibNamed(String(describing: IDAddFlashcardFooterView.self), owner: nil, options: nil)!.last {
                 Holder.height = (view as! UIView).frame.size.height
             }
         }
@@ -29,25 +29,25 @@ class IDAddFlashcardFooterView: UIView {
     
     // MARK: Action
     
-    @IBAction func didTapAddImageButton(sender: AnyObject) {
+    @IBAction func didTapAddImageButton(_ sender: AnyObject) {
         if let delegate = self.delegate {
             delegate.addFlashcardFooterViewDidTapAddImageButton(self)
         }
     }
     
-    @IBAction func didTapAddTextButton(sender: AnyObject) {
+    @IBAction func didTapAddTextButton(_ sender: AnyObject) {
         if let delegate = self.delegate {
             delegate.addFlashcardFooterViewDidTapAddTextButton(self)
         }
     }
     
-    @IBAction func didTapLeftButton(sender: AnyObject) {
+    @IBAction func didTapLeftButton(_ sender: AnyObject) {
         if let delegate = self.delegate {
             delegate.addFlashcardFooterViewDidTapLeftButton(self)
         }
     }
     
-    @IBAction func didTapRightButton(sender: AnyObject) {
+    @IBAction func didTapRightButton(_ sender: AnyObject) {
         if let delegate = self.delegate {
             delegate.addFlashcardFooterViewDidTapRightButton(self)
         }

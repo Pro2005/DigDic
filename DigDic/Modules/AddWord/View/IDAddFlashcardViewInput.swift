@@ -13,9 +13,9 @@ protocol IDAddFlashcardViewInput: IDBaseViewInput {
     func setupInitialState()
     func addFormForSelectingImage()
     func addFormForText()
-    func displayDialogForSelectingImage(completion: (result: UIImage?) -> Void)
-    func displayDialogForCropImage(image: UIImage, dataHolder: IDAddFlashcardDataHolder)
-    func updateImageForDataHolder(image: UIImage, dataHolder: IDAddFlashcardDataHolder)
+    func displayDialogForSelectingImage(_ completion: @escaping (UIImage?) -> Void)
+    func displayDialogForCropImage(_ image: UIImage, dataHolder: IDAddFlashcardDataHolder)
+    func updateImageForDataHolder(_ image: UIImage, dataHolder: IDAddFlashcardDataHolder)
     func frontDataHolders() -> [IDAddFlashcardDataHolder]
     func backDataHolders() -> [IDAddFlashcardDataHolder]
     

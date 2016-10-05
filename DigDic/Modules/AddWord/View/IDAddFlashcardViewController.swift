@@ -17,7 +17,7 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
     @IBOutlet weak var backView: IDAddFlashcardFormView!
     
     var currentView: IDAddFlashcardFormView {
-        if (!frontView.hidden) {
+        if (!frontView.isHidden) {
             return frontView
         } else {
             return backView
@@ -29,18 +29,18 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
     
     enum IDWordFrom: Int {
         case frontView = 0
-        case BackView
+        case backView
     }
     
     var currentDataDisplayManager: IDAddFlashcardDataDisplayManager {
-        if (!frontView.hidden) {
+        if (!frontView.isHidden) {
             return frontDataDisplayManager
         } else {
             return backDataDisplayManager
         }
     }
     
-    var cropImageCompletionBlock: ((image: UIImage) -> Void)?
+    var cropImageCompletionBlock: ((_ image: UIImage) -> Void)?
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -50,13 +50,23 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
     
     // MARK: Actions
     
-    @IBAction func didTapCloseButton(sender: AnyObject) {
+    @IBAction func didTapCloseButton(_ sender: AnyObject) {
         self.output.didTapCloseButton()
     }
     
-    @IBAction func didTapAddButton(sender: AnyObject) {
+    @IBAction func didTapAddButton(_ sender: AnyObject) {
         self.output.didTapAddButton()
     }
+    
+//    func setupInitialState()
+//    func addFormForSelectingImage()
+//    func addFormForText()
+//    func displayDialogForSelectingImage(_ completion: (_ result: UIImage?) -> Void)
+//    func displayDialogForCropImage(_ image: UIImage, dataHolder: IDAddFlashcardDataHolder)
+//    func updateImageForDataHolder(_ image: UIImage, dataHolder: IDAddFlashcardDataHolder)
+//    func frontDataHolders() -> [IDAddFlashcardDataHolder]
+//    func backDataHolders() -> [IDAddFlashcardDataHolder]
+//    
 
     // MARK: IDAddFlashcardViewInput
     
@@ -70,41 +80,43 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
         self.currentView.reloadData()
     }
     
-    func displayDialogForSelectingImage(completion: (result: UIImage?) -> Void) {
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+    internal func displayDialogForSelectingImage(_ completion: @escaping (UIImage?) -> Void) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             
         }
         alertController.addAction(cancelAction)
-        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
-            let takePhotoAction = UIAlertAction(title: "take photo", style: .Default, handler: {[unowned self] (action) in
-                self.showImagePickerController(.Camera, completion: { (image) in
-                    completion(result: image)
-                });
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let takePhotoAction = UIAlertAction(title: "take photo", style: .default, handler: {[weak self] (action) in
+                guard let strongSelf = self else { return }
+                strongSelf.showImagePickerController(.camera, completion: { (image) in
+                    completion(image)
+                })
             })
             alertController.addAction(takePhotoAction)
         }
-        if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
-            let selectExistingPhotoAction = UIAlertAction(title: "choose img", style: .Default, handler: {[unowned self] (action) in
-                self.showImagePickerController(.PhotoLibrary, completion: { (image) in
-                    completion(result: image)
-                });
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let selectExistingPhotoAction = UIAlertAction(title: "choose img", style: .default, handler: {[weak self] (action) in
+                guard let strongSelf = self else { return }
+                strongSelf.showImagePickerController(.photoLibrary, completion: { (image) in
+                    completion(image)
+                })
             })
             alertController.addAction(selectExistingPhotoAction)
         }
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
     
-    func displayDialogForCropImage(image: UIImage, dataHolder: IDAddFlashcardDataHolder) {
+    func displayDialogForCropImage(_ image: UIImage, dataHolder: IDAddFlashcardDataHolder) {
         let cropViewController = TOCropViewController(image: image)
-        cropViewController.delegate = self
+        cropViewController?.delegate = self
         self.cropImageCompletionBlock = {[unowned self](image) in
             self.output.didCropImage(image, dataHolder: dataHolder)
         }
-        self.presentViewController(cropViewController, animated: true, completion: nil)
+        self.present(cropViewController!, animated: true, completion: nil)
     }
     
-    func updateImageForDataHolder(image: UIImage, dataHolder: IDAddFlashcardDataHolder) {
+    func updateImageForDataHolder(_ image: UIImage, dataHolder: IDAddFlashcardDataHolder) {
         guard let imageDataHolder = dataHolder as? IDAddFlashcardImageDataHolder else {
             return
         }
@@ -122,47 +134,47 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
     
     // MARK: TOCropViewControllerDelegate
 
-    func cropViewController(cropViewController: TOCropViewController!, didCropToImage image: UIImage!, withRect cropRect: CGRect, angle: Int) {
-        cropViewController.dismissViewControllerAnimated(true, completion: nil)
+    func cropViewController(_ cropViewController: TOCropViewController!, didCropTo image: UIImage!, with cropRect: CGRect, angle: Int) {
+        cropViewController.dismiss(animated: true, completion: nil)
         if let completionBlock = self.cropImageCompletionBlock {
-            completionBlock(image: image)
+            completionBlock(image)
         }
     }
     
     // MARK: IDAddFlashcardFooterViewDelegate
     
-    func addFlashcardFooterViewDidTapAddImageButton(footerView: IDAddFlashcardFooterView) {
+    func addFlashcardFooterViewDidTapAddImageButton(_ footerView: IDAddFlashcardFooterView) {
         self.output.didTapAddImageButton()
     }
     
-    func addFlashcardFooterViewDidTapAddTextButton(footerView: IDAddFlashcardFooterView) {
+    func addFlashcardFooterViewDidTapAddTextButton(_ footerView: IDAddFlashcardFooterView) {
         self.output.didTapAddTextButton()
     }
     
-    func addFlashcardFooterViewDidTapLeftButton(footerView: IDAddFlashcardFooterView) {
-        UIView.transitionFromView(self.currentView, toView: self.currentView == self.frontView ? self.backView : self.frontView, duration: 0.5, options:[.TransitionFlipFromRight, .ShowHideTransitionViews], completion: nil)
+    func addFlashcardFooterViewDidTapLeftButton(_ footerView: IDAddFlashcardFooterView) {
+        UIView.transition(from: self.currentView, to: self.currentView == self.frontView ? self.backView : self.frontView, duration: 0.5, options:[.transitionFlipFromRight, .showHideTransitionViews], completion: nil)
     }
     
-    func addFlashcardFooterViewDidTapRightButton(footerView: IDAddFlashcardFooterView) {
-        UIView.transitionFromView(self.currentView, toView: self.currentView == self.frontView ? self.backView : self.frontView, duration: 0.5, options:[.TransitionFlipFromLeft, .ShowHideTransitionViews], completion: nil)
+    func addFlashcardFooterViewDidTapRightButton(_ footerView: IDAddFlashcardFooterView) {
+        UIView.transition(from: self.currentView, to: self.currentView == self.frontView ? self.backView : self.frontView, duration: 0.5, options:[.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
     }
     
     // MARK: IDAddFlashcardDataDisplayManagerDelegate
     
-    func dataDisplayManagerWantSelectImage(dataDisplayManager: IDAddFlashcardDataDisplayManager, dataHolder: IDAddFlashcardDataHolder) {
+    func dataDisplayManagerWantSelectImage(_ dataDisplayManager: IDAddFlashcardDataDisplayManager, dataHolder: IDAddFlashcardDataHolder) {
         self.output.didTapSelectImageButton(dataHolder)
     }
     
     // MARK: Protected
     
     override func setupInitialState() {
-        if let view = NSBundle.mainBundle().loadNibNamed(String(IDAddFlashcardFooterView), owner: nil, options: nil).last {
+        if let view = Bundle.main.loadNibNamed(String(describing: IDAddFlashcardFooterView.self), owner: nil, options: nil)!.last {
             let footerView = view as! IDAddFlashcardFooterView
             footerView.delegate = self
             self.frontView.setupTableViewFooter(footerView, footerHeight: IDAddFlashcardFooterView.height())
         }
         
-        if let view = NSBundle.mainBundle().loadNibNamed(String(IDAddFlashcardFooterView), owner: nil, options: nil).last {
+        if let view = Bundle.main.loadNibNamed(String(describing: IDAddFlashcardFooterView.self), owner: nil, options: nil)!.last {
             let footerView = view as! IDAddFlashcardFooterView
             footerView.delegate = self
             self.backView.setupTableViewFooter(footerView, footerHeight: IDAddFlashcardFooterView.height())
@@ -170,29 +182,31 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
         
         self.frontView.setupTableViewDataSource(self.frontDataDisplayManager, delegate: self.frontDataDisplayManager)
         self.frontDataDisplayManager.delegate = self
+        self.frontView.registerNibsWithClassNames(self.frontDataDisplayManager.classNamesForRegistration())
         
         self.backView.setupTableViewDataSource(self.backDataDisplayManager, delegate: self.backDataDisplayManager)
         self.backDataDisplayManager.delegate = self
+        self.backView.registerNibsWithClassNames(self.backDataDisplayManager.classNamesForRegistration())
     }
     
     // MARK: Private
     
-    private func showImagePickerController(sourceType: UIImagePickerControllerSourceType, completion: (UIImage?) -> Void) {
+    fileprivate func showImagePickerController(_ sourceType: UIImagePickerControllerSourceType, completion: @escaping (UIImage?) -> Void) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.allowsEditing = true
         imagePickerController.sourceType = sourceType
-        let didFinishPickingMediaBlock: (UIImagePickerController!, [NSObject: AnyObject]!) -> Void = {(imagePickerController, info) in
-            imagePickerController.dismissViewControllerAnimated(true, completion: nil)
-            let image = info[UIImagePickerControllerEditedImage]
+        let didFinishPickingMediaBlock: (UIImagePickerController?, [AnyHashable: Any]?) -> Void = {(imagePickerController, info) in
+            imagePickerController?.dismiss(animated: true, completion: nil)
+            let image = info?[UIImagePickerControllerEditedImage]
             completion(image as? UIImage)
         }
         imagePickerController.bk_didFinishPickingMediaBlock = didFinishPickingMediaBlock
         let didCancelBlock: (UIImagePickerController!) -> Void = {(imagePickerController) in
-            imagePickerController.dismissViewControllerAnimated(true, completion: nil)
+            imagePickerController.dismiss(animated: true, completion: nil)
             completion(nil)
         }
-        imagePickerController.bk_didCancelBlock = didCancelBlock
-        self.presentViewController(imagePickerController, animated: true, completion: nil)
+//        imagePickerController.bk_didCancelBlock = didCancelBlock
+        self.present(imagePickerController, animated: true, completion: nil)
     }
     
 }

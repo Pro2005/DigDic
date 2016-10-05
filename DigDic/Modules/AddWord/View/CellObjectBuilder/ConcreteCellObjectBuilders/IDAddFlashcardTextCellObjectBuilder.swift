@@ -11,14 +11,15 @@ import UIKit
 
 class IDAddFlashcardTextCellObjectBuilder: IDAddFlashcardCellObjectBuilder {
     
-    func cellObjectForDataHolder(dataHolder: IDAddFlashcardDataHolder, tableView: UITableView) -> IDAddFlashcardCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(IDAddFlashcardTextCell)) as! IDAddFlashcardCell
+    func cellObjectForDataHolder(_ dataHolder: IDAddFlashcardDataHolder, tableView: UITableView) -> IDAddFlashcardCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: IDAddFlashcardTextCell.self)) as! IDAddFlashcardCell
         cell.loadFromDataHolder(dataHolder)
         return cell
     }
+
     
-    static func registerCellForTableView(tableView: UITableView) {
-        tableView.registerNib(UINib.init(nibName: String(IDAddFlashcardTextCell), bundle: nil), forCellReuseIdentifier: String(IDAddFlashcardTextCell))
+    static func classNameForRegistration() -> String {
+        return String(describing: IDAddFlashcardTextCell.self)
     }
     
 }

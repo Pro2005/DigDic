@@ -12,11 +12,11 @@ import UIKit
 class IDDictionaryDetailImageCell: UITableViewCell, IDDictionaryDetailCell {
     @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet weak var heightLayoutConstraint: NSLayoutConstraint!
-    private var setNeedUpdateHeight = false
+    fileprivate var setNeedUpdateHeight = false
     
     // MARK: Public
     
-    func loadWithData(cardData: IDCardData) {
+    func loadWithData(_ cardData: IDCardData) {
         if let imageName = cardData.imageName {
             do {
                 backgroundImageView.image = try IDImageManager().imageByFilename(imageName)
@@ -41,7 +41,7 @@ class IDDictionaryDetailImageCell: UITableViewCell, IDDictionaryDetailCell {
     
     // MARK: Private
     
-    private func updateHeightIfNeeded() {
+    fileprivate func updateHeightIfNeeded() {
         if !self.setNeedUpdateHeight {
             return
         }
@@ -51,9 +51,9 @@ class IDDictionaryDetailImageCell: UITableViewCell, IDDictionaryDetailCell {
         let imageSize = image.size
         let factor = max(imageSize.width, imageSize.height) / min(imageSize.width, imageSize.height)
         if (imageSize.width > imageSize.height) {
-            self.heightLayoutConstraint.constant = ceil(CGRectGetWidth(self.frame) / factor)
+            self.heightLayoutConstraint.constant = ceil(self.frame.width / factor)
         } else {
-            self.heightLayoutConstraint.constant = ceil(CGRectGetWidth(self.frame) * factor)
+            self.heightLayoutConstraint.constant = ceil(self.frame.width * factor)
         }
         self.setNeedUpdateHeight = false
     }

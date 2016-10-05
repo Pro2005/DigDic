@@ -54,7 +54,7 @@ class IDAddFlashcardPresenter: NSObject, IDAddFlashcardModuleInput, IDAddFlashca
         self.view.addFormForText()
     }
     
-    func didTapSelectImageButton(dataHolder: IDAddFlashcardDataHolder) {
+    func didTapSelectImageButton(_ dataHolder: IDAddFlashcardDataHolder) {
         self.view.displayDialogForSelectingImage { (result) in
             if let image = result {
                 self.view.displayDialogForCropImage(image, dataHolder: dataHolder)
@@ -62,7 +62,7 @@ class IDAddFlashcardPresenter: NSObject, IDAddFlashcardModuleInput, IDAddFlashca
         }
     }
     
-    func didCropImage(image: UIImage, dataHolder: IDAddFlashcardDataHolder) {
+    func didCropImage(_ image: UIImage, dataHolder: IDAddFlashcardDataHolder) {
         self.view.updateImageForDataHolder(image, dataHolder: dataHolder)
     }
     

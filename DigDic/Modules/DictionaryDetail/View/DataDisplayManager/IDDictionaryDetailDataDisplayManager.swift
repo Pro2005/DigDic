@@ -18,15 +18,15 @@ class IDDictionaryDetailDataDisplayManager: NSObject, UITableViewDelegate, UITab
     
     // MARK: UITableViewDataSource
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let data = self.card.data {
             return data.count
         }
         return 0
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let data = self.card.data![indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let data = self.card.data![(indexPath as NSIndexPath).row]
         if let cellObjectBuilder = IDDictionaryDetailCellObjectBuilderFactory.builderForCardData(data) {
             let cell = cellObjectBuilder.cellObjectForCardData(data)
             return cell as! UITableViewCell
@@ -36,7 +36,7 @@ class IDDictionaryDetailDataDisplayManager: NSObject, UITableViewDelegate, UITab
     
     // MARK: UITableViewDelegate
     
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     

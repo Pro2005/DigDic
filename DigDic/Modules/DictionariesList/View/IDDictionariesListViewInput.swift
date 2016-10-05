@@ -10,7 +10,7 @@ import UIKit
 
 protocol IDDictionariesListViewInput: IDBaseViewInput {
 
-    func reloadDataWithDictionaries(dictionaries: [IDDictionary])
+    func reloadDataWith(Dictionaries dictionaries: [IDDictionary])
     func showFormForCreatingNewDictionary()
     
 }

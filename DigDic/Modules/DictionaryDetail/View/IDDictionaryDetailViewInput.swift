@@ -15,8 +15,8 @@ protocol IDDictionaryDetailViewInput: IDBaseViewInput {
     */
 
     func setupInitialState()
-    func updateTitle(title: String)
-    func displayFlashcards(flashcards: [IDFlashcard], reverseOrder: Bool)
+    func updateTitle(_ title: String)
+    func displayFlashcards(_ flashcards: [IDFlashcard], reverseOrder: Bool)
     func getConfirmationForRemoving()
 
 }

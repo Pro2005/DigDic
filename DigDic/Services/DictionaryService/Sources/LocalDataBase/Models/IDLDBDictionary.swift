@@ -16,24 +16,24 @@ class IDLDBDictionary: Object, IDDictionary {
         return self._flashcards.map{$0 as IDFlashcard}
     }
 
-    func addFlashcard(flashcard: IDFlashcard) {
+    func addFlashcard(_ flashcard: IDFlashcard) {
         guard let flashcard = flashcard as? IDLDBFlashcard else {
             return
         }
         self._flashcards.append(flashcard)
     }
     
-    func removeFlashcard(flashcard: IDFlashcard) {
+    func removeFlashcard(_ flashcard: IDFlashcard) {
         guard let flashcard = flashcard as? IDLDBFlashcard else {
             return
         }
-        if let index = self._flashcards.indexOf(flashcard) {
-            self._flashcards.removeAtIndex(index)
+        if let index = self._flashcards.index(of: flashcard) {
+            self._flashcards.remove(at: index)
         }
     }
     
     // MARK: Private
-    private let _flashcards = List<IDLDBFlashcard>()
+    fileprivate var _flashcards = List<IDLDBFlashcard>()
     
     override static func ignoredProperties() -> [String] {
         return ["flashcards"]

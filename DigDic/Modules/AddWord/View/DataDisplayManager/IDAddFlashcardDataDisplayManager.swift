@@ -25,26 +25,26 @@ class IDAddFlashcardDataDisplayManager: NSObject, UITableViewDelegate, UITableVi
         dataSource.append(textDataHolder)
     }
     
-    func updateImage(image: UIImage, indexPath: NSIndexPath) {
-        let dataHolder = self.dataSource[indexPath.row]
+    func updateImage(_ image: UIImage, indexPath: IndexPath) {
+        let dataHolder = self.dataSource[(indexPath as NSIndexPath).row]
         guard let imageDataHolder = dataHolder as? IDAddFlashcardImageDataHolder else {
             return
         }
         imageDataHolder.image = image
     }
     
-    func registerCellsForTableView(tableView: UITableView) {
-        IDAddFlashcardCellObjectBuilderFactory.registerCellsForTableView(tableView)
+    func classNamesForRegistration() -> [String] {
+        return IDAddFlashcardCellObjectBuilderFactory.classNamesForRegistration()
     }
  
     // MARK: UITableViewDataSource
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let dataHolder = self.dataSource[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let dataHolder = self.dataSource[(indexPath as NSIndexPath).row]
         if let cellObjectBuilder = IDAddFlashcardCellObjectBuilderFactory.builderForDataHolder(dataHolder) {
             let cell = cellObjectBuilder.cellObjectForDataHolder(dataHolder, tableView: tableView)
             return cell as! UITableViewCell
@@ -54,8 +54,8 @@ class IDAddFlashcardDataDisplayManager: NSObject, UITableViewDelegate, UITableVi
     
     // MARK: UITableViewDelegate
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let dataHolder = self.dataSource[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dataHolder = self.dataSource[(indexPath as NSIndexPath).row]
         switch dataHolder {
         case _ as IDAddFlashcardImageDataHolder:
             if let delegate = self.delegate {
@@ -66,7 +66,7 @@ class IDAddFlashcardDataDisplayManager: NSObject, UITableViewDelegate, UITableVi
         }
     }
     
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     

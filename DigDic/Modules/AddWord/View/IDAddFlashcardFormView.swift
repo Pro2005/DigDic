@@ -11,7 +11,7 @@ import UIKit
 import PureLayout
 
 class IDAddFlashcardFormView: UIView {
-    var tableView: UITableView = UITableView(frame: CGRectZero, style: .Plain)
+    var tableView: UITableView = UITableView(frame: CGRect.zero, style: .plain)
     var footerHeight: CGFloat?
     
     required init?(coder aDecoder: NSCoder) {
@@ -22,9 +22,9 @@ class IDAddFlashcardFormView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.tableView.backgroundColor = UIColor.clearColor()
+        self.tableView.backgroundColor = UIColor.clear
         
-        if let height = self.footerHeight, footerView = self.tableView.tableFooterView {
+        if let height = self.footerHeight, let footerView = self.tableView.tableFooterView {
             self.updateFooterHeight(footerView, height: height)
         }
     }
@@ -39,14 +39,20 @@ class IDAddFlashcardFormView: UIView {
     
     // MARK: Public
     
-    func setupTableViewFooter(footer: UIView, footerHeight: CGFloat) {
+    func setupTableViewFooter(_ footer: UIView, footerHeight: CGFloat) {
         self.tableView.tableFooterView = footer
         self.footerHeight = footerHeight
     }
     
-    func setupTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
+    func setupTableViewDataSource(_ dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
         self.tableView.dataSource = dataSource
         self.tableView.delegate = delegate
+    }
+    
+    func registerNibsWithClassNames(_ classNames: [String]) {
+        for name in classNames {
+            self.tableView.register(UINib.init(nibName: name, bundle: nil), forCellReuseIdentifier: name)
+        }
     }
     
     func reloadData() {
@@ -55,13 +61,14 @@ class IDAddFlashcardFormView: UIView {
     
     // MARK: Private
     
-    private func setup() {
+    fileprivate func setup() {
         self.addSubview(self.tableView)
+//        self.tableView.allowsSelection = false;
         
     }
     
     // MARK: Private
-    private func updateFooterHeight(footer: UIView, height: CGFloat) {
+    fileprivate func updateFooterHeight(_ footer: UIView, height: CGFloat) {
         var frame = footer.frame
         frame.size.height = height
         footer.frame = frame

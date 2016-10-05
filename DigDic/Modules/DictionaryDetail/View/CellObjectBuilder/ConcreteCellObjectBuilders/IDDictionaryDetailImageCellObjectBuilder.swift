@@ -10,8 +10,8 @@ import Foundation
 
 class IDDictionaryDetailImageCellObjectBuilder: IDDictionaryDetailCellObjectBuilder {
     
-    func cellObjectForCardData(cardData: IDCardData) -> IDDictionaryDetailCell {
-        let view = NSBundle.mainBundle().loadNibNamed(String(IDDictionaryDetailImageCell), owner: nil, options: nil).last
+    func cellObjectForCardData(_ cardData: IDCardData) -> IDDictionaryDetailCell {
+        let view = Bundle.main.loadNibNamed(String(describing: IDDictionaryDetailImageCell.self), owner: nil, options: nil)!.last
         let cell = view as! IDDictionaryDetailImageCell
         cell.loadWithData(cardData)
         return cell

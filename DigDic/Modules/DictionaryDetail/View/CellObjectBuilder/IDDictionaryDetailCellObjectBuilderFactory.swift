@@ -10,7 +10,7 @@ import Foundation
 
 class IDDictionaryDetailCellObjectBuilderFactory {
     
-    class func builderForCardData(cardData: IDCardData) -> IDDictionaryDetailCellObjectBuilder? {
+    class func builderForCardData(_ cardData: IDCardData) -> IDDictionaryDetailCellObjectBuilder? {
         switch cardData.type! {
         case .Image:
             return IDDictionaryDetailImageCellObjectBuilder()

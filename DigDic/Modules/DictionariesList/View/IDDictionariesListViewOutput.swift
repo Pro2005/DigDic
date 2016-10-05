@@ -9,8 +9,8 @@
 protocol IDDictionariesListViewOutput: IDBaseViewOutput {
 
     func didTapAddButton()
-    func didTapCreateDictionaryButtonWithDictionaryName(name: String)
-    func didSelectDictionary(dictionary: IDDictionary, reverseOrder: Bool)
-    func wantRemoveDictionary(dictionary: IDDictionary)
+    func didTapCreateDictionaryButtonWithDictionaryName(_ name: String)
+    func didSelectDictionary(_ dictionary: IDDictionary, reverseOrder: Bool)
+    func wantRemoveDictionary(_ dictionary: IDDictionary)
     
 }

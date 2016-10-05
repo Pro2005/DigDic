@@ -17,10 +17,10 @@ class IDDictionaryDetailFlashcardView: UIView {
     var backDataDisplayManager: IDDictionaryDetailDataDisplayManager?
     
     var visibleView: IDDictionaryDetailFlashcardSubView {
-        return frontView.hidden ? backView : frontView
+        return frontView.isHidden ? backView : frontView
     }
     var hiddenView: IDDictionaryDetailFlashcardSubView {
-        return frontView.hidden ? frontView : backView
+        return frontView.isHidden ? frontView : backView
     }
     var setNeedsAddConstraints = false
     
@@ -28,7 +28,7 @@ class IDDictionaryDetailFlashcardView: UIView {
     
     init(flashcard: IDFlashcard, reverseOrder: Bool) {
         self.flashcard = flashcard
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
         self.setup(flashcard, reverseOrder: reverseOrder)
     }
     
@@ -38,8 +38,8 @@ class IDDictionaryDetailFlashcardView: UIView {
     
     // MARK: Action
     
-    func handleLongPress(sender: UILongPressGestureRecognizer) {
-        if sender.state == .Began {
+    func handleLongPress(_ sender: UILongPressGestureRecognizer) {
+        if sender.state == .began {
             self.flipFlashcard(true)
         }
     }
@@ -68,7 +68,7 @@ class IDDictionaryDetailFlashcardView: UIView {
     
     // MARK: Private
     
-    func setup(flashcard: IDFlashcard, reverseOrder: Bool) {
+    func setup(_ flashcard: IDFlashcard, reverseOrder: Bool) {
         self.frontDataDisplayManager = IDDictionaryDetailDataDisplayManager(card: flashcard.frontCard!)
         self.backDataDisplayManager = IDDictionaryDetailDataDisplayManager(card: flashcard.backCard!)
         self.frontView.setupTableViewDataSource(self.frontDataDisplayManager!, delegate: self.frontDataDisplayManager!)
@@ -76,9 +76,9 @@ class IDDictionaryDetailFlashcardView: UIView {
         self.addSubview(self.frontView)
         self.addSubview(self.backView)
         if reverseOrder {
-            self.frontView.hidden = true
+            self.frontView.isHidden = true
         } else {
-            self.backView.hidden = true
+            self.backView.isHidden = true
         }
 //        self.backView.hidden = true
         self.setNeedsAddConstraints = true
@@ -87,12 +87,12 @@ class IDDictionaryDetailFlashcardView: UIView {
         self.addGestureRecognizer(gestureRecognizer)
     }
     
-    private func flipFlashcard(left: Bool) {
-        var options: UIViewAnimationOptions = [.TransitionFlipFromRight, .ShowHideTransitionViews]
+    fileprivate func flipFlashcard(_ left: Bool) {
+        var options: UIViewAnimationOptions = [.transitionFlipFromRight, .showHideTransitionViews]
         if left {
-            options = [.TransitionFlipFromLeft, .ShowHideTransitionViews]
+            options = [.transitionFlipFromLeft, .showHideTransitionViews]
         }
-        UIView.transitionFromView(self.visibleView, toView: self.hiddenView, duration: 0.5, options:options, completion: nil)
+        UIView.transition(from: self.visibleView, to: self.hiddenView, duration: 0.5, options:options, completion: nil)
     }
     
 }

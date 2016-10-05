@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 class IDDictionaryDetailFlashcardSubView: UIView {
-    var tableView: UITableView = UITableView(frame: CGRectZero, style: .Plain)
+    var tableView: UITableView = UITableView(frame: CGRect.zero, style: .plain)
     
     init() {
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
         self.setup()
     }
     
@@ -31,7 +31,7 @@ class IDDictionaryDetailFlashcardSubView: UIView {
     
     // MARK: Public
     
-    func setupTableViewDataSource(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
+    func setupTableViewDataSource(_ dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
         self.tableView.dataSource = dataSource
         self.tableView.delegate = delegate
     }
@@ -42,10 +42,10 @@ class IDDictionaryDetailFlashcardSubView: UIView {
     
     // MARK: Private
     
-    private func setup() {
+    fileprivate func setup() {
         self.addSubview(self.tableView)
-        self.tableView.separatorStyle = .None
-        self.tableView.backgroundColor = UIColor.clearColor()
+        self.tableView.separatorStyle = .none
+        self.tableView.backgroundColor = UIColor.clear
     }
     
 }

@@ -10,14 +10,14 @@ import UIKit
 
 class IDDictionariesListModuleConfigurator {
 
-    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
+    func configureModuleForViewInput<UIViewController>(_ viewInput: UIViewController) {
 
         if let viewController = viewInput as? IDDictionariesListViewController {
             configure(viewController)
         }
     }
 
-    private func configure(viewController: IDDictionariesListViewController) {
+    fileprivate func configure(_ viewController: IDDictionariesListViewController) {
 
         let router = IDDictionariesListRouter(viewController: viewController)
 

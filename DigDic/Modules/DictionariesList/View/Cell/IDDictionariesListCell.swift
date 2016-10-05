@@ -15,13 +15,13 @@ class IDDictionariesListCell: UITableViewCell, IDDictionariesListReverseOrder {
     
     override func prepareForReuse() {
         self.titleLabel.text = ""
-        self.toggle.on = false
+        self.toggle.isOn = false
     }
     
     // MARK: - IDDictionariesListReverseOrder
     
     func hasReverseOrder() -> Bool {
-        return self.toggle.on
+        return self.toggle.isOn
     }
     
 }

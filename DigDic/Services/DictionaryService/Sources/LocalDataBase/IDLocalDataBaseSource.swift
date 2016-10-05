@@ -12,14 +12,15 @@ import RealmSwift
 class IDLocalDataBaseSource: IDDictionarySource {
     
     // MARK: IDDictionarySourceProtocol
-    func fetchDictionaries(completion: ([IDDictionary]) -> ()) {
+    func fetchDictionaries(_ completion: ([IDDictionary]) -> ()) {
         let realm = try! Realm()
-        let result = realm.objects(IDLDBDictionary)
-        let dictionaries = result.map{$0 as IDDictionary}
-        completion(dictionaries)
+        let result = realm.objects(IDLDBDictionary.self)
+        let array = Array(result)
+        let dictionaries = array.map{$0 as IDDictionary}
+        completion(dictionaries as [IDDictionary])
     }
     
-    func addDictionaryWithName(name: String) {
+    func addDictionaryWithName(_ name: String) {
         let newDictionary = IDLDBDictionary()
         newDictionary.name = name
         
@@ -34,7 +35,7 @@ class IDLocalDataBaseSource: IDDictionarySource {
         return card
     }
     
-    func addCardDataWithImageName(imageName: String) -> IDCardData {
+    func addCardDataWithImageName(_ imageName: String) -> IDCardData {
         let cardData = IDLDBCardData()
         cardData.imageName = imageName
         cardData.type = .Image
@@ -45,7 +46,7 @@ class IDLocalDataBaseSource: IDDictionarySource {
         return cardData
     }
     
-    func createFlashcard(frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard? {
+    func createFlashcard(_ frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard? {
         guard let frontCard = frontCard as? IDLDBCard else {
             return nil
         }
@@ -66,7 +67,7 @@ class IDLocalDataBaseSource: IDDictionarySource {
         return flashcard
     }
     
-    func removeFlashcard(flashcard: IDFlashcard, fromDictionary dictionary: IDDictionary) {
+    func removeFlashcard(_ flashcard: IDFlashcard, fromDictionary dictionary: IDDictionary) {
         guard let flashcard = flashcard as? IDLDBFlashcard else {
             return
         }
@@ -83,7 +84,7 @@ class IDLocalDataBaseSource: IDDictionarySource {
         }
     }
     
-    func removeDictionary(dictionary: IDDictionary) {
+    func removeDictionary(_ dictionary: IDDictionary) {
         guard let dictionary = dictionary as? IDLDBDictionary else {
             return
         }
@@ -97,7 +98,7 @@ class IDLocalDataBaseSource: IDDictionarySource {
     }
     
     // this method should be called into write transaction
-    private func _removeCard(card: IDCard?) {
+    fileprivate func _removeCard(_ card: IDCard?) {
         guard let card = card as? IDLDBCard else {
             return
         }

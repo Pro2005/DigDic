@@ -56,6 +56,7 @@
 		086377BE1D77790C00ABB41B /* IDAddFlashcardDataDisplayManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377BD1D77790C00ABB41B /* IDAddFlashcardDataDisplayManagerDelegate.swift */; };
 		0863B6B21D7376EA009EB5B6 /* IDBaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */; };
 		086E79291D6B3C3000EB081F /* UINavigationItem+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */; };
+		0890355B1D9086B90003C7AA /* IDAddFlashcardTextCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890355A1D9086B90003C7AA /* IDAddFlashcardTextCellDelegate.swift */; };
 		08A1ADEE1D7B69B1006A39DA /* IDBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADDD1D7B69B1006A39DA /* IDBaseService.swift */; };
 		08A1ADEF1D7B69B1006A39DA /* IDDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADDE1D7B69B1006A39DA /* IDDictionaryService.swift */; };
 		08A1ADF01D7B69B1006A39DA /* IDFlashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADE11D7B69B1006A39DA /* IDFlashcard.swift */; };
@@ -193,6 +194,7 @@
 		0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouter.swift; sourceTree = "<group>"; };
 		0863CC1F69CEAFCD15C3449C /* IDAddWordRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordRouterTests.swift; sourceTree = "<group>"; };
 		086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Buttons.swift"; sourceTree = "<group>"; };
+		0890355A1D9086B90003C7AA /* IDAddFlashcardTextCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardTextCellDelegate.swift; sourceTree = "<group>"; };
 		08A1ADDD1D7B69B1006A39DA /* IDBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseService.swift; sourceTree = "<group>"; };
 		08A1ADDE1D7B69B1006A39DA /* IDDictionaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionaryService.swift; sourceTree = "<group>"; };
 		08A1ADE11D7B69B1006A39DA /* IDFlashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDFlashcard.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 			children = (
 				0845D1A61D8C2D320020AED2 /* IDAddFlashcardTextCell.swift */,
 				0845D1A81D8C2D400020AED2 /* IDAddFlashcardTextCell.xib */,
+				0890355A1D9086B90003C7AA /* IDAddFlashcardTextCellDelegate.swift */,
 			);
 			path = TextCell;
 			sourceTree = "<group>";
@@ -1131,12 +1134,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Ilya Denisov";
 				TargetAttributes = {
 					084F13C11D65E6A700E907D6 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = RT92TJ3NKC;
+						LastSwiftMigration = 0800;
 					};
 					084F13D51D65E6A700E907D6 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1357,6 +1361,7 @@
 				0855514C1D7575F400029EED /* IDAddFlashcardFooterView.swift in Sources */,
 				FB959B8ED252B3488930458E /* IDAddFlashcardViewController.swift in Sources */,
 				B3CC735E2E05C0A96A4CED4F /* IDAddFlashcardModuleInput.swift in Sources */,
+				0890355B1D9086B90003C7AA /* IDAddFlashcardTextCellDelegate.swift in Sources */,
 				E341AE691D11286488A115FB /* IDAddFlashcardPresenter.swift in Sources */,
 				B52ACF295E17B5AF55110598 /* IDAddFlashcardInteractorInput.swift in Sources */,
 				081550621D834892006182A7 /* IDLDBCard.swift in Sources */,
@@ -1429,6 +1434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1439,8 +1445,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1474,6 +1482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1484,8 +1493,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1504,6 +1515,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1512,6 +1524,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F1215E1957285839254C1F9 /* Pods-DigDic.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1520,6 +1533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = developer.digdic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1527,6 +1541,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CF3BF10209863A4F838B4745 /* Pods-DigDic.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1535,6 +1550,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = developer.digdic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1547,6 +1563,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.DigDicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigDic.app/DigDic";
 			};
 			name = Debug;
@@ -1560,6 +1577,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ios.DigDicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigDic.app/DigDic";
 			};
 			name = Release;

@@ -14,53 +14,53 @@ class IDDictionariesListDataDisplayManager: NSObject, UITableViewDelegate, UITab
     var delegate: IDDictionariesListDataDisplayManagerDelegate?
     // MARK: Public
     
-    func registerCellForTableView(tableView: UITableView) {
-        tableView.registerNib(UINib.init(nibName: String(IDDictionariesListCell), bundle: nil), forCellReuseIdentifier: String(IDDictionariesListCell))
+    func registerCellForTableView(_ tableView: UITableView) {
+        tableView.register(UINib.init(nibName: String(describing: IDDictionariesListCell.self), bundle: nil), forCellReuseIdentifier: String(describing: IDDictionariesListCell.self))
     }
     
-    func updateTableViewModelWithDictionaries(dictionaries: [IDDictionary]) {
+    func updateTableViewModelWithDictionaries(_ dictionaries: [IDDictionary]) {
         self.dataSource.removeAll()
         self.dataSource += dictionaries
     }
    
     // MARK: UITableViewDataSource
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataSource.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellObjectBuilder = IDDictionariesListCellObjectBuilderFactory.builderForObject(self.dataSource[indexPath.row])
-        let cell = cellObjectBuilder.buildCellObjectForData(self.dataSource[indexPath.row], tableView: tableView)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellObjectBuilder = IDDictionariesListCellObjectBuilderFactory.builderForObject(self.dataSource[(indexPath as NSIndexPath).row])
+        let cell = cellObjectBuilder.buildCellObjectForData(self.dataSource[(indexPath as NSIndexPath).row], tableView: tableView)
         return cell
     }
     
-    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-        return .Delete
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .delete
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            delegate?.dictionariesListDataDisplayManager(self, wantRemoveDictionary: self.dataSource[indexPath.row])
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            delegate?.dictionariesListDataDisplayManager(self, wantRemoveDictionary: self.dataSource[(indexPath as NSIndexPath).row])
         }
     }
     
     // MARK: UITableViewDelegate
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        guard indexPath.row < self.dataSource.count else {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard (indexPath as NSIndexPath).row < self.dataSource.count else {
             return
         }
         guard let delegate = self.delegate else {
             return
         }
-        let dictionary = self.dataSource[indexPath.row]
-        if let cell = tableView.cellForRowAtIndexPath(indexPath) as? IDDictionariesListReverseOrder {
+        let dictionary = self.dataSource[(indexPath as NSIndexPath).row]
+        if let cell = tableView.cellForRow(at: indexPath) as? IDDictionariesListReverseOrder {
             delegate.dictionariesListDataDisplayManager(self, didSelectDictionary: dictionary, reverseOrder: cell.hasReverseOrder())
         }
     }
     
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     

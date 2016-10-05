@@ -12,6 +12,6 @@ protocol IDDictionary {
     var name: String? {get}
     var flashcards: [IDFlashcard] {get}
     
-    func addFlashcard(flashcard: IDFlashcard)
-    func removeFlashcard(flashcard: IDFlashcard)
+    func addFlashcard(_ flashcard: IDFlashcard)
+    func removeFlashcard(_ flashcard: IDFlashcard)
 }

@@ -10,6 +10,6 @@ import Foundation
 
 protocol IDDictionaryDetailInteractorInput: IDBaseInteractorInput {
     
-    func removeFlashcard(flashcard: IDFlashcard, fromDictinary dictionary: IDDictionary)
+    func removeFlashcard(_ flashcard: IDFlashcard, fromDictinary dictionary: IDDictionary)
     
 }

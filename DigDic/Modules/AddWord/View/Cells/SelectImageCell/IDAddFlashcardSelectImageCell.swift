@@ -14,7 +14,7 @@ class IDAddFlashcardSelectImageCell: UITableViewCell, IDAddFlashcardCell {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var heightLayoutConstraint: NSLayoutConstraint!
-    private var setNeedUpdateHeight = false
+    fileprivate var setNeedUpdateHeight = false
     
     // MARK: Public
     
@@ -24,13 +24,13 @@ class IDAddFlashcardSelectImageCell: UITableViewCell, IDAddFlashcardCell {
         super.updateConstraints()
     }
     
-    func loadFromDataHolder(dataHolder: IDAddFlashcardDataHolder) {
+    func loadFromDataHolder(_ dataHolder: IDAddFlashcardDataHolder) {
         guard let dataHolder = dataHolder as? IDAddFlashcardImageDataHolder else {
             return
         }
         if let image = dataHolder.image {
             self.backgroundImageView.image = image
-            self.label.hidden = true
+            self.label.isHidden = true
             self.setNeedUpdateHeight = true
         }
     }
@@ -39,12 +39,12 @@ class IDAddFlashcardSelectImageCell: UITableViewCell, IDAddFlashcardCell {
     
     override func prepareForReuse() {
         self.backgroundImageView.image = nil
-        self.label.hidden = false
+        self.label.isHidden = false
     }
     
     // MARK: Private
     
-    private func updateHeightIfNeeded() {
+    fileprivate func updateHeightIfNeeded() {
         if !self.setNeedUpdateHeight {
             return
         }
@@ -54,9 +54,9 @@ class IDAddFlashcardSelectImageCell: UITableViewCell, IDAddFlashcardCell {
         let imageSize = image.size
         let factor = max(imageSize.width, imageSize.height) / min(imageSize.width, imageSize.height)
         if (imageSize.width > imageSize.height) {
-            self.heightLayoutConstraint.constant = ceil(CGRectGetWidth(self.frame) / factor)
+            self.heightLayoutConstraint.constant = ceil(self.frame.width / factor)
         } else {
-            self.heightLayoutConstraint.constant = ceil(CGRectGetWidth(self.frame) * factor)
+            self.heightLayoutConstraint.constant = ceil(self.frame.width * factor)
         }
         self.setNeedUpdateHeight = false
     }

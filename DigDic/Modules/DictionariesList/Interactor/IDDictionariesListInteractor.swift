@@ -12,17 +12,17 @@ class IDDictionariesListInteractor: IDDictionariesListInteractorInput {
     lazy var service: IDDictionaryService = IDDictionaryService(source: IDLocalDataBaseSource())
 
     // MARK: IDDictionariesListInteractorInput
-    func fetchDictionaries(competion: ([IDDictionary]) -> ()) {
+    func fetchDictionaries(_ competion: ([IDDictionary]) -> ()) {
         self.service.fetchDictionaries {(dictionaries: [IDDictionary]) in
             competion(dictionaries)
         }
     }
     
-    func addNewDictionaryWithName(name: String) {
+    func addNewDictionaryWithName(_ name: String) {
         self.service.addDictionaryWithName(name)
     }
     
-    func removeDictionary(dictionary: IDDictionary) {
+    func removeDictionary(_ dictionary: IDDictionary) {
         self.service.removeDictionary(dictionary)
     }
     

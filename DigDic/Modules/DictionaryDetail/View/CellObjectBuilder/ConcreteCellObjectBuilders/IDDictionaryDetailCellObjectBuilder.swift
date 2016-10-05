@@ -10,6 +10,6 @@ import Foundation
 
 protocol IDDictionaryDetailCellObjectBuilder {
 
-    func cellObjectForCardData(cardData: IDCardData) -> IDDictionaryDetailCell
+    func cellObjectForCardData(_ cardData: IDCardData) -> IDDictionaryDetailCell
     
 }

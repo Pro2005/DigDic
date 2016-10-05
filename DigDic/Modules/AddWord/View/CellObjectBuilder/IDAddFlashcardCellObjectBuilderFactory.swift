@@ -11,7 +11,7 @@ import UIKit
 
 class IDAddFlashcardCellObjectBuilderFactory {
     
-    class func builderForDataHolder(dataHolder: IDAddFlashcardDataHolder) -> IDAddFlashcardCellObjectBuilder? {
+    class func builderForDataHolder(_ dataHolder: IDAddFlashcardDataHolder) -> IDAddFlashcardCellObjectBuilder? {
         switch dataHolder {
         case _ as IDAddFlashcardImageDataHolder:
             return IDAddFlashcardSelectImageCellObjectBuilder()
@@ -22,9 +22,8 @@ class IDAddFlashcardCellObjectBuilderFactory {
         }
     }
     
-    class func registerCellsForTableView(tableView: UITableView) {
-        IDAddFlashcardSelectImageCellObjectBuilder.registerCellForTableView(tableView)
-        IDAddFlashcardTextCellObjectBuilder.registerCellForTableView(tableView)
+    class func classNamesForRegistration() -> [String] {
+        return [IDAddFlashcardSelectImageCellObjectBuilder.classNameForRegistration(), IDAddFlashcardTextCellObjectBuilder.classNameForRegistration()];
     }
     
 }
