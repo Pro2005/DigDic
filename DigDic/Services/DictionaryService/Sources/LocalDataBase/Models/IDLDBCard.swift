@@ -16,6 +16,7 @@ class IDLDBCard: Object, IDCard {
             return self._data.map{$0 as IDCardData}
         }
         set {
+            self._data.removeAll()
             if let newValue = newValue {
                 for value in newValue {
                     self._data.append(value as! IDLDBCardData)

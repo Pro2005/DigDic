@@ -12,11 +12,9 @@ private let FlashcardViewBottomOffset: CGFloat = 60.0
 
 class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetailViewInput {
     var output: IDDictionaryDetailViewOutput!
-//    var setNeedsUpdateConstraints: Bool = false
     @IBOutlet var goodLabel: UILabel!
     @IBOutlet var badLabel: UILabel!
     
-//    var flashcardViews = [IDDictionaryDetailFlashcardView]()
     var flashcards = [IDFlashcard]()
     var flashcardIndex = 0
     var reverseOrder = false
@@ -78,14 +76,6 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
             self.output.removeFlashcard(flashcard)
             self.flashcards.remove(at: self.flashcardIndex)
             self.showNextFlashcards()
-//            if let flashcard = self.flashcards[flashcardIndex] {
-//                self.output.removeFlashcard(flashcard)
-//                
-//            }
-//            if let topView = self.swipeableView?.topView() as? IDDictionaryDetailFlashcardView {
-//                self.output.removeFlashcard(topView.flashcard)
-//                self.swipeableView?.swipeTopView(inDirection: .Down)
-//            }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (alertAction) in
             
@@ -135,13 +125,11 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     private func _addFlashcardViewWith(flashcard: IDFlashcard, reverseOrder: Bool) {
         let flashcardView = IDDictionaryDetailFlashcardView(flashcard: flashcard, reverseOrder: reverseOrder)
 
-        if self._isFlashcardViewShown() {
-//        if let currentFlashcardView = flashcardViews.last {
-            view.insertSubview(flashcardView, belowSubview: currentFlashcardView)
+        if let visibleFlashcardView = _visibleFlashcardView() {
+            view.insertSubview(flashcardView, belowSubview: visibleFlashcardView)
         } else {
             view.addSubview(flashcardView)
         }
-//        flashcardViews.append(flashcardView)
         
         flashcardView.autoPinEdge(toSuperviewEdge: .left)
         flashcardView.autoPinEdge(toSuperviewEdge: .right)
@@ -157,13 +145,13 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
         }
     }
     
-    private func _isFlashcardViewShown() -> Bool {
+    private func _visibleFlashcardView() -> IDDictionaryDetailFlashcardView? {
         for view in self.view.subviews {
             if view is IDDictionaryDetailFlashcardView {
-                return true
+                return view as? IDDictionaryDetailFlashcardView
             }
         }
-        return false
+        return nil
     }
     
 }

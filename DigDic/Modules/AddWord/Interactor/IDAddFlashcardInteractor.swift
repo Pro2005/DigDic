@@ -19,7 +19,7 @@ class IDAddFlashcardInteractor: IDAddFlashcardInteractorInput {
                 if let image = imageDataHolder.image {
                     do {
                         if let filename = try self.imageManager.saveImage(image) {
-                            card.data!.append(self.service.addCardDataWithImageName(filename))
+                            card.data?.append(self.service.addCardDataWithImageName(filename))
                         }
                     } catch {
                         

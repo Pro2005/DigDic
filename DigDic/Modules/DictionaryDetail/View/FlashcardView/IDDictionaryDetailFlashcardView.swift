@@ -48,30 +48,6 @@ class IDDictionaryDetailFlashcardView: UIView {
             self.flipFlashcard(true)
         }
     }
-//    
-//    func handleLeftSwipe(_ sender: UISwipeGestureRecognizer) {
-//        UIView.animate(withDuration: animationDuration, animations: { [weak self] in
-//            guard let strongSelf = self else { return }
-//            strongSelf.center.x = -strongSelf.frame.maxX * 2.0
-//            }) {[weak self] (completed) in
-//                guard let strongSelf = self else { return }
-//                if let completionBlock = strongSelf.swipeLeftCompletionBlock {
-//                    completionBlock(strongSelf)
-//                }
-//        }
-//    }
-//    
-//    func handleRightSwipe(_ sender: UISwipeGestureRecognizer) {
-//        UIView.animate(withDuration: animationDuration, animations: { [weak self] in
-//            guard let strongSelf = self else { return }
-//            strongSelf.center.x = strongSelf.frame.maxX * 2.0
-//        }) {[weak self] (completed) in
-//            guard let strongSelf = self else { return }
-//            if let completionBlock = strongSelf.swipeLeftCompletionBlock {
-//                completionBlock(strongSelf)
-//            }
-//        }
-//    }
     
     // MARK: Public
     
@@ -79,21 +55,6 @@ class IDDictionaryDetailFlashcardView: UIView {
         self.frontView.reloadData()
         self.backView.reloadData()
     }
-//    
-//    func hideWith(leftAnimation: Bool, completionBlock: @escaping () -> ()) {
-//        UIView.animate(withDuration: animationDuration, animations: { [weak self] in
-//                guard let strongSelf = self else { return }
-//                if (leftAnimation) {
-//                    strongSelf.center.x = -strongSelf.frame.maxX * 2.0
-//                } else {
-//                    strongSelf.center.x = strongSelf.frame.maxX * 2.0
-//                }
-//            }) { (completed) in
-//                if completed {
-//                    completionBlock()
-//            }
-//        }
-//    }
     
     // MARK: 
     
@@ -124,19 +85,11 @@ class IDDictionaryDetailFlashcardView: UIView {
         } else {
             self.backView.isHidden = true
         }
-//        self.backView.hidden = true
         self.setNeedsAddConstraints = true
         
         let handleLongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
         self.addGestureRecognizer(handleLongPressGestureRecognizer)
-        
-//        let handleLeftSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleLeftSwipe))
-//        handleLeftSwipeGestureRecognizer.direction = .left
-//        self.addGestureRecognizer(handleLeftSwipeGestureRecognizer)
-//        
-//        let handleRightSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleRightSwipe))
-//        handleRightSwipeGestureRecognizer.direction = .right
-//        self.addGestureRecognizer(handleRightSwipeGestureRecognizer)
+
     }
     
     fileprivate func flipFlashcard(_ left: Bool) {

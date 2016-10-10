@@ -32,6 +32,7 @@ class IDAddFlashcardSelectImageCell: UITableViewCell, IDAddFlashcardCell {
             self.backgroundImageView.image = image
             self.label.isHidden = true
             self.setNeedUpdateHeight = true
+            self.setNeedsUpdateConstraints()
         }
     }
     
