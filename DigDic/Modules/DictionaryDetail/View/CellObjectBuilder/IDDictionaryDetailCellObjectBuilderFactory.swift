@@ -14,8 +14,8 @@ class IDDictionaryDetailCellObjectBuilderFactory {
         switch cardData.type! {
         case .Image:
             return IDDictionaryDetailImageCellObjectBuilder()
-        default:
-            return nil
+        case .Text:
+            return IDDictionaryDetailTextCellObjectBuilder()
         }
     }
     

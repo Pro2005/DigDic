@@ -22,22 +22,29 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
     func viewIsReady() {
         view.setupInitialState()
         if let dictionaryName = self.selectedDictionary.name {
-            self.view.updateTitle(dictionaryName)
+            view.updateTitle(dictionaryName)
         }
-        self.view.displayFlashcards(self.selectedDictionary.flashcards, reverseOrder: self.reverseOrder)
+        view.displayFlashcards(self.selectedDictionary.flashcards, reverseOrder: self.reverseOrder)
     }
     
     func didTapAddButton() {
-        self.router.presentAddFlashcardForDictionary(self.selectedDictionary, delegate: self)
+        router.presentAddFlashcardForDictionary(self.selectedDictionary, delegate: self)
     }
     
     func didTapRemoveButton() {
-        self.view.getConfirmationForRemoving()
+        view.getConfirmationForRemoving()
     }
     
     func removeFlashcard(_ flashcard: IDFlashcard) {
-        self.interactor.removeFlashcard(flashcard, fromDictinary: self.selectedDictionary)
-        
+        interactor.removeFlashcard(flashcard, fromDictinary: self.selectedDictionary)
+    }
+    
+    func didRightSwipe() {
+        view.showNextFlashcards()
+    }
+    
+    func didLeftSwipe() {
+        view.showNextFlashcards()
     }
     
     // MARK: - IDAddFlashcardPresenterDelegate 

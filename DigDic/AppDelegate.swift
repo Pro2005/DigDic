@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = IDDictionariesListViewController()
         IDDictionariesListModuleConfigurator().configureModuleForViewInput(rootViewController)
         let navigationController = IDBaseNavigationController(rootViewController: rootViewController)
+        navigationController.navigationBar.isTranslucent = false
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
         

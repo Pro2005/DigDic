@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol IDFlashcard {
+protocol IDFlashcard: class {
     
     var frontCard: IDCard? {get set}
     var backCard: IDCard? {get set}

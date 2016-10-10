@@ -15,6 +15,7 @@ protocol IDDictionarySource {
     
     func cardModelForFilling() -> IDCard
     func addCardDataWithImageName(_ imageName: String) -> IDCardData
+    func addCardDataWith(text: String) -> IDCardData
     func createFlashcard(_ frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard?
     func removeFlashcard(_ flashcard: IDFlashcard, fromDictionary dictionary: IDDictionary)
     func removeDictionary(_ dictionary: IDDictionary)

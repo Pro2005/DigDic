@@ -25,6 +25,10 @@ class IDAddFlashcardInteractor: IDAddFlashcardInteractorInput {
                         
                     }
                 }
+            } else if let textDataHolder = dataHolder as? IDAddFlashcardTextDataHolder {
+                if let text = textDataHolder.text {
+                    card.data?.append(self.service.addCardDataWith(text: text))
+                }
             }
         }
         return card

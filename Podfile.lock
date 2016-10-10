@@ -20,7 +20,7 @@ PODS:
   - Realm/Headers (2.0.1)
   - RealmSwift (2.0.1):
     - Realm (= 2.0.1)
-  - TOCropViewController (2.0.7)
+  - TOCropViewController (2.0.8)
 
 DEPENDENCIES:
   - BlocksKit
@@ -33,8 +33,8 @@ SPEC CHECKSUMS:
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Realm: 0557ee0e4ab4f0936c90e370056d1ed6265f93d6
   RealmSwift: 64e00af79bdcd7d2a7a23fdc1cb3faf22b80ae4c
-  TOCropViewController: cec24e4385929683b217d08bfdc8791975cddc04
+  TOCropViewController: 8d62fbb51a239f83da14d1516494de7e6a76ce4a
 
-PODFILE CHECKSUM: ff7cf0c051b6bed9012181483b08bef45d38c103
+PODFILE CHECKSUM: 7296d94522ae3d4bba1c3088eb7387d1438c3d4b
 
 COCOAPODS: 1.0.1

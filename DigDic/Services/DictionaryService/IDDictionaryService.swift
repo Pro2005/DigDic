@@ -32,6 +32,10 @@ class IDDictionaryService: IDBaseService {
         return self.source.addCardDataWithImageName(imageName)
     }
     
+    func addCardDataWith(text: String) -> IDCardData {
+        return self.source.addCardDataWith(text: text)
+    }
+    
     func createFlashcard(_ frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard? {
         return self.source.createFlashcard(frontCard, backCard: backCard, toDictionary: dictionary)
     }

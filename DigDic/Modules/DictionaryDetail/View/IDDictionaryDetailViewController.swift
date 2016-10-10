@@ -8,12 +8,18 @@
 
 import UIKit
 
+private let FlashcardViewBottomOffset: CGFloat = 60.0
+
 class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetailViewInput {
     var output: IDDictionaryDetailViewOutput!
-//    var swipeableView: ZLSwipeableView?
-    var setNeedsUpdateConstraints: Bool = false
+//    var setNeedsUpdateConstraints: Bool = false
     @IBOutlet var goodLabel: UILabel!
     @IBOutlet var badLabel: UILabel!
+    
+//    var flashcardViews = [IDDictionaryDetailFlashcardView]()
+    var flashcards = [IDFlashcard]()
+    var flashcardIndex = 0
+    var reverseOrder = false
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -22,28 +28,28 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     }
 
     override func updateViewConstraints() {
-        if self.setNeedsUpdateConstraints {
-//            if let swipeableView = self.swipeableView {
-//                swipeableView.autoPinEdgeToSuperviewEdge(.Left, withInset: 10)
-//                swipeableView.autoPinEdgeToSuperviewEdge(.Right, withInset: 10)
-//                swipeableView.autoPinEdgeToSuperviewEdge(.Top, withInset: 70)
-//                swipeableView.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 60)
-//            }
-
-            self.setNeedsUpdateConstraints = false
-        }
-    
+        
+        
         super.updateViewConstraints()
     }
     
     // MARK: Actions
     
     @IBAction func didTapAddButton(_ sender: AnyObject) {
-        self.output.didTapAddButton()
+        output.didTapAddButton()
     }
     
     @IBAction func didTapRemoveButton(_ sender: AnyObject) {
-        self.output.didTapRemoveButton()
+        output.didTapRemoveButton()
+    }
+    
+    
+    func handleLeftSwipe(_ sender: UISwipeGestureRecognizer) {
+        output.didLeftSwipe()
+    }
+    
+    func handleRightSwipe(_ sender: UISwipeGestureRecognizer) {
+        output.didRightSwipe()
     }
 
     // MARK: IDDictionaryDetailViewInput
@@ -53,29 +59,29 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     }
     
     func displayFlashcards(_ flashcards: [IDFlashcard], reverseOrder: Bool) {
-//        guard let swpeableView = self.swipeableView else {
-//            return
-//        }
-//        swpeableView.numberOfActiveView = UInt(flashcards.count)
-//        var index = 0
-//        swpeableView.nextView = {
-//            if index < flashcards.count {
-//                let flashcard = flashcards[index]
-//                let view = IDDictionaryDetailFlashcardView(flashcard: flashcard, reverseOrder: reverseOrder)
-//                if index != 0 {
-//                    view.alpha = 0.2
-//                }
-//                index += 1
-//                return view
-//            }
-//            return UIView()
-//        }
-//        swpeableView.loadViews()
+        self._removeFlashcardViewsFromSuperview()
+
+        flashcardIndex = 0
+        guard let firstFlashcard = flashcards.first else {
+            return;
+        }
+        
+        self.flashcards = flashcards
+        self.reverseOrder = reverseOrder
+        _addFlashcardViewWith(flashcard: firstFlashcard, reverseOrder: reverseOrder)
     }
     
     func getConfirmationForRemoving() {
         let alertController = UIAlertController(title: "", message: "Are you sure?", preferredStyle: .alert)
         let acceptAction = UIAlertAction(title: "Remove", style: .destructive) { (alertAction) in
+            let flashcard = self.flashcards[self.flashcardIndex]
+            self.output.removeFlashcard(flashcard)
+            self.flashcards.remove(at: self.flashcardIndex)
+            self.showNextFlashcards()
+//            if let flashcard = self.flashcards[flashcardIndex] {
+//                self.output.removeFlashcard(flashcard)
+//                
+//            }
 //            if let topView = self.swipeableView?.topView() as? IDDictionaryDetailFlashcardView {
 //                self.output.removeFlashcard(topView.flashcard)
 //                self.swipeableView?.swipeTopView(inDirection: .Down)
@@ -89,36 +95,75 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func showNextFlashcards() {
+        self._removeFlashcardViewsFromSuperview()
+//        var index = 0
+//        if let flashcardView = flashcardViews.last {
+//            index = flashcardViews.count - 1
+//            flashcardView.removeFromSuperview()
+//        }
+        var index = flashcardIndex
+        index += 1
+        if index >= flashcards.count {
+            return
+        }
+        
+        let nextFlashcard = flashcards[index]
+        _addFlashcardViewWith(flashcard: nextFlashcard, reverseOrder: reverseOrder)
+        
+    }
+    
     // MARK: override
     
     override func setupInitialState() {
         super.setupInitialState()
-        
-//        let swipeableView = ZLSwipeableView(frame: CGRect.zero)
-//        self.view.addSubview(swipeableView)
-//        self.swipeableView = swipeableView
-//        self.setNeedsUpdateConstraints = true
-//        self.swipeableView?.allowedDirection = .Horizontal
-//        self.swipeableView?.swiping = {[unowned self] view, location, translation in
-//            if abs(translation.x) < 10 {
-//                self.goodLabel.alpha = 0
-//                self.badLabel.alpha = 0
-//                return
-//            } else if translation.x > 0 {
-//                self.goodLabel.alpha = abs(translation.x) / 100.0
-//            } else if translation.x < 0 {
-//                self.badLabel.alpha = abs(translation.x) / 100.0
-//            }
-//        }
-//        self.swipeableView?.didEnd =  {[unowned self] view, location in
-//            self.goodLabel.alpha = 0
-//            self.badLabel.alpha = 0
-//            if let topView = self.swipeableView?.topView() {
-//                topView.alpha = 1.0
-//            }
-//        }
+
         self.goodLabel.alpha = 0
         self.badLabel.alpha = 0
+        
+        let handleLeftSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleLeftSwipe))
+        handleLeftSwipeGestureRecognizer.direction = .left
+        view.addGestureRecognizer(handleLeftSwipeGestureRecognizer)
+        
+        let handleRightSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleRightSwipe))
+        handleRightSwipeGestureRecognizer.direction = .right
+        view.addGestureRecognizer(handleRightSwipeGestureRecognizer)
+    }
+    
+    // MARK: private
+    
+    private func _addFlashcardViewWith(flashcard: IDFlashcard, reverseOrder: Bool) {
+        let flashcardView = IDDictionaryDetailFlashcardView(flashcard: flashcard, reverseOrder: reverseOrder)
+
+        if self._isFlashcardViewShown() {
+//        if let currentFlashcardView = flashcardViews.last {
+            view.insertSubview(flashcardView, belowSubview: currentFlashcardView)
+        } else {
+            view.addSubview(flashcardView)
+        }
+//        flashcardViews.append(flashcardView)
+        
+        flashcardView.autoPinEdge(toSuperviewEdge: .left)
+        flashcardView.autoPinEdge(toSuperviewEdge: .right)
+        flashcardView.autoPinEdge(toSuperviewEdge: .bottom, withInset: FlashcardViewBottomOffset)
+        flashcardView.autoPinEdge(toSuperviewEdge: .top)
+    }
+    
+    private func _removeFlashcardViewsFromSuperview() {
+        for view in self.view.subviews {
+            if let flashcardView = view as? IDDictionaryDetailFlashcardView {
+                flashcardView.removeFromSuperview()
+            }
+        }
+    }
+    
+    private func _isFlashcardViewShown() -> Bool {
+        for view in self.view.subviews {
+            if view is IDDictionaryDetailFlashcardView {
+                return true
+            }
+        }
+        return false
     }
     
 }

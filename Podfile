@@ -9,7 +9,8 @@ target 'DigDic' do
   pod 'PureLayout'
   pod 'BlocksKit'
   pod 'TOCropViewController'
-#  pod 'ZLSwipeableViewSwift'
+  # pod 'SPTinderView', '~> 0.3.0'
+  #  pod 'ZLSwipeableViewSwift'
 
   target 'DigDicTests' do
     inherit! :search_paths

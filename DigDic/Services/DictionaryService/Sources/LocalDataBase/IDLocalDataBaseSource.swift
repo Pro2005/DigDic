@@ -46,6 +46,17 @@ class IDLocalDataBaseSource: IDDictionarySource {
         return cardData
     }
     
+    func addCardDataWith(text: String) -> IDCardData {
+        let cardData = IDLDBCardData()
+        cardData.type = .Text
+        cardData.text = text
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(cardData)
+        }
+        return cardData
+    }
+    
     func createFlashcard(_ frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard? {
         guard let frontCard = frontCard as? IDLDBCard else {
             return nil
