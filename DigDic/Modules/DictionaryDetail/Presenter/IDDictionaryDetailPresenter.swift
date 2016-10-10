@@ -11,10 +11,10 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
     weak var view: IDDictionaryDetailViewInput!
     var interactor: IDDictionaryDetailInteractorInput!
     var router: IDDictionaryDetailRouterInput!
-    let selectedDictionary: IDDictionary
+    let selectedDictionary: Dictionary
     let reverseOrder: Bool
     
-    init(selectedDictionary: IDDictionary, reverseOrder: Bool) {
+    init(selectedDictionary: Dictionary, reverseOrder: Bool) {
         self.selectedDictionary = selectedDictionary
         self.reverseOrder = reverseOrder
     }
@@ -35,7 +35,7 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
         view.getConfirmationForRemoving()
     }
     
-    func removeFlashcard(_ flashcard: IDFlashcard) {
+    func removeFlashcard(_ flashcard: Flashcard) {
         interactor.removeFlashcard(flashcard, fromDictinary: self.selectedDictionary)
     }
     
@@ -49,7 +49,7 @@ class IDDictionaryDetailPresenter: IDDictionaryDetailModuleInput, IDDictionaryDe
     
     // MARK: - IDAddFlashcardPresenterDelegate 
     
-    func addFlashcardPresenterDidAddFlashcard(_ flashcard: IDFlashcard) {
+    func addFlashcardPresenterDidAddFlashcard(_ flashcard: Flashcard) {
         self.view.displayFlashcards([flashcard], reverseOrder: self.reverseOrder)
     }
     

@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol IDCard {
+protocol Card {
     
-    var data: [IDCardData]? {get set}
+    var data: [CardData]? {get set}
     
 }

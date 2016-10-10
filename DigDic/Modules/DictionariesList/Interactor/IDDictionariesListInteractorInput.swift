@@ -10,8 +10,8 @@ import Foundation
 
 protocol IDDictionariesListInteractorInput: IDBaseInteractorInput {
 
-    func fetchDictionaries(_ competion: ([IDDictionary]) -> ())
+    func fetchDictionaries(_ competion: ([Dictionary]) -> ())
     func addNewDictionaryWithName(_ name: String)
-    func removeDictionary(_ dictionary: IDDictionary)
+    func removeDictionary(_ dictionary: Dictionary)
     
 }

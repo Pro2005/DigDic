@@ -9,19 +9,19 @@
 import Foundation
 import RealmSwift
 
-class IDLocalDataBaseSource: IDDictionarySource {
+class LocalDataBaseSource: Service {
     
     // MARK: IDDictionarySourceProtocol
-    func fetchDictionaries(_ completion: ([IDDictionary]) -> ()) {
+    func fetchDictionaries(_ completion: ([Dictionary]) -> ()) {
         let realm = try! Realm()
-        let result = realm.objects(IDLDBDictionary.self)
+        let result = realm.objects(LDBDictionary.self)
         let array = Array(result)
-        let dictionaries = array.map{$0 as IDDictionary}
-        completion(dictionaries as [IDDictionary])
+        let dictionaries = array.map{$0 as Dictionary}
+        completion(dictionaries as [Dictionary])
     }
     
     func addDictionaryWithName(_ name: String) {
-        let newDictionary = IDLDBDictionary()
+        let newDictionary = LDBDictionary()
         newDictionary.name = name
         
         let realm = try! Realm()
@@ -30,13 +30,13 @@ class IDLocalDataBaseSource: IDDictionarySource {
         }
     }
     
-    func cardModelForFilling() -> IDCard {
-        let card = IDLDBCard()
+    func cardModelForFilling() -> Card {
+        let card = LDBCard()
         return card
     }
     
-    func addCardDataWithImageName(_ imageName: String) -> IDCardData {
-        let cardData = IDLDBCardData()
+    func addCardDataWithImageName(_ imageName: String) -> CardData {
+        let cardData = LDBCardData()
         cardData.imageName = imageName
         cardData.type = .Image
         let realm = try! Realm()
@@ -46,8 +46,8 @@ class IDLocalDataBaseSource: IDDictionarySource {
         return cardData
     }
     
-    func addCardDataWith(text: String) -> IDCardData {
-        let cardData = IDLDBCardData()
+    func addCardDataWith(text: String) -> CardData {
+        let cardData = LDBCardData()
         cardData.type = .Text
         cardData.text = text
         let realm = try! Realm()
@@ -57,17 +57,17 @@ class IDLocalDataBaseSource: IDDictionarySource {
         return cardData
     }
     
-    func createFlashcard(_ frontCard: IDCard, backCard: IDCard, toDictionary dictionary: IDDictionary) -> IDFlashcard? {
-        guard let frontCard = frontCard as? IDLDBCard else {
+    func createFlashcard(_ frontCard: Card, backCard: Card, toDictionary dictionary: Dictionary) -> Flashcard? {
+        guard let frontCard = frontCard as? LDBCard else {
             return nil
         }
-        guard let backCard = backCard as? IDLDBCard else {
+        guard let backCard = backCard as? LDBCard else {
             return nil
         }
-        guard let dictionary = dictionary as? IDLDBDictionary else {
+        guard let dictionary = dictionary as? LDBDictionary else {
             return nil
         }
-        let flashcard = IDLDBFlashcard()
+        let flashcard = LDBFlashcard()
         flashcard.frontCard = frontCard
         flashcard.backCard = backCard
         let realm = try! Realm()
@@ -78,11 +78,11 @@ class IDLocalDataBaseSource: IDDictionarySource {
         return flashcard
     }
     
-    func removeFlashcard(_ flashcard: IDFlashcard, fromDictionary dictionary: IDDictionary) {
-        guard let flashcard = flashcard as? IDLDBFlashcard else {
+    func removeFlashcard(_ flashcard: Flashcard, fromDictionary dictionary: Dictionary) {
+        guard let flashcard = flashcard as? LDBFlashcard else {
             return
         }
-        guard let dictionary = dictionary as? IDLDBDictionary else {
+        guard let dictionary = dictionary as? LDBDictionary else {
             return
         }
         
@@ -95,8 +95,8 @@ class IDLocalDataBaseSource: IDDictionarySource {
         }
     }
     
-    func removeDictionary(_ dictionary: IDDictionary) {
-        guard let dictionary = dictionary as? IDLDBDictionary else {
+    func removeDictionary(_ dictionary: Dictionary) {
+        guard let dictionary = dictionary as? LDBDictionary else {
             return
         }
         for flashcard in dictionary.flashcards {
@@ -109,13 +109,13 @@ class IDLocalDataBaseSource: IDDictionarySource {
     }
     
     // this method should be called into write transaction
-    fileprivate func _removeCard(_ card: IDCard?) {
-        guard let card = card as? IDLDBCard else {
+    fileprivate func _removeCard(_ card: Card?) {
+        guard let card = card as? LDBCard else {
             return
         }
         
         let realm = try! Realm()
-        if let data = card.data as? [IDLDBCardData] {
+        if let data = card.data as? [LDBCardData] {
             realm.delete(data)
         }
         realm.delete(card)

@@ -10,14 +10,14 @@ import UIKit
 
 class IDDictionaryDetailModuleConfigurator {
 
-    func configureModuleForViewInput<UIViewController>(_ viewInput: UIViewController, dictionary: IDDictionary, reverseOrder: Bool) {
+    func configureModuleForViewInput<UIViewController>(_ viewInput: UIViewController, dictionary: Dictionary, reverseOrder: Bool) {
 
         if let viewController = viewInput as? IDDictionaryDetailViewController {
             configure(viewController, dictionary: dictionary, reverseOrder: reverseOrder)
         }
     }
 
-    fileprivate func configure(_ viewController: IDDictionaryDetailViewController, dictionary: IDDictionary, reverseOrder: Bool) {
+    fileprivate func configure(_ viewController: IDDictionaryDetailViewController, dictionary: Dictionary, reverseOrder: Bool) {
 
         let router = IDDictionaryDetailRouter(viewController: viewController)
 

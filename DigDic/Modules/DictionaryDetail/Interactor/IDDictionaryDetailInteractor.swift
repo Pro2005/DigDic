@@ -9,10 +9,10 @@
 class IDDictionaryDetailInteractor: IDDictionaryDetailInteractorInput {
 
     weak var output: IDDictionaryDetailInteractorOutput!
-    lazy var service: IDDictionaryService = IDDictionaryService(source: IDLocalDataBaseSource())
+    lazy var service: Service = LocalDataBaseSource()
     lazy var imageManager: IDImageManager = IDImageManager()
 
-    func removeFlashcard(_ flashcard: IDFlashcard, fromDictinary dictionary: IDDictionary) {
+    func removeFlashcard(_ flashcard: Flashcard, fromDictinary dictionary: Dictionary) {
         self._removeImagesForCardData(flashcard.frontCard?.data)
         self._removeImagesForCardData(flashcard.backCard?.data)
         self.service.removeFlashcard(flashcard, fromDictionary: dictionary)
@@ -20,7 +20,7 @@ class IDDictionaryDetailInteractor: IDDictionaryDetailInteractorInput {
     
     // MARK: - Private
     
-    fileprivate func _removeImagesForCardData(_ cardData: [IDCardData]?) {
+    fileprivate func _removeImagesForCardData(_ cardData: [CardData]?) {
         if let data = cardData {
             for dataItem in data {
                 if let imageName = dataItem.imageName {

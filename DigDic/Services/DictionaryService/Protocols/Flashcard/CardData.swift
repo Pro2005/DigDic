@@ -8,15 +8,15 @@
 
 import Foundation
 
-enum IDCardDataType: String {
+enum CardDataType: String {
     case Image
     case Text
 }
 
-protocol IDCardData {
+protocol CardData {
     
     var text: String? {get set}
     var imageName: String? {get set}
-    var type: IDCardDataType? {get set}
+    var type: CardDataType? {get set}
     
 }

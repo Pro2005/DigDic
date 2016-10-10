@@ -9,22 +9,22 @@
 import Foundation
 import RealmSwift
 
-class IDLDBDictionary: Object, IDDictionary {
+class LDBDictionary: Object, Dictionary {
     // MARK: IDDictionaryProtocol
     dynamic var name: String?
-    var flashcards: [IDFlashcard] {
-        return self._flashcards.map{$0 as IDFlashcard}
+    var flashcards: [Flashcard] {
+        return self._flashcards.map{$0 as Flashcard}
     }
 
-    func addFlashcard(_ flashcard: IDFlashcard) {
-        guard let flashcard = flashcard as? IDLDBFlashcard else {
+    func addFlashcard(_ flashcard: Flashcard) {
+        guard let flashcard = flashcard as? LDBFlashcard else {
             return
         }
         self._flashcards.append(flashcard)
     }
     
-    func removeFlashcard(_ flashcard: IDFlashcard) {
-        guard let flashcard = flashcard as? IDLDBFlashcard else {
+    func removeFlashcard(_ flashcard: Flashcard) {
+        guard let flashcard = flashcard as? LDBFlashcard else {
             return
         }
         if let index = self._flashcards.index(of: flashcard) {
@@ -33,7 +33,7 @@ class IDLDBDictionary: Object, IDDictionary {
     }
     
     // MARK: Private
-    fileprivate var _flashcards = List<IDLDBFlashcard>()
+    fileprivate var _flashcards = List<LDBFlashcard>()
     
     override static func ignoredProperties() -> [String] {
         return ["flashcards"]

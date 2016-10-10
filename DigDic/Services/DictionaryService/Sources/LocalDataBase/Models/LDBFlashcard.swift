@@ -9,27 +9,27 @@
 import Foundation
 import RealmSwift
 
-class IDLDBFlashcard: Object, IDFlashcard {
-    var frontCard: IDCard? {
+class LDBFlashcard: Object, Flashcard {
+    var frontCard: Card? {
         get {
-            return self._frontCard as? IDCard
+            return self._frontCard as? Card
         }
         set {
-            self._frontCard = newValue as? IDLDBCard
+            self._frontCard = newValue as? LDBCard
         }
     }
     
-    var backCard: IDCard? {
+    var backCard: Card? {
         get {
-            return self._backCard as? IDCard
+            return self._backCard as? Card
         }
         set {
-            self._backCard = newValue as? IDLDBCard
+            self._backCard = newValue as? LDBCard
         }
     }
     
-    fileprivate dynamic var _frontCard: IDLDBCard?
-    fileprivate dynamic var _backCard: IDLDBCard?
+    fileprivate dynamic var _frontCard: LDBCard?
+    fileprivate dynamic var _backCard: LDBCard?
     
     override static func ignoredProperties() -> [String] {
         return ["frontCard", "backCard"]

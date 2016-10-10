@@ -10,7 +10,7 @@ import Foundation
 
 class IDDictionariesListCellObjectBuilderFactory {
     
-    class func builderForObject(_ dictionary: IDDictionary) -> IDDictionariesListCellObjectBuilder {
+    class func builderForObject(_ dictionary: Dictionary) -> IDDictionariesListCellObjectBuilder {
         return IDDictionariesListDefaultCellObjectBuilder()
     }
     

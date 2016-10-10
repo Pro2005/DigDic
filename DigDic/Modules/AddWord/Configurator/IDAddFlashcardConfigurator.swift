@@ -10,14 +10,14 @@ import UIKit
 
 class IDAddFlashcardModuleConfigurator {
 
-    func configureModuleForViewInput<UIViewController>(_ viewInput: UIViewController, dictionary: IDDictionary, delegate: IDAddFlashcardPresenterDelegate?) {
+    func configureModuleForViewInput<UIViewController>(_ viewInput: UIViewController, dictionary: Dictionary, delegate: IDAddFlashcardPresenterDelegate?) {
 
         if let viewController = viewInput as? IDAddFlashcardViewController {
             configure(viewController, dictionary: dictionary, delegate: delegate)
         }
     }
 
-    fileprivate func configure(_ viewController: IDAddFlashcardViewController, dictionary: IDDictionary, delegate: IDAddFlashcardPresenterDelegate?) {
+    fileprivate func configure(_ viewController: IDAddFlashcardViewController, dictionary: Dictionary, delegate: IDAddFlashcardPresenterDelegate?) {
 
         let router = IDAddFlashcardRouter(viewController: viewController)
 

@@ -10,7 +10,7 @@ import UIKit
 
 class IDDictionaryDetailRouter: IDBaseRouter, IDDictionaryDetailRouterInput {
 
-    func presentAddFlashcardForDictionary(_ dictionary: IDDictionary, delegate: IDAddFlashcardPresenterDelegate?) {
+    func presentAddFlashcardForDictionary(_ dictionary: Dictionary, delegate: IDAddFlashcardPresenterDelegate?) {
         guard let navigationController = self.viewController.navigationController else {
             return
         }

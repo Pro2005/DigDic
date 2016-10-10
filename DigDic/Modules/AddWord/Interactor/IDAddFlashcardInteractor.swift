@@ -9,10 +9,10 @@
 class IDAddFlashcardInteractor: IDAddFlashcardInteractorInput {
 
     weak var output: IDAddFlashcardInteractorOutput!
-    lazy var service: IDDictionaryService = IDDictionaryService(source: IDLocalDataBaseSource())
+    lazy var service: Service = LocalDataBaseSource()
     lazy var imageManager: IDImageManager = IDImageManager()
     
-    func addCardWithDataHolders(_ dataHolders: [IDAddFlashcardDataHolder], toDictionary dictionary: IDDictionary) -> IDCard? {
+    func addCardWithDataHolders(_ dataHolders: [IDAddFlashcardDataHolder], toDictionary dictionary: Dictionary) -> Card? {
         var card = service.cardModelForFilling()
         for dataHolder in dataHolders {
             if let imageDataHolder = dataHolder as? IDAddFlashcardImageDataHolder {
@@ -34,7 +34,7 @@ class IDAddFlashcardInteractor: IDAddFlashcardInteractorInput {
         return card
     }
     
-    func createFlashcardWithfrontCard(_ frontCard: IDCard, backCart: IDCard, addToDictionary dictionary: IDDictionary) -> IDFlashcard? {
+    func createFlashcardWithfrontCard(_ frontCard: Card, backCart: Card, addToDictionary dictionary: Dictionary) -> Flashcard? {
         return self.service.createFlashcard(frontCard, backCard: backCart, toDictionary: dictionary)
     }
     

@@ -58,7 +58,7 @@ class IDDictionariesListViewController: IDBaseViewController, IDDictionariesList
         self.dataDisplayManager.delegate = self
     }
     
-    func reloadDataWith(Dictionaries dictionaries: [IDDictionary]) {
+    func reloadDataWith(Dictionaries dictionaries: [Dictionary]) {
         self.dataDisplayManager.updateTableViewModelWithDictionaries(dictionaries)
         self.tableView.reloadData()
     }
@@ -87,11 +87,11 @@ class IDDictionariesListViewController: IDBaseViewController, IDDictionariesList
     
     // MARK: IDDictionariesListDataDisplayManagerDelegate
 
-    func dictionariesListDataDisplayManager(_ manager: IDDictionariesListDataDisplayManager, didSelectDictionary dictionary: IDDictionary, reverseOrder: Bool) {
+    func dictionariesListDataDisplayManager(_ manager: IDDictionariesListDataDisplayManager, didSelectDictionary dictionary: Dictionary, reverseOrder: Bool) {
         self.output.didSelectDictionary(dictionary, reverseOrder: reverseOrder)
     }
     
-    func dictionariesListDataDisplayManager(_ manager: IDDictionariesListDataDisplayManager, wantRemoveDictionary dictionary: IDDictionary) {
+    func dictionariesListDataDisplayManager(_ manager: IDDictionariesListDataDisplayManager, wantRemoveDictionary dictionary: Dictionary) {
         self.output.wantRemoveDictionary(dictionary)
     }
     

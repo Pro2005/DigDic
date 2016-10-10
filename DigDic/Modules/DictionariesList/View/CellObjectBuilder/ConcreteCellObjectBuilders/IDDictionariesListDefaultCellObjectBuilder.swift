@@ -11,7 +11,7 @@ import UIKit
 
 class IDDictionariesListDefaultCellObjectBuilder: IDDictionariesListCellObjectBuilder {
     
-    func buildCellObjectForData(_ dictionary: IDDictionary, tableView: UITableView) -> UITableViewCell {
+    func buildCellObjectForData(_ dictionary: Dictionary, tableView: UITableView) -> UITableViewCell {
         let identifier = String(describing: IDDictionariesListCell.self)
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? IDDictionariesListCell {

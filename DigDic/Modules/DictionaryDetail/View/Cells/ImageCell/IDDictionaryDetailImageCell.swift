@@ -16,7 +16,7 @@ class IDDictionaryDetailImageCell: UITableViewCell, IDDictionaryDetailCell {
     
     // MARK: Public
     
-    func loadWithData(_ cardData: IDCardData) {
+    func loadWithData(_ cardData: CardData) {
         if let imageName = cardData.imageName {
             do {
                 backgroundImageView.image = try IDImageManager().imageByFilename(imageName)

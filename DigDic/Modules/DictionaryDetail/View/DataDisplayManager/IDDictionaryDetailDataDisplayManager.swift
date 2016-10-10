@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class IDDictionaryDetailDataDisplayManager: NSObject, UITableViewDelegate, UITableViewDataSource {
-    let card: IDCard!
+    let card: Card!
     
-    init(card: IDCard) {
+    init(card: Card) {
         self.card = card
     }
     

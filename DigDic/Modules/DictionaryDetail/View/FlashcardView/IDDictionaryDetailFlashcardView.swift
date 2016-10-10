@@ -12,7 +12,7 @@ import UIKit
 private let animationDuration = 0.5
 
 class IDDictionaryDetailFlashcardView: UIView {
-    let flashcard: IDFlashcard
+    let flashcard: Flashcard
     let frontView = IDDictionaryDetailFlashcardSubView()
     let backView = IDDictionaryDetailFlashcardSubView()
     var frontDataDisplayManager: IDDictionaryDetailDataDisplayManager?
@@ -31,7 +31,7 @@ class IDDictionaryDetailFlashcardView: UIView {
     
     // MARK: Initializer
     
-    init(flashcard: IDFlashcard, reverseOrder: Bool) {
+    init(flashcard: Flashcard, reverseOrder: Bool) {
         self.flashcard = flashcard
         super.init(frame: CGRect.zero)
         setup(flashcard, reverseOrder: reverseOrder)
@@ -72,7 +72,7 @@ class IDDictionaryDetailFlashcardView: UIView {
     
     // MARK: Private
     
-    func setup(_ flashcard: IDFlashcard, reverseOrder: Bool) {
+    func setup(_ flashcard: Flashcard, reverseOrder: Bool) {
         self.frontDataDisplayManager = IDDictionaryDetailDataDisplayManager(card: flashcard.frontCard!)
         self.backDataDisplayManager = IDDictionaryDetailDataDisplayManager(card: flashcard.backCard!)
         self.frontView.setupTableViewDataSource(self.frontDataDisplayManager!, delegate: self.frontDataDisplayManager!)

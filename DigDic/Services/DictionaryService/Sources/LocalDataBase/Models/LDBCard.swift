@@ -9,23 +9,23 @@
 import Foundation
 import RealmSwift
 
-class IDLDBCard: Object, IDCard {
+class LDBCard: Object, Card {
 
-    var data: [IDCardData]? {
+    var data: [CardData]? {
         get {
-            return self._data.map{$0 as IDCardData}
+            return self._data.map{$0 as CardData}
         }
         set {
             self._data.removeAll()
             if let newValue = newValue {
                 for value in newValue {
-                    self._data.append(value as! IDLDBCardData)
+                    self._data.append(value as! LDBCardData)
                 }
             }
         }
     }
     
-    fileprivate let _data = List<IDLDBCardData>()
+    fileprivate let _data = List<LDBCardData>()
     
     override static func ignoredProperties() -> [String] {
         return ["data"]

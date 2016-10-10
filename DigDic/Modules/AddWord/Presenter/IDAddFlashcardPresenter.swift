@@ -12,10 +12,10 @@ class IDAddFlashcardPresenter: NSObject, IDAddFlashcardModuleInput, IDAddFlashca
     weak var view: IDAddFlashcardViewInput!
     var interactor: IDAddFlashcardInteractorInput!
     var router: IDAddFlashcardRouterInput!
-    let dictionary: IDDictionary!
+    let dictionary: Dictionary!
     var delegate: IDAddFlashcardPresenterDelegate?
     
-    init(dictionary: IDDictionary) {
+    init(dictionary: Dictionary) {
         self.dictionary = dictionary
     }
 

@@ -15,7 +15,7 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     @IBOutlet var goodLabel: UILabel!
     @IBOutlet var badLabel: UILabel!
     
-    var flashcards = [IDFlashcard]()
+    var flashcards = [Flashcard]()
     var flashcardIndex = 0
     var reverseOrder = false
 
@@ -56,7 +56,7 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
         self.title = title
     }
     
-    func displayFlashcards(_ flashcards: [IDFlashcard], reverseOrder: Bool) {
+    func displayFlashcards(_ flashcards: [Flashcard], reverseOrder: Bool) {
         self._removeFlashcardViewsFromSuperview()
 
         flashcardIndex = 0
@@ -117,7 +117,7 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     
     // MARK: private
     
-    private func _addFlashcardViewWith(flashcard: IDFlashcard, reverseOrder: Bool) {
+    private func _addFlashcardViewWith(flashcard: Flashcard, reverseOrder: Bool) {
         let flashcardView = IDDictionaryDetailFlashcardView(flashcard: flashcard, reverseOrder: reverseOrder)
 
         if let visibleFlashcardView = _visibleFlashcardView() {

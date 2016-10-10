@@ -14,7 +14,7 @@ class IDDictionaryDetailTextCell: UITableViewCell, IDDictionaryDetailCell {
     
     // MARK: Public
     
-    func loadWithData(_ cardData: IDCardData) {
+    func loadWithData(_ cardData: CardData) {
         guard let text = cardData.text else {
             return
         }

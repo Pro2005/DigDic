@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class IDDictionariesListDataDisplayManager: NSObject, UITableViewDelegate, UITableViewDataSource {
-    var dataSource = [IDDictionary]()
+    var dataSource = [Dictionary]()
     var delegate: IDDictionariesListDataDisplayManagerDelegate?
     // MARK: Public
     
@@ -18,7 +18,7 @@ class IDDictionariesListDataDisplayManager: NSObject, UITableViewDelegate, UITab
         tableView.register(UINib.init(nibName: String(describing: IDDictionariesListCell.self), bundle: nil), forCellReuseIdentifier: String(describing: IDDictionariesListCell.self))
     }
     
-    func updateTableViewModelWithDictionaries(_ dictionaries: [IDDictionary]) {
+    func updateTableViewModelWithDictionaries(_ dictionaries: [Dictionary]) {
         self.dataSource.removeAll()
         self.dataSource += dictionaries
     }

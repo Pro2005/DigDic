@@ -16,7 +16,7 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
     // MARK: IDDictionariesListViewOutput
     func viewIsReady() {
         view.setupInitialState()
-        self.updateData {[weak self] (items: [IDDictionary]) in
+        self.updateData {[weak self] (items: [Dictionary]) in
             self?.view.reloadDataWith(Dictionaries: items)
         }
     }
@@ -27,26 +27,26 @@ class IDDictionariesListPresenter: NSObject, IDDictionariesListModuleInput, IDDi
     
     func didTapCreateDictionaryButtonWithDictionaryName(_ name: String) {
         self.interactor.addNewDictionaryWithName(name)
-        self.updateData {[weak self] (items: [IDDictionary]) in
+        self.updateData {[weak self] (items: [Dictionary]) in
             self?.view.reloadDataWith(Dictionaries: items)
         }
     }
     
-    func didSelectDictionary(_ dictionary: IDDictionary, reverseOrder: Bool) {
+    func didSelectDictionary(_ dictionary: Dictionary, reverseOrder: Bool) {
         self.router.pushDictionaryDetailScreenWithDictionary(dictionary, reverseOrder: reverseOrder)
     }
     
-    func wantRemoveDictionary(_ dictionary: IDDictionary) {
+    func wantRemoveDictionary(_ dictionary: Dictionary) {
         self.interactor.removeDictionary(dictionary)
-        self.updateData {[weak self] (items: [IDDictionary]) in
+        self.updateData {[weak self] (items: [Dictionary]) in
             self?.view.reloadDataWith(Dictionaries: items)
         }
     }
     
     // MARK: Private
     
-    fileprivate func updateData(_ completion: (([IDDictionary]) -> ())) {
-        interactor.fetchDictionaries { (items: [IDDictionary]) in
+    fileprivate func updateData(_ completion: (([Dictionary]) -> ())) {
+        interactor.fetchDictionaries { (items: [Dictionary]) in
             completion(items)
         }
     }

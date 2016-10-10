@@ -8,9 +8,9 @@
 
 import Foundation
 
-protocol IDFlashcard: class {
+protocol Flashcard: class {
     
-    var frontCard: IDCard? {get set}
-    var backCard: IDCard? {get set}
+    var frontCard: Card? {get set}
+    var backCard: Card? {get set}
 
 }
