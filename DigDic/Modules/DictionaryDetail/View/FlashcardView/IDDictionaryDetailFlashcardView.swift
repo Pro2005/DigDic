@@ -60,7 +60,6 @@ class IDDictionaryDetailFlashcardView: UIView {
     
     override func updateConstraints() {
         if (self.setNeedsAddConstraints) {
-            self.autoPinEdgesToSuperviewEdges()
             
             self.frontView.autoPinEdgesToSuperviewEdges()
             self.backView.autoPinEdgesToSuperviewEdges()

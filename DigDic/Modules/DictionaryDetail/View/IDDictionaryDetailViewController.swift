@@ -87,11 +87,6 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
     
     func showNextFlashcards() {
         self._removeFlashcardViewsFromSuperview()
-//        var index = 0
-//        if let flashcardView = flashcardViews.last {
-//            index = flashcardViews.count - 1
-//            flashcardView.removeFromSuperview()
-//        }
         var index = flashcardIndex
         index += 1
         if index >= flashcards.count {
@@ -100,7 +95,7 @@ class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetail
         
         let nextFlashcard = flashcards[index]
         _addFlashcardViewWith(flashcard: nextFlashcard, reverseOrder: reverseOrder)
-        
+        flashcardIndex = index;
     }
     
     // MARK: override
