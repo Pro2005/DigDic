@@ -5,12 +5,10 @@ target 'DigDic' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'RealmSwift'
-  pod 'PureLayout'
-  pod 'BlocksKit'
-  pod 'TOCropViewController'
-  # pod 'SPTinderView', '~> 0.3.0'
-  #  pod 'ZLSwipeableViewSwift'
+  pod 'RealmSwift', '~> 2.0.2'
+  pod 'PureLayout', '~> 3.0.2'
+  pod 'BlocksKit', '~> 2.2.5'
+  pod 'TOCropViewController', '~> 2.0.10'
 
   target 'DigDicTests' do
     inherit! :search_paths

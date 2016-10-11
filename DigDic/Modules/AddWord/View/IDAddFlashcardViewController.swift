@@ -109,11 +109,11 @@ class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInpu
     
     func displayDialogForCropImage(_ image: UIImage, dataHolder: IDAddFlashcardDataHolder) {
         let cropViewController = TOCropViewController(image: image)
-        cropViewController?.delegate = self
+        cropViewController.delegate = self
         self.cropImageCompletionBlock = {[unowned self](image) in
             self.output.didCropImage(image, dataHolder: dataHolder)
         }
-        self.present(cropViewController!, animated: true, completion: nil)
+        self.present(cropViewController, animated: true, completion: nil)
     }
     
     func updateImageForDataHolder(_ image: UIImage, dataHolder: IDAddFlashcardDataHolder) {
