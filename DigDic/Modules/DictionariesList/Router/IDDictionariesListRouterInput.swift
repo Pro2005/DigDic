@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol IDDictionariesListRouterInput: IDBaseRouterInput {
+protocol IDDictionariesListRouterInput: BaseRouterInput {
 
     func pushDictionaryDetailScreenWithDictionary(_ dictionary: Dictionary, reverseOrder: Bool)
     

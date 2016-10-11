@@ -7,7 +7,7 @@
 //
 import UIKit
 
-protocol IDBaseViewInput: class {
+protocol BaseViewInput: class {
 
     /**
         @author Ilya Denisov

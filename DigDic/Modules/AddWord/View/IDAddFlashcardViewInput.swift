@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol IDAddFlashcardViewInput: IDBaseViewInput {
+protocol IDAddFlashcardViewInput: BaseViewInput {
 
     func setupInitialState()
     func addFormForSelectingImage()

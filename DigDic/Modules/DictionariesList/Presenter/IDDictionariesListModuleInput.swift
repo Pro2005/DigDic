@@ -6,6 +6,6 @@
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
 
-protocol IDDictionariesListModuleInput: IDBaseModuleInput {
+protocol IDDictionariesListModuleInput: BaseModuleInput {
 
 }

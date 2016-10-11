@@ -10,7 +10,7 @@ import UIKit
 import BlocksKit
 import TOCropViewController
 
-class IDAddFlashcardViewController: IDBaseViewController, IDAddFlashcardViewInput, IDAddFlashcardFooterViewDelegate, IDAddFlashcardDataDisplayManagerDelegate, TOCropViewControllerDelegate {
+class IDAddFlashcardViewController: BaseViewController, IDAddFlashcardViewInput, IDAddFlashcardFooterViewDelegate, IDAddFlashcardDataDisplayManagerDelegate, TOCropViewControllerDelegate {
 
     var output: IDAddFlashcardViewOutput!
     @IBOutlet weak var frontView: IDAddFlashcardFormView!

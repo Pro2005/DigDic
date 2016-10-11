@@ -1,5 +1,5 @@
 //
-//  IDBaseNavigationController.swift
+//  BaseNavigationController.swift
 //  DigDic
 //
 //  Created by Ilya Denisov on 8/18/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IDBaseNavigationController: UINavigationController {
+class BaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

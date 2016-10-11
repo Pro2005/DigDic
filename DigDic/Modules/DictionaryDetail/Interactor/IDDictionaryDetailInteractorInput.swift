@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol IDDictionaryDetailInteractorInput: IDBaseInteractorInput {
+protocol IDDictionaryDetailInteractorInput: BaseInteractorInput {
     
     func removeFlashcard(_ flashcard: Flashcard, fromDictinary dictionary: Dictionary)
     

@@ -19,7 +19,7 @@ class IDDictionaryDetailImageCell: UITableViewCell, IDDictionaryDetailCell {
     func loadWithData(_ cardData: CardData) {
         if let imageName = cardData.imageName {
             do {
-                backgroundImageView.image = try IDImageManager().imageByFilename(imageName)
+                backgroundImageView.image = try ImageManager().imageByFilename(imageName)
             } catch {
                 
             }

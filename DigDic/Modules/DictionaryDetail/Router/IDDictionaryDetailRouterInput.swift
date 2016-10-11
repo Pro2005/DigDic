@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol IDDictionaryDetailRouterInput: IDBaseRouterInput {
+protocol IDDictionaryDetailRouterInput: BaseRouterInput {
     
     func presentAddFlashcardForDictionary(_ dictionary: Dictionary, delegate: IDAddFlashcardPresenterDelegate?)
     

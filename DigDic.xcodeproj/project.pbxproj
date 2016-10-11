@@ -24,7 +24,7 @@
 		081CCDDC1D7CB2B1005B7035 /* LDBCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CCDDB1D7CB2B1005B7035 /* LDBCardData.swift */; };
 		081CCDDE1D7CB4F9005B7035 /* IDDictionaryDetailImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 081CCDDD1D7CB4F9005B7035 /* IDDictionaryDetailImageCell.xib */; };
 		081E909A1D70D490007FA7A1 /* IDAddFlashcardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 081E90991D70D490007FA7A1 /* IDAddFlashcardViewController.xib */; };
-		081E90A11D70E137007FA7A1 /* IDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E90A01D70E137007FA7A1 /* IDBaseViewController.swift */; };
+		081E90A11D70E137007FA7A1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E90A01D70E137007FA7A1 /* BaseViewController.swift */; };
 		083935231D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083935221D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift */; };
 		0845D1A41D8C2CC40020AED2 /* IDAddFlashcardTextDataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0845D1A31D8C2CC40020AED2 /* IDAddFlashcardTextDataHolder.swift */; };
 		0845D1A71D8C2D320020AED2 /* IDAddFlashcardTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0845D1A61D8C2D320020AED2 /* IDAddFlashcardTextCell.swift */; };
@@ -34,13 +34,13 @@
 		084F13DB1D65E6A700E907D6 /* DigDicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13DA1D65E6A700E907D6 /* DigDicTests.swift */; };
 		084F13E91D65EA7B00E907D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 084F13E81D65EA7B00E907D6 /* Assets.xcassets */; };
 		084F13EE1D65ED5E00E907D6 /* IDDictionariesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084F13ED1D65ED5E00E907D6 /* IDDictionariesListViewController.xib */; };
-		084F13F61D65F34000E907D6 /* IDBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13F51D65F34000E907D6 /* IDBaseNavigationController.swift */; };
-		084F13FE1D65F3D200E907D6 /* IDBaseViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13FC1D65F3D200E907D6 /* IDBaseViewInput.swift */; };
-		084F13FF1D65F3D200E907D6 /* IDBaseViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13FD1D65F3D200E907D6 /* IDBaseViewOutput.swift */; };
-		084F14011D65F40300E907D6 /* IDBaseModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14001D65F40300E907D6 /* IDBaseModuleInput.swift */; };
-		084F14041D65F42F00E907D6 /* IDBaseInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */; };
-		084F14051D65F42F00E907D6 /* IDBaseInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */; };
-		084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */; };
+		084F13F61D65F34000E907D6 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13F51D65F34000E907D6 /* BaseNavigationController.swift */; };
+		084F13FE1D65F3D200E907D6 /* BaseViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13FC1D65F3D200E907D6 /* BaseViewInput.swift */; };
+		084F13FF1D65F3D200E907D6 /* BaseViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F13FD1D65F3D200E907D6 /* BaseViewOutput.swift */; };
+		084F14011D65F40300E907D6 /* BaseModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14001D65F40300E907D6 /* BaseModuleInput.swift */; };
+		084F14041D65F42F00E907D6 /* BaseInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14021D65F42F00E907D6 /* BaseInteractorInput.swift */; };
+		084F14051D65F42F00E907D6 /* BaseInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14031D65F42F00E907D6 /* BaseInteractorOutput.swift */; };
+		084F14071D65F45900E907D6 /* BaseRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F14061D65F45900E907D6 /* BaseRouterInput.swift */; };
 		085182821DAAD38900C33738 /* IDDictionaryDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085182811DAAD38900C33738 /* IDDictionaryDetailTextCell.swift */; };
 		085182841DAAD3A200C33738 /* IDDictionaryDetailTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085182831DAAD3A200C33738 /* IDDictionaryDetailTextCell.xib */; };
 		085182861DAAD49200C33738 /* IDDictionaryDetailTextCellObjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085182851DAAD49200C33738 /* IDDictionaryDetailTextCellObjectBuilder.swift */; };
@@ -57,7 +57,7 @@
 		086377BA1D77715C00ABB41B /* IDAddFlashcardImageDataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377B91D77715C00ABB41B /* IDAddFlashcardImageDataHolder.swift */; };
 		086377BC1D7773F600ABB41B /* IDAddFlashcardSelectImageCellObjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377BB1D7773F600ABB41B /* IDAddFlashcardSelectImageCellObjectBuilder.swift */; };
 		086377BE1D77790C00ABB41B /* IDAddFlashcardDataDisplayManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086377BD1D77790C00ABB41B /* IDAddFlashcardDataDisplayManagerDelegate.swift */; };
-		0863B6B21D7376EA009EB5B6 /* IDBaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */; };
+		0863B6B21D7376EA009EB5B6 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863B6B11D7376EA009EB5B6 /* BaseRouter.swift */; };
 		086E79291D6B3C3000EB081F /* UINavigationItem+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */; };
 		08A1ADF01D7B69B1006A39DA /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADE11D7B69B1006A39DA /* Flashcard.swift */; };
 		08A1ADF31D7B69B1006A39DA /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADE41D7B69B1006A39DA /* Dictionary.swift */; };
@@ -65,7 +65,7 @@
 		08A1ADF51D7B69B1006A39DA /* LocalDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADE81D7B69B1006A39DA /* LocalDataBaseService.swift */; };
 		08A1ADF61D7B69B1006A39DA /* LDBDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADEA1D7B69B1006A39DA /* LDBDictionary.swift */; };
 		08A1ADF71D7B69B1006A39DA /* LDBFlashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADEB1D7B69B1006A39DA /* LDBFlashcard.swift */; };
-		08A1ADFB1D7B69E9006A39DA /* IDImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADFA1D7B69E9006A39DA /* IDImageManager.swift */; };
+		08A1ADFB1D7B69E9006A39DA /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1ADFA1D7B69E9006A39DA /* ImageManager.swift */; };
 		08A4CEB71D8408FE004080F5 /* IDDictionariesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4CEB61D8408FE004080F5 /* IDDictionariesListCell.swift */; };
 		08A4CEB91D84090A004080F5 /* IDDictionariesListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A4CEB81D84090A004080F5 /* IDDictionariesListCell.xib */; };
 		08A4CEBC1D840B19004080F5 /* IDDictionariesListCellObjectBuilderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4CEBB1D840B19004080F5 /* IDDictionariesListCellObjectBuilderFactory.swift */; };
@@ -151,12 +151,12 @@
 		081CCDCF1D7CACF8005B7035 /* IDDictionaryDetailCellObjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailCellObjectBuilder.swift; sourceTree = "<group>"; };
 		081CCDD11D7CAD2C005B7035 /* IDDictionaryDetailImageCellObjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailImageCellObjectBuilder.swift; sourceTree = "<group>"; };
 		081CCDD41D7CAD66005B7035 /* IDDictionaryDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailCell.swift; sourceTree = "<group>"; };
-		081CCDD71D7CAD8A005B7035 /* IDDictionaryDetailImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailImageCell.swift; sourceTree = "<group>"; };
+		081CCDD71D7CAD8A005B7035 /* IDDictionaryDetailImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IDDictionaryDetailImageCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		081CCDD91D7CB1B9005B7035 /* CardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		081CCDDB1D7CB2B1005B7035 /* LDBCardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDBCardData.swift; sourceTree = "<group>"; };
 		081CCDDD1D7CB4F9005B7035 /* IDDictionaryDetailImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDDictionaryDetailImageCell.xib; sourceTree = "<group>"; };
 		081E90991D70D490007FA7A1 /* IDAddFlashcardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDAddFlashcardViewController.xib; sourceTree = "<group>"; };
-		081E90A01D70E137007FA7A1 /* IDBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseViewController.swift; sourceTree = "<group>"; };
+		081E90A01D70E137007FA7A1 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		083935221D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionariesListDataDisplayManager.swift; sourceTree = "<group>"; };
 		084506986546352BFDC79839 /* IDDictionariesListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListPresenter.swift; sourceTree = "<group>"; };
 		0845D1A31D8C2CC40020AED2 /* IDAddFlashcardTextDataHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardTextDataHolder.swift; sourceTree = "<group>"; };
@@ -171,13 +171,13 @@
 		084F13E81D65EA7B00E907D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		084F13EB1D65EAC500E907D6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		084F13ED1D65ED5E00E907D6 /* IDDictionariesListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDDictionariesListViewController.xib; sourceTree = "<group>"; };
-		084F13F51D65F34000E907D6 /* IDBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseNavigationController.swift; sourceTree = "<group>"; };
-		084F13FC1D65F3D200E907D6 /* IDBaseViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseViewInput.swift; sourceTree = "<group>"; };
-		084F13FD1D65F3D200E907D6 /* IDBaseViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseViewOutput.swift; sourceTree = "<group>"; };
-		084F14001D65F40300E907D6 /* IDBaseModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseModuleInput.swift; sourceTree = "<group>"; };
-		084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorInput.swift; sourceTree = "<group>"; };
-		084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseInteractorOutput.swift; sourceTree = "<group>"; };
-		084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouterInput.swift; sourceTree = "<group>"; };
+		084F13F51D65F34000E907D6 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		084F13FC1D65F3D200E907D6 /* BaseViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewInput.swift; sourceTree = "<group>"; };
+		084F13FD1D65F3D200E907D6 /* BaseViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewOutput.swift; sourceTree = "<group>"; };
+		084F14001D65F40300E907D6 /* BaseModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModuleInput.swift; sourceTree = "<group>"; };
+		084F14021D65F42F00E907D6 /* BaseInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInteractorInput.swift; sourceTree = "<group>"; };
+		084F14031D65F42F00E907D6 /* BaseInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInteractorOutput.swift; sourceTree = "<group>"; };
+		084F14061D65F45900E907D6 /* BaseRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouterInput.swift; sourceTree = "<group>"; };
 		085182811DAAD38900C33738 /* IDDictionaryDetailTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailTextCell.swift; sourceTree = "<group>"; };
 		085182831DAAD3A200C33738 /* IDDictionaryDetailTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDDictionaryDetailTextCell.xib; sourceTree = "<group>"; };
 		085182851DAAD49200C33738 /* IDDictionaryDetailTextCellObjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailTextCellObjectBuilder.swift; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 		086377B91D77715C00ABB41B /* IDAddFlashcardImageDataHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardImageDataHolder.swift; sourceTree = "<group>"; };
 		086377BB1D7773F600ABB41B /* IDAddFlashcardSelectImageCellObjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardSelectImageCellObjectBuilder.swift; sourceTree = "<group>"; };
 		086377BD1D77790C00ABB41B /* IDAddFlashcardDataDisplayManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardDataDisplayManagerDelegate.swift; sourceTree = "<group>"; };
-		0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDBaseRouter.swift; sourceTree = "<group>"; };
+		0863B6B11D7376EA009EB5B6 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		0863CC1F69CEAFCD15C3449C /* IDAddWordRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordRouterTests.swift; sourceTree = "<group>"; };
 		086E79281D6B3C3000EB081F /* UINavigationItem+Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Buttons.swift"; sourceTree = "<group>"; };
 		08A1ADE11D7B69B1006A39DA /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 		08A1ADE81D7B69B1006A39DA /* LocalDataBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataBaseService.swift; sourceTree = "<group>"; };
 		08A1ADEA1D7B69B1006A39DA /* LDBDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDBDictionary.swift; sourceTree = "<group>"; };
 		08A1ADEB1D7B69B1006A39DA /* LDBFlashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDBFlashcard.swift; sourceTree = "<group>"; };
-		08A1ADFA1D7B69E9006A39DA /* IDImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDImageManager.swift; sourceTree = "<group>"; };
+		08A1ADFA1D7B69E9006A39DA /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ImageManager.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		08A4CEB61D8408FE004080F5 /* IDDictionariesListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionariesListCell.swift; sourceTree = "<group>"; };
 		08A4CEB81D84090A004080F5 /* IDDictionariesListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDDictionariesListCell.xib; sourceTree = "<group>"; };
 		08A4CEBB1D840B19004080F5 /* IDDictionariesListCellObjectBuilderFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDDictionariesListCellObjectBuilderFactory.swift; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 		42B0A531BD3644B8F9479B55 /* IDAddFlashcardPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardPresenter.swift; sourceTree = "<group>"; };
 		521C9D52C1054A1C7DF5BF32 /* IDAddWordInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddWordInteractorTests.swift; sourceTree = "<group>"; };
 		5D53CD41234F11AE8C93E4B1 /* IDDictionaryDetailPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailPresenter.swift; sourceTree = "<group>"; };
-		6C20C58D76B100F636642462 /* IDAddFlashcardInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardInteractor.swift; sourceTree = "<group>"; };
+		6C20C58D76B100F636642462 /* IDAddFlashcardInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IDAddFlashcardInteractor.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7121FA5BDB166E48857A7750 /* IDDictionariesListRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListRouterTests.swift; sourceTree = "<group>"; };
 		750E971230A7C48DFF11B96F /* IDDictionariesListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewController.swift; sourceTree = "<group>"; };
 		757BCB33CEA9BCF21C5B896B /* IDDictionariesListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListViewOutput.swift; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 		C84D2429BA61854DBF241AF6 /* Pods_DigDic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigDic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93B9DCBAEE7E472BB651204 /* IDAddFlashcardConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IDAddFlashcardConfigurator.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CF3BF10209863A4F838B4745 /* Pods-DigDic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDic.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigDic/Pods-DigDic.release.xcconfig"; sourceTree = "<group>"; };
-		D36BFA38A97CF5BD7486E7C0 /* IDDictionaryDetailInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionaryDetailInteractor.swift; sourceTree = "<group>"; };
+		D36BFA38A97CF5BD7486E7C0 /* IDDictionaryDetailInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = IDDictionaryDetailInteractor.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D572770738EB155EA136FF42 /* IDDictionariesListModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDDictionariesListModuleInput.swift; sourceTree = "<group>"; };
 		D930CB18255A1E66BC3C5E92 /* IDAddFlashcardViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IDAddFlashcardViewInput.swift; sourceTree = "<group>"; };
 		E0191674B3B7921148B3326F /* Pods-DigDicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigDicTests/Pods-DigDicTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -468,9 +468,9 @@
 		084F13F41D65F34000E907D6 /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
-				084F13F51D65F34000E907D6 /* IDBaseNavigationController.swift */,
-				081E90A01D70E137007FA7A1 /* IDBaseViewController.swift */,
-				0863B6B11D7376EA009EB5B6 /* IDBaseRouter.swift */,
+				084F13F51D65F34000E907D6 /* BaseNavigationController.swift */,
+				081E90A01D70E137007FA7A1 /* BaseViewController.swift */,
+				0863B6B11D7376EA009EB5B6 /* BaseRouter.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -478,7 +478,7 @@
 		084F13F81D65F3B200E907D6 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				084F14061D65F45900E907D6 /* IDBaseRouterInput.swift */,
+				084F14061D65F45900E907D6 /* BaseRouterInput.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -486,8 +486,8 @@
 		084F13F91D65F3B200E907D6 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				084F14021D65F42F00E907D6 /* IDBaseInteractorInput.swift */,
-				084F14031D65F42F00E907D6 /* IDBaseInteractorOutput.swift */,
+				084F14021D65F42F00E907D6 /* BaseInteractorInput.swift */,
+				084F14031D65F42F00E907D6 /* BaseInteractorOutput.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -495,7 +495,7 @@
 		084F13FA1D65F3B200E907D6 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				084F14001D65F40300E907D6 /* IDBaseModuleInput.swift */,
+				084F14001D65F40300E907D6 /* BaseModuleInput.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -503,8 +503,8 @@
 		084F13FB1D65F3B200E907D6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				084F13FC1D65F3D200E907D6 /* IDBaseViewInput.swift */,
-				084F13FD1D65F3D200E907D6 /* IDBaseViewOutput.swift */,
+				084F13FC1D65F3D200E907D6 /* BaseViewInput.swift */,
+				084F13FD1D65F3D200E907D6 /* BaseViewOutput.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -681,7 +681,7 @@
 		08AAD4911D6B820F0072ED1D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				08A1ADFA1D7B69E9006A39DA /* IDImageManager.swift */,
+				08A1ADFA1D7B69E9006A39DA /* ImageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1301,18 +1301,18 @@
 				8BBCF3710B1094637156C098 /* IDDictionariesListViewOutput.swift in Sources */,
 				F4934EB3922FB4741E358414 /* IDDictionariesListViewController.swift in Sources */,
 				081CC38B1D761572001E3293 /* IDAddFlashcardFormView.swift in Sources */,
-				084F14011D65F40300E907D6 /* IDBaseModuleInput.swift in Sources */,
+				084F14011D65F40300E907D6 /* BaseModuleInput.swift in Sources */,
 				085182861DAAD49200C33738 /* IDDictionaryDetailTextCellObjectBuilder.swift in Sources */,
 				3A2EC88414525B4CC6D8B395 /* IDDictionariesListModuleInput.swift in Sources */,
 				0845D1A71D8C2D320020AED2 /* IDAddFlashcardTextCell.swift in Sources */,
-				084F13FF1D65F3D200E907D6 /* IDBaseViewOutput.swift in Sources */,
+				084F13FF1D65F3D200E907D6 /* BaseViewOutput.swift in Sources */,
 				DBC18666997231F8BE46F665 /* IDDictionariesListPresenter.swift in Sources */,
 				D950E713B8C50D2CD0F88137 /* IDDictionariesListInteractorInput.swift in Sources */,
 				086377A31D7763C000ABB41B /* IDAddFlashcardSelectImageCell.swift in Sources */,
-				084F14041D65F42F00E907D6 /* IDBaseInteractorInput.swift in Sources */,
+				084F14041D65F42F00E907D6 /* BaseInteractorInput.swift in Sources */,
 				085182821DAAD38900C33738 /* IDDictionaryDetailTextCell.swift in Sources */,
-				084F13FE1D65F3D200E907D6 /* IDBaseViewInput.swift in Sources */,
-				084F14051D65F42F00E907D6 /* IDBaseInteractorOutput.swift in Sources */,
+				084F13FE1D65F3D200E907D6 /* BaseViewInput.swift in Sources */,
+				084F14051D65F42F00E907D6 /* BaseInteractorOutput.swift in Sources */,
 				645833ABEB171AE312D8A55F /* IDDictionariesListInteractorOutput.swift in Sources */,
 				E6773595B873EC1A9F11C691 /* IDDictionariesListInteractor.swift in Sources */,
 				086E79291D6B3C3000EB081F /* UINavigationItem+Buttons.swift in Sources */,
@@ -1324,13 +1324,13 @@
 				6BEE48A86F54732D103C0EA7 /* IDDictionariesListRouter.swift in Sources */,
 				03CA0AF00450ADE64E177428 /* IDDictionariesListConfigurator.swift in Sources */,
 				08A4CEC11D840B57004080F5 /* IDDictionariesListDefaultCellObjectBuilder.swift in Sources */,
-				084F13F61D65F34000E907D6 /* IDBaseNavigationController.swift in Sources */,
+				084F13F61D65F34000E907D6 /* BaseNavigationController.swift in Sources */,
 				086377BA1D77715C00ABB41B /* IDAddFlashcardImageDataHolder.swift in Sources */,
 				0863779C1D77620E00ABB41B /* IDAddFlashcardDataDisplayManager.swift in Sources */,
 				08A4CEB71D8408FE004080F5 /* IDDictionariesListCell.swift in Sources */,
 				08A1ADF01D7B69B1006A39DA /* Flashcard.swift in Sources */,
-				0863B6B21D7376EA009EB5B6 /* IDBaseRouter.swift in Sources */,
-				084F14071D65F45900E907D6 /* IDBaseRouterInput.swift in Sources */,
+				0863B6B21D7376EA009EB5B6 /* BaseRouter.swift in Sources */,
+				084F14071D65F45900E907D6 /* BaseRouterInput.swift in Sources */,
 				2842A9EFCB076636AF741314 /* IDDictionaryDetailViewInput.swift in Sources */,
 				081CCDDC1D7CB2B1005B7035 /* LDBCardData.swift in Sources */,
 				D64F75F3512D5B6D36299F6F /* IDDictionaryDetailViewOutput.swift in Sources */,
@@ -1370,12 +1370,12 @@
 				08A1ADF41D7B69B1006A39DA /* Service.swift in Sources */,
 				0D326EF69ED452DDCBA125D4 /* IDAddFlashcardInteractor.swift in Sources */,
 				086377A51D77649A00ABB41B /* IDAddFlashcardCell.swift in Sources */,
-				081E90A11D70E137007FA7A1 /* IDBaseViewController.swift in Sources */,
+				081E90A11D70E137007FA7A1 /* BaseViewController.swift in Sources */,
 				2C9D64258F6D0546CBC4A175 /* IDAddFlashcardRouterInput.swift in Sources */,
 				08A1ADF61D7B69B1006A39DA /* LDBDictionary.swift in Sources */,
 				086377B61D77704D00ABB41B /* IDAddFlashcardDataHolder.swift in Sources */,
 				086377BE1D77790C00ABB41B /* IDAddFlashcardDataDisplayManagerDelegate.swift in Sources */,
-				08A1ADFB1D7B69E9006A39DA /* IDImageManager.swift in Sources */,
+				08A1ADFB1D7B69E9006A39DA /* ImageManager.swift in Sources */,
 				08A585291D847AB200B289F5 /* IDDictionariesListReverseOrder.swift in Sources */,
 				083935231D744C9B00F71B29 /* IDDictionariesListDataDisplayManager.swift in Sources */,
 				6F407B79A3CA2FDFC84E1C13 /* IDAddFlashcardRouter.swift in Sources */,

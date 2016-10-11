@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
 
-class IDAddFlashcardRouter: IDBaseRouter, IDAddFlashcardRouterInput {
+class IDAddFlashcardRouter: BaseRouter, IDAddFlashcardRouterInput {
 
     func dismiss() {
         self.viewController .dismiss(animated: true, completion: nil)

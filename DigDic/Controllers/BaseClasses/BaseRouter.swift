@@ -1,5 +1,5 @@
 //
-//  IDBaseRouter.swift
+//  BaseRouter.swift
 //  DigDic
 //
 //  Created by Ilya Denisov on 8/28/16.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class IDBaseRouter {
+class BaseRouter {
     let viewController: UIViewController
     
     init(viewController: UIViewController) {

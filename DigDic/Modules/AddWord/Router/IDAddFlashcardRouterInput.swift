@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol IDAddFlashcardRouterInput: IDBaseRouterInput {
+protocol IDAddFlashcardRouterInput: BaseRouterInput {
 
     func dismiss()
     

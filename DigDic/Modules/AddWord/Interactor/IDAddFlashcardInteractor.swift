@@ -10,7 +10,7 @@ class IDAddFlashcardInteractor: IDAddFlashcardInteractorInput {
 
     weak var output: IDAddFlashcardInteractorOutput!
     lazy var service: Service = LocalDataBaseSource()
-    lazy var imageManager: IDImageManager = IDImageManager()
+    lazy var imageManager: ImageManager = ImageManager()
     
     func addCardWithDataHolders(_ dataHolders: [IDAddFlashcardDataHolder], toDictionary dictionary: Dictionary) -> Card? {
         var card = service.cardModelForFilling()

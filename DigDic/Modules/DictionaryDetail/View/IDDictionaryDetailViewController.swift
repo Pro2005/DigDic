@@ -10,7 +10,7 @@ import UIKit
 
 private let FlashcardViewBottomOffset: CGFloat = 60.0
 
-class IDDictionaryDetailViewController: IDBaseViewController, IDDictionaryDetailViewInput {
+class IDDictionaryDetailViewController: BaseViewController, IDDictionaryDetailViewInput {
     var output: IDDictionaryDetailViewOutput!
     @IBOutlet var goodLabel: UILabel!
     @IBOutlet var badLabel: UILabel!

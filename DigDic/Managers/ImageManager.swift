@@ -1,5 +1,5 @@
 //
-//  IDImageManager.swift
+//  ImageManager.swift
 //  DigDic
 //
 //  Created by Ilya Denisov on 9/3/16.
@@ -13,7 +13,7 @@ enum ImageManagerError: Error {
     case nameConflict
 }
 
-class IDImageManager {
+class ImageManager {
     fileprivate var documentsURL: URL {
         return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     }

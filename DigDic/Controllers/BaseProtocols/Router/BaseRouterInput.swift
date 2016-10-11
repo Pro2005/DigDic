@@ -1,5 +1,5 @@
 //
-//  IDDictionariesListIDDictionariesListInteractorInput.swift
+//  DictionariesListIDDictionariesListRouterInput.swift
 //  DigDic
 //
 //  Created by Ilya Denisov on 18/08/2016.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol IDBaseInteractorInput {
+protocol BaseRouterInput {
 
 }

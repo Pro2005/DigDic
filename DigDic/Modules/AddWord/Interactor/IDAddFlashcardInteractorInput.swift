@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol IDAddFlashcardInteractorInput: IDBaseInteractorInput {
+protocol IDAddFlashcardInteractorInput: BaseInteractorInput {
 
     func addCardWithDataHolders(_ dataHolders: [IDAddFlashcardDataHolder], toDictionary dictionary: Dictionary) -> Card?
     func createFlashcardWithfrontCard(_ frontCard: Card, backCart: Card, addToDictionary dictionary: Dictionary) -> Flashcard?

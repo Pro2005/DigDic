@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
 
-protocol IDDictionariesListViewOutput: IDBaseViewOutput {
+protocol IDDictionariesListViewOutput: BaseViewOutput {
 
     func didTapAddButton()
     func didTapCreateDictionaryButtonWithDictionaryName(_ name: String)

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol IDDictionariesListInteractorInput: IDBaseInteractorInput {
+protocol IDDictionariesListInteractorInput: BaseInteractorInput {
 
     func fetchDictionaries(_ competion: ([Dictionary]) -> ())
     func addNewDictionaryWithName(_ name: String)

@@ -1,5 +1,5 @@
 //
-//  IDBaseViewController.swift
+//  BaseViewController.swift
 //  DigDic
 //
 //  Created by Ilya Denisov on 8/26/16.
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class IDBaseViewController: UIViewController, IDBaseViewInput {
+class BaseViewController: UIViewController, BaseViewInput {
     
-    // MARK: IDBaseViewInput
+    // MARK: BaseViewInput
     
     func setupInitialState() {
         

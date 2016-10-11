@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol IDDictionariesListInteractorOutput: IDBaseInteractorOutput {
+protocol IDDictionariesListInteractorOutput: BaseInteractorOutput {
     
 }

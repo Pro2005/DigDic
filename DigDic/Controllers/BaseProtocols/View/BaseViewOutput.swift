@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
 
-protocol IDBaseViewOutput {
+protocol BaseViewOutput {
 
     /**
         @author Ilya Denisov

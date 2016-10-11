@@ -7,7 +7,7 @@
 //
 import UIKit
 
-protocol IDAddFlashcardViewOutput: IDBaseViewOutput {
+protocol IDAddFlashcardViewOutput: BaseViewOutput {
 
     /**
         @author ls

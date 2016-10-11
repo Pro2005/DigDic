@@ -6,6 +6,6 @@
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
 
-protocol IDAddFlashcardModuleInput: IDBaseModuleInput {
+protocol IDAddFlashcardModuleInput: BaseModuleInput {
 
 }

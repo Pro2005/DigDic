@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol IDAddFlashcardInteractorOutput: IDBaseInteractorOutput {
+protocol IDAddFlashcardInteractorOutput: BaseInteractorOutput {
 
 }

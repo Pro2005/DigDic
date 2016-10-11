@@ -7,7 +7,7 @@
 //
 import UIKit
 
-protocol IDDictionaryDetailViewInput: IDBaseViewInput {
+protocol IDDictionaryDetailViewInput: BaseViewInput {
 
     /**
         @author ls

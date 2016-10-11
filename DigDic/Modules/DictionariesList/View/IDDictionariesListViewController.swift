@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IDDictionariesListViewController: IDBaseViewController, IDDictionariesListViewInput, IDDictionariesListDataDisplayManagerDelegate {
+class IDDictionariesListViewController: BaseViewController, IDDictionariesListViewInput, IDDictionariesListDataDisplayManagerDelegate {
     
     // MARK: Constants
     enum Constants {

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ilya Denisov. All rights reserved.
 //
 
-protocol IDDictionaryDetailViewOutput: IDBaseViewOutput {
+protocol IDDictionaryDetailViewOutput: BaseViewOutput {
 
     /**
         @author ls
